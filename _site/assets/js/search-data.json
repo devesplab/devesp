@@ -1,0 +1,282 @@
+{"0": {
+    "doc": "About",
+    "title": "About",
+    "content": "Home News About DevESP significa [Dev]ops en [ESP]añol. El objetivo de este sitio es hacer una pequeña contribución haciendo disponible conocimientos de infomática en el idioma Español. En este sitio podria hacer referencia a recursos de información en Inglés. Haré lo mejor posible para asociar tales recursos de manera pertinente. Discutiremos conocimientos prácticos y actualizados que son usados diariamente en un ambiente típico de devops. Return to main page. ",
+    "url": "/about/",
+    
+    "relUrl": "/about/"
+  },"1": {
+    "doc": "Docker",
+    "title": "Docker",
+    "content": ". | Listar la version de Docker | Listar Imagenes de Docker | . En este document hablaremos the Docker. El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Docker. ",
+    "url": "/docker/#docker",
+    
+    "relUrl": "/docker/#docker"
+  },"2": {
+    "doc": "Docker",
+    "title": "Listar la version de Docker",
+    "content": "Ejecutemos el comando para listar la version the minikube instalada localmente. -&gt; docker version Client: Cloud integration: v1.0.29 Version: 20.10.22 API version: 1.41 Go version: go1.18.9 Git commit: 3a2c30b Built: Thu Dec 15 22:28:41 2022 OS/Arch: darwin/amd64 Context: default Experimental: true . Tambien se pueded listar de esta manera. -&gt; docker --version Docker version 20.10.22, build 3a2c30b . ",
+    "url": "/docker/#listar-la-version-de-docker",
+    
+    "relUrl": "/docker/#listar-la-version-de-docker"
+  },"3": {
+    "doc": "Docker",
+    "title": "Listar Imagenes de Docker",
+    "content": "El comando docker image ls lista las imagenes de docker presentes en el sistema. La lista es dinámica y puede cambiar a medida que agregamos o borramos imagenes . -&gt; docker image ls REPOSITORY TAG IMAGE ID CREATED SIZE prom/prometheus latest a5624f16ebec 2 months ago 223MB ubuntu 22.04 6b7dfa7e8fdb 2 months ago 77.8MB ubuntu 20.04 d5447fc01ae6 2 months ago 72.8MB grafana/grafana latest 179ad45e2c74 2 months ago 315MB docker/volumes-backup-extension 1.1.1 afd08623b0ee 2 months ago 118MB portainer/portainer-ce alpine ecdb4fbad999 3 months ago 292MB . Definición de terminos . REPOSITORY el repositorio de origen donde localizar la imagen TAG palabra alfanumérica identificando la imagen IMAGE ID suma de sha identificando la imagen internamente en el sistema CREATED fecha cuando la imagen fue creada SIZE tamaño de la imagen en megabytes Return to main page. ",
+    "url": "/docker/#listar-imagenes-de-docker",
+    
+    "relUrl": "/docker/#listar-imagenes-de-docker"
+  },"4": {
+    "doc": "Docker",
+    "title": "Docker",
+    "content": "Home News About ",
+    "url": "/docker/",
+    
+    "relUrl": "/docker/"
+  },"5": {
+    "doc": "Instalacion Linux",
+    "title": "Instalacion Linux",
+    "content": "This page: Minikube Installation LINUX . ",
+    "url": "/minikube_linux/minikube-installation-linux/",
+    
+    "relUrl": "/minikube_linux/minikube-installation-linux/"
+  },"6": {
+    "doc": "Instalacion MacOS",
+    "title": "Instalacion MacOS",
+    "content": "This page: Minikube Installation MacOS . ",
+    "url": "/minikube_linux/minikube-installation-macos/",
+    
+    "relUrl": "/minikube_linux/minikube-installation-macos/"
+  },"7": {
+    "doc": "Kubernetes",
+    "title": "Kubernetes",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/kubernetes/#kubernetes",
+    
+    "relUrl": "/kubernetes/#kubernetes"
+  },"8": {
+    "doc": "Kubernetes",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/kubernetes/#first-subtitle",
+    
+    "relUrl": "/kubernetes/#first-subtitle"
+  },"9": {
+    "doc": "Kubernetes",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/kubernetes/#second-subtitle",
+    
+    "relUrl": "/kubernetes/#second-subtitle"
+  },"10": {
+    "doc": "Kubernetes",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/kubernetes/#third-subtitle",
+    
+    "relUrl": "/kubernetes/#third-subtitle"
+  },"11": {
+    "doc": "Kubernetes",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Return to main page. ",
+    "url": "/kubernetes/#fourth-subtitle",
+    
+    "relUrl": "/kubernetes/#fourth-subtitle"
+  },"12": {
+    "doc": "Kubernetes",
+    "title": "Kubernetes",
+    "content": "Home News About ",
+    "url": "/kubernetes/",
+    
+    "relUrl": "/kubernetes/"
+  },"13": {
+    "doc": "Minikube",
+    "title": "Minikube",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . Parent page for MINIKUBE . ",
+    "url": "/minikube/#minikube",
+    
+    "relUrl": "/minikube/#minikube"
+  },"14": {
+    "doc": "Minikube",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/minikube/#first-subtitle",
+    
+    "relUrl": "/minikube/#first-subtitle"
+  },"15": {
+    "doc": "Minikube",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/minikube/#second-subtitle",
+    
+    "relUrl": "/minikube/#second-subtitle"
+  },"16": {
+    "doc": "Minikube",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/minikube/#third-subtitle",
+    
+    "relUrl": "/minikube/#third-subtitle"
+  },"17": {
+    "doc": "Minikube",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow: . Example 1 . --- layout: default title: 404 nav_exclude: true --- . Example 2 . --- layout: default title: 404 nav_exclude: true --- . The examples above will not show up in the TABLE OF CONTENTS . Return to main page. ",
+    "url": "/minikube/#fourth-subtitle",
+    
+    "relUrl": "/minikube/#fourth-subtitle"
+  },"18": {
+    "doc": "Minikube",
+    "title": "Minikube",
+    "content": "Home News About ",
+    "url": "/minikube/",
+    
+    "relUrl": "/minikube/"
+  },"19": {
+    "doc": "Conceptos",
+    "title": "Minikube",
+    "content": "En este document hablaremos the Minikube. El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Kubernetes. ",
+    "url": "/minikube-basics/#minikube",
+    
+    "relUrl": "/minikube-basics/#minikube"
+  },"20": {
+    "doc": "Conceptos",
+    "title": "Listar Minikube",
+    "content": "Ejecutemos el comando para listar la version the minikube instalada localmente. -&gt; minikube version minikube version: v1.28.0 commit: 986b1ebd987211ed16f8cc10aed7d2c42fc8392f . ",
+    "url": "/minikube-basics/#listar-minikube",
+    
+    "relUrl": "/minikube-basics/#listar-minikube"
+  },"21": {
+    "doc": "Conceptos",
+    "title": "Verificar Instancias de Kubernetes",
+    "content": "Verificar las instancias the kubernetes installadas corrientemente. This is el resultado en forma de comando. -&gt; minikube profile list 🎉 minikube 1.29.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.29.0 💡 To disable this notice, run: 'minikube config set WantUpdateNotification false' |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 | |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| . Este es el resultado en forma the tabla. | Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active | . | minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 |   | . NOTA: la lista es dinámica y puede cambiar . Return to main page. ",
+    "url": "/minikube-basics/#verificar-instancias-de-kubernetes",
+    
+    "relUrl": "/minikube-basics/#verificar-instancias-de-kubernetes"
+  },"22": {
+    "doc": "Conceptos",
+    "title": "Conceptos",
+    "content": "This page: Minikube Basics . ",
+    "url": "/minikube-basics/",
+    
+    "relUrl": "/minikube-basics/"
+  },"23": {
+    "doc": "Configuracion",
+    "title": "Configuracion",
+    "content": "This page: Minikube Configuration . Return to main page. ",
+    "url": "/minikube-configuration/",
+    
+    "relUrl": "/minikube-configuration/"
+  },"24": {
+    "doc": "Implementacion",
+    "title": "Implementacion",
+    "content": "This page: Minikube Create Cluster . Return to main page. ",
+    "url": "/minikube-create-cluster/",
+    
+    "relUrl": "/minikube-create-cluster/"
+  },"25": {
+    "doc": "Instalacion y Uso",
+    "title": "Instalacion de Minikube",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/minikube-installation/#instalacion-de-minikube",
+    
+    "relUrl": "/minikube-installation/#instalacion-de-minikube"
+  },"26": {
+    "doc": "Instalacion y Uso",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/minikube-installation/#first-subtitle",
+    
+    "relUrl": "/minikube-installation/#first-subtitle"
+  },"27": {
+    "doc": "Instalacion y Uso",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/minikube-installation/#second-subtitle",
+    
+    "relUrl": "/minikube-installation/#second-subtitle"
+  },"28": {
+    "doc": "Instalacion y Uso",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/minikube-installation/#third-subtitle",
+    
+    "relUrl": "/minikube-installation/#third-subtitle"
+  },"29": {
+    "doc": "Instalacion y Uso",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/minikube-installation/#fourth-subtitle",
+    
+    "relUrl": "/minikube-installation/#fourth-subtitle"
+  },"30": {
+    "doc": "Instalacion y Uso",
+    "title": "Instalacion y Uso",
+    "content": " ",
+    "url": "/minikube-installation/",
+    
+    "relUrl": "/minikube-installation/"
+  },"31": {
+    "doc": "News",
+    "title": "News",
+    "content": "Home News About En esta página vamos a agregar puntos de interés que se discuten en el mundo de la informática. Return to main page. ",
+    "url": "/news/",
+    
+    "relUrl": "/news/"
+  },"32": {
+    "doc": "Postgresql",
+    "title": "PostgreSQL",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/postgresql/#postgresql",
+    
+    "relUrl": "/postgresql/#postgresql"
+  },"33": {
+    "doc": "Postgresql",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/postgresql/#first-subtitle",
+    
+    "relUrl": "/postgresql/#first-subtitle"
+  },"34": {
+    "doc": "Postgresql",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/postgresql/#second-subtitle",
+    
+    "relUrl": "/postgresql/#second-subtitle"
+  },"35": {
+    "doc": "Postgresql",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/postgresql/#third-subtitle",
+    
+    "relUrl": "/postgresql/#third-subtitle"
+  },"36": {
+    "doc": "Postgresql",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Return to main page. ",
+    "url": "/postgresql/#fourth-subtitle",
+    
+    "relUrl": "/postgresql/#fourth-subtitle"
+  },"37": {
+    "doc": "Postgresql",
+    "title": "Postgresql",
+    "content": "Home News About ",
+    "url": "/postgresql/",
+    
+    "relUrl": "/postgresql/"
+  },"38": {
+    "doc": "Usar en Linux",
+    "title": "Usar en Linux",
+    "content": "This page: Minikube Use LINUX . ",
+    "url": "/minikube_linux/minikube-use-linux/",
+    
+    "relUrl": "/minikube_linux/minikube-use-linux/"
+  },"39": {
+    "doc": "Usar en MacOS",
+    "title": "Usar en MacOS",
+    "content": "This page: Minikube Use MACOS . ",
+    "url": "/minikube_linux/minikube-use-macos/",
+    
+    "relUrl": "/minikube_linux/minikube-use-macos/"
+  }
+}
