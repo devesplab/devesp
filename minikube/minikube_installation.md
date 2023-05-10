@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Instalacion y Uso
-permalink: /minikube-installation/
+title: Instalación y Configuración
+permalink: /minikube-installation-configuration/
 parent: Minikube
 has_children: true
 has_toc: false
-nav_order: 2
+nav_order: 3
 ---
 
-# Instalacion de Minikube
+# Instalacion y Configuración de Minikube
 {: .no_toc }
 
 <details open markdown="block">

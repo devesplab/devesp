@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Provisión y Uso
+title: Instalación y Uso
 permalink: /linux-provisioning/
 parent: Linux
 has_children: true
