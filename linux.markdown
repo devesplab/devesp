@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Minikube
-permalink: /minikube/
-nav_order: 3
+title: Linux
+permalink: /linux/
+nav_order: 1
 has_children: true
 has_toc: false
 ---
@@ -13,7 +13,7 @@ has_toc: false
  <a href="../about">About</a>
 </div> 
 
-# Minikube
+# Linux
 {: .no_toc }
 
 <details open markdown="block">
@@ -27,7 +27,7 @@ has_toc: false
 
 ---
 
-Parent page for MINIKUBE
+Parent page for LINUX
 ## First Subtitle
 
 This is the first section of the document.

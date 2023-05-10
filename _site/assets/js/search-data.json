@@ -1,7 +1,7 @@
 {"0": {
     "doc": "About",
     "title": "About",
-    "content": "Home News About DevESP significa [Dev]ops en [ESP]añol. El objetivo de este sitio es hacer una pequeña contribución haciendo disponible conocimientos de infomática en el idioma Español. En este sitio podria hacer referencia a recursos de información en Inglés. Haré lo mejor posible para asociar tales recursos de manera pertinente. Discutiremos conocimientos prácticos y actualizados que son usados diariamente en un ambiente típico de devops. Return to main page. ",
+    "content": "Home About DevESP significa [Dev]ops en [ESP]añol. El objetivo de este sitio es hacer una pequeña contribución haciendo disponible conocimientos de infomática en el idioma Español. En este sitio podria hacer referencia a recursos de información en Inglés. Haré lo mejor posible para asociar tales recursos de manera pertinente. Discutiremos conocimientos prácticos y actualizados que son usados diariamente en un ambiente típico de devops. Return to main page. ",
     "url": "/about/",
     
     "relUrl": "/about/"
@@ -29,7 +29,7 @@
   },"4": {
     "doc": "Docker",
     "title": "Docker",
-    "content": "Home News About ",
+    "content": "Home About ",
     "url": "/docker/",
     
     "relUrl": "/docker/"
@@ -41,237 +41,454 @@
     
     "relUrl": "/minikube_linux/minikube-installation-linux/"
   },"6": {
+    "doc": "Instalacion Linux",
+    "title": "Instalacion Linux",
+    "content": "This page: Minikube Installation LINUX . ",
+    "url": "/minikube_linux/minikube-installation-linux/",
+    
+    "relUrl": "/minikube_linux/minikube-installation-linux/"
+  },"7": {
     "doc": "Instalacion MacOS",
     "title": "Instalacion MacOS",
     "content": "This page: Minikube Installation MacOS . ",
     "url": "/minikube_linux/minikube-installation-macos/",
     
     "relUrl": "/minikube_linux/minikube-installation-macos/"
-  },"7": {
+  },"8": {
+    "doc": "Instalacion MacOS",
+    "title": "Instalacion MacOS",
+    "content": "This page: Minikube Installation MacOS . ",
+    "url": "/minikube_linux/minikube-installation-macos/",
+    
+    "relUrl": "/minikube_linux/minikube-installation-macos/"
+  },"9": {
     "doc": "Kubernetes",
     "title": "Kubernetes",
     "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
     "url": "/kubernetes/#kubernetes",
     
     "relUrl": "/kubernetes/#kubernetes"
-  },"8": {
+  },"10": {
     "doc": "Kubernetes",
     "title": "First Subtitle",
     "content": "This is the first section of the document. ",
     "url": "/kubernetes/#first-subtitle",
     
     "relUrl": "/kubernetes/#first-subtitle"
-  },"9": {
+  },"11": {
     "doc": "Kubernetes",
     "title": "Second Subtitle",
     "content": "Second section of the document. ",
     "url": "/kubernetes/#second-subtitle",
     
     "relUrl": "/kubernetes/#second-subtitle"
-  },"10": {
+  },"12": {
     "doc": "Kubernetes",
     "title": "Third Subtitle",
     "content": "And this third section of the document. ",
     "url": "/kubernetes/#third-subtitle",
     
     "relUrl": "/kubernetes/#third-subtitle"
-  },"11": {
+  },"13": {
     "doc": "Kubernetes",
     "title": "Fourth Subtitle",
     "content": "Some interesting examples follow. Return to main page. ",
     "url": "/kubernetes/#fourth-subtitle",
     
     "relUrl": "/kubernetes/#fourth-subtitle"
-  },"12": {
+  },"14": {
     "doc": "Kubernetes",
     "title": "Kubernetes",
-    "content": "Home News About ",
+    "content": "Home About ",
     "url": "/kubernetes/",
     
     "relUrl": "/kubernetes/"
-  },"13": {
+  },"15": {
+    "doc": "Linux",
+    "title": "Linux",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . Parent page for LINUX . ",
+    "url": "/linux/#linux",
+    
+    "relUrl": "/linux/#linux"
+  },"16": {
+    "doc": "Linux",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/linux/#first-subtitle",
+    
+    "relUrl": "/linux/#first-subtitle"
+  },"17": {
+    "doc": "Linux",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/linux/#second-subtitle",
+    
+    "relUrl": "/linux/#second-subtitle"
+  },"18": {
+    "doc": "Linux",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/linux/#third-subtitle",
+    
+    "relUrl": "/linux/#third-subtitle"
+  },"19": {
+    "doc": "Linux",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow: . Example 1 . --- layout: default title: 404 nav_exclude: true --- . Example 2 . --- layout: default title: 404 nav_exclude: true --- . The examples above will not show up in the TABLE OF CONTENTS . Return to main page. ",
+    "url": "/linux/#fourth-subtitle",
+    
+    "relUrl": "/linux/#fourth-subtitle"
+  },"20": {
+    "doc": "Linux",
+    "title": "Linux",
+    "content": "Home About ",
+    "url": "/linux/",
+    
+    "relUrl": "/linux/"
+  },"21": {
+    "doc": "Ambiente",
+    "title": "Ambiente en Linux",
+    "content": "Una de los mejores características de Linux es que puede personalizarse de la manera que deseamos. ",
+    "url": "/linux_ambiente/#ambiente-en-linux",
+    
+    "relUrl": "/linux_ambiente/#ambiente-en-linux"
+  },"22": {
+    "doc": "Ambiente",
+    "title": "Directorio de Inicio",
+    "content": "Cada usuario puede hacer ver su Directorio de Inicio en manera differente. ",
+    "url": "/linux_ambiente/#directorio-de-inicio",
+    
+    "relUrl": "/linux_ambiente/#directorio-de-inicio"
+  },"23": {
+    "doc": "Ambiente",
+    "title": "Las Variables de Ambiente",
+    "content": "La variable PS1. Return to main page. ",
+    "url": "/linux_ambiente/#las-variables-de-ambiente",
+    
+    "relUrl": "/linux_ambiente/#las-variables-de-ambiente"
+  },"24": {
+    "doc": "Ambiente",
+    "title": "Ambiente",
+    "content": " ",
+    "url": "/linux_ambiente/",
+    
+    "relUrl": "/linux_ambiente/"
+  },"25": {
+    "doc": "Información y Ayuda",
+    "title": "Ayuda en Linux",
+    "content": "En cualquier momento tenemos a nuestra cuenta informacíon copiosa para asistirnos en el uso del sistema operativo. La ayuda está disponible como parte del sistem dentro o fuera de linea. ",
+    "url": "/linux-ayuda/#ayuda-en-linux",
+    
+    "relUrl": "/linux-ayuda/#ayuda-en-linux"
+  },"26": {
+    "doc": "Información y Ayuda",
+    "title": "Páginas Manuales",
+    "content": "Usa las páginas manuals pare use detallado. ",
+    "url": "/linux-ayuda/#p%C3%A1ginas-manuales",
+    
+    "relUrl": "/linux-ayuda/#páginas-manuales"
+  },"27": {
+    "doc": "Información y Ayuda",
+    "title": "La Utilidad Info",
+    "content": "La información que da el comando info es muy útil. ",
+    "url": "/linux-ayuda/#la-utilidad-info",
+    
+    "relUrl": "/linux-ayuda/#la-utilidad-info"
+  },"28": {
+    "doc": "Información y Ayuda",
+    "title": "Utilidades",
+    "content": "Las herrmientas usadas para manejar los paquetes del sistema operativo ofrecen una breve explicación de las utilidades que ofrecen. ",
+    "url": "/linux-ayuda/#utilidades",
+    
+    "relUrl": "/linux-ayuda/#utilidades"
+  },"29": {
+    "doc": "Información y Ayuda",
+    "title": "Sitios De Vendedores",
+    "content": "Otro fuente de información son los sitios de internet de las compañías que han creado y mantiened los sistemas operativos. Return to main page. ",
+    "url": "/linux-ayuda/#sitios-de-vendedores",
+    
+    "relUrl": "/linux-ayuda/#sitios-de-vendedores"
+  },"30": {
+    "doc": "Información y Ayuda",
+    "title": "Información y Ayuda",
+    "content": " ",
+    "url": "/linux-ayuda/",
+    
+    "relUrl": "/linux-ayuda/"
+  },"31": {
+    "doc": "Conceptos",
+    "title": "Porqué Linux?",
+    "content": "Hemos de pregutarnos la razón por la que queremos usar Linux. ",
+    "url": "/linux-conceptos/#porqu%C3%A9-linux",
+    
+    "relUrl": "/linux-conceptos/#porqué-linux"
+  },"32": {
+    "doc": "Conceptos",
+    "title": "Es Open Source",
+    "content": "Es libre de uso. Hay muchas versiones. ",
+    "url": "/linux-conceptos/#es-open-source",
+    
+    "relUrl": "/linux-conceptos/#es-open-source"
+  },"33": {
+    "doc": "Conceptos",
+    "title": "Versatilidad",
+    "content": "Pueded usarse en sistemas fisicos y virtuales. ",
+    "url": "/linux-conceptos/#versatilidad",
+    
+    "relUrl": "/linux-conceptos/#versatilidad"
+  },"34": {
+    "doc": "Conceptos",
+    "title": "Extensible",
+    "content": "Puede ser refabricado en una nueva version. Return to main page. ",
+    "url": "/linux-conceptos/#extensible",
+    
+    "relUrl": "/linux-conceptos/#extensible"
+  },"35": {
+    "doc": "Conceptos",
+    "title": "Conceptos",
+    "content": " ",
+    "url": "/linux-conceptos/",
+    
+    "relUrl": "/linux-conceptos/"
+  },"36": {
+    "doc": "Provisión y Uso",
+    "title": "Instalacion de Linux",
+    "content": ". | Escoger y Obtener una Distribución | Decidir Metodo de Instalacion | Entender Actualización y Seguridad | Personalización y Extensión | . ",
+    "url": "/linux-provisioning/#instalacion-de-linux",
+    
+    "relUrl": "/linux-provisioning/#instalacion-de-linux"
+  },"37": {
+    "doc": "Provisión y Uso",
+    "title": "Escoger y Obtener una Distribución",
+    "content": "Linux flavor. Vendor site. Server or Workstation. Mirror: wget, ftp, torrent. System resource considerations. ",
+    "url": "/linux-provisioning/#escoger-y-obtener-una-distribuci%C3%B3n",
+    
+    "relUrl": "/linux-provisioning/#escoger-y-obtener-una-distribución"
+  },"38": {
+    "doc": "Provisión y Uso",
+    "title": "Decidir Metodo de Instalacion",
+    "content": "ISO. USB. ",
+    "url": "/linux-provisioning/#decidir-metodo-de-instalacion",
+    
+    "relUrl": "/linux-provisioning/#decidir-metodo-de-instalacion"
+  },"39": {
+    "doc": "Provisión y Uso",
+    "title": "Entender Actualización y Seguridad",
+    "content": "Es importante entender el ciclo de vida de los diferentes sistems operativos. Life cycle: en algunos casos el ciclo de lanzamiento es muy agresivo, como en el caso de Fedora. Package management. Firewalls. SSHD. ",
+    "url": "/linux-provisioning/#entender-actualizaci%C3%B3n-y-seguridad",
+    
+    "relUrl": "/linux-provisioning/#entender-actualización-y-seguridad"
+  },"40": {
+    "doc": "Provisión y Uso",
+    "title": "Personalización y Extensión",
+    "content": "Algunos sabores de sistemas operativos son mas facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de production. Return to main page. ",
+    "url": "/linux-provisioning/#personalizaci%C3%B3n-y-extensi%C3%B3n",
+    
+    "relUrl": "/linux-provisioning/#personalización-y-extensión"
+  },"41": {
+    "doc": "Provisión y Uso",
+    "title": "Provisión y Uso",
+    "content": " ",
+    "url": "/linux-provisioning/",
+    
+    "relUrl": "/linux-provisioning/"
+  },"42": {
     "doc": "Minikube",
     "title": "Minikube",
     "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . Parent page for MINIKUBE . ",
     "url": "/minikube/#minikube",
     
     "relUrl": "/minikube/#minikube"
-  },"14": {
+  },"43": {
     "doc": "Minikube",
     "title": "First Subtitle",
     "content": "This is the first section of the document. ",
     "url": "/minikube/#first-subtitle",
     
     "relUrl": "/minikube/#first-subtitle"
-  },"15": {
+  },"44": {
     "doc": "Minikube",
     "title": "Second Subtitle",
     "content": "Second section of the document. ",
     "url": "/minikube/#second-subtitle",
     
     "relUrl": "/minikube/#second-subtitle"
-  },"16": {
+  },"45": {
     "doc": "Minikube",
     "title": "Third Subtitle",
     "content": "And this third section of the document. ",
     "url": "/minikube/#third-subtitle",
     
     "relUrl": "/minikube/#third-subtitle"
-  },"17": {
+  },"46": {
     "doc": "Minikube",
     "title": "Fourth Subtitle",
     "content": "Some interesting examples follow: . Example 1 . --- layout: default title: 404 nav_exclude: true --- . Example 2 . --- layout: default title: 404 nav_exclude: true --- . The examples above will not show up in the TABLE OF CONTENTS . Return to main page. ",
     "url": "/minikube/#fourth-subtitle",
     
     "relUrl": "/minikube/#fourth-subtitle"
-  },"18": {
+  },"47": {
     "doc": "Minikube",
     "title": "Minikube",
-    "content": "Home News About ",
+    "content": "Home About ",
     "url": "/minikube/",
     
     "relUrl": "/minikube/"
-  },"19": {
+  },"48": {
     "doc": "Conceptos",
     "title": "Minikube",
     "content": "En este document hablaremos the Minikube. El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Kubernetes. ",
     "url": "/minikube-basics/#minikube",
     
     "relUrl": "/minikube-basics/#minikube"
-  },"20": {
+  },"49": {
     "doc": "Conceptos",
     "title": "Listar Minikube",
     "content": "Ejecutemos el comando para listar la version the minikube instalada localmente. -&gt; minikube version minikube version: v1.28.0 commit: 986b1ebd987211ed16f8cc10aed7d2c42fc8392f . ",
     "url": "/minikube-basics/#listar-minikube",
     
     "relUrl": "/minikube-basics/#listar-minikube"
-  },"21": {
+  },"50": {
     "doc": "Conceptos",
     "title": "Verificar Instancias de Kubernetes",
     "content": "Verificar las instancias the kubernetes installadas corrientemente. This is el resultado en forma de comando. -&gt; minikube profile list 🎉 minikube 1.29.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.29.0 💡 To disable this notice, run: 'minikube config set WantUpdateNotification false' |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 | |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| . Este es el resultado en forma the tabla. | Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active | . | minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 |   | . NOTA: la lista es dinámica y puede cambiar . Return to main page. ",
     "url": "/minikube-basics/#verificar-instancias-de-kubernetes",
     
     "relUrl": "/minikube-basics/#verificar-instancias-de-kubernetes"
-  },"22": {
+  },"51": {
     "doc": "Conceptos",
     "title": "Conceptos",
     "content": "This page: Minikube Basics . ",
     "url": "/minikube-basics/",
     
     "relUrl": "/minikube-basics/"
-  },"23": {
+  },"52": {
     "doc": "Configuracion",
     "title": "Configuracion",
     "content": "This page: Minikube Configuration . Return to main page. ",
     "url": "/minikube-configuration/",
     
     "relUrl": "/minikube-configuration/"
-  },"24": {
+  },"53": {
     "doc": "Implementacion",
     "title": "Implementacion",
     "content": "This page: Minikube Create Cluster . Return to main page. ",
     "url": "/minikube-create-cluster/",
     
     "relUrl": "/minikube-create-cluster/"
-  },"25": {
+  },"54": {
     "doc": "Instalacion y Uso",
     "title": "Instalacion de Minikube",
     "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
     "url": "/minikube-installation/#instalacion-de-minikube",
     
     "relUrl": "/minikube-installation/#instalacion-de-minikube"
-  },"26": {
+  },"55": {
     "doc": "Instalacion y Uso",
     "title": "First Subtitle",
     "content": "This is the first section of the document. ",
     "url": "/minikube-installation/#first-subtitle",
     
     "relUrl": "/minikube-installation/#first-subtitle"
-  },"27": {
+  },"56": {
     "doc": "Instalacion y Uso",
     "title": "Second Subtitle",
     "content": "Second section of the document. ",
     "url": "/minikube-installation/#second-subtitle",
     
     "relUrl": "/minikube-installation/#second-subtitle"
-  },"28": {
+  },"57": {
     "doc": "Instalacion y Uso",
     "title": "Third Subtitle",
     "content": "And this third section of the document. ",
     "url": "/minikube-installation/#third-subtitle",
     
     "relUrl": "/minikube-installation/#third-subtitle"
-  },"29": {
+  },"58": {
     "doc": "Instalacion y Uso",
     "title": "Fourth Subtitle",
     "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
     "url": "/minikube-installation/#fourth-subtitle",
     
     "relUrl": "/minikube-installation/#fourth-subtitle"
-  },"30": {
+  },"59": {
     "doc": "Instalacion y Uso",
     "title": "Instalacion y Uso",
     "content": " ",
     "url": "/minikube-installation/",
     
     "relUrl": "/minikube-installation/"
-  },"31": {
+  },"60": {
     "doc": "News",
     "title": "News",
-    "content": "Home News About En esta página vamos a agregar puntos de interés que se discuten en el mundo de la informática. Return to main page. ",
+    "content": "Home About En esta página vamos a agregar puntos de interés que se discuten en el mundo de la informática. Return to main page. ",
     "url": "/news/",
     
     "relUrl": "/news/"
-  },"32": {
+  },"61": {
     "doc": "Postgresql",
     "title": "PostgreSQL",
     "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
     "url": "/postgresql/#postgresql",
     
     "relUrl": "/postgresql/#postgresql"
-  },"33": {
+  },"62": {
     "doc": "Postgresql",
     "title": "First Subtitle",
     "content": "This is the first section of the document. ",
     "url": "/postgresql/#first-subtitle",
     
     "relUrl": "/postgresql/#first-subtitle"
-  },"34": {
+  },"63": {
     "doc": "Postgresql",
     "title": "Second Subtitle",
     "content": "Second section of the document. ",
     "url": "/postgresql/#second-subtitle",
     
     "relUrl": "/postgresql/#second-subtitle"
-  },"35": {
+  },"64": {
     "doc": "Postgresql",
     "title": "Third Subtitle",
     "content": "And this third section of the document. ",
     "url": "/postgresql/#third-subtitle",
     
     "relUrl": "/postgresql/#third-subtitle"
-  },"36": {
+  },"65": {
     "doc": "Postgresql",
     "title": "Fourth Subtitle",
     "content": "Some interesting examples follow. Return to main page. ",
     "url": "/postgresql/#fourth-subtitle",
     
     "relUrl": "/postgresql/#fourth-subtitle"
-  },"37": {
+  },"66": {
     "doc": "Postgresql",
     "title": "Postgresql",
-    "content": "Home News About ",
+    "content": "Home About ",
     "url": "/postgresql/",
     
     "relUrl": "/postgresql/"
-  },"38": {
+  },"67": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
     "content": "This page: Minikube Use LINUX . ",
     "url": "/minikube_linux/minikube-use-linux/",
     
     "relUrl": "/minikube_linux/minikube-use-linux/"
-  },"39": {
+  },"68": {
+    "doc": "Usar en Linux",
+    "title": "Usar en Linux",
+    "content": "This page: Minikube Use LINUX . ",
+    "url": "/minikube_linux/minikube-use-linux/",
+    
+    "relUrl": "/minikube_linux/minikube-use-linux/"
+  },"69": {
+    "doc": "Usar en MacOS",
+    "title": "Usar en MacOS",
+    "content": "This page: Minikube Use MACOS . ",
+    "url": "/minikube_linux/minikube-use-macos/",
+    
+    "relUrl": "/minikube_linux/minikube-use-macos/"
+  },"70": {
     "doc": "Usar en MacOS",
     "title": "Usar en MacOS",
     "content": "This page: Minikube Use MACOS . ",
