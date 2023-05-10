@@ -251,43 +251,43 @@
     
     "relUrl": "/linux-conceptos/"
   },"36": {
-    "doc": "Provisión y Uso",
+    "doc": "Instalación y Uso",
     "title": "Instalacion de Linux",
     "content": ". | Escoger y Obtener una Distribución | Decidir Metodo de Instalacion | Entender Actualización y Seguridad | Personalización y Extensión | . ",
     "url": "/linux-provisioning/#instalacion-de-linux",
     
     "relUrl": "/linux-provisioning/#instalacion-de-linux"
   },"37": {
-    "doc": "Provisión y Uso",
+    "doc": "Instalación y Uso",
     "title": "Escoger y Obtener una Distribución",
     "content": "Linux flavor. Vendor site. Server or Workstation. Mirror: wget, ftp, torrent. System resource considerations. ",
     "url": "/linux-provisioning/#escoger-y-obtener-una-distribuci%C3%B3n",
     
     "relUrl": "/linux-provisioning/#escoger-y-obtener-una-distribución"
   },"38": {
-    "doc": "Provisión y Uso",
+    "doc": "Instalación y Uso",
     "title": "Decidir Metodo de Instalacion",
     "content": "ISO. USB. ",
     "url": "/linux-provisioning/#decidir-metodo-de-instalacion",
     
     "relUrl": "/linux-provisioning/#decidir-metodo-de-instalacion"
   },"39": {
-    "doc": "Provisión y Uso",
+    "doc": "Instalación y Uso",
     "title": "Entender Actualización y Seguridad",
     "content": "Es importante entender el ciclo de vida de los diferentes sistems operativos. Life cycle: en algunos casos el ciclo de lanzamiento es muy agresivo, como en el caso de Fedora. Package management. Firewalls. SSHD. ",
     "url": "/linux-provisioning/#entender-actualizaci%C3%B3n-y-seguridad",
     
     "relUrl": "/linux-provisioning/#entender-actualización-y-seguridad"
   },"40": {
-    "doc": "Provisión y Uso",
+    "doc": "Instalación y Uso",
     "title": "Personalización y Extensión",
     "content": "Algunos sabores de sistemas operativos son mas facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de production. Return to main page. ",
     "url": "/linux-provisioning/#personalizaci%C3%B3n-y-extensi%C3%B3n",
     
     "relUrl": "/linux-provisioning/#personalización-y-extensión"
   },"41": {
-    "doc": "Provisión y Uso",
-    "title": "Provisión y Uso",
+    "doc": "Instalación y Uso",
+    "title": "Instalación y Uso",
     "content": " ",
     "url": "/linux-provisioning/",
     
@@ -363,110 +363,110 @@
     
     "relUrl": "/minikube-basics/"
   },"52": {
-    "doc": "Configuracion",
-    "title": "Configuracion",
-    "content": "This page: Minikube Configuration . Return to main page. ",
-    "url": "/minikube-configuration/",
-    
-    "relUrl": "/minikube-configuration/"
-  },"53": {
     "doc": "Implementacion",
     "title": "Implementacion",
     "content": "This page: Minikube Create Cluster . Return to main page. ",
     "url": "/minikube-create-cluster/",
     
     "relUrl": "/minikube-create-cluster/"
-  },"54": {
-    "doc": "Instalacion y Uso",
-    "title": "Instalacion de Minikube",
+  },"53": {
+    "doc": "Instalación y Configuración",
+    "title": "Instalacion y Configuración de Minikube",
     "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
-    "url": "/minikube-installation/#instalacion-de-minikube",
+    "url": "/minikube-installation-configuration/#instalacion-y-configuraci%C3%B3n-de-minikube",
     
-    "relUrl": "/minikube-installation/#instalacion-de-minikube"
-  },"55": {
-    "doc": "Instalacion y Uso",
+    "relUrl": "/minikube-installation-configuration/#instalacion-y-configuración-de-minikube"
+  },"54": {
+    "doc": "Instalación y Configuración",
     "title": "First Subtitle",
     "content": "This is the first section of the document. ",
-    "url": "/minikube-installation/#first-subtitle",
+    "url": "/minikube-installation-configuration/#first-subtitle",
     
-    "relUrl": "/minikube-installation/#first-subtitle"
-  },"56": {
-    "doc": "Instalacion y Uso",
+    "relUrl": "/minikube-installation-configuration/#first-subtitle"
+  },"55": {
+    "doc": "Instalación y Configuración",
     "title": "Second Subtitle",
     "content": "Second section of the document. ",
-    "url": "/minikube-installation/#second-subtitle",
+    "url": "/minikube-installation-configuration/#second-subtitle",
     
-    "relUrl": "/minikube-installation/#second-subtitle"
-  },"57": {
-    "doc": "Instalacion y Uso",
+    "relUrl": "/minikube-installation-configuration/#second-subtitle"
+  },"56": {
+    "doc": "Instalación y Configuración",
     "title": "Third Subtitle",
     "content": "And this third section of the document. ",
-    "url": "/minikube-installation/#third-subtitle",
+    "url": "/minikube-installation-configuration/#third-subtitle",
     
-    "relUrl": "/minikube-installation/#third-subtitle"
-  },"58": {
-    "doc": "Instalacion y Uso",
+    "relUrl": "/minikube-installation-configuration/#third-subtitle"
+  },"57": {
+    "doc": "Instalación y Configuración",
     "title": "Fourth Subtitle",
     "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
-    "url": "/minikube-installation/#fourth-subtitle",
+    "url": "/minikube-installation-configuration/#fourth-subtitle",
     
-    "relUrl": "/minikube-installation/#fourth-subtitle"
-  },"59": {
-    "doc": "Instalacion y Uso",
-    "title": "Instalacion y Uso",
+    "relUrl": "/minikube-installation-configuration/#fourth-subtitle"
+  },"58": {
+    "doc": "Instalación y Configuración",
+    "title": "Instalación y Configuración",
     "content": " ",
-    "url": "/minikube-installation/",
+    "url": "/minikube-installation-configuration/",
     
-    "relUrl": "/minikube-installation/"
-  },"60": {
+    "relUrl": "/minikube-installation-configuration/"
+  },"59": {
     "doc": "News",
     "title": "News",
     "content": "Home About En esta página vamos a agregar puntos de interés que se discuten en el mundo de la informática. Return to main page. ",
     "url": "/news/",
     
     "relUrl": "/news/"
-  },"61": {
+  },"60": {
     "doc": "Postgresql",
     "title": "PostgreSQL",
     "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
     "url": "/postgresql/#postgresql",
     
     "relUrl": "/postgresql/#postgresql"
-  },"62": {
+  },"61": {
     "doc": "Postgresql",
     "title": "First Subtitle",
     "content": "This is the first section of the document. ",
     "url": "/postgresql/#first-subtitle",
     
     "relUrl": "/postgresql/#first-subtitle"
-  },"63": {
+  },"62": {
     "doc": "Postgresql",
     "title": "Second Subtitle",
     "content": "Second section of the document. ",
     "url": "/postgresql/#second-subtitle",
     
     "relUrl": "/postgresql/#second-subtitle"
-  },"64": {
+  },"63": {
     "doc": "Postgresql",
     "title": "Third Subtitle",
     "content": "And this third section of the document. ",
     "url": "/postgresql/#third-subtitle",
     
     "relUrl": "/postgresql/#third-subtitle"
-  },"65": {
+  },"64": {
     "doc": "Postgresql",
     "title": "Fourth Subtitle",
     "content": "Some interesting examples follow. Return to main page. ",
     "url": "/postgresql/#fourth-subtitle",
     
     "relUrl": "/postgresql/#fourth-subtitle"
-  },"66": {
+  },"65": {
     "doc": "Postgresql",
     "title": "Postgresql",
     "content": "Home About ",
     "url": "/postgresql/",
     
     "relUrl": "/postgresql/"
+  },"66": {
+    "doc": "Usar en Linux",
+    "title": "Usar en Linux",
+    "content": "This page: Minikube Use LINUX . ",
+    "url": "/minikube_linux/minikube-use-linux/",
+    
+    "relUrl": "/minikube_linux/minikube-use-linux/"
   },"67": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
@@ -475,20 +475,13 @@
     
     "relUrl": "/minikube_linux/minikube-use-linux/"
   },"68": {
-    "doc": "Usar en Linux",
-    "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX . ",
-    "url": "/minikube_linux/minikube-use-linux/",
-    
-    "relUrl": "/minikube_linux/minikube-use-linux/"
-  },"69": {
     "doc": "Usar en MacOS",
     "title": "Usar en MacOS",
     "content": "This page: Minikube Use MACOS . ",
     "url": "/minikube_linux/minikube-use-macos/",
     
     "relUrl": "/minikube_linux/minikube-use-macos/"
-  },"70": {
+  },"69": {
     "doc": "Usar en MacOS",
     "title": "Usar en MacOS",
     "content": "This page: Minikube Use MACOS . ",
