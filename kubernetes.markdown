@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes
 permalink: /kubernetes/
-nav_order: 3
+nav_order: 4
 has_children: true
 has_toc: false
 ---
@@ -10,7 +10,6 @@ has_toc: false
 [comment]: # (Adds topnav bar above the main image)
 <div class="topnav">
  <a class="active" href="../index">Home</a>
- <a href="#news">News</a>
  <a href="../about">About</a>
 </div> 
 
