@@ -7,62 +7,16 @@ has_children: true
 has_toc: false
 ---
 
-[comment]: # (Adds topnav bar above the main image)
-<div class="topnav">
- <a class="active" href="../index">Home</a>
- <a href="../about">About</a>
-</div> 
-
 # Linux
-{: .no_toc }
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-- TOC
-{:toc}
-</details>
+En este espacio vamos a discutir muchos aspectos referentes a Linux. 
 
----
+Siendo que tenemos varias opciones, visitaremos varios sabores de Linux tales como CentOS, Ubuntu, RedHat, y otros como sea neceario.
 
-Parent page for LINUX
-## First Subtitle
+Las exposiciones son prácticas y al punto con el objetivo de aprender a hacer algo específico y útil.
 
-This is the first section of the document.
-## Second Subtitle
+En la mayoría de los casos vamos a explorar la linea de comandos viendo el resultado de acciones dentro y fuera del ambiente del usuario que los ejecute.
 
-Second section of the document.
-
-## Third Subtitle
-
-And this third section of the document.
-
-## Fourth Subtitle
- 
-Some interesting examples follow: 
-#### Example 1
-{: .no_toc }
-
-```yaml
----
-layout: default
-title: 404
-nav_exclude: true
----
-```
-#### Example 2
-{: .no_toc }
-
-```yaml
----
-layout: default
-title: 404
-nav_exclude: true
----
-```
-
-The examples above will not show up in the **TABLE OF CONTENTS**
+Harémos uso de referencias a documentos o ejemplos externas cuando sea necesario para expandir los conceptos o dar recursos prácticos para enfatizar lo explicado.
 
 [Return to main page]({{site.baseurl}}/).

@@ -1,7 +1,7 @@
 {"0": {
     "doc": "About",
     "title": "About",
-    "content": "Home About DevESP significa [Dev]ops en [ESP]añol. El objetivo de este sitio es hacer una pequeña contribución haciendo disponible conocimientos de infomática en el idioma Español. En este sitio podria hacer referencia a recursos de información en Inglés. Haré lo mejor posible para asociar tales recursos de manera pertinente. Discutiremos conocimientos prácticos y actualizados que son usados diariamente en un ambiente típico de devops. Return to main page. ",
+    "content": "[comment]: # (Adds topnav bar above the main image) Home About DevESP significa [Dev]ops en [ESP]añol. El objetivo de este sitio es hacer una pequeña contribución haciendo disponible conocimientos de infomática en el idioma Español. {: .highlight } En este sitio podria hacer referencia a recursos de información en Inglés. Haré lo mejor posible para asociar tales recursos de manera pertinente. Discutiremos conocimientos prácticos y actualizados que son usados diariamente en un ambiente típico de devops. [Return to main page]({{site.baseurl}}/). ",
     "url": "/about/",
     
     "relUrl": "/about/"
@@ -15,735 +15,266 @@
   },"2": {
     "doc": "Docker",
     "title": "Docker",
-    "content": ". | Listar la version de Docker | Listar Imagenes de Docker | . En este document hablaremos the Docker. El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Docker. ",
-    "url": "/docker/#docker",
-    
-    "relUrl": "/docker/#docker"
-  },"3": {
-    "doc": "Docker",
-    "title": "Listar la version de Docker",
-    "content": "Ejecutemos el comando para listar la version the minikube instalada localmente. -&gt; docker version Client: Cloud integration: v1.0.29 Version: 20.10.22 API version: 1.41 Go version: go1.18.9 Git commit: 3a2c30b Built: Thu Dec 15 22:28:41 2022 OS/Arch: darwin/amd64 Context: default Experimental: true . Tambien se pueded listar de esta manera. -&gt; docker --version Docker version 20.10.22, build 3a2c30b . ",
-    "url": "/docker/#listar-la-version-de-docker",
-    
-    "relUrl": "/docker/#listar-la-version-de-docker"
-  },"4": {
-    "doc": "Docker",
-    "title": "Listar Imagenes de Docker",
-    "content": "El comando docker image ls lista las imagenes de docker presentes en el sistema. La lista es dinámica y puede cambiar a medida que agregamos o borramos imagenes . -&gt; docker image ls REPOSITORY TAG IMAGE ID CREATED SIZE prom/prometheus latest a5624f16ebec 2 months ago 223MB ubuntu 22.04 6b7dfa7e8fdb 2 months ago 77.8MB ubuntu 20.04 d5447fc01ae6 2 months ago 72.8MB grafana/grafana latest 179ad45e2c74 2 months ago 315MB docker/volumes-backup-extension 1.1.1 afd08623b0ee 2 months ago 118MB portainer/portainer-ce alpine ecdb4fbad999 3 months ago 292MB . Definición de terminos . REPOSITORY el repositorio de origen donde localizar la imagen TAG palabra alfanumérica identificando la imagen IMAGE ID suma de sha identificando la imagen internamente en el sistema CREATED fecha cuando la imagen fue creada SIZE tamaño de la imagen en megabytes Return to main page. ",
-    "url": "/docker/#listar-imagenes-de-docker",
-    
-    "relUrl": "/docker/#listar-imagenes-de-docker"
-  },"5": {
-    "doc": "Docker",
-    "title": "Docker",
-    "content": "Home About ",
+    "content": "[comment]: # (Adds topnav bar above the main image) Home About # Docker {: .no_toc } {: .text-delta } - TOC {:toc} En este document hablaremos the Docker. _El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Docker._ ## Listar la version de Docker Ejecutemos el comando para listar la version the minikube instalada localmente. ```bash -> docker version Client: Cloud integration: v1.0.29 Version: 20.10.22 API version: 1.41 Go version: go1.18.9 Git commit: 3a2c30b Built: Thu Dec 15 22:28:41 2022 OS/Arch: darwin/amd64 Context: default Experimental: true ``` Tambien se pueded listar de esta manera. ``` -> docker --version Docker version 20.10.22, build 3a2c30b ``` ## Listar Imagenes de Docker El comando `docker image ls` lista las imagenes de docker presentes en el sistema. {: .note } La lista es dinámica y puede cambiar a medida que agregamos o borramos imagenes ```c -> docker image ls REPOSITORY TAG IMAGE ID CREATED SIZE prom/prometheus latest a5624f16ebec 2 months ago 223MB ubuntu 22.04 6b7dfa7e8fdb 2 months ago 77.8MB ubuntu 20.04 d5447fc01ae6 2 months ago 72.8MB grafana/grafana latest 179ad45e2c74 2 months ago 315MB docker/volumes-backup-extension 1.1.1 afd08623b0ee 2 months ago 118MB portainer/portainer-ce alpine ecdb4fbad999 3 months ago 292MB ``` Definición de terminos REPOSITORY el repositorio de origen donde localizar la imagen TAG palabra alfanumérica identificando la imagen IMAGE ID suma de sha identificando la imagen internamente en el sistema CREATED fecha cuando la imagen fue creada SIZE tamaño de la imagen en megabytes [Return to main page]({{site.baseurl}}/). ",
     "url": "/docker/",
     
     "relUrl": "/docker/"
-  },"6": {
+  },"3": {
     "doc": "Conceptos Docker",
     "title": "Conceptos Docker",
-    "content": "This page: Docker Basics . ",
+    "content": "This page: Docker Basics ",
     "url": "/docker_concepts/",
     
     "relUrl": "/docker_concepts/"
-  },"7": {
+  },"4": {
     "doc": "Implemetación Docker",
     "title": "Implemetación Docker",
-    "content": "This page: Implementacion de Docker . Return to main page. ",
+    "content": "This page: Implementacion de Docker [Return to main page]({{site.baseurl}}/). ",
     "url": "/docker_implementation/",
     
     "relUrl": "/docker_implementation/"
-  },"8": {
-    "doc": "Provisión Docker",
-    "title": "Instalacion y Configuración de Docker",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
-    "url": "/docker_provision/#instalacion-y-configuraci%C3%B3n-de-docker",
-    
-    "relUrl": "/docker_provision/#instalacion-y-configuración-de-docker"
-  },"9": {
-    "doc": "Provisión Docker",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/docker_provision/#first-subtitle",
-    
-    "relUrl": "/docker_provision/#first-subtitle"
-  },"10": {
-    "doc": "Provisión Docker",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/docker_provision/#second-subtitle",
-    
-    "relUrl": "/docker_provision/#second-subtitle"
-  },"11": {
-    "doc": "Provisión Docker",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/docker_provision/#third-subtitle",
-    
-    "relUrl": "/docker_provision/#third-subtitle"
-  },"12": {
-    "doc": "Provisión Docker",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
-    "url": "/docker_provision/#fourth-subtitle",
-    
-    "relUrl": "/docker_provision/#fourth-subtitle"
-  },"13": {
+  },"5": {
     "doc": "Provisión Docker",
     "title": "Provisión Docker",
-    "content": ". ",
+    "content": "--- # Instalacion y Configuración de Docker {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
     "url": "/docker_provision/",
     
     "relUrl": "/docker_provision/"
-  },"14": {
+  },"6": {
     "doc": "Implementación Paquetes",
     "title": "Implementación Paquetes",
-    "content": "This page: Como installar packetes en varios sabores de Linux . ",
+    "content": "This page: Como installar packetes en varios sabores de Linux ",
     "url": "/package_management/implementacion/",
     
     "relUrl": "/package_management/implementacion/"
-  },"15": {
+  },"7": {
     "doc": "Instalacion Linux",
     "title": "Instalacion Linux",
-    "content": "This page: Minikube Installation LINUX . ",
+    "content": "This page: Minikube Installation LINUX ",
     "url": "/minikube_linux/minikube-installation-linux/",
     
     "relUrl": "/minikube_linux/minikube-installation-linux/"
-  },"16": {
+  },"8": {
     "doc": "Instalacion Linux",
     "title": "Instalacion Linux",
-    "content": "This page: Minikube Installation LINUX . ",
+    "content": "This page: Minikube Installation LINUX ",
     "url": "/minikube_linux/minikube-installation-linux/",
     
     "relUrl": "/minikube_linux/minikube-installation-linux/"
-  },"17": {
+  },"9": {
     "doc": "Instalacion Linux",
     "title": "Instalacion Linux",
-    "content": "This page: Minikube Installation LINUX . ",
+    "content": "This page: Minikube Installation LINUX ",
     "url": "/minikube_linux/minikube-installation-linux/",
     
     "relUrl": "/minikube_linux/minikube-installation-linux/"
-  },"18": {
+  },"10": {
     "doc": "Instalacion MacOS",
     "title": "Instalacion MacOS",
-    "content": "This page: Minikube Installation MacOS . ",
+    "content": "This page: Minikube Installation MacOS ",
     "url": "/minikube_linux/minikube-installation-macos/",
     
     "relUrl": "/minikube_linux/minikube-installation-macos/"
-  },"19": {
+  },"11": {
     "doc": "Kubernetes",
     "title": "Kubernetes",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
-    "url": "/kubernetes/#kubernetes",
-    
-    "relUrl": "/kubernetes/#kubernetes"
-  },"20": {
-    "doc": "Kubernetes",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/kubernetes/#first-subtitle",
-    
-    "relUrl": "/kubernetes/#first-subtitle"
-  },"21": {
-    "doc": "Kubernetes",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/kubernetes/#second-subtitle",
-    
-    "relUrl": "/kubernetes/#second-subtitle"
-  },"22": {
-    "doc": "Kubernetes",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/kubernetes/#third-subtitle",
-    
-    "relUrl": "/kubernetes/#third-subtitle"
-  },"23": {
-    "doc": "Kubernetes",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow. Return to main page. ",
-    "url": "/kubernetes/#fourth-subtitle",
-    
-    "relUrl": "/kubernetes/#fourth-subtitle"
-  },"24": {
-    "doc": "Kubernetes",
-    "title": "Kubernetes",
-    "content": "Home About ",
+    "content": "[comment]: # (Adds topnav bar above the main image) Home About # Kubernetes {: .no_toc } {: .text-delta } - TOC {:toc} ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. [Return to main page]({{site.baseurl}}/). ",
     "url": "/kubernetes/",
     
     "relUrl": "/kubernetes/"
-  },"25": {
+  },"12": {
     "doc": "Conceptos Kubernetes",
     "title": "Conceptos Kubernetes",
-    "content": "This page: Kubernetes Basics . ",
+    "content": "This page: Kubernetes Basics ",
     "url": "/kubernetes_concepts/",
     
     "relUrl": "/kubernetes_concepts/"
-  },"26": {
+  },"13": {
     "doc": "Implemetación Kubernetes",
     "title": "Implemetación Kubernetes",
-    "content": "This page: Implementacion de Kubernetes . Return to main page. ",
+    "content": "This page: Implementacion de Kubernetes [Return to main page]({{site.baseurl}}/). ",
     "url": "/kubernetes_implementation/",
     
     "relUrl": "/kubernetes_implementation/"
-  },"27": {
-    "doc": "Provisión Kubernetes",
-    "title": "Instalacion y Configuración de Kubernetes",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
-    "url": "/kubernetes_provision/#instalacion-y-configuraci%C3%B3n-de-kubernetes",
-    
-    "relUrl": "/kubernetes_provision/#instalacion-y-configuración-de-kubernetes"
-  },"28": {
-    "doc": "Provisión Kubernetes",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/kubernetes_provision/#first-subtitle",
-    
-    "relUrl": "/kubernetes_provision/#first-subtitle"
-  },"29": {
-    "doc": "Provisión Kubernetes",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/kubernetes_provision/#second-subtitle",
-    
-    "relUrl": "/kubernetes_provision/#second-subtitle"
-  },"30": {
-    "doc": "Provisión Kubernetes",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/kubernetes_provision/#third-subtitle",
-    
-    "relUrl": "/kubernetes_provision/#third-subtitle"
-  },"31": {
-    "doc": "Provisión Kubernetes",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
-    "url": "/kubernetes_provision/#fourth-subtitle",
-    
-    "relUrl": "/kubernetes_provision/#fourth-subtitle"
-  },"32": {
+  },"14": {
     "doc": "Provisión Kubernetes",
     "title": "Provisión Kubernetes",
-    "content": ". ",
+    "content": "--- # Instalacion y Configuración de Kubernetes {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
     "url": "/kubernetes_provision/",
     
     "relUrl": "/kubernetes_provision/"
-  },"33": {
+  },"15": {
     "doc": "Linux",
     "title": "Linux",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . Parent page for LINUX . ",
-    "url": "/linux/#linux",
-    
-    "relUrl": "/linux/#linux"
-  },"34": {
-    "doc": "Linux",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/linux/#first-subtitle",
-    
-    "relUrl": "/linux/#first-subtitle"
-  },"35": {
-    "doc": "Linux",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/linux/#second-subtitle",
-    
-    "relUrl": "/linux/#second-subtitle"
-  },"36": {
-    "doc": "Linux",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/linux/#third-subtitle",
-    
-    "relUrl": "/linux/#third-subtitle"
-  },"37": {
-    "doc": "Linux",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow: . Example 1 . --- layout: default title: 404 nav_exclude: true --- . Example 2 . --- layout: default title: 404 nav_exclude: true --- . The examples above will not show up in the TABLE OF CONTENTS . Return to main page. ",
-    "url": "/linux/#fourth-subtitle",
-    
-    "relUrl": "/linux/#fourth-subtitle"
-  },"38": {
-    "doc": "Linux",
-    "title": "Linux",
-    "content": "Home About ",
+    "content": "En este espacio vamos a discutir muchos aspectos referentes a Linux. Siendo que tenemos varias opciones, visitaremos varios sabores de Linux tales como CentOS, Ubuntu, RedHat, y otros como sea neceario. Las exposiciones son prácticas y al punto con el objetivo de aprender a hacer algo específico y útil. En la mayoría de los casos vamos a explorar la linea de comandos viendo el resultado de acciones dentro y fuera del ambiente del usuario que los ejecute. Harémos uso de referencias a documentos o ejemplos externas cuando sea necesario para expandir los conceptos o dar recursos prácticos para enfatizar lo explicado. Return to main page. ",
     "url": "/linux/",
     
     "relUrl": "/linux/"
-  },"39": {
-    "doc": "Conceptos",
-    "title": "Porqué Linux?",
-    "content": ". | Porqué Linux? . | Versatilidad | Extensible y Configurable | Donde Obtener Linux | Referencias | . | . Hemos de preguntarnos la razón por la que queremos usar Linux. Linux es un sistema operativo de fuente abierta. Para usar Linux solo se requiere descargar la imagen ISO deseado e instalar el sistema operativo en la computadora deseada. Una imagen de ISO es un archivo que tiene el mismo contenido que un disco óptico, o CD/DVD. Generalmente no se requiere una licensia de usuario. Una licensia de uso solo se requiere en ciertos casos en los que una rama del producto se ha comercializado. ",
-    "url": "/linux_conceptos/#porqu%C3%A9-linux",
-    
-    "relUrl": "/linux_conceptos/#porqué-linux"
-  },"40": {
-    "doc": "Conceptos",
-    "title": "Versatilidad",
-    "content": "Linux es un sistema operativo muy versátil. Hay varias versiones de Linux para escoger tales como Debian, Ubuntu, CentOS, Fedora, RedHat, Oracle Linux, OpenSuse, Getoo, y muchos otros 1. Cuál deberia escoger? Depende del caso. | Versiones para el usuario regular: son equipadas con utilidades y configuraciones que facilitan el uso diario. | Versiones para servidores: son equipadas para uso mas pesado en un ambiente de produccion empresarial. | . Linux puede usarse en sistemas fisicos y virtuales. La arquitectura del sistema operativo esta diseeñao de tal manera que puede instalarze en una variedad de platofmas. Eso ofrece un alto grade de flexibilidad. ",
-    "url": "/linux_conceptos/#versatilidad",
-    
-    "relUrl": "/linux_conceptos/#versatilidad"
-  },"41": {
-    "doc": "Conceptos",
-    "title": "Extensible y Configurable",
-    "content": "Una vez installado, el ambiente operacional ofrece alternativas para un alto grado de personalization. En el mundo práctio hay una gran variedad de immplementaciones desde lo más básico hasta lo mas complejo y seguro. ",
-    "url": "/linux_conceptos/#extensible-y-configurable",
-    
-    "relUrl": "/linux_conceptos/#extensible-y-configurable"
-  },"42": {
-    "doc": "Conceptos",
-    "title": "Donde Obtener Linux",
-    "content": "Linux puede descargarse de cualquier espejo disponible. Varios sabores de linux estan disponibles en kernel.org Algunos sabores de Linux de fuente abierta tales come CentOS 2, Fedora 3, Ubuntu 4, Debian 5, Gentoo 6, están disponibles gratis en varias versiones. Otras versiones tales como RedHat 7, requieren un licensia de usuario. Se debe tener en mente el ciclo de actualización y desmantelamiento de versiones. Fedora tiene un ciclo se actualizacion agresivo de cada seis meses lo que hace muy difícil mantener los sistemas al dia. De otro lado, Ubuntu tiene un ciclo mas largo; la version mas estable se conoce come la version de lanzamiento a largo plazo (LTS, o Long Term Support). ",
-    "url": "/linux_conceptos/#donde-obtener-linux",
-    
-    "relUrl": "/linux_conceptos/#donde-obtener-linux"
-  },"43": {
-    "doc": "Conceptos",
-    "title": "Referencias",
-    "content": "Return to main page. | Lista de distrubuciones de Linux &#8617; . | Descargar CentOS &#8617; . | Descargar Fedora &#8617; . | Descargar Ubuntu &#8617; . | Descargar Debian &#8617; . | Descargar Gentoo &#8617; . | Descargar RedHat &#8617; . | . ",
-    "url": "/linux_conceptos/#referencias",
-    
-    "relUrl": "/linux_conceptos/#referencias"
-  },"44": {
+  },"16": {
     "doc": "Conceptos",
     "title": "Conceptos",
-    "content": " ",
+    "content": "# Porqué Linux? {: .no_toc } {: .text-delta } - TOC {:toc} Hemos de preguntarnos la razón por la que queremos usar Linux. Linux es un sistema operativo de fuente abierta. Para usar Linux solo se requiere descargar la imagen ISO deseado e instalar el sistema operativo en la computadora deseada. Una imagen de ISO es un archivo que tiene el mismo contenido que un disco óptico such as CD/DVD. Generalmente no se requiere una licensia de usuario. Una licensia de uso solo se requiere en ciertos casos en los que una rama del producto se ha comercializado. ## Versatilidad Linux es un sistema operativo muy versátil. Hay varias versiones de Linux para escoger tales como Debian, Ubuntu, CentOS, Fedora, RedHat, Oracle Linux, OpenSuse, Getoo, y muchos otros [^1]. Cuál deberia escoger? Depende del caso. - Versiones para el usuario regular: son equipadas con utilidades y configuraciones que facilitan el uso diario. - Versiones para servidores: son equipadas para uso mas pesado en un ambiente de produccion empresarial. Linux puede usarse en sistemas fisicos y virtuales. La arquitectura del sistema operativo esta diseeñao de tal manera que puede instalarze en una variedad de platofmas. Eso ofrece un alto grade de flexibilidad. ## Extensible y Configurable Una vez installado, el ambiente operacional ofrece alternativas para un alto grado de personalization. En el mundo práctio hay una gran variedad de immplementaciones desde lo más básico hasta lo mas complejo y seguro. [^1]: [Lista de distrubuciones de Linux](https://en.wikipedia.org/wiki/List_of_Linux_distributions) [Return to main page]({{site.baseurl}}/). ",
     "url": "/linux_conceptos/",
     
     "relUrl": "/linux_conceptos/"
-  },"45": {
-    "doc": "Implementación",
-    "title": "Personalización y Extensión",
-    "content": "Algunos sabores de sistemas operativos son mas facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de production. ",
-    "url": "/linux_implementacion/#personalizaci%C3%B3n-y-extensi%C3%B3n",
-    
-    "relUrl": "/linux_implementacion/#personalización-y-extensión"
-  },"46": {
-    "doc": "Implementación",
-    "title": "Directorio de Inicio",
-    "content": "Cada usuario puede hacer ver su Directorio de Inicio en manera differente. ",
-    "url": "/linux_implementacion/#directorio-de-inicio",
-    
-    "relUrl": "/linux_implementacion/#directorio-de-inicio"
-  },"47": {
-    "doc": "Implementación",
-    "title": "Ambiente en Linux",
-    "content": "Directorio del usuario. Variables de ambient: PS1 . Una de los mejores características de Linux es que puede personalizarse de la manera que deseamos. ",
-    "url": "/linux_implementacion/#ambiente-en-linux",
-    
-    "relUrl": "/linux_implementacion/#ambiente-en-linux"
-  },"48": {
-    "doc": "Implementación",
-    "title": "Las Variables de Ambiente",
-    "content": "La variable PS1. Return to main page. ",
-    "url": "/linux_implementacion/#las-variables-de-ambiente",
-    
-    "relUrl": "/linux_implementacion/#las-variables-de-ambiente"
-  },"49": {
+  },"17": {
     "doc": "Implementación",
     "title": "Implementación",
-    "content": " ",
+    "content": "# Personalización y Extensión Algunos sabores de sistemas operativos son mas facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de production. ## Directorio de Inicio Cada usuario puede hacer ver su Directorio de Inicio en manera differente. ## Ambiente en Linux Directorio del usuario. Variables de ambient: PS1 Una de los mejores características de Linux es que puede personalizarse de la manera que deseamos. ## Las Variables de Ambiente La variable PS1. [Return to main page]({{site.baseurl}}/). ",
     "url": "/linux_implementacion/",
     
     "relUrl": "/linux_implementacion/"
-  },"50": {
-    "doc": "Provision",
-    "title": "Provisonar Ambiente de Linux",
-    "content": ". | Escoger y Obtener una Distribución . | Decidir Metodo de Instalacion | Entender Actualización y Seguridad | . | . ",
-    "url": "/linux_provision/#provisonar-ambiente-de-linux",
-    
-    "relUrl": "/linux_provision/#provisonar-ambiente-de-linux"
-  },"51": {
-    "doc": "Provision",
-    "title": "Escoger y Obtener una Distribución",
-    "content": "Linux flavor. Vendor site. Server or Workstation. Mirror: wget, ftp, torrent. System resource considerations. Decidir Metodo de Instalacion . ISO. USB. Entender Actualización y Seguridad . Es importante entender el ciclo de vida de los diferentes sistems operativos. Life cycle: en algunos casos el ciclo de lanzamiento es muy agresivo, como en el caso de Fedora. Package management. Firewalls. SSHD. Return to main page. ",
-    "url": "/linux_provision/#escoger-y-obtener-una-distribuci%C3%B3n",
-    
-    "relUrl": "/linux_provision/#escoger-y-obtener-una-distribución"
-  },"52": {
+  },"18": {
     "doc": "Provision",
     "title": "Provision",
-    "content": " ",
+    "content": "# Provisonar Ambiente de Linux {: .no_toc } {: .text-delta } - TOC {:toc} --- ## Escoger y Obtener una Distribución Primero que nada debemos escoger el sabor de linux que queremos implementar. En la discussión de los [conceptos](../linux_conceptos) de Linux mencionamos que podemos escoger una version apta para servidores u otra para usuarios regulares. La sección de [referencias](#referencias) muestra una lista the varios sitios para descargar distribuciones completas de Linux. La manera típica de obtener una distribución es ir al sitio del distribuidor y descargar la imagen en formato de ISO. Podemos descargar el ISO en mas de una manera. Por ejemplo, la imagen de _CentOS 8 Stream_. * directamente del sitio de internet usando el URL en el navegador web. ``` https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso ``` * directamente en la linea de comandos en un terminal usando el el comando `wget` ``` wget https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso ``` Los ISO estan generalmente disponibles en varias localidades sincronizadas conocidos como \"espejos\" porque reflejan el mismo contenido. Podemos escoger un espejo que este cerca geograficamente a nuestra localidad para que el descargue sea más rápido; esto es importante en lugares donde la velocidad de internet no es óptima. ### Recursos de Computación Requeridos Hoy día la vasta mayoría de hardware es the arquictectura AMD64, Intel 64, and 64-bit ARM. La página de [CentOS](https://docs.centos.org/en-US/8-docs/standard-install/assembly_system-requirements-reference/) indica que los siguiente es necesario para instalar el sistema operativo: * 10Gib de disco duro * 768MiB de RAM usando USB/DVD/NFS * 1.5GiB usando HTTP/HTTPS/FTP Los requerimientos para [Ubuntu](https://help.ubuntu.com/community/Installation/SystemRequirements) son mas exigentes: * 2 GHz dual core processor * 4 GiB RAM * 25 GB (8.6 GB por lo menos) * VGA capaz de 1024x768 resolución de pantalla Cuando se usa HTTP/HTTPS/FTP como método de instalación se require mas memoria porque el tráfico del internet lledo y vieniendo a travéz del cable es muy intenso. El requerimiento de disco duro aumenta dependiendo de los paquetes escogidos para provisionar el sistema. Por ejemplo, instalar el sistema gráfico de GNOME consume mas disco duro, y tambiem mas memoria fisica para correr normalmente. ### Entender Actualización y Seguridad Fedora tiene un [ciclo](https://docs.fedoraproject.org/en-US/releases/lifecycle/) se actualizacion agresivo de cada seis meses lo que hace muy difícil mantener los sistemas al dia. De otro lado, Ubuntu tiene un [ciclo](https://ubuntu.com/about/release-cycle) mas largo; la version mas estable se conoce come la version de lanzamiento a largo plazo (LTS, o Long Term Support). {: .note } Es importante entender el ciclo de vida de los diferentes sistems operativos. {: .important } > Se debe tener en mente el ciclo de actualización y desmantelamiento de versiones. ## Decidir Método de Instalación Todas las distribuciones de Linux tienen un sistema y opciones similares de instalación. ISO : usando le imagen ISO descargarda de la internet DVD : usando un disco óptico en una unidad de DVD USB : usando una targeta de memoria adjunta a un puerto de USB Kickstart/NFS : método usado por RedHat/CentOS/Fedora a travéz del cable de network Clonar : copiar un sistema a otro con la misma configuración de hardware ## Donde Obtener Linux Linux puede descargarse de cualquier espejo disponible. Varios sabores de linux estan disponibles en [kernel.org](https://mirrors.edge.kernel.org/) Algunos sabores de Linux de fuente abierta tales come CentOS [^2], Fedora [^3], Ubuntu [^4], Debian [^5], Gentoo [^6], están disponibles gratis en varias versiones. Otras versiones tales como RedHat [^7], requieren un licensia de usuario. ## [](referencias)Referencias [^1]: [Lista de distrubuciones de Linux](https://en.wikipedia.org/wiki/List_of_Linux_distributions) [^2]: [Descargar CentOS](https://mirrors.edge.kernel.org/centos/) [^3]: [Descargar Fedora](https://fedoraproject.org/) [^4]: [Descargar Ubuntu](https://launchpad.net/ubuntu/+cdmirrors) [^5]: [Descargar Debian](https://www.debian.org/CD/http-ftp/) [^6]: [Descargar Gentoo](https://www.gentoo.org/downloads/) [^7]: [Descargar RedHat](https://access.redhat.com/downloads/) [Return to main page]({{site.baseurl}}/). ",
     "url": "/linux_provision/",
     
     "relUrl": "/linux_provision/"
-  },"53": {
+  },"19": {
     "doc": "Minikube",
     "title": "Minikube",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . Parent page for MINIKUBE . ",
-    "url": "/minikube/#minikube",
-    
-    "relUrl": "/minikube/#minikube"
-  },"54": {
-    "doc": "Minikube",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/minikube/#first-subtitle",
-    
-    "relUrl": "/minikube/#first-subtitle"
-  },"55": {
-    "doc": "Minikube",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/minikube/#second-subtitle",
-    
-    "relUrl": "/minikube/#second-subtitle"
-  },"56": {
-    "doc": "Minikube",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/minikube/#third-subtitle",
-    
-    "relUrl": "/minikube/#third-subtitle"
-  },"57": {
-    "doc": "Minikube",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow: . Example 1 . --- layout: default title: 404 nav_exclude: true --- . Example 2 . --- layout: default title: 404 nav_exclude: true --- . The examples above will not show up in the TABLE OF CONTENTS . Return to main page. ",
-    "url": "/minikube/#fourth-subtitle",
-    
-    "relUrl": "/minikube/#fourth-subtitle"
-  },"58": {
-    "doc": "Minikube",
-    "title": "Minikube",
-    "content": "Home About ",
+    "content": "[comment]: # (Adds topnav bar above the main image) Home About # Minikube {: .no_toc } {: .text-delta } - TOC {:toc} --- Parent page for MINIKUBE ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow: #### Example 1 {: .no_toc } ```yaml --- layout: default title: 404 nav_exclude: true --- ``` #### Example 2 {: .no_toc } ```yaml --- layout: default title: 404 nav_exclude: true --- ``` The examples above will not show up in the **TABLE OF CONTENTS** [Return to main page]({{site.baseurl}}/). ",
     "url": "/minikube/",
     
     "relUrl": "/minikube/"
-  },"59": {
-    "doc": "Conceptos Minikube",
-    "title": "Minikube",
-    "content": "En este document hablaremos the Minikube. El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Kubernetes. ",
-    "url": "/minikube_concepts/#minikube",
-    
-    "relUrl": "/minikube_concepts/#minikube"
-  },"60": {
-    "doc": "Conceptos Minikube",
-    "title": "Listar Minikube",
-    "content": "Ejecutemos el comando para listar la version the minikube instalada localmente. -&gt; minikube version minikube version: v1.28.0 commit: 986b1ebd987211ed16f8cc10aed7d2c42fc8392f . ",
-    "url": "/minikube_concepts/#listar-minikube",
-    
-    "relUrl": "/minikube_concepts/#listar-minikube"
-  },"61": {
-    "doc": "Conceptos Minikube",
-    "title": "Verificar Instancias de Kubernetes",
-    "content": "Verificar las instancias the kubernetes installadas corrientemente. This is el resultado en forma de comando. -&gt; minikube profile list 🎉 minikube 1.29.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.29.0 💡 To disable this notice, run: 'minikube config set WantUpdateNotification false' |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 | |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| . Este es el resultado en forma the tabla. | Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active | . | minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 |   | . NOTA: la lista es dinámica y puede cambiar . Return to main page. ",
-    "url": "/minikube_concepts/#verificar-instancias-de-kubernetes",
-    
-    "relUrl": "/minikube_concepts/#verificar-instancias-de-kubernetes"
-  },"62": {
+  },"20": {
     "doc": "Conceptos Minikube",
     "title": "Conceptos Minikube",
-    "content": "This page: Minikube Basics . ",
+    "content": "This page: Minikube Basics # Minikube En este document hablaremos the Minikube. _El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Kubernetes._ ## Listar Minikube Ejecutemos el comando para listar la version the minikube instalada localmente. ```bash -> minikube version minikube version: v1.28.0 commit: 986b1ebd987211ed16f8cc10aed7d2c42fc8392f ``` ## Verificar Instancias de Kubernetes Verificar las instancias the kubernetes installadas corrientemente. This is el resultado en forma de **comando**. ```bash -> minikube profile list 🎉 minikube 1.29.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.29.0 💡 To disable this notice, run: 'minikube config set WantUpdateNotification false' |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 | |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| ``` Este es el resultado en forma the **tabla**. |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 | |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| > NOTA: la lista es dinámica y puede cambiar [Return to main page]({{site.baseurl}}/). ",
     "url": "/minikube_concepts/",
     
     "relUrl": "/minikube_concepts/"
-  },"63": {
+  },"21": {
     "doc": "Implementacion Minikube",
     "title": "Implementacion Minikube",
-    "content": "This page: Minikube Create Cluster . Return to main page. ",
+    "content": "This page: Minikube Create Cluster [Return to main page]({{site.baseurl}}/). ",
     "url": "/minikube_implementacion/",
     
     "relUrl": "/minikube_implementacion/"
-  },"64": {
+  },"22": {
     "doc": "Instalacion Linux",
     "title": "Instalacion Linux",
-    "content": "This page: Minikube Installation LINUX . ",
+    "content": "This page: Minikube Installation LINUX ",
     "url": "/minikube_linux/minikube_installation_linux/",
     
     "relUrl": "/minikube_linux/minikube_installation_linux/"
-  },"65": {
-    "doc": "Provisión Minikube",
-    "title": "Instalacion y Configuración de Minikube",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
-    "url": "/minikube_provision/#instalacion-y-configuraci%C3%B3n-de-minikube",
-    
-    "relUrl": "/minikube_provision/#instalacion-y-configuración-de-minikube"
-  },"66": {
-    "doc": "Provisión Minikube",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/minikube_provision/#first-subtitle",
-    
-    "relUrl": "/minikube_provision/#first-subtitle"
-  },"67": {
-    "doc": "Provisión Minikube",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/minikube_provision/#second-subtitle",
-    
-    "relUrl": "/minikube_provision/#second-subtitle"
-  },"68": {
-    "doc": "Provisión Minikube",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/minikube_provision/#third-subtitle",
-    
-    "relUrl": "/minikube_provision/#third-subtitle"
-  },"69": {
-    "doc": "Provisión Minikube",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
-    "url": "/minikube_provision/#fourth-subtitle",
-    
-    "relUrl": "/minikube_provision/#fourth-subtitle"
-  },"70": {
+  },"23": {
     "doc": "Provisión Minikube",
     "title": "Provisión Minikube",
-    "content": " ",
+    "content": "# Instalacion y Configuración de Minikube {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
     "url": "/minikube_provision/",
     
     "relUrl": "/minikube_provision/"
-  },"71": {
+  },"24": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX . ",
+    "content": "This page: Minikube Use LINUX ",
     "url": "/minikube_linux/minikube_use_linux/",
     
     "relUrl": "/minikube_linux/minikube_use_linux/"
-  },"72": {
+  },"25": {
     "doc": "News",
     "title": "News",
-    "content": "Home About En esta página vamos a agregar puntos de interés que se discuten en el mundo de la informática. Return to main page. ",
+    "content": "[comment]: # (Adds topnav bar above the main image) Home About En esta página vamos a agregar puntos de interés que se discuten en el mundo de la informática. [Return to main page]({{site.baseurl}}/). ",
     "url": "/news/",
     
     "relUrl": "/news/"
-  },"73": {
-    "doc": "Manejo_De_Paquetes",
-    "title": "Introducción a Manejo De Paquetes",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
-    "url": "/paquetes/#introducci%C3%B3n-a-manejo-de-paquetes",
-    
-    "relUrl": "/paquetes/#introducción-a-manejo-de-paquetes"
-  },"74": {
-    "doc": "Manejo_De_Paquetes",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/paquetes/#first-subtitle",
-    
-    "relUrl": "/paquetes/#first-subtitle"
-  },"75": {
-    "doc": "Manejo_De_Paquetes",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/paquetes/#second-subtitle",
-    
-    "relUrl": "/paquetes/#second-subtitle"
-  },"76": {
-    "doc": "Manejo_De_Paquetes",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/paquetes/#third-subtitle",
-    
-    "relUrl": "/paquetes/#third-subtitle"
-  },"77": {
-    "doc": "Manejo_De_Paquetes",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
-    "url": "/paquetes/#fourth-subtitle",
-    
-    "relUrl": "/paquetes/#fourth-subtitle"
-  },"78": {
+  },"26": {
     "doc": "Manejo_De_Paquetes",
     "title": "Manejo_De_Paquetes",
-    "content": " ",
+    "content": "# Introducción a Manejo De Paquetes {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
     "url": "/paquetes/",
     
     "relUrl": "/paquetes/"
-  },"79": {
-    "doc": "Postgresql",
-    "title": "PostgreSQL",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
-    "url": "/postgresql/#postgresql",
-    
-    "relUrl": "/postgresql/#postgresql"
-  },"80": {
-    "doc": "Postgresql",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/postgresql/#first-subtitle",
-    
-    "relUrl": "/postgresql/#first-subtitle"
-  },"81": {
-    "doc": "Postgresql",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/postgresql/#second-subtitle",
-    
-    "relUrl": "/postgresql/#second-subtitle"
-  },"82": {
-    "doc": "Postgresql",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/postgresql/#third-subtitle",
-    
-    "relUrl": "/postgresql/#third-subtitle"
-  },"83": {
-    "doc": "Postgresql",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow. Return to main page. ",
-    "url": "/postgresql/#fourth-subtitle",
-    
-    "relUrl": "/postgresql/#fourth-subtitle"
-  },"84": {
+  },"27": {
     "doc": "Postgresql",
     "title": "Postgresql",
-    "content": "Home About ",
+    "content": "[comment]: # (Adds topnav bar above the main image) Home About # PostgreSQL {: .no_toc } {: .text-delta } - TOC {:toc} ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. [Return to main page]({{site.baseurl}}/). ",
     "url": "/postgresql/",
     
     "relUrl": "/postgresql/"
-  },"85": {
+  },"28": {
     "doc": "Conceptos Postgresql",
     "title": "Conceptos Postgresql",
-    "content": "This page: Postgresql Basics . ",
+    "content": "This page: Postgresql Basics ",
     "url": "/postgresql_concepts/",
     
     "relUrl": "/postgresql_concepts/"
-  },"86": {
+  },"29": {
     "doc": "Implemetación Postgresql",
     "title": "Implemetación Postgresql",
-    "content": "This page: Implementacion de Postgresql . Return to main page. ",
+    "content": "This page: Implementacion de Postgresql [Return to main page]({{site.baseurl}}/). ",
     "url": "/postgresql_implementation/",
     
     "relUrl": "/postgresql_implementation/"
-  },"87": {
-    "doc": "Provisión Postgresql",
-    "title": "Instalacion y Configuración de Postgresql",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
-    "url": "/postgresql_provision/#instalacion-y-configuraci%C3%B3n-de-postgresql",
-    
-    "relUrl": "/postgresql_provision/#instalacion-y-configuración-de-postgresql"
-  },"88": {
-    "doc": "Provisión Postgresql",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/postgresql_provision/#first-subtitle",
-    
-    "relUrl": "/postgresql_provision/#first-subtitle"
-  },"89": {
-    "doc": "Provisión Postgresql",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/postgresql_provision/#second-subtitle",
-    
-    "relUrl": "/postgresql_provision/#second-subtitle"
-  },"90": {
-    "doc": "Provisión Postgresql",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/postgresql_provision/#third-subtitle",
-    
-    "relUrl": "/postgresql_provision/#third-subtitle"
-  },"91": {
-    "doc": "Provisión Postgresql",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
-    "url": "/postgresql_provision/#fourth-subtitle",
-    
-    "relUrl": "/postgresql_provision/#fourth-subtitle"
-  },"92": {
+  },"30": {
     "doc": "Provisión Postgresql",
     "title": "Provisión Postgresql",
-    "content": ". ",
+    "content": "--- # Instalacion y Configuración de Postgresql {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
     "url": "/postgresql_provision/",
     
     "relUrl": "/postgresql_provision/"
-  },"93": {
+  },"31": {
     "doc": "RPMBuild",
     "title": "RPMBuild",
     "content": "This page: Como usar RPMBuild para provisionar paquetes personalizados. ",
     "url": "/package_management/rpmbuild/",
     
     "relUrl": "/package_management/rpmbuild/"
-  },"94": {
-    "doc": "SSH",
-    "title": "Introducción a SSH",
-    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
-    "url": "/ssh/#introducci%C3%B3n-a-ssh",
-    
-    "relUrl": "/ssh/#introducción-a-ssh"
-  },"95": {
-    "doc": "SSH",
-    "title": "First Subtitle",
-    "content": "This is the first section of the document. ",
-    "url": "/ssh/#first-subtitle",
-    
-    "relUrl": "/ssh/#first-subtitle"
-  },"96": {
-    "doc": "SSH",
-    "title": "Second Subtitle",
-    "content": "Second section of the document. ",
-    "url": "/ssh/#second-subtitle",
-    
-    "relUrl": "/ssh/#second-subtitle"
-  },"97": {
-    "doc": "SSH",
-    "title": "Third Subtitle",
-    "content": "And this third section of the document. ",
-    "url": "/ssh/#third-subtitle",
-    
-    "relUrl": "/ssh/#third-subtitle"
-  },"98": {
-    "doc": "SSH",
-    "title": "Fourth Subtitle",
-    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
-    "url": "/ssh/#fourth-subtitle",
-    
-    "relUrl": "/ssh/#fourth-subtitle"
-  },"99": {
+  },"32": {
     "doc": "SSH",
     "title": "SSH",
-    "content": " ",
+    "content": "# Introducción a SSH {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
     "url": "/ssh/",
     
     "relUrl": "/ssh/"
-  },"100": {
+  },"33": {
     "doc": "Conceptos de SSH",
     "title": "Conceptos de SSH",
     "content": "This page: Conceptos generals acerca de SSH en Linux. ",
     "url": "/ssh/ssh_concepts/",
     
     "relUrl": "/ssh/ssh_concepts/"
-  },"101": {
+  },"34": {
     "doc": "Implementación de SSH",
     "title": "Implementación de SSH",
-    "content": "This page: Como installar y configurar SSH en Linux . ",
+    "content": "This page: Como installar y configurar SSH en Linux ",
     "url": "/ssh/ssh_implementation/",
     
     "relUrl": "/ssh/ssh_implementation/"
-  },"102": {
+  },"35": {
     "doc": "Provisión de SSH",
     "title": "Provisión de SSH",
-    "content": "This page: Como prosionar SSH en varios sabores the LINUX . ",
+    "content": "This page: Como prosionar SSH en varios sabores the LINUX ",
     "url": "/ssh/ssh_provision/",
     
     "relUrl": "/ssh/ssh_provision/"
-  },"103": {
+  },"36": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX . ",
+    "content": "This page: Minikube Use LINUX ",
     "url": "/minikube_linux/minikube-use-linux/",
     
     "relUrl": "/minikube_linux/minikube-use-linux/"
-  },"104": {
+  },"37": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX . ",
+    "content": "This page: Minikube Use LINUX ",
     "url": "/minikube_linux/minikube-use-linux/",
     
     "relUrl": "/minikube_linux/minikube-use-linux/"
-  },"105": {
+  },"38": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX . ",
+    "content": "This page: Minikube Use LINUX ",
     "url": "/minikube_linux/minikube-use-linux/",
     
     "relUrl": "/minikube_linux/minikube-use-linux/"
-  },"106": {
+  },"39": {
     "doc": "Usar en MacOS",
     "title": "Usar en MacOS",
-    "content": "This page: Minikube Use MACOS . ",
+    "content": "This page: Minikube Use MACOS ",
     "url": "/minikube_linux/minikube-use-macos/",
     
     "relUrl": "/minikube_linux/minikube-use-macos/"
