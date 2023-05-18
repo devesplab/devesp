@@ -2,7 +2,7 @@
 layout: page
 title: Kubernetes
 permalink: /kubernetes/
-nav_order: 4
+nav_order: 5
 has_children: true
 has_toc: false
 ---
@@ -11,6 +11,7 @@ has_toc: false
 <div class="topnav">
  <a class="active" href="../index">Home</a>
  <a href="../about">About</a>
+ <a href="../news">News</a>  
 </div> 
 
 # Kubernetes
