@@ -5,7 +5,7 @@ permalink: /ssh/
 parent: Linux
 has_children: true
 has_toc: false
-nav_order: 4
+nav_order: 7
 ---
 
 # Introducción a SSH

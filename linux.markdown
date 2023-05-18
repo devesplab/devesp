@@ -7,6 +7,13 @@ has_children: true
 has_toc: false
 ---
 
+[comment]: # (Adds topnav bar above the main image)
+<div class="topnav">
+ <a class="active" href="../index">Home</a>
+ <a href="../about">About</a>
+ <a href="../news">News</a> 
+</div> 
+
 # Linux
 
 En este espacio vamos a discutir muchos aspectos referentes a Linux. 

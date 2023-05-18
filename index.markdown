@@ -8,7 +8,8 @@ layout: home
 [comment]: # (Adds topnav bar above the main image)
 <div class="topnav">
  <a class="active" href="../index">Home</a>
- <a href="./about">About</a>
+ <a href="../about">About</a>
+ <a href="../news">News</a>   
 </div> 
 
 ![](../../assets/images/devesp_logo.png)
