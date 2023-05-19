@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Implemetación Ansible
+title: Implementación Ansible
 permalink: /ansible_implementation/
 parent: Ansible
 nav_order: 3

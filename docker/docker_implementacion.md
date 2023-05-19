@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Implemetación Docker
+title: Implementación Docker
 permalink: /docker_implementation/
 parent: Docker
 nav_order: 3
