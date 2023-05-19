@@ -3,7 +3,7 @@ layout: default
 title: Provisión Ansible
 permalink: /ansible_provision/
 parent: Ansible
-nav_order: 3
+nav_order: 2
 ---
 ---
 

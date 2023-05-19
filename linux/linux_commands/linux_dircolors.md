@@ -6,7 +6,7 @@ parent: Comandos y Procesos
 grand_parent: Linux
 has_children: false
 has_toc: false
-nav_order: 4
+nav_order: 3
 ---
 
 # Colorizar Con El Comando ls
@@ -52,16 +52,11 @@ Solo dos archivos son necesarios para esta tarea:
 * **/etc/DIR_COLORS** :: Archivo de configuración para el sistema entero 
 * **~/.dir_colors** :: Archivo de configuración para el usuario individual
 
-La instalacion crea el archivo `/etc/DIR_COLORS`
+La instalacion crea el archivo `/etc/DIR_COLORS`.
+Por defacto, este archivo debe ser legible por el mundo.
 ```
 root@centos8-1 [DevEsp]
 hist:344 -> ls -l /etc/DIR_COLORS
--rw-r--r-- 1 root root 4536 Jul 13  2021 /etc/DIR_COLORS
-```
-
-Por defacto, este archivo va en el directorio `/etc`, y debe ser legible por el mundo.
-```
--> ls -l /etc/DIR_COLORS
 -rw-r--r-- 1 root root 4536 Jul 13  2021 /etc/DIR_COLORS
 ```
 

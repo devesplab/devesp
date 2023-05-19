@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Utilidades
+title: Herramientas Utiles
 permalink: /linux_commands/commands_utilities/
 parent: Comandos y Procesos
 grand_parent: Linux
 has_children: false
 has_toc: false
-nav_order: 3
+nav_order: 2
 ---
 
 This page: Utilidades Varias
