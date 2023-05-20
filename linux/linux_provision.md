@@ -24,6 +24,9 @@ nav_order: 2
 
 Primero que nada debemos escoger el sabor de linux que queremos implementar.
 
+{: .warning }
+Se debe tener en mente el ciclo de actualización y desmantelamiento de versiones.
+
 En la discussión de los [conceptos](../linux_conceptos) de Linux mencionamos que podemos escoger una version apta para servidores u otra para usuarios regulares. 
 
 La sección de [referencias](#referencias) muestra una lista the varios sitios para descargar distribuciones completas de Linux.
@@ -71,10 +74,6 @@ Fedora tiene un [ciclo](https://docs.fedoraproject.org/en-US/releases/lifecycle/
 
 {: .note }
 Es importante entender el ciclo de vida de los diferentes sistems operativos.
-
-{: .important }
-> Se debe tener en mente el ciclo de actualización y desmantelamiento de versiones.
-
 
 ## Decidir Método de Instalación
 
