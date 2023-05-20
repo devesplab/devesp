@@ -174,5 +174,3 @@ compress_html:
 # Set a path/url to a favicon that will be displayed by the browser
 favicon_ico: "./assets/images/favicon/favicon.ico"
 logo: "./assets/images/site_logo.png"
-
-page_excerpts: true

@@ -143,16 +143,16 @@ callouts:
   highlight:
     color: yellow
   important:
-    title: Important
+    title: Importante
     color: blue
   new:
-    title: New
-    color: green
-  note:
-    title: Note
+    title: Nuevo
     color: purple
+  note:
+    title: Nota
+    color: green
   warning:
-    title: Warning
+    title: Atención
     color: red
 
 plugins:
