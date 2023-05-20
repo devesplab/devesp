@@ -1,11 +1,11 @@
 ---
 layout: default
-title: RPMBuild
+title: RPMBuild en CentOS
 permalink: /package_management/rpmbuild/
-parent: Manejo_De_Paquetes
+parent: Manejando Paquetes
 grand_parent: Linux
 has_children: false
-nav_order: 2
+nav_order: 99
 ---
 
 This page: Como usar RPMBuild para provisionar paquetes personalizados.
