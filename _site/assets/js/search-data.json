@@ -1,434 +1,1253 @@
 {"0": {
     "doc": "About",
     "title": "About",
-    "content": "[comment]: # (Adds topnav bar above the main image) Home About News DevESP significa [Dev]ops en [ESP]añol. El objetivo de este sitio es hacer una pequeña contribución haciendo disponible conocimientos de infomática en el idioma Español. {: .highlight } En este sitio podria hacer referencia a recursos de información en Inglés. Haré lo mejor posible para asociar tales recursos de manera pertinente. Discutiremos conocimientos prácticos y actualizados que son usados diariamente en un ambiente típico de devops. [Return to main page]({{site.baseurl}}/). ",
+    "content": "Home About News DevESP significa [Dev]ops en [ESP]añol. El objetivo de este sitio es hacer una pequeña contribución haciendo disponible conocimientos de infomática en el idioma Español. En este sitio podria hacer referencia a recursos de información en Inglés. Haré lo mejor posible para asociar tales recursos de manera pertinente. Discutiremos conocimientos prácticos y actualizados que son usados diariamente en un ambiente típico de devops. Return to main page. ",
     "url": "/about/",
     
     "relUrl": "/about/"
   },"1": {
     "doc": "Ansible",
     "title": "Ansible",
-    "content": "[comment]: # (Adds topnav bar above the main image) Home About News # Ansible {: .no_toc } {: .text-delta } - TOC {:toc} ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. [Return to main page]({{site.baseurl}}/). ",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/ansible/#ansible",
+    
+    "relUrl": "/ansible/#ansible"
+  },"2": {
+    "doc": "Ansible",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/ansible/#first-subtitle",
+    
+    "relUrl": "/ansible/#first-subtitle"
+  },"3": {
+    "doc": "Ansible",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/ansible/#second-subtitle",
+    
+    "relUrl": "/ansible/#second-subtitle"
+  },"4": {
+    "doc": "Ansible",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/ansible/#third-subtitle",
+    
+    "relUrl": "/ansible/#third-subtitle"
+  },"5": {
+    "doc": "Ansible",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Return to main page. ",
+    "url": "/ansible/#fourth-subtitle",
+    
+    "relUrl": "/ansible/#fourth-subtitle"
+  },"6": {
+    "doc": "Ansible",
+    "title": "Ansible",
+    "content": "Home About News ",
     "url": "/ansible/",
     
     "relUrl": "/ansible/"
-  },"2": {
+  },"7": {
     "doc": "Conceptos Ansible",
     "title": "Conceptos Ansible",
-    "content": "This page: Ansible Basics ",
+    "content": "This page: Ansible Basics . ",
     "url": "/ansible_concepts/",
     
     "relUrl": "/ansible_concepts/"
-  },"3": {
+  },"8": {
     "doc": "Implementación Ansible",
     "title": "Implementación Ansible",
-    "content": "This page: Implementacion de Ansible [Return to main page]({{site.baseurl}}/). ",
+    "content": "This page: Implementacion de Ansible . Return to main page. ",
     "url": "/ansible_implementation/",
     
     "relUrl": "/ansible_implementation/"
-  },"4": {
+  },"9": {
+    "doc": "Provisión Ansible",
+    "title": "Instalacion y Configuración de Ansible",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/ansible_provision/#instalacion-y-configuraci%C3%B3n-de-ansible",
+    
+    "relUrl": "/ansible_provision/#instalacion-y-configuración-de-ansible"
+  },"10": {
+    "doc": "Provisión Ansible",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/ansible_provision/#first-subtitle",
+    
+    "relUrl": "/ansible_provision/#first-subtitle"
+  },"11": {
+    "doc": "Provisión Ansible",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/ansible_provision/#second-subtitle",
+    
+    "relUrl": "/ansible_provision/#second-subtitle"
+  },"12": {
+    "doc": "Provisión Ansible",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/ansible_provision/#third-subtitle",
+    
+    "relUrl": "/ansible_provision/#third-subtitle"
+  },"13": {
+    "doc": "Provisión Ansible",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/ansible_provision/#fourth-subtitle",
+    
+    "relUrl": "/ansible_provision/#fourth-subtitle"
+  },"14": {
     "doc": "Provisión Ansible",
     "title": "Provisión Ansible",
-    "content": "--- # Instalacion y Configuración de Ansible {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
+    "content": ". ",
     "url": "/ansible_provision/",
     
     "relUrl": "/ansible_provision/"
-  },"5": {
+  },"15": {
+    "doc": "Bash",
+    "title": "Introducción a Bash",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/bash/#introducci%C3%B3n-a-bash",
+    
+    "relUrl": "/bash/#introducción-a-bash"
+  },"16": {
+    "doc": "Bash",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/bash/#first-subtitle",
+    
+    "relUrl": "/bash/#first-subtitle"
+  },"17": {
+    "doc": "Bash",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/bash/#second-subtitle",
+    
+    "relUrl": "/bash/#second-subtitle"
+  },"18": {
+    "doc": "Bash",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/bash/#third-subtitle",
+    
+    "relUrl": "/bash/#third-subtitle"
+  },"19": {
+    "doc": "Bash",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/bash/#fourth-subtitle",
+    
+    "relUrl": "/bash/#fourth-subtitle"
+  },"20": {
     "doc": "Bash",
     "title": "Bash",
-    "content": "# Introducción a Bash {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
+    "content": " ",
     "url": "/bash/",
     
     "relUrl": "/bash/"
-  },"6": {
+  },"21": {
+    "doc": "Paquetes en CentOS",
+    "title": "Manejo de Paquetes en CentOS",
+    "content": ". ",
+    "url": "/centos_package_management/#manejo-de-paquetes-en-centos",
+    
+    "relUrl": "/centos_package_management/#manejo-de-paquetes-en-centos"
+  },"22": {
     "doc": "Paquetes en CentOS",
     "title": "Paquetes en CentOS",
-    "content": "# Manejo de Paquetes en CentOS {: .no_toc } {: .text-delta } - TOC {:toc} --- ",
+    "content": " ",
     "url": "/centos_package_management/",
     
     "relUrl": "/centos_package_management/"
-  },"7": {
+  },"23": {
+    "doc": "Markdown CheatSheet",
+    "title": "Markdown CheatSheet",
+    "content": ". | Markdown CheatSheet . | Emojis | custom NOTE | highlighted PARAGRAPH | NOTE paragraph | An important paragraph | Something NEW | Nested CALLOUTS | Warning | Footnote (callouts) | . | Heading 1 . | Heading 2 . | Heading 3 | . | blockquote | Ordered List | Unordered List | Code | Link | Tabla | Fenced Code Block | Strikethrough | Highlight, Bold, Italics | . | Header 1 . | Header 2 . | Header 3 . | Header 4 with code not transformed . | Header 5 . | Header 6 | . | . | . | There’s a horizontal rule below this. | Here is an unordered list: | And an ordered list: | And an ordered list, continued: | And an ordered list starting from 42: | And a nested list: | Nesting an ol in ul in an ol | And a task list | Nesting task lists | Nesting a ul in a task list | Nesting a task list in a ul | Large image | Labels | HTML syntax test | Definition lists can be used with HTML syntax. | Multiple description terms and values | . | More code . | THANK YOU FOR READING THIS FAR! | . | . | . | . ",
+    "url": "/markdown/#markdown-cheatsheet",
+    
+    "relUrl": "/markdown/#markdown-cheatsheet"
+  },"24": {
+    "doc": "Markdown CheatSheet",
+    "title": "Emojis",
+    "content": "Thi is an emoji 😀 . ",
+    "url": "/markdown/#emojis",
+    
+    "relUrl": "/markdown/#emojis"
+  },"25": {
+    "doc": "Markdown CheatSheet",
+    "title": "custom NOTE",
+    "content": " ",
+    "url": "/markdown/#custom-note",
+    
+    "relUrl": "/markdown/#custom-note"
+  },"26": {
     "doc": "Markdown CheatSheet",
     "title": "NOTE 1",
     "content": "London is the capital of England. ",
     "url": "/markdown/",
     
     "relUrl": "/markdown/"
-  },"8": {
+  },"27": {
     "doc": "Markdown CheatSheet",
     "title": "NOTE 2",
-    "content": "Paris is the capital of France. Ejemplos para sintax en documentos. See the [markdownguide](https://www.markdownguide.org/cheat-sheet) ## highlighted PARAGRAPH {: .highlight } A highlighted PARAGRAPH ## NOTE paragraph {: .note } A NOTE paragraph {: .note } > If you have cloned/forked and customised the theme repo, > and pull the changes of a new release to your clone, > you may need to resolve merge conflicts. ## An important paragraph {: .important } > A paragraph > > Another paragraph > > The last paragraph ## Something NEW {: .new } > Something NEW > > Another paragraph > > The last paragraph ## Nested CALLOUTS {: .important } > {: .warning } > A paragraph ## Warning {: .warning } > If your configuration states `remote_theme: just-the-docs/just-the-docs`, your > website is built using the current `main` branch of the theme, which may include > changes made after the latest release; see the [CHANGELOG]. > > If your configuration states `theme: just the docs` and your `Gemfile` specifies > `gem \"just-the-docs\"`, your website is always built using the latest release. --- ## Footnote (callouts) The website now uses *callouts*[^callouts] to draw attention to important information. You type the verbiage of the callout right below. [^callouts]: The theme website configuration defines the callout titles and colors used there. Websites that use the theme have to configure their own callout titles and colors. The callout contents shows up at the bottom of the page. Here's a sentence with a footnote. [^1] [^1]: This is the footnote. --- The file `about.markdown` is used to give information about the site. ```html TEXT . ``` # Heading 1 Below is a thick line that can be used to separate main part of the doc. https://stackoverflow.com/questions/8702708/css3-how-to-get-a-5px-wide-thick-horizontal-line http://www.sovavsiti.cz/css/hr.html ## Heading 2 ### Heading 3 ## blockquote > this is a blockquote > another > block quote ## Ordered List 1. First item 2. Second item 3. Third item ## Unordered List - First item - Second item - Third item ## Code This `code` is inline. ## Link See [this link](https://www.example.com) for more information. [Link to another page](another-page). ## Tabla | Syntax | Description | ----------- | ----------- | Header | Title | Paragraph | Text | Paragraph | Text | ## Fenced Code Block ``` { \"firstName\": \"John\", \"lastName\": \"Smith\", \"age\": 25 } ``` ## Strikethrough Text can be **bold**, _italic_, or ~~strikethrough~~. some say ~~the world is flat~~, or is it? ## Highlight, Bold, Italics I need to highlight these **very important words** to be very clear. Preview dark color scheme There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project. This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere. # [](#header-1)Header 1 Note how these headers have an anchor that shows up in the URL. The anchor shows in the URL when you click on the paperclip icon next to the header. You can then bookmark the URL for that particular header. ## [](#header-2)Header 2 > This is a blockquote following a header. > > When something is important enough, you do it even if the odds are not in your favor. ### [](#header-3)Header 3 ```js // Javascript code with syntax highlighting. var fun = function lang(l) { dateformat.i18n = require('./lang/' + l) return true; } ``` ```ruby # Ruby code with syntax highlighting GitHubPages::Dependencies.gems.each do |gem, version| s.add_dependency(gem, \"= #{version}\") end ``` #### [](#header-4)Header 4 `with code not transformed` * This is an unordered list following a header. * This is an unordered list following a header. * This is an unordered list following a header. ##### [](#header-5)Header 5 1. This is an ordered list following a header. 2. This is an ordered list following a header. 3. This is an ordered list following a header. ###### [](#header-6)Header 6 [This is a very long link which wraps and therefore doesn't overflow even when it comes at the beginning](.) of the line. - [This is a very long link which wraps and therefore doesn't overflow the line when used first in an item ](.) in a list. | head1 | head two | three |:-------------|:------------------|:------| ok | good swedish fish | nice | out of stock | good and plenty | nice | ok | good `oreos` | hmm | ok | good `zoute` drop | yumm | ### There's a horizontal rule below this. * * * ### Here is an unordered list: * Item foo * Item bar * Item baz * Item zip ### And an ordered list: 1. Item one 1. Item two 1. Item three 1. Item four ### And an ordered list, continued: 1. Item one 1. Item two Some text {:style=\"counter-reset:none\"} 1. Item three 1. Item four ### And an ordered list starting from 42: {:style=\"counter-reset:step-counter 41\"} 1. Item 42 1. Item 43 1. Item 44 ### And a nested list: - level 1 item - level 2 item - level 2 item - level 3 item - level 3 item - level 1 item - level 2 item - level 2 item - level 2 item - level 1 item - level 2 item - level 2 item - level 1 item ### Nesting an ol in ul in an ol - level 1 item (ul) 1. level 2 item (ol) 1. level 2 item (ol) - level 3 item (ul) - level 3 item (ul) - level 1 item (ul) 1. level 2 item (ol) 1. level 2 item (ol) - level 3 item (ul) - level 3 item (ul) 1. level 4 item (ol) 1. level 4 item (ol) - level 3 item (ul) - level 3 item (ul) - level 1 item (ul) ### And a task list - [ ] Hello, this is a TODO item - [ ] Hello, this is another TODO item - [x] Goodbye, this item is done ### Nesting task lists - [ ] level 1 item (task) - [ ] level 2 item (task) - [ ] level 2 item (task) - [ ] level 1 item (task) - [ ] level 1 item (task) ### Nesting a ul in a task list - [ ] level 1 item (task) - level 2 item (ul) - level 2 item (ul) - [ ] level 1 item (task) - [ ] level 1 item (task) ### Nesting a task list in a ul - level 1 item (ul) - [ ] level 2 item (task) - [ ] level 2 item (task) - level 1 item (ul) - level 1 item (ul) ### Large image ![](../../assets/images/devesp_logo.png) ### Labels I'm a label {: .label } blue {: .label .label-blue } green {: .label .label-green } purple {: .label .label-purple } yellow {: .label .label-yellow } red {: .label .label-red } **bold** {: .label } *italic* {: .label } ***bold + italic*** {: .label } Try This >>> {: .label .label-blue } ### HTML syntax test This is an HTML paragraph test . ### Definition lists can be used with HTML syntax. Name Godzilla Born 1952 Birthplace Japan Color Green #### Multiple description terms and values Term : Brief description of Term Longer Term : Longer description of Term, possibly more than one line Term1 : First description of Term, possibly more than one line : Second description of Term, possibly more than one line Term1 Term2 : Single description of Term1 and Term2, possibly more than one line Term1 Term2 : First description of Term1 and Term2, possibly more than one line : Second description of Term1 and Term2, possibly more than one line ### More code We can code with python. Try This >>> {: .label .label-blue } ```python{% raw %} def dump_args(func): \"This decorator dumps out the arguments passed to a function before calling it\" argnames = func.func_code.co_varnames[:func.func_code.co_argcount] fname = func.func_name def echo_func(*args,**kwargs): print fname, \":\", ', '.join( '%s=%r' % entry for entry in zip(argnames,args) + kwargs.items()) return func(*args, **kwargs) return echo_func @dump_args def f1(a,b,c): print a + b + c f1(1, 2, 3) def precondition(precondition, use_conditions=DEFAULT_ON): return conditions(precondition, None, use_conditions) def postcondition(postcondition, use_conditions=DEFAULT_ON): return conditions(None, postcondition, use_conditions) class conditions(object): __slots__ = ('__precondition', '__postcondition') def __init__(self, pre, post, use_conditions=DEFAULT_ON): if not use_conditions: pre, post = None, None self.__precondition = pre self.__postcondition = post {% endraw %} ``` Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. #### THANK YOU FOR READING THIS FAR! [comment]: # (This is a comment, it will not be included) [comment]: # (in the output file unless you use it in) [comment]: # (a reference style link.) [//]: # (This is a comment, it will not be included) [//]: # (in the output file unless you use it in) [//]: # (a reference style link.) ``` ``` [Return to main page]({{site.baseurl}}/). ",
+    "content": "Paris is the capital of France. Ejemplos para sintax en documentos. See the markdownguide . ",
     "url": "/markdown/",
     
     "relUrl": "/markdown/"
-  },"9": {
+  },"28": {
+    "doc": "Markdown CheatSheet",
+    "title": "highlighted PARAGRAPH",
+    "content": "A highlighted PARAGRAPH . ",
+    "url": "/markdown/#highlighted-paragraph",
+    
+    "relUrl": "/markdown/#highlighted-paragraph"
+  },"29": {
+    "doc": "Markdown CheatSheet",
+    "title": "NOTE paragraph",
+    "content": "A NOTE paragraph . If you have cloned/forked and customised the theme repo, and pull the changes of a new release to your clone, you may need to resolve merge conflicts. ",
+    "url": "/markdown/#note-paragraph",
+    
+    "relUrl": "/markdown/#note-paragraph"
+  },"30": {
+    "doc": "Markdown CheatSheet",
+    "title": "An important paragraph",
+    "content": "A paragraph . Another paragraph . The last paragraph . ",
+    "url": "/markdown/#an-important-paragraph",
+    
+    "relUrl": "/markdown/#an-important-paragraph"
+  },"31": {
+    "doc": "Markdown CheatSheet",
+    "title": "Something NEW",
+    "content": "Something NEW . Another paragraph . The last paragraph . ",
+    "url": "/markdown/#something-new",
+    
+    "relUrl": "/markdown/#something-new"
+  },"32": {
+    "doc": "Markdown CheatSheet",
+    "title": "Nested CALLOUTS",
+    "content": "A paragraph . ",
+    "url": "/markdown/#nested-callouts",
+    
+    "relUrl": "/markdown/#nested-callouts"
+  },"33": {
+    "doc": "Markdown CheatSheet",
+    "title": "Warning",
+    "content": "If your configuration states remote_theme: just-the-docs/just-the-docs, your website is built using the current main branch of the theme, which may include changes made after the latest release; see the [CHANGELOG]. If your configuration states theme: just the docs and your Gemfile specifies gem \"just-the-docs\", your website is always built using the latest release. ",
+    "url": "/markdown/#warning",
+    
+    "relUrl": "/markdown/#warning"
+  },"34": {
+    "doc": "Markdown CheatSheet",
+    "title": "Footnote (callouts)",
+    "content": "The website now uses callouts1 to draw attention to important information. You type the verbiage of the callout right below. The callout contents shows up at the bottom of the page. Here’s a sentence with a footnote. 2 . The file about.markdown is used to give information about the site. &lt;p class=\"text-small text-grey-dk-100 mb-0\"&gt;TEXT&lt;/p&gt; . ",
+    "url": "/markdown/#footnote-callouts",
+    
+    "relUrl": "/markdown/#footnote-callouts"
+  },"35": {
+    "doc": "Markdown CheatSheet",
+    "title": "Heading 1",
+    "content": "Below is a thick line that can be used to separate main part of the doc. https://stackoverflow.com/questions/8702708/css3-how-to-get-a-5px-wide-thick-horizontal-line http://www.sovavsiti.cz/css/hr.html . ",
+    "url": "/markdown/#heading-1",
+    
+    "relUrl": "/markdown/#heading-1"
+  },"36": {
+    "doc": "Markdown CheatSheet",
+    "title": "Heading 2",
+    "content": "Heading 3 . ",
+    "url": "/markdown/#heading-2",
+    
+    "relUrl": "/markdown/#heading-2"
+  },"37": {
+    "doc": "Markdown CheatSheet",
+    "title": "blockquote",
+    "content": "this is a blockquote . another block quote . ",
+    "url": "/markdown/#blockquote",
+    
+    "relUrl": "/markdown/#blockquote"
+  },"38": {
+    "doc": "Markdown CheatSheet",
+    "title": "Ordered List",
+    "content": ". | First item | Second item | Third item | . ",
+    "url": "/markdown/#ordered-list",
+    
+    "relUrl": "/markdown/#ordered-list"
+  },"39": {
+    "doc": "Markdown CheatSheet",
+    "title": "Unordered List",
+    "content": ". | First item | Second item | Third item | . ",
+    "url": "/markdown/#unordered-list",
+    
+    "relUrl": "/markdown/#unordered-list"
+  },"40": {
+    "doc": "Markdown CheatSheet",
+    "title": "Code",
+    "content": "This code is inline. ",
+    "url": "/markdown/#code",
+    
+    "relUrl": "/markdown/#code"
+  },"41": {
+    "doc": "Markdown CheatSheet",
+    "title": "Link",
+    "content": "See this link for more information. Link to another page. ",
+    "url": "/markdown/#link",
+    
+    "relUrl": "/markdown/#link"
+  },"42": {
+    "doc": "Markdown CheatSheet",
+    "title": "Tabla",
+    "content": "| Syntax | Description | . | Header | Title | . | Paragraph | Text | . | Paragraph | Text | . ",
+    "url": "/markdown/#tabla",
+    
+    "relUrl": "/markdown/#tabla"
+  },"43": {
+    "doc": "Markdown CheatSheet",
+    "title": "Fenced Code Block",
+    "content": "{ \"firstName\": \"John\", \"lastName\": \"Smith\", \"age\": 25 } . ",
+    "url": "/markdown/#fenced-code-block",
+    
+    "relUrl": "/markdown/#fenced-code-block"
+  },"44": {
+    "doc": "Markdown CheatSheet",
+    "title": "Strikethrough",
+    "content": "Text can be bold, italic, or strikethrough. some say the world is flat, or is it? . ",
+    "url": "/markdown/#strikethrough",
+    
+    "relUrl": "/markdown/#strikethrough"
+  },"45": {
+    "doc": "Markdown CheatSheet",
+    "title": "Highlight, Bold, Italics",
+    "content": "I need to highlight these very important words to be very clear. Preview dark color scheme . There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project. This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere. ",
+    "url": "/markdown/#highlight-bold-italics",
+    
+    "relUrl": "/markdown/#highlight-bold-italics"
+  },"46": {
+    "doc": "Markdown CheatSheet",
+    "title": "Header 1",
+    "content": "Note how these headers have an anchor that shows up in the URL. The anchor shows in the URL when you click on the paperclip icon next to the header. You can then bookmark the URL for that particular header. ",
+    "url": "/markdown/#header-1",
+    
+    "relUrl": "/markdown/#header-1"
+  },"47": {
+    "doc": "Markdown CheatSheet",
+    "title": "Header 2",
+    "content": "This is a blockquote following a header. When something is important enough, you do it even if the odds are not in your favor. Header 3 . // Javascript code with syntax highlighting. var fun = function lang(l) { dateformat.i18n = require('./lang/' + l) return true; } . # Ruby code with syntax highlighting GitHubPages::Dependencies.gems.each do |gem, version| s.add_dependency(gem, \"= #{version}\") end . Header 4 with code not transformed . | This is an unordered list following a header. | This is an unordered list following a header. | This is an unordered list following a header. | . Header 5 . | This is an ordered list following a header. | This is an ordered list following a header. | This is an ordered list following a header. | . Header 6 . This is a very long link which wraps and therefore doesn’t overflow even when it comes at the beginning of the line. | This is a very long link which wraps and therefore doesn’t overflow the line when used first in an item in a list. | . | head1 | head two | three | . | ok | good swedish fish | nice | . | out of stock | good and plenty | nice | . | ok | good oreos | hmm | . | ok | good zoute drop | yumm | . There’s a horizontal rule below this. Here is an unordered list: . | Item foo | Item bar | Item baz | Item zip | . And an ordered list: . | Item one | Item two | Item three | Item four | . And an ordered list, continued: . | Item one | Item two | . Some text . | Item three | Item four | . And an ordered list starting from 42: . | Item 42 | Item 43 | Item 44 | . And a nested list: . | level 1 item . | level 2 item | level 2 item . | level 3 item | level 3 item | . | . | level 1 item . | level 2 item | level 2 item | level 2 item | . | level 1 item . | level 2 item | level 2 item | . | level 1 item | . Nesting an ol in ul in an ol . | level 1 item (ul) . | level 2 item (ol) | level 2 item (ol) . | level 3 item (ul) | level 3 item (ul) | . | . | level 1 item (ul) . | level 2 item (ol) | level 2 item (ol) . | level 3 item (ul) | level 3 item (ul) | . | level 4 item (ol) | level 4 item (ol) . | level 3 item (ul) | level 3 item (ul) | . | . | level 1 item (ul) | . And a task list . | Hello, this is a TODO item | Hello, this is another TODO item | Goodbye, this item is done | . Nesting task lists . | level 1 item (task) . | level 2 item (task) | level 2 item (task) | . | level 1 item (task) | level 1 item (task) | . Nesting a ul in a task list . | level 1 item (task) . | level 2 item (ul) | level 2 item (ul) | . | level 1 item (task) | level 1 item (task) | . Nesting a task list in a ul . | level 1 item (ul) . | level 2 item (task) | level 2 item (task) | . | level 1 item (ul) | level 1 item (ul) | . Large image . Labels . I’m a label . blue . green . purple . yellow . red . bold . italic . bold + italic . Try This »&gt; . HTML syntax test . This is an HTML paragraph test . Definition lists can be used with HTML syntax. Name Godzilla Born 1952 Birthplace Japan Color Green Multiple description terms and values . Term Brief description of Term Longer Term Longer description of Term, possibly more than one line Term1 First description of Term, possibly more than one line Second description of Term, possibly more than one line . Term1 Term2 Single description of Term1 and Term2, possibly more than one line Term1 Term2 First description of Term1 and Term2, possibly more than one line Second description of Term1 and Term2, possibly more than one line . More code . We can code with python. Try This »&gt; . def dump_args(func): \"This decorator dumps out the arguments passed to a function before calling it\" argnames = func.func_code.co_varnames[:func.func_code.co_argcount] fname = func.func_name def echo_func(*args,**kwargs): print fname, \":\", ', '.join( '%s=%r' % entry for entry in zip(argnames,args) + kwargs.items()) return func(*args, **kwargs) return echo_func @dump_args def f1(a,b,c): print a + b + c f1(1, 2, 3) def precondition(precondition, use_conditions=DEFAULT_ON): return conditions(precondition, None, use_conditions) def postcondition(postcondition, use_conditions=DEFAULT_ON): return conditions(None, postcondition, use_conditions) class conditions(object): __slots__ = ('__precondition', '__postcondition') def __init__(self, pre, post, use_conditions=DEFAULT_ON): if not use_conditions: pre, post = None, None self.__precondition = pre self.__postcondition = post . Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. THANK YOU FOR READING THIS FAR! . Return to main page. | The theme website configuration defines the callout titles and colors used there. Websites that use the theme have to configure their own callout titles and colors. &#8617; . | This is the footnote. &#8617; . | . ",
+    "url": "/markdown/#header-2",
+    
+    "relUrl": "/markdown/#header-2"
+  },"48": {
     "doc": "Markdown CheatSheet",
     "title": "Markdown CheatSheet",
-    "content": "[comment]: # (Adds topnav bar above the main image) Home News About # {{ page.title }} {: .no_toc } {: .text-delta } - TOC {:toc} ## Emojis Thi is an emoji &#128512; ## custom NOTE ",
+    "content": "Home News About ",
     "url": "/markdown/",
     
     "relUrl": "/markdown/"
-  },"10": {
+  },"49": {
     "doc": "Comandos Basicos",
     "title": "Comandos Basicos",
-    "content": "This page: Comandos basicos ",
+    "content": "This page: Comandos basicos . ",
     "url": "/linux_commands/commands_basic/",
     
     "relUrl": "/linux_commands/commands_basic/"
-  },"11": {
+  },"50": {
     "doc": "Utilidades Varias",
     "title": "Utilidades Varias",
-    "content": "This page: Conceptos generals acerca de Utilidades Varias. Test ",
+    "content": "This page: Conceptos generals acerca de Utilidades Varias. Test . ",
     "url": "/linux_commands/commands_concepts/",
     
     "relUrl": "/linux_commands/commands_concepts/"
-  },"12": {
+  },"51": {
     "doc": "Herramientas Utiles",
     "title": "Herramientas Utiles",
-    "content": "This page: Utilidades Varias ",
+    "content": "This page: Utilidades Varias . ",
     "url": "/linux_commands/commands_utilities/",
     
     "relUrl": "/linux_commands/commands_utilities/"
-  },"13": {
+  },"52": {
     "doc": "Docker",
     "title": "Docker",
-    "content": "[comment]: # (Adds topnav bar above the main image) Home About # Docker {: .no_toc } {: .text-delta } - TOC {:toc} En este document hablaremos the Docker. _El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Docker._ ## Listar la version de Docker Ejecutemos el comando para listar la version the minikube instalada localmente. ```bash -> docker version Client: Cloud integration: v1.0.29 Version: 20.10.22 API version: 1.41 Go version: go1.18.9 Git commit: 3a2c30b Built: Thu Dec 15 22:28:41 2022 OS/Arch: darwin/amd64 Context: default Experimental: true ``` Tambien se pueded listar de esta manera. ``` -> docker --version Docker version 20.10.22, build 3a2c30b ``` ## Listar Imagenes de Docker El comando `docker image ls` lista las imagenes de docker presentes en el sistema. {: .note } La lista es dinámica y puede cambiar a medida que agregamos o borramos imagenes ```c -> docker image ls REPOSITORY TAG IMAGE ID CREATED SIZE prom/prometheus latest a5624f16ebec 2 months ago 223MB ubuntu 22.04 6b7dfa7e8fdb 2 months ago 77.8MB ubuntu 20.04 d5447fc01ae6 2 months ago 72.8MB grafana/grafana latest 179ad45e2c74 2 months ago 315MB docker/volumes-backup-extension 1.1.1 afd08623b0ee 2 months ago 118MB portainer/portainer-ce alpine ecdb4fbad999 3 months ago 292MB ``` Definición de terminos REPOSITORY el repositorio de origen donde localizar la imagen TAG palabra alfanumérica identificando la imagen IMAGE ID suma de sha identificando la imagen internamente en el sistema CREATED fecha cuando la imagen fue creada SIZE tamaño de la imagen en megabytes [Return to main page]({{site.baseurl}}/). ",
+    "content": ". | Listar la version de Docker | Listar Imagenes de Docker | . En este document hablaremos the Docker. El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Docker. ",
+    "url": "/docker/#docker",
+    
+    "relUrl": "/docker/#docker"
+  },"53": {
+    "doc": "Docker",
+    "title": "Listar la version de Docker",
+    "content": "Ejecutemos el comando para listar la version the minikube instalada localmente. -&gt; docker version Client: Cloud integration: v1.0.29 Version: 20.10.22 API version: 1.41 Go version: go1.18.9 Git commit: 3a2c30b Built: Thu Dec 15 22:28:41 2022 OS/Arch: darwin/amd64 Context: default Experimental: true . Tambien se pueded listar de esta manera. -&gt; docker --version Docker version 20.10.22, build 3a2c30b . ",
+    "url": "/docker/#listar-la-version-de-docker",
+    
+    "relUrl": "/docker/#listar-la-version-de-docker"
+  },"54": {
+    "doc": "Docker",
+    "title": "Listar Imagenes de Docker",
+    "content": "El comando docker image ls lista las imagenes de docker presentes en el sistema. La lista es dinámica y puede cambiar a medida que agregamos o borramos imagenes . -&gt; docker image ls REPOSITORY TAG IMAGE ID CREATED SIZE prom/prometheus latest a5624f16ebec 2 months ago 223MB ubuntu 22.04 6b7dfa7e8fdb 2 months ago 77.8MB ubuntu 20.04 d5447fc01ae6 2 months ago 72.8MB grafana/grafana latest 179ad45e2c74 2 months ago 315MB docker/volumes-backup-extension 1.1.1 afd08623b0ee 2 months ago 118MB portainer/portainer-ce alpine ecdb4fbad999 3 months ago 292MB . Definición de terminos . REPOSITORY el repositorio de origen donde localizar la imagen TAG palabra alfanumérica identificando la imagen IMAGE ID suma de sha identificando la imagen internamente en el sistema CREATED fecha cuando la imagen fue creada SIZE tamaño de la imagen en megabytes Return to main page. ",
+    "url": "/docker/#listar-imagenes-de-docker",
+    
+    "relUrl": "/docker/#listar-imagenes-de-docker"
+  },"55": {
+    "doc": "Docker",
+    "title": "Docker",
+    "content": "Home About ",
     "url": "/docker/",
     
     "relUrl": "/docker/"
-  },"14": {
+  },"56": {
     "doc": "Conceptos Docker",
     "title": "Conceptos Docker",
-    "content": "This page: Docker Basics ",
+    "content": "This page: Docker Basics . ",
     "url": "/docker_concepts/",
     
     "relUrl": "/docker_concepts/"
-  },"15": {
+  },"57": {
     "doc": "Implementación Docker",
     "title": "Implementación Docker",
-    "content": "This page: Implementacion de Docker [Return to main page]({{site.baseurl}}/). ",
+    "content": "This page: Implementacion de Docker . Return to main page. ",
     "url": "/docker_implementation/",
     
     "relUrl": "/docker_implementation/"
-  },"16": {
+  },"58": {
+    "doc": "Provisión Docker",
+    "title": "Instalacion y Configuración de Docker",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/docker_provision/#instalacion-y-configuraci%C3%B3n-de-docker",
+    
+    "relUrl": "/docker_provision/#instalacion-y-configuración-de-docker"
+  },"59": {
+    "doc": "Provisión Docker",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/docker_provision/#first-subtitle",
+    
+    "relUrl": "/docker_provision/#first-subtitle"
+  },"60": {
+    "doc": "Provisión Docker",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/docker_provision/#second-subtitle",
+    
+    "relUrl": "/docker_provision/#second-subtitle"
+  },"61": {
+    "doc": "Provisión Docker",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/docker_provision/#third-subtitle",
+    
+    "relUrl": "/docker_provision/#third-subtitle"
+  },"62": {
+    "doc": "Provisión Docker",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/docker_provision/#fourth-subtitle",
+    
+    "relUrl": "/docker_provision/#fourth-subtitle"
+  },"63": {
     "doc": "Provisión Docker",
     "title": "Provisión Docker",
-    "content": "--- # Instalacion y Configuración de Docker {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
+    "content": ". ",
     "url": "/docker_provision/",
     
     "relUrl": "/docker_provision/"
-  },"17": {
+  },"64": {
     "doc": "Instalacion Linux",
     "title": "Instalacion Linux",
-    "content": "This page: Minikube Installation LINUX ",
+    "content": "This page: Minikube Installation LINUX . ",
     "url": "/minikube_linux/minikube-installation-linux/",
     
     "relUrl": "/minikube_linux/minikube-installation-linux/"
-  },"18": {
+  },"65": {
     "doc": "Instalacion Linux",
     "title": "Instalacion Linux",
-    "content": "This page: Minikube Installation LINUX ",
+    "content": "This page: Minikube Installation LINUX . ",
     "url": "/minikube_linux/minikube-installation-linux/",
     
     "relUrl": "/minikube_linux/minikube-installation-linux/"
-  },"19": {
+  },"66": {
     "doc": "Instalacion Linux",
     "title": "Instalacion Linux",
-    "content": "This page: Minikube Installation LINUX ",
+    "content": "This page: Minikube Installation LINUX . ",
     "url": "/minikube_linux/minikube-installation-linux/",
     
     "relUrl": "/minikube_linux/minikube-installation-linux/"
-  },"20": {
+  },"67": {
     "doc": "Instalacion Linux",
     "title": "Instalacion Linux",
-    "content": "This page: Minikube Installation LINUX ",
+    "content": "This page: Minikube Installation LINUX . ",
     "url": "/minikube_linux/minikube-installation-linux/",
     
     "relUrl": "/minikube_linux/minikube-installation-linux/"
-  },"21": {
+  },"68": {
     "doc": "Instalacion MacOS",
     "title": "Instalacion MacOS",
-    "content": "This page: Minikube Installation MacOS ",
+    "content": "This page: Minikube Installation MacOS . ",
     "url": "/minikube_linux/minikube-installation-macos/",
     
     "relUrl": "/minikube_linux/minikube-installation-macos/"
-  },"22": {
+  },"69": {
     "doc": "Kubernetes",
     "title": "Kubernetes",
-    "content": "[comment]: # (Adds topnav bar above the main image) Home About News # Kubernetes {: .no_toc } {: .text-delta } - TOC {:toc} ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. [Return to main page]({{site.baseurl}}/). ",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/kubernetes/#kubernetes",
+    
+    "relUrl": "/kubernetes/#kubernetes"
+  },"70": {
+    "doc": "Kubernetes",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/kubernetes/#first-subtitle",
+    
+    "relUrl": "/kubernetes/#first-subtitle"
+  },"71": {
+    "doc": "Kubernetes",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/kubernetes/#second-subtitle",
+    
+    "relUrl": "/kubernetes/#second-subtitle"
+  },"72": {
+    "doc": "Kubernetes",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/kubernetes/#third-subtitle",
+    
+    "relUrl": "/kubernetes/#third-subtitle"
+  },"73": {
+    "doc": "Kubernetes",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Return to main page. ",
+    "url": "/kubernetes/#fourth-subtitle",
+    
+    "relUrl": "/kubernetes/#fourth-subtitle"
+  },"74": {
+    "doc": "Kubernetes",
+    "title": "Kubernetes",
+    "content": "Home About News ",
     "url": "/kubernetes/",
     
     "relUrl": "/kubernetes/"
-  },"23": {
+  },"75": {
     "doc": "Conceptos Kubernetes",
     "title": "Conceptos Kubernetes",
-    "content": "This page: Kubernetes Basics ",
+    "content": "This page: Kubernetes Basics . ",
     "url": "/kubernetes_concepts/",
     
     "relUrl": "/kubernetes_concepts/"
-  },"24": {
+  },"76": {
     "doc": "Implemetación Kubernetes",
     "title": "Implemetación Kubernetes",
-    "content": "This page: Implementacion de Kubernetes [Return to main page]({{site.baseurl}}/). ",
+    "content": "This page: Implementacion de Kubernetes . Return to main page. ",
     "url": "/kubernetes_implementation/",
     
     "relUrl": "/kubernetes_implementation/"
-  },"25": {
+  },"77": {
+    "doc": "Provisión Kubernetes",
+    "title": "Instalacion y Configuración de Kubernetes",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/kubernetes_provision/#instalacion-y-configuraci%C3%B3n-de-kubernetes",
+    
+    "relUrl": "/kubernetes_provision/#instalacion-y-configuración-de-kubernetes"
+  },"78": {
+    "doc": "Provisión Kubernetes",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/kubernetes_provision/#first-subtitle",
+    
+    "relUrl": "/kubernetes_provision/#first-subtitle"
+  },"79": {
+    "doc": "Provisión Kubernetes",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/kubernetes_provision/#second-subtitle",
+    
+    "relUrl": "/kubernetes_provision/#second-subtitle"
+  },"80": {
+    "doc": "Provisión Kubernetes",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/kubernetes_provision/#third-subtitle",
+    
+    "relUrl": "/kubernetes_provision/#third-subtitle"
+  },"81": {
+    "doc": "Provisión Kubernetes",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/kubernetes_provision/#fourth-subtitle",
+    
+    "relUrl": "/kubernetes_provision/#fourth-subtitle"
+  },"82": {
     "doc": "Provisión Kubernetes",
     "title": "Provisión Kubernetes",
-    "content": "--- # Instalacion y Configuración de Kubernetes {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
+    "content": ". ",
     "url": "/kubernetes_provision/",
     
     "relUrl": "/kubernetes_provision/"
-  },"26": {
+  },"83": {
+    "doc": "Linux",
+    "title": "Porqué Linux?",
+    "content": ". | Porqué Linux? . | Versatilidad | Extensible y Configurable | . | . Hemos de preguntarnos la razón por la que queremos usar Linux. Linux es un sistema operativo de fuente abierta. Para usar Linux solo se requiere descargar la imagen ISO deseado e instalar el sistema operativo en la computadora deseada. Una imagen de ISO es un archivo que tiene el mismo contenido que un disco óptico such as CD/DVD. Generalmente no se requiere una licensia de usuario. Una licensia de uso solo se requiere en ciertos casos en los que una rama del producto se ha comercializado. ",
+    "url": "/linux/#porqu%C3%A9-linux",
+    
+    "relUrl": "/linux/#porqué-linux"
+  },"84": {
+    "doc": "Linux",
+    "title": "Versatilidad",
+    "content": "Linux es un sistema operativo muy versátil. Hay varias versiones de Linux para escoger tales como Debian, Ubuntu, CentOS, Fedora, RedHat, Oracle Linux, OpenSuse, Getoo, y muchos otros 1. Cuál deberia escoger? Depende del caso. | Versiones para el usuario regular: son equipadas con utilidades y configuraciones que facilitan el uso diario. | Versiones para servidores: son equipadas para uso mas pesado en un ambiente de produccion empresarial. | . Linux puede usarse en sistemas fisicos y virtuales. La arquitectura del sistema operativo esta diseeñao de tal manera que puede instalarze en una variedad de platofmas. Eso ofrece un alto grade de flexibilidad. ",
+    "url": "/linux/#versatilidad",
+    
+    "relUrl": "/linux/#versatilidad"
+  },"85": {
+    "doc": "Linux",
+    "title": "Extensible y Configurable",
+    "content": "Una vez installado, el ambiente operacional ofrece alternativas para un alto grado de personalization. En el mundo práctio hay una gran variedad de immplementaciones desde lo más básico hasta lo mas complejo y seguro. Return to main page. | Lista de distrubuciones de Linux &#8617; . | . ",
+    "url": "/linux/#extensible-y-configurable",
+    
+    "relUrl": "/linux/#extensible-y-configurable"
+  },"86": {
     "doc": "Linux",
     "title": "Linux",
-    "content": "[comment]: # (Adds topnav bar above the main image) Home About News # Porqué Linux? {: .no_toc } {: .text-delta } - TOC {:toc} Hemos de preguntarnos la razón por la que queremos usar Linux. Linux es un sistema operativo de fuente abierta. Para usar Linux solo se requiere descargar la imagen ISO deseado e instalar el sistema operativo en la computadora deseada. Una imagen de ISO es un archivo que tiene el mismo contenido que un disco óptico such as CD/DVD. Generalmente no se requiere una licensia de usuario. Una licensia de uso solo se requiere en ciertos casos en los que una rama del producto se ha comercializado. ## Versatilidad Linux es un sistema operativo muy versátil. Hay varias versiones de Linux para escoger tales como Debian, Ubuntu, CentOS, Fedora, RedHat, Oracle Linux, OpenSuse, Getoo, y muchos otros [^1]. Cuál deberia escoger? Depende del caso. - Versiones para el usuario regular: son equipadas con utilidades y configuraciones que facilitan el uso diario. - Versiones para servidores: son equipadas para uso mas pesado en un ambiente de produccion empresarial. Linux puede usarse en sistemas fisicos y virtuales. La arquitectura del sistema operativo esta diseeñao de tal manera que puede instalarze en una variedad de platofmas. Eso ofrece un alto grade de flexibilidad. ## Extensible y Configurable Una vez installado, el ambiente operacional ofrece alternativas para un alto grado de personalization. En el mundo práctio hay una gran variedad de immplementaciones desde lo más básico hasta lo mas complejo y seguro. [^1]: [Lista de distrubuciones de Linux](https://en.wikipedia.org/wiki/List_of_Linux_distributions) [Return to main page]({{site.baseurl}}/). ",
+    "content": "Home About News ",
     "url": "/linux/",
     
     "relUrl": "/linux/"
-  },"27": {
+  },"87": {
+    "doc": "Comandos y Procesos",
+    "title": "Introducción a Comando y Processos en Linux",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/linux_commands/#introducci%C3%B3n-a-comando-y-processos-en-linux",
+    
+    "relUrl": "/linux_commands/#introducción-a-comando-y-processos-en-linux"
+  },"88": {
+    "doc": "Comandos y Procesos",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/linux_commands/#first-subtitle",
+    
+    "relUrl": "/linux_commands/#first-subtitle"
+  },"89": {
+    "doc": "Comandos y Procesos",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/linux_commands/#second-subtitle",
+    
+    "relUrl": "/linux_commands/#second-subtitle"
+  },"90": {
+    "doc": "Comandos y Procesos",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/linux_commands/#third-subtitle",
+    
+    "relUrl": "/linux_commands/#third-subtitle"
+  },"91": {
+    "doc": "Comandos y Procesos",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/linux_commands/#fourth-subtitle",
+    
+    "relUrl": "/linux_commands/#fourth-subtitle"
+  },"92": {
     "doc": "Comandos y Procesos",
     "title": "Comandos y Procesos",
-    "content": "# Introducción a Comando y Processos en Linux {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
+    "content": " ",
     "url": "/linux_commands/",
     
     "relUrl": "/linux_commands/"
-  },"28": {
+  },"93": {
+    "doc": "Conceptos",
+    "title": "Conceptos para Empezar",
+    "content": " ",
+    "url": "/linux_conceptos/#conceptos-para-empezar",
+    
+    "relUrl": "/linux_conceptos/#conceptos-para-empezar"
+  },"94": {
+    "doc": "Conceptos",
+    "title": "System De Archivos (Filesystem)",
+    "content": " ",
+    "url": "/linux_conceptos/#system-de-archivos-filesystem",
+    
+    "relUrl": "/linux_conceptos/#system-de-archivos-filesystem"
+  },"95": {
+    "doc": "Conceptos",
+    "title": "Terminal",
+    "content": " ",
+    "url": "/linux_conceptos/#terminal",
+    
+    "relUrl": "/linux_conceptos/#terminal"
+  },"96": {
+    "doc": "Conceptos",
+    "title": "Linea De Comandos",
+    "content": " ",
+    "url": "/linux_conceptos/#linea-de-comandos",
+    
+    "relUrl": "/linux_conceptos/#linea-de-comandos"
+  },"97": {
+    "doc": "Conceptos",
+    "title": "Directorio De Inicio (Home Directory)",
+    "content": " ",
+    "url": "/linux_conceptos/#directorio-de-inicio-home-directory",
+    
+    "relUrl": "/linux_conceptos/#directorio-de-inicio-home-directory"
+  },"98": {
+    "doc": "Conceptos",
+    "title": "Paginas Manuales (Man Pages)",
+    "content": "Return to main page. ",
+    "url": "/linux_conceptos/#paginas-manuales-man-pages",
+    
+    "relUrl": "/linux_conceptos/#paginas-manuales-man-pages"
+  },"99": {
     "doc": "Conceptos",
     "title": "Conceptos",
-    "content": "# Conceptos para Empezar ## System De Archivos (Filesystem) ## Terminal ## Linea De Comandos ## Directorio De Inicio (Home Directory) ## Paginas Manuales (Man Pages) [Return to main page]({{site.baseurl}}/). ",
+    "content": " ",
     "url": "/linux_conceptos/",
     
     "relUrl": "/linux_conceptos/"
-  },"29": {
+  },"100": {
+    "doc": "DirColors en la Terminal",
+    "title": "Colorizar Con DirColors",
+    "content": ". | Colorizar Con DirColors . | Instalar y Configuración en CentOS . | Configurar El Ambiente | Usando Color Con Salida de Comandos | . | Instalar y Configuración en Ubuntu | Referencias | . | . Normalmente cuando usamos el comando ls para listar archivos y carpetas, la salida son colores de facto. Esto se puede modifiar para ver la salida del comando con ciertos colores que ayuda visualmente para leer mejor lo que vemos en la pantalla. El proceso para abilitar esto es simple: . | instalar el paquete requerido | obtener el archivo de configuración y modificarlo | crear personalizaciones deseadas | . ",
+    "url": "/linux_commands/linux_dircolors/#colorizar-con-dircolors",
+    
+    "relUrl": "/linux_commands/linux_dircolors/#colorizar-con-dircolors"
+  },"101": {
+    "doc": "DirColors en la Terminal",
+    "title": "Instalar y Configuración en CentOS",
+    "content": "En CentOS 8 Stream, es necesario instalar el paquete coreutils-common para poder usar colorizacion en el listado the archivos y carpetas. root@centos8-1 [DevEsp] hist:343 -&gt; yum install coreutils-common-8.30-12.el8.x86_64 Last metadata expiration check: 21:25:08 ago on Tue 16 May 2023 08:04:12 PM PDT. Dependencies resolved. ================================================================================ Package Architecture Version Repository Size ================================================================================ coreutils-common x86_64 8.30-12.el8 baseos ================================================================================ Install 1 Package . Solo dos archivos son necesarios para esta tarea: . | /etc/DIR_COLORS :: Archivo de configuración para el sistema entero | ~/.dir_colors :: Archivo de configuración para el usuario individual | . La instalacion crea el archivo /etc/DIR_COLORS. Por defacto, este archivo debe ser legible por el mundo. root@centos8-1 [DevEsp] hist:344 -&gt; ls -l /etc/DIR_COLORS -rw-r--r-- 1 root root 4536 Jul 13 2021 /etc/DIR_COLORS . A partir de ahora, la confiugration está disponible para todos los usuarios. Pero podemos copiar el archivo a .dir_colors en nuestro directorio de inicio $HOME para re-escribir los valores predeterminados del sistema. -&gt; sudo cp /etc/DIR_COLORS ~/.dir_colors . Si modificamos nuestra copia, solo afecta nuestro ambiento. Configurar El Ambiente . Una vez que hemos copiado el archivo a nuestro directorio de inicio, agregemos esta linea en ~/.bash_profile para abilitar esta característica automáticamente cada vez que entremos al sistema. eval $(dircolors ~/.dir_colors) . Esta otra forma es mejor porque verifica que el archivo existe y si no, entoces lee la base de datos de facto disponible internamente en el sistema. [ -e ~/.dircolors ] &amp;&amp; eval $(dircolors -b ~/.dircolors) || eval $(dircolors -b) . El comando dircolors usa la variable the ambient LS_COLORS para determinar los colores con los cuales mostrará la salida del comando ls. Usando Color Con Salida de Comandos . Ahora podemos usar el parámetro --color con el comando ls para ver la salida del comando en color. -&gt; ls -l --color /usr/bin . Ahora, usando cualquiera de esos aliases resultará en salida de comando colorizado, por ejemplo este alias produce un listado de archivos formateado en tres columnas. -&gt; ls . Si no deseamos color podemos hacer esto para nulificar el effecto. alias ls=\"ls --color=never\" . Para comprobar la configuración podemos listar algunos directorios conocidos. La salida del comando debería mostrar algunas carpetas y archivos en colores diferentes. -&gt; ll /etc -&gt; ls --color -l /sbin . ",
+    "url": "/linux_commands/linux_dircolors/#instalar-y-configuraci%C3%B3n-en-centos",
+    
+    "relUrl": "/linux_commands/linux_dircolors/#instalar-y-configuración-en-centos"
+  },"102": {
+    "doc": "DirColors en la Terminal",
+    "title": "Instalar y Configuración en Ubuntu",
+    "content": "En Ubuntu, esta característica la provee el paquete coreutils. El paquete deberia estar instalado de facto haciendo disponible el comando /usr/bin/dircolors el cual toma una base de datos precargado, o también puede tomar por argumento un archivo con personalizaciones. Crear el archivo ~/.dir_colors es opcional. Simplemente úsese asi: . -&gt; ls --color -l /sbin . Para más información ver la ayuda en línea. -&gt; /usr/bin/dircolors --help . ",
+    "url": "/linux_commands/linux_dircolors/#instalar-y-configuraci%C3%B3n-en-ubuntu",
+    
+    "relUrl": "/linux_commands/linux_dircolors/#instalar-y-configuración-en-ubuntu"
+  },"103": {
+    "doc": "DirColors en la Terminal",
+    "title": "Referencias",
+    "content": ". | Ver las páginas manuales. -&gt; man dir_colors -&gt; man dircolors . | Ver el archivo de configuración. -&gt; cat /etc/DIR_COLORS . | Página manual de dir_colors para CentOS en linea. | Página manual de dir_colors para Ubuntu en linea. | Ver vivid en Github. | . ",
+    "url": "/linux_commands/linux_dircolors/#referencias",
+    
+    "relUrl": "/linux_commands/linux_dircolors/#referencias"
+  },"104": {
     "doc": "DirColors en la Terminal",
     "title": "DirColors en la Terminal",
-    "content": "# Colorizar Con DirColors {: .no_toc } {: .text-delta } - TOC {:toc} Normalmente cuando usamos el comando `ls` para listar archivos y carpetas, la salida son colores de facto. Esto se puede modifiar para ver la salida del comando con ciertos colores que ayuda visualmente para leer mejor lo que vemos en la pantalla. El proceso para abilitar esto es simple: * instalar el paquete requerido * obtener el archivo de configuración y modificarlo * crear personalizaciones deseadas . ## Instalar y Configuración en CentOS En **CentOS 8 Stream**, es necesario instalar el paquete `coreutils-common` para poder usar colorizacion en el listado the archivos y carpetas. ```bash root@centos8-1 [DevEsp] hist:343 -> yum install coreutils-common-8.30-12.el8.x86_64 Last metadata expiration check: 21:25:08 ago on Tue 16 May 2023 08:04:12 PM PDT. Dependencies resolved. ================================================================================ Package Architecture Version Repository Size ================================================================================ coreutils-common x86_64 8.30-12.el8 baseos ================================================================================ Install 1 Package ``` Solo dos archivos son necesarios para esta tarea: * **/etc/DIR_COLORS** :: Archivo de configuración para el sistema entero * **~/.dir_colors** :: Archivo de configuración para el usuario individual La instalacion crea el archivo `/etc/DIR_COLORS`. Por defacto, este archivo debe ser legible por el mundo. ``` root@centos8-1 [DevEsp] hist:344 -> ls -l /etc/DIR_COLORS -rw-r--r-- 1 root root 4536 Jul 13 2021 /etc/DIR_COLORS ``` A partir de ahora, la confiugration está disponible para todos los usuarios. Pero podemos copiar el archivo a `.dir_colors` en nuestro directorio de inicio $HOME para re-escribir los valores predeterminados del sistema. ``` -> sudo cp /etc/DIR_COLORS ~/.dir_colors ``` Si modificamos nuestra copia, solo afecta nuestro ambiento. * * * ### Configurar El Ambiente Una vez que hemos copiado el archivo a nuestro directorio de inicio, agregemos esta linea en `~/.bash_profile` para abilitar esta característica automáticamente cada vez que entremos al sistema. ``` eval $(dircolors ~/.dir_colors) ``` Esta otra forma es mejor porque verifica que el archivo existe y si no, entoces lee la base de datos de facto disponible internamente en el sistema. ``` [ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) || eval $(dircolors -b) ``` {: .note } > El comando `dircolors` usa la variable the ambient LS_COLORS para determinar los colores con los cuales mostrará la salida del comando `ls`. * * * ### Usando Color Con Salida de Comandos Ahora podemos usar el parámetro `--color` con el comando `ls` para ver la salida del comando en color. ``` -> ls -l --color /usr/bin ``` Ahora, usando cualquiera de esos aliases resultará en salida de comando colorizado, por ejemplo este alias produce un listado de archivos formateado en tres columnas. ``` -> ls ``` Si no deseamos color podemos hacer esto para nulificar el effecto. ``` alias ls=\"ls --color=never\" ``` Para comprobar la configuración podemos listar algunos directorios conocidos. La salida del comando debería mostrar algunas carpetas y archivos en colores diferentes. ``` -> ll /etc -> ls --color -l /sbin ``` . ## Instalar y Configuración en Ubuntu En Ubuntu, esta característica la provee el paquete `coreutils`. El paquete deberia estar instalado de facto haciendo disponible el comando `/usr/bin/dircolors` el cual toma una base de datos precargado, o también puede tomar por argumento un archivo con personalizaciones. Crear el archivo `~/.dir_colors` es opcional. Simplemente úsese asi: ``` -> ls --color -l /sbin ``` Para más información ver la ayuda en línea. ``` -> /usr/bin/dircolors --help ``` . ## Referencias * Ver las páginas manuales. ``` -> man dir_colors -> man dircolors ``` * Ver el archivo de configuración. ``` -> cat /etc/DIR_COLORS ``` * Página manual de [dir_colors para CentOS](https://linux.die.net/man/5/dir_colors) en linea. * Página manual de [dir_colors para Ubuntu](https://manpages.ubuntu.com/manpages/trusty/man1/dircolors.1.html) en linea. * Ver [vivid](https://github.com/sharkdp/vivid) en Github. ",
+    "content": " ",
     "url": "/linux_commands/linux_dircolors/",
     
     "relUrl": "/linux_commands/linux_dircolors/"
-  },"30": {
+  },"105": {
+    "doc": "Implementación",
+    "title": "Personalización y Extensión",
+    "content": "Algunos sabores de sistemas operativos son mas facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de production. ",
+    "url": "/linux_implementacion/#personalizaci%C3%B3n-y-extensi%C3%B3n",
+    
+    "relUrl": "/linux_implementacion/#personalización-y-extensión"
+  },"106": {
+    "doc": "Implementación",
+    "title": "Directorio de Inicio",
+    "content": "Cada usuario puede hacer ver su Directorio de Inicio en manera differente. ",
+    "url": "/linux_implementacion/#directorio-de-inicio",
+    
+    "relUrl": "/linux_implementacion/#directorio-de-inicio"
+  },"107": {
+    "doc": "Implementación",
+    "title": "Ambiente en Linux",
+    "content": "Directorio del usuario. Variables de ambient: PS1 . Una de los mejores características de Linux es que puede personalizarse de la manera que deseamos. ",
+    "url": "/linux_implementacion/#ambiente-en-linux",
+    
+    "relUrl": "/linux_implementacion/#ambiente-en-linux"
+  },"108": {
+    "doc": "Implementación",
+    "title": "Las Variables de Ambiente",
+    "content": "La variable PS1. Return to main page. ",
+    "url": "/linux_implementacion/#las-variables-de-ambiente",
+    
+    "relUrl": "/linux_implementacion/#las-variables-de-ambiente"
+  },"109": {
     "doc": "Implementación",
     "title": "Implementación",
-    "content": "# Personalización y Extensión Algunos sabores de sistemas operativos son mas facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de production. ## Directorio de Inicio Cada usuario puede hacer ver su Directorio de Inicio en manera differente. ## Ambiente en Linux Directorio del usuario. Variables de ambient: PS1 Una de los mejores características de Linux es que puede personalizarse de la manera que deseamos. ## Las Variables de Ambiente La variable PS1. [Return to main page]({{site.baseurl}}/). ",
+    "content": " ",
     "url": "/linux_implementacion/",
     
     "relUrl": "/linux_implementacion/"
-  },"31": {
+  },"110": {
+    "doc": "Provision",
+    "title": "Provisonar Ambiente de Linux",
+    "content": ". | Escoger y Obtener una Distribución . | Recursos de Computación Requeridos | Entender Actualización y Seguridad | . | Decidir Método de Instalación | Donde Obtener Linux | Referencias | . ",
+    "url": "/linux_provision/#provisonar-ambiente-de-linux",
+    
+    "relUrl": "/linux_provision/#provisonar-ambiente-de-linux"
+  },"111": {
+    "doc": "Provision",
+    "title": "Escoger y Obtener una Distribución",
+    "content": "Primero que nada debemos escoger el sabor de linux que queremos implementar. Se debe tener en mente el ciclo de actualización y desmantelamiento de versiones. En la discussión de los conceptos de Linux mencionamos que podemos escoger una version apta para servidores u otra para usuarios regulares. La sección de referencias muestra una lista the varios sitios para descargar distribuciones completas de Linux. La manera típica de obtener una distribución es ir al sitio del distribuidor y descargar la imagen en formato de ISO. Podemos descargar el ISO en mas de una manera. Por ejemplo, la imagen de CentOS 8 Stream. | directamente del sitio de internet usando el URL en el navegador web. https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso . | directamente en la linea de comandos en un terminal usando el el comando wget wget https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso . | . Los ISO estan generalmente disponibles en varias localidades sincronizadas conocidos como “espejos” porque reflejan el mismo contenido. Podemos escoger un espejo que este cerca geograficamente a nuestra localidad para que el descargue sea más rápido; esto es importante en lugares donde la velocidad de internet no es óptima. Recursos de Computación Requeridos . Hoy día la vasta mayoría de hardware es the arquictectura AMD64, Intel 64, and 64-bit ARM. La página de CentOS indica que los siguiente es necesario para instalar el sistema operativo: . | 10Gib de disco duro | 768MiB de RAM usando USB/DVD/NFS | 1.5GiB usando HTTP/HTTPS/FTP | . Los requerimientos para Ubuntu son mas exigentes: . | 2 GHz dual core processor | 4 GiB RAM | 25 GB (8.6 GB por lo menos) | VGA capaz de 1024x768 resolución de pantalla | . Cuando se usa HTTP/HTTPS/FTP como método de instalación se require mas memoria porque el tráfico del internet lledo y vieniendo a travéz del cable es muy intenso. El requerimiento de disco duro aumenta dependiendo de los paquetes escogidos para provisionar el sistema. Por ejemplo, instalar el sistema gráfico de GNOME consume mas disco duro, y tambiem mas memoria fisica para correr normalmente. Entender Actualización y Seguridad . Fedora tiene un ciclo se actualizacion agresivo de cada seis meses lo que hace muy difícil mantener los sistemas al dia. De otro lado, Ubuntu tiene un ciclo mas largo; la version mas estable se conoce come la version de lanzamiento a largo plazo (LTS, o Long Term Support). Es importante entender el ciclo de vida de los diferentes sistems operativos. ",
+    "url": "/linux_provision/#escoger-y-obtener-una-distribuci%C3%B3n",
+    
+    "relUrl": "/linux_provision/#escoger-y-obtener-una-distribución"
+  },"112": {
+    "doc": "Provision",
+    "title": "Decidir Método de Instalación",
+    "content": "Todas las distribuciones de Linux tienen un sistema y opciones similares de instalación. ISO usando le imagen ISO descargarda de la internet DVD usando un disco óptico en una unidad de DVD USB usando una targeta de memoria adjunta a un puerto de USB Kickstart/NFS método usado por RedHat/CentOS/Fedora a travéz del cable de network Clonar copiar un sistema a otro con la misma configuración de hardware ",
+    "url": "/linux_provision/#decidir-m%C3%A9todo-de-instalaci%C3%B3n",
+    
+    "relUrl": "/linux_provision/#decidir-método-de-instalación"
+  },"113": {
+    "doc": "Provision",
+    "title": "Donde Obtener Linux",
+    "content": "Linux puede descargarse de cualquier espejo disponible. Varios sabores de linux estan disponibles en kernel.org Algunos sabores de Linux de fuente abierta tales come CentOS 1, Fedora 2, Ubuntu 3, Debian 4, Gentoo 5, están disponibles gratis en varias versiones. Otras versiones tales como RedHat 6, requieren un licensia de usuario. ",
+    "url": "/linux_provision/#donde-obtener-linux",
+    
+    "relUrl": "/linux_provision/#donde-obtener-linux"
+  },"114": {
+    "doc": "Provision",
+    "title": "Referencias",
+    "content": "Return to main page. | Descargar CentOS &#8617; . | Descargar Fedora &#8617; . | Descargar Ubuntu &#8617; . | Descargar Debian &#8617; . | Descargar Gentoo &#8617; . | Descargar RedHat &#8617; . | . ",
+    "url": "/linux_provision/#referencias",
+    
+    "relUrl": "/linux_provision/#referencias"
+  },"115": {
     "doc": "Provision",
     "title": "Provision",
-    "content": "# Provisonar Ambiente de Linux {: .no_toc } {: .text-delta } - TOC {:toc} --- ## Escoger y Obtener una Distribución Primero que nada debemos escoger el sabor de linux que queremos implementar. {: .warning } Se debe tener en mente el ciclo de actualización y desmantelamiento de versiones. En la discussión de los [conceptos](../linux_conceptos) de Linux mencionamos que podemos escoger una version apta para servidores u otra para usuarios regulares. La sección de [referencias](#referencias) muestra una lista the varios sitios para descargar distribuciones completas de Linux. La manera típica de obtener una distribución es ir al sitio del distribuidor y descargar la imagen en formato de ISO. Podemos descargar el ISO en mas de una manera. Por ejemplo, la imagen de _CentOS 8 Stream_. * directamente del sitio de internet usando el URL en el navegador web. ``` https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso ``` * directamente en la linea de comandos en un terminal usando el el comando `wget` ``` wget https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso ``` Los ISO estan generalmente disponibles en varias localidades sincronizadas conocidos como \"espejos\" porque reflejan el mismo contenido. Podemos escoger un espejo que este cerca geograficamente a nuestra localidad para que el descargue sea más rápido; esto es importante en lugares donde la velocidad de internet no es óptima. ### Recursos de Computación Requeridos Hoy día la vasta mayoría de hardware es the arquictectura AMD64, Intel 64, and 64-bit ARM. La página de [CentOS](https://docs.centos.org/en-US/8-docs/standard-install/assembly_system-requirements-reference/) indica que los siguiente es necesario para instalar el sistema operativo: * 10Gib de disco duro * 768MiB de RAM usando USB/DVD/NFS * 1.5GiB usando HTTP/HTTPS/FTP Los requerimientos para [Ubuntu](https://help.ubuntu.com/community/Installation/SystemRequirements) son mas exigentes: * 2 GHz dual core processor * 4 GiB RAM * 25 GB (8.6 GB por lo menos) * VGA capaz de 1024x768 resolución de pantalla Cuando se usa HTTP/HTTPS/FTP como método de instalación se require mas memoria porque el tráfico del internet lledo y vieniendo a travéz del cable es muy intenso. El requerimiento de disco duro aumenta dependiendo de los paquetes escogidos para provisionar el sistema. Por ejemplo, instalar el sistema gráfico de GNOME consume mas disco duro, y tambiem mas memoria fisica para correr normalmente. ### Entender Actualización y Seguridad Fedora tiene un [ciclo](https://docs.fedoraproject.org/en-US/releases/lifecycle/) se actualizacion agresivo de cada seis meses lo que hace muy difícil mantener los sistemas al dia. De otro lado, Ubuntu tiene un [ciclo](https://ubuntu.com/about/release-cycle) mas largo; la version mas estable se conoce come la version de lanzamiento a largo plazo (LTS, o Long Term Support). {: .note } Es importante entender el ciclo de vida de los diferentes sistems operativos. ## Decidir Método de Instalación Todas las distribuciones de Linux tienen un sistema y opciones similares de instalación. ISO : usando le imagen ISO descargarda de la internet DVD : usando un disco óptico en una unidad de DVD USB : usando una targeta de memoria adjunta a un puerto de USB Kickstart/NFS : método usado por RedHat/CentOS/Fedora a travéz del cable de network Clonar : copiar un sistema a otro con la misma configuración de hardware ## Donde Obtener Linux Linux puede descargarse de cualquier espejo disponible. Varios sabores de linux estan disponibles en [kernel.org](https://mirrors.edge.kernel.org/) Algunos sabores de Linux de fuente abierta tales come CentOS [^2], Fedora [^3], Ubuntu [^4], Debian [^5], Gentoo [^6], están disponibles gratis en varias versiones. Otras versiones tales como RedHat [^7], requieren un licensia de usuario. ## [](referencias)Referencias [^1]: [Lista de distrubuciones de Linux](https://en.wikipedia.org/wiki/List_of_Linux_distributions) [^2]: [Descargar CentOS](https://mirrors.edge.kernel.org/centos/) [^3]: [Descargar Fedora](https://fedoraproject.org/) [^4]: [Descargar Ubuntu](https://launchpad.net/ubuntu/+cdmirrors) [^5]: [Descargar Debian](https://www.debian.org/CD/http-ftp/) [^6]: [Descargar Gentoo](https://www.gentoo.org/downloads/) [^7]: [Descargar RedHat](https://access.redhat.com/downloads/) [Return to main page]({{site.baseurl}}/). ",
+    "content": " ",
     "url": "/linux_provision/",
     
     "relUrl": "/linux_provision/"
-  },"32": {
+  },"116": {
     "doc": "Minikube",
     "title": "Minikube",
-    "content": "[comment]: # (Adds topnav bar above the main image) Home About News # Minikube {: .no_toc } {: .text-delta } - TOC {:toc} --- Parent page for MINIKUBE ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow: #### Example 1 {: .no_toc } ```yaml --- layout: default title: 404 nav_exclude: true --- ``` #### Example 2 {: .no_toc } ```yaml --- layout: default title: 404 nav_exclude: true --- ``` The examples above will not show up in the **TABLE OF CONTENTS** [Return to main page]({{site.baseurl}}/). ",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . Parent page for MINIKUBE . ",
+    "url": "/minikube/#minikube",
+    
+    "relUrl": "/minikube/#minikube"
+  },"117": {
+    "doc": "Minikube",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/minikube/#first-subtitle",
+    
+    "relUrl": "/minikube/#first-subtitle"
+  },"118": {
+    "doc": "Minikube",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/minikube/#second-subtitle",
+    
+    "relUrl": "/minikube/#second-subtitle"
+  },"119": {
+    "doc": "Minikube",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/minikube/#third-subtitle",
+    
+    "relUrl": "/minikube/#third-subtitle"
+  },"120": {
+    "doc": "Minikube",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow: . Example 1 . --- layout: default title: 404 nav_exclude: true --- . Example 2 . --- layout: default title: 404 nav_exclude: true --- . The examples above will not show up in the TABLE OF CONTENTS . Return to main page. ",
+    "url": "/minikube/#fourth-subtitle",
+    
+    "relUrl": "/minikube/#fourth-subtitle"
+  },"121": {
+    "doc": "Minikube",
+    "title": "Minikube",
+    "content": "Home About News ",
     "url": "/minikube/",
     
     "relUrl": "/minikube/"
-  },"33": {
+  },"122": {
+    "doc": "Conceptos Minikube",
+    "title": "Minikube",
+    "content": "En este document hablaremos the Minikube. El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Kubernetes. ",
+    "url": "/minikube_concepts/#minikube",
+    
+    "relUrl": "/minikube_concepts/#minikube"
+  },"123": {
+    "doc": "Conceptos Minikube",
+    "title": "Listar Minikube",
+    "content": "Ejecutemos el comando para listar la version the minikube instalada localmente. -&gt; minikube version minikube version: v1.28.0 commit: 986b1ebd987211ed16f8cc10aed7d2c42fc8392f . ",
+    "url": "/minikube_concepts/#listar-minikube",
+    
+    "relUrl": "/minikube_concepts/#listar-minikube"
+  },"124": {
+    "doc": "Conceptos Minikube",
+    "title": "Verificar Instancias de Kubernetes",
+    "content": "Verificar las instancias the kubernetes installadas corrientemente. This is el resultado en forma de comando. -&gt; minikube profile list 🎉 minikube 1.29.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.29.0 💡 To disable this notice, run: 'minikube config set WantUpdateNotification false' |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 | |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| . Este es el resultado en forma the tabla. | Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active | . | minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 |   | . NOTA: la lista es dinámica y puede cambiar . Return to main page. ",
+    "url": "/minikube_concepts/#verificar-instancias-de-kubernetes",
+    
+    "relUrl": "/minikube_concepts/#verificar-instancias-de-kubernetes"
+  },"125": {
     "doc": "Conceptos Minikube",
     "title": "Conceptos Minikube",
-    "content": "This page: Minikube Basics # Minikube En este document hablaremos the Minikube. _El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Kubernetes._ ## Listar Minikube Ejecutemos el comando para listar la version the minikube instalada localmente. ```bash -> minikube version minikube version: v1.28.0 commit: 986b1ebd987211ed16f8cc10aed7d2c42fc8392f ``` ## Verificar Instancias de Kubernetes Verificar las instancias the kubernetes installadas corrientemente. This is el resultado en forma de **comando**. ```bash -> minikube profile list 🎉 minikube 1.29.0 is available! Download it: https://github.com/kubernetes/minikube/releases/tag/v1.29.0 💡 To disable this notice, run: 'minikube config set WantUpdateNotification false' |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 | |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| ``` Este es el resultado en forma the **tabla**. |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| Profile | VM Driver | Runtime | IP | Port | Version | Status | Nodes | Active |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| minikube-v1.23.4a | hyperkit | docker | 172.16.156.9 | 8443 | v1.23.4 | Stopped | 3 | |-------------------|-----------|---------|--------------|------|---------|---------|-------|--------| > NOTA: la lista es dinámica y puede cambiar [Return to main page]({{site.baseurl}}/). ",
+    "content": "This page: Minikube Basics . ",
     "url": "/minikube_concepts/",
     
     "relUrl": "/minikube_concepts/"
-  },"34": {
+  },"126": {
     "doc": "Implementacion Minikube",
     "title": "Implementacion Minikube",
-    "content": "This page: Minikube Create Cluster [Return to main page]({{site.baseurl}}/). ",
+    "content": "This page: Minikube Create Cluster . Return to main page. ",
     "url": "/minikube_implementacion/",
     
     "relUrl": "/minikube_implementacion/"
-  },"35": {
+  },"127": {
     "doc": "Instalacion Linux",
     "title": "Instalacion Linux",
-    "content": "This page: Minikube Installation LINUX ",
+    "content": "This page: Minikube Installation LINUX . ",
     "url": "/minikube_linux/minikube_installation_linux/",
     
     "relUrl": "/minikube_linux/minikube_installation_linux/"
-  },"36": {
+  },"128": {
+    "doc": "Provisión Minikube",
+    "title": "Instalacion y Configuración de Minikube",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/minikube_provision/#instalacion-y-configuraci%C3%B3n-de-minikube",
+    
+    "relUrl": "/minikube_provision/#instalacion-y-configuración-de-minikube"
+  },"129": {
+    "doc": "Provisión Minikube",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/minikube_provision/#first-subtitle",
+    
+    "relUrl": "/minikube_provision/#first-subtitle"
+  },"130": {
+    "doc": "Provisión Minikube",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/minikube_provision/#second-subtitle",
+    
+    "relUrl": "/minikube_provision/#second-subtitle"
+  },"131": {
+    "doc": "Provisión Minikube",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/minikube_provision/#third-subtitle",
+    
+    "relUrl": "/minikube_provision/#third-subtitle"
+  },"132": {
+    "doc": "Provisión Minikube",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/minikube_provision/#fourth-subtitle",
+    
+    "relUrl": "/minikube_provision/#fourth-subtitle"
+  },"133": {
     "doc": "Provisión Minikube",
     "title": "Provisión Minikube",
-    "content": "# Instalacion y Configuración de Minikube {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
+    "content": " ",
     "url": "/minikube_provision/",
     
     "relUrl": "/minikube_provision/"
-  },"37": {
+  },"134": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX ",
+    "content": "This page: Minikube Use LINUX . ",
     "url": "/minikube_linux/minikube_use_linux/",
     
     "relUrl": "/minikube_linux/minikube_use_linux/"
-  },"38": {
+  },"135": {
     "doc": "News",
     "title": "News",
-    "content": "[comment]: # (Adds topnav bar above the main image) Home About News En esta página vamos a agregar puntos de interés que se discuten en el mundo de la informática. [Return to main page]({{site.baseurl}}/). ",
+    "content": "Home About News En esta página vamos a agregar puntos de interés que se discuten en el mundo de la informática. Return to main page. ",
     "url": "/news/",
     
     "relUrl": "/news/"
-  },"39": {
+  },"136": {
+    "doc": "Manejando Paquetes",
+    "title": "Introducción a Manejo De Paquetes",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/paquetes/#introducci%C3%B3n-a-manejo-de-paquetes",
+    
+    "relUrl": "/paquetes/#introducción-a-manejo-de-paquetes"
+  },"137": {
+    "doc": "Manejando Paquetes",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/paquetes/#first-subtitle",
+    
+    "relUrl": "/paquetes/#first-subtitle"
+  },"138": {
+    "doc": "Manejando Paquetes",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/paquetes/#second-subtitle",
+    
+    "relUrl": "/paquetes/#second-subtitle"
+  },"139": {
+    "doc": "Manejando Paquetes",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/paquetes/#third-subtitle",
+    
+    "relUrl": "/paquetes/#third-subtitle"
+  },"140": {
+    "doc": "Manejando Paquetes",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/paquetes/#fourth-subtitle",
+    
+    "relUrl": "/paquetes/#fourth-subtitle"
+  },"141": {
     "doc": "Manejando Paquetes",
     "title": "Manejando Paquetes",
-    "content": "# Introducción a Manejo De Paquetes {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
+    "content": " ",
     "url": "/paquetes/",
     
     "relUrl": "/paquetes/"
-  },"40": {
+  },"142": {
+    "doc": "Postgresql",
+    "title": "PostgreSQL",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/postgresql/#postgresql",
+    
+    "relUrl": "/postgresql/#postgresql"
+  },"143": {
+    "doc": "Postgresql",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/postgresql/#first-subtitle",
+    
+    "relUrl": "/postgresql/#first-subtitle"
+  },"144": {
+    "doc": "Postgresql",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/postgresql/#second-subtitle",
+    
+    "relUrl": "/postgresql/#second-subtitle"
+  },"145": {
+    "doc": "Postgresql",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/postgresql/#third-subtitle",
+    
+    "relUrl": "/postgresql/#third-subtitle"
+  },"146": {
+    "doc": "Postgresql",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Return to main page. ",
+    "url": "/postgresql/#fourth-subtitle",
+    
+    "relUrl": "/postgresql/#fourth-subtitle"
+  },"147": {
     "doc": "Postgresql",
     "title": "Postgresql",
-    "content": "[comment]: # (Adds topnav bar above the main image) Home About News # PostgreSQL {: .no_toc } {: .text-delta } - TOC {:toc} ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. [Return to main page]({{site.baseurl}}/). ",
+    "content": "Home About News ",
     "url": "/postgresql/",
     
     "relUrl": "/postgresql/"
-  },"41": {
+  },"148": {
     "doc": "Conceptos Postgresql",
     "title": "Conceptos Postgresql",
-    "content": "This page: Postgresql Basics ",
+    "content": "This page: Postgresql Basics . ",
     "url": "/postgresql_concepts/",
     
     "relUrl": "/postgresql_concepts/"
-  },"42": {
+  },"149": {
     "doc": "Implemetación Postgresql",
     "title": "Implemetación Postgresql",
-    "content": "This page: Implementacion de Postgresql [Return to main page]({{site.baseurl}}/). ",
+    "content": "This page: Implementacion de Postgresql . Return to main page. ",
     "url": "/postgresql_implementation/",
     
     "relUrl": "/postgresql_implementation/"
-  },"43": {
+  },"150": {
+    "doc": "Provisión Postgresql",
+    "title": "Instalacion y Configuración de Postgresql",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/postgresql_provision/#instalacion-y-configuraci%C3%B3n-de-postgresql",
+    
+    "relUrl": "/postgresql_provision/#instalacion-y-configuración-de-postgresql"
+  },"151": {
+    "doc": "Provisión Postgresql",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/postgresql_provision/#first-subtitle",
+    
+    "relUrl": "/postgresql_provision/#first-subtitle"
+  },"152": {
+    "doc": "Provisión Postgresql",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/postgresql_provision/#second-subtitle",
+    
+    "relUrl": "/postgresql_provision/#second-subtitle"
+  },"153": {
+    "doc": "Provisión Postgresql",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/postgresql_provision/#third-subtitle",
+    
+    "relUrl": "/postgresql_provision/#third-subtitle"
+  },"154": {
+    "doc": "Provisión Postgresql",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/postgresql_provision/#fourth-subtitle",
+    
+    "relUrl": "/postgresql_provision/#fourth-subtitle"
+  },"155": {
     "doc": "Provisión Postgresql",
     "title": "Provisión Postgresql",
-    "content": "--- # Instalacion y Configuración de Postgresql {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
+    "content": ". ",
     "url": "/postgresql_provision/",
     
     "relUrl": "/postgresql_provision/"
-  },"44": {
+  },"156": {
     "doc": "RPMBuild en CentOS",
     "title": "RPMBuild en CentOS",
     "content": "This page: Como usar RPMBuild para provisionar paquetes personalizados. ",
     "url": "/package_management/rpmbuild/",
     
     "relUrl": "/package_management/rpmbuild/"
-  },"45": {
+  },"157": {
+    "doc": "SSH",
+    "title": "Introducción a SSH",
+    "content": ". | First Subtitle | Second Subtitle | Third Subtitle | Fourth Subtitle | . ",
+    "url": "/ssh/#introducci%C3%B3n-a-ssh",
+    
+    "relUrl": "/ssh/#introducción-a-ssh"
+  },"158": {
+    "doc": "SSH",
+    "title": "First Subtitle",
+    "content": "This is the first section of the document. ",
+    "url": "/ssh/#first-subtitle",
+    
+    "relUrl": "/ssh/#first-subtitle"
+  },"159": {
+    "doc": "SSH",
+    "title": "Second Subtitle",
+    "content": "Second section of the document. ",
+    "url": "/ssh/#second-subtitle",
+    
+    "relUrl": "/ssh/#second-subtitle"
+  },"160": {
+    "doc": "SSH",
+    "title": "Third Subtitle",
+    "content": "And this third section of the document. ",
+    "url": "/ssh/#third-subtitle",
+    
+    "relUrl": "/ssh/#third-subtitle"
+  },"161": {
+    "doc": "SSH",
+    "title": "Fourth Subtitle",
+    "content": "Some interesting examples follow. Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. Return to main page. ",
+    "url": "/ssh/#fourth-subtitle",
+    
+    "relUrl": "/ssh/#fourth-subtitle"
+  },"162": {
     "doc": "SSH",
     "title": "SSH",
-    "content": "# Introducción a SSH {: .no_toc } {: .text-delta } - TOC {:toc} --- ## First Subtitle This is the first section of the document. ## Second Subtitle Second section of the document. ## Third Subtitle And this third section of the document. ## Fourth Subtitle Some interesting examples follow. {: .note } Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages. [Return to main page]({{site.baseurl}}/). ",
+    "content": " ",
     "url": "/ssh/",
     
     "relUrl": "/ssh/"
-  },"46": {
+  },"163": {
     "doc": "Conceptos de SSH",
     "title": "Conceptos de SSH",
     "content": "This page: Conceptos generals acerca de SSH en Linux. ",
     "url": "/ssh/ssh_concepts/",
     
     "relUrl": "/ssh/ssh_concepts/"
-  },"47": {
+  },"164": {
     "doc": "Implementación de SSH",
     "title": "Implementación de SSH",
-    "content": "This page: Como installar y configurar SSH en Linux ",
+    "content": "This page: Como installar y configurar SSH en Linux . ",
     "url": "/ssh/ssh_implementation/",
     
     "relUrl": "/ssh/ssh_implementation/"
-  },"48": {
+  },"165": {
     "doc": "Provisión de SSH",
     "title": "Provisión de SSH",
-    "content": "This page: Como prosionar SSH en varios sabores the LINUX ",
+    "content": "This page: Como prosionar SSH en varios sabores the LINUX . ",
     "url": "/ssh/ssh_provision/",
     
     "relUrl": "/ssh/ssh_provision/"
-  },"49": {
+  },"166": {
     "doc": "Paquetes en Ubuntu",
     "title": "Manejo de Paquetes en Ubuntu",
     "content": ". | Advanced Packaging Tool – APT | Otras Opciones Usadas Con APT | Mostrar Información De Paquetes | Mostrar los Archivos De Un Paquete | Buscar Paquetes En Linea | Referencias | . ",
     "url": "/ubuntu_package_management/#manejo-de-paquetes-en-ubuntu",
     
     "relUrl": "/ubuntu_package_management/#manejo-de-paquetes-en-ubuntu"
-  },"50": {
+  },"167": {
     "doc": "Paquetes en Ubuntu",
     "title": "Advanced Packaging Tool – APT",
     "content": "The utilidad Advanced Packaging Tool (APT) se usa para instalar, mejorar o actualizar paquetes en Ubuntu. A seguido veamos los ejemplos más usados. Instalar un Paquete . sudo apt install nmap . Remover un Paquete . sudo apt remove nmap . Actualizar el index . sudo apt update . Actualizar el sistem entero . sudo apt upgrade . Buscar un paquete . sudo apt search coreutils . ",
     "url": "/ubuntu_package_management/#advanced-packaging-tool--apt",
     
     "relUrl": "/ubuntu_package_management/#advanced-packaging-tool--apt"
-  },"51": {
+  },"168": {
     "doc": "Paquetes en Ubuntu",
     "title": "Otras Opciones Usadas Con APT",
     "content": "Mostrar las opciones para apt con el parámetro --help . sudo apt --help . Estas opciones son útiles. list listar paquetes basado en el nombre search buscar en la descripcion de los paquetes show mostras los detalles de un paquete reinstall reinstaller paquestes autoremove automáticament borrar paquetes que no estan en uso full-upgrade actualizar el sistem borrando/instalando/actualizando paquetes Cada actividad que resulta de usar apt va en el archivo de registro /var/log/dpkg.log. Ubuntu mantiene un sitio 1 en donde podemos buscar información de paquetes. ",
     "url": "/ubuntu_package_management/#otras-opciones-usadas-con-apt",
     
     "relUrl": "/ubuntu_package_management/#otras-opciones-usadas-con-apt"
-  },"52": {
+  },"169": {
     "doc": "Paquetes en Ubuntu",
     "title": "Mostrar Información De Paquetes",
     "content": "Buscar un paquete. -&gt; sudo apt search coreutils Sorting... Done Full Text Search... Done coreutils/jammy,now 8.32-4.1ubuntu1 amd64 [installed] GNU core utilities policycoreutils/jammy 3.3-1build1 amd64 SELinux core policy utilities . En el primer caso, podemos ver que el paquete está instalado como lo indica la palabra “installed”. En el segundo caso, solo muestra que el paquete esta disponible para ser instalado. Mostrar información acerca del paquete. -&gt; sudo apt show coreutils Package: coreutils Version: 8.32-4.1ubuntu1 Priority: required Essential: yes Section: utils Origin: Ubuntu Maintainer: Ubuntu Developers &lt;ubuntu-devel-discuss@lists.ubuntu.com&gt; Original-Maintainer: Michael Stone &lt;mstone@debian.org&gt; Bugs: https://bugs.launchpad.net/ubuntu/+filebug Installed-Size: 7283 kB Pre-Depends: libacl1 (&gt;= 2.2.23), libattr1 (&gt;= 1:2.4.44), libc6 (&gt;= 2.34), libgmp10 (&gt;= 2:6.2.1+dfsg), libselinux1 (&gt;= 3.1~) Homepage: http://gnu.org/software/coreutils Task: minimal, server-minimal Download-Size: 1438 kB APT-Manual-Installed: yes APT-Sources: http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages Description: GNU core utilities . ",
     "url": "/ubuntu_package_management/#mostrar-informaci%C3%B3n-de-paquetes",
     
     "relUrl": "/ubuntu_package_management/#mostrar-información-de-paquetes"
-  },"53": {
+  },"170": {
     "doc": "Paquetes en Ubuntu",
     "title": "Mostrar los Archivos De Un Paquete",
     "content": "A veces queremos saber sin un paquete ofrece un archivo o utilidad en particular. Esto lo podemos saber al mostrar la lista entera de archivos que el paquete a instalado en el sistema. Este ejemplo muestra una lista parcial de archivos que son parte de coreutils. -&gt; dpkg-query -L coreutils /. /bin /bin/cat /bin/chgrp /bin/chmod /bin/chown /bin/cp /bin/date /bin/dd ... A seguido veamos los archivos que están en un paquete que no hemos instalado todavía. Primero installemos apt-file y actulizemos el sistema. -&gt; sudo apt-get install apt-file -&gt; sudo apt-file update . Luego listemos los archivos de algún paquete que nos interese. -&gt; apt-file list &lt;nomber-del-paquete&gt; . ",
     "url": "/ubuntu_package_management/#mostrar-los-archivos-de-un-paquete",
     
     "relUrl": "/ubuntu_package_management/#mostrar-los-archivos-de-un-paquete"
-  },"54": {
+  },"171": {
     "doc": "Paquetes en Ubuntu",
     "title": "Buscar Paquetes En Linea",
     "content": "Ubuntu ofrece la facilidad de buscar información acerca de paquetes or archivos específicos. Primero verifiquemos la arquitectura de nuestro sistema . -&gt; uname -a Linux ubuntu2204-1 5.15.49-linuxkit #1 SMP Tue Sep 13 07:51:46 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux . Esto muestra que solo podemos usar paquetes de 64Bits. Sigamos los pasos siguientes: . | Ir a http://packages.ubuntu.com/ | Ir a la sección Search package directories – (Buscar paquetes de directorio) | Entrar el nombre del paquete en la caja Keyword y seleccionar Only Show exact matches (Mostrar solo coincidencias exactas) | Seleccionar la Distribution y cliquear el botón Search | Seleccionar el paquete deseado cuando el resultado aparezca | Hacia el final de la página, cliquera el enlace list of files que corresponde a la arquitectura de nuestro sistema | La lista de archivos se mostrará en la página siguiente | . Este commando mostraría lo mismo . curl -s https://packages.ubuntu.com/$(lsb_release -cs)/$(dpkg --print-architecture)/&lt;NOMBRE-DE-PAQUETE&gt;/filelist . Por ejemplo, esto es para policycoreutils. curl -s https://packages.ubuntu.com/$(lsb_release -cs)/$(dpkg --print-architecture)/policycoreutils/filelist . ",
     "url": "/ubuntu_package_management/#buscar-paquetes-en-linea",
     
     "relUrl": "/ubuntu_package_management/#buscar-paquetes-en-linea"
-  },"55": {
+  },"172": {
     "doc": "Paquetes en Ubuntu",
     "title": "Referencias",
     "content": ". | https://packages.ubuntu.com/ &#8617; . | . ",
     "url": "/ubuntu_package_management/#referencias",
     
     "relUrl": "/ubuntu_package_management/#referencias"
-  },"56": {
+  },"173": {
     "doc": "Paquetes en Ubuntu",
     "title": "Paquetes en Ubuntu",
     "content": " ",
     "url": "/ubuntu_package_management/",
     
     "relUrl": "/ubuntu_package_management/"
-  },"57": {
+  },"174": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX ",
+    "content": "This page: Minikube Use LINUX . ",
     "url": "/minikube_linux/minikube-use-linux/",
     
     "relUrl": "/minikube_linux/minikube-use-linux/"
-  },"58": {
+  },"175": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX ",
+    "content": "This page: Minikube Use LINUX . ",
     "url": "/minikube_linux/minikube-use-linux/",
     
     "relUrl": "/minikube_linux/minikube-use-linux/"
-  },"59": {
+  },"176": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX ",
+    "content": "This page: Minikube Use LINUX . ",
     "url": "/minikube_linux/minikube-use-linux/",
     
     "relUrl": "/minikube_linux/minikube-use-linux/"
-  },"60": {
+  },"177": {
     "doc": "Usar en Linux",
     "title": "Usar en Linux",
-    "content": "This page: Minikube Use LINUX ",
+    "content": "This page: Minikube Use LINUX . ",
     "url": "/minikube_linux/minikube-use-linux/",
     
     "relUrl": "/minikube_linux/minikube-use-linux/"
-  },"61": {
+  },"178": {
     "doc": "Usar en MacOS",
     "title": "Usar en MacOS",
-    "content": "This page: Minikube Use MACOS ",
+    "content": "This page: Minikube Use MACOS . ",
     "url": "/minikube_linux/minikube-use-macos/",
     
     "relUrl": "/minikube_linux/minikube-use-macos/"
