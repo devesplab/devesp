@@ -14,11 +14,10 @@ layout: home
 
 ![](../../assets/images/devesp_logo.png)
 
-
 <h2><font color="#0369a3"> Saludos, Hispania! </font></h2>
-<br>
-DevEsp es un sitio dedicado a esparcir los conocimientos de informática en el idioma Español.
 
+#### DevEsp es un sitio dedicado a esparcir los conocimientos de informática en el idioma Español.
+<br>
 El panel a la izquierda muestra differentes categorias de discusíon.
 Expande una categoria para navegar las páginas en la área de interés.
 
