@@ -63,7 +63,9 @@ Así que podemos ver que el termino se aplica a roles de varias disciplinas.
 Todas las posiciones mostraran que se requieren habilidades similares pero alineadas con el rol especifico y las necesidades del empleador. Una cosa es clara: el la mayoría de los casos se requiere conocimiento de infrastructure, desarrollo, automatización, seguridad y métodos ágiles. En muchos casos sobresale el requerimiento de esto dos aspectos conocidos como CI/CD:
 * Integración Continua (Continuos Integration)
 * Entrega Continua (Continuous Delivery)
-Con esos requerimientos, seguramente estamos en una area mas allá de lo básico.
 
+Con esos requerimientos, tocamos una area mas allá de lo básico.
+
+Uno de los principios mas elementales de DevOps es que tenemos que actualizar nuestro conocimientos continuamente. Es imperativo estar al día con los desarrollos continuos del mundo tecnológico o corremos el riesgo de ser obsoletos.
 
 [Return to main page]({{site.baseurl}}/).
