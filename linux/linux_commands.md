@@ -8,7 +8,7 @@ has_toc: false
 nav_order: 4
 ---
 
-# Introducción a Comando y Processos en Linux
+# Introducción a Comandos y Processos en Linux
 {: .no_toc }
 
 <details open markdown="block">

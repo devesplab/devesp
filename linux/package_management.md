@@ -36,6 +36,7 @@ And this third section of the document.
  
 Some interesting examples follow.
 
+
 {: .note }
 Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages.
 
