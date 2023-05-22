@@ -17,11 +17,13 @@ DevESP significa
 <b><font color="black">[Dev]</font></b>ops en 
 <b><font color="#0369a3">[ESP]</font></b>añol.
 
-El objetivo de este sitio es hacer una pequeña contribución haciendo disponible conocimientos de infomática en el idioma Español.
+DevEsp es DevOps en Español, o Informática en Español.
+
+Nuestra tema es la exposición práctica de Linux en Expañol, y temas relaciondos con Entrega Continua e Integración Continua en general. Temas a explorar incluyen Git, Ansible, Docker, Kubernetes, Jenkins, Base de Datos, y más.
 
 {: .highlight }
 En este sitio podria hacer referencia a recursos de información en Inglés. Haré lo mejor posible para asociar tales recursos de manera pertinente.
 
-Discutiremos conocimientos prácticos y actualizados que son usados diariamente en un ambiente típico de devops.
+Discutiremos conocimientos prácticos y actualizados que son usados diariamente en un ambiente típico de devops en un entorno actual de producción.
 
 [Return to main page]({{site.baseurl}}/).
