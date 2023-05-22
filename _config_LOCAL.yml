@@ -19,14 +19,15 @@
 # in the templates via {{ site.myvariable }}.
 
 title: DevEsp
+author: al foot
 email: devesplab@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Este sitio esta dedicated a esparcir los conocimientos de informática en el idioma Español.
-  Vamos a exponer todo lo relactionado a Linux en Expañol, Docker en Español y en genral muchos 
-  temas relacionados a DevOps en Español.
+  DevEsp es DevOps en Español, o Informática en Español.
+  Exposición práctica de Linux en Expañol, y temas relaciondos con Entrega Continua e Integración Continua 
+  en general. Temas a explorar incluyen Git, Ansible, Docker, Kubernetes, Jenkins, Base de Datos, y más.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://docs.devesp.com/" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: ""
+github_username: "devesplab"
 
 # Build settings
 theme: just-the-docs

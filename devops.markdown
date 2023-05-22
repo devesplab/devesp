@@ -60,7 +60,7 @@ Cuando vamos a un sitio de internet y buscamos avisos de trabajo usando la palab
 
 Así que podemos ver que el termino se aplica a roles de varias disciplinas.
 
-Todas las posiciones mostraran que se requieren habilidades similares pero alineadas con el rol especifico y las necesidades del empleador. Una cosa es clara: el la mayoría de los casos se requiere conocimiento de infrastructure, desarrollo, automatización, seguridad y métodos ágiles. En muchos casos sobresale el requerimiento de esto dos aspectos conocidos como CI/CD:
+Todas las posiciones mostraran que se requieren habilidades similares pero alineadas con el rol especifico y las necesidades del empleador. Una cosa es clara: en la mayoría de los casos se requiere conocimiento de infrastructure, desarrollo, automatización, seguridad y métodos ágiles. En muchos casos sobresale el requerimiento de esto dos aspectos conocidos como CI/CD:
 * Integración Continua (Continuos Integration)
 * Entrega Continua (Continuous Delivery)
 
