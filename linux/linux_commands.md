@@ -20,19 +20,86 @@ nav_order: 4
 {:toc}
 </details>
 
----
-
-## First Subtitle
-
-This is the first section of the document.
-## Second Subtitle
-
-Second section of the document.
-
-## Third Subtitle
-
-And this third section of the document.
 
 
+## Estructura de un Comando
+
+Los comandos en Linux tienen cierto formato mas o menos consistente.
+```
+<comando> <opciones> <argumentos>
+```
+Podemos definir cada parte de esta manera:
+* comando
+  * el nombre del archivo con atributo de ejecución
+  * ejecuta la acción deseada
+* opciones
+  * modifica o mejora la salida del comando
+  * frequentemente se combina con otras opciones
+  * como el nombre lo indica, su uso es opcional
+* argumentos
+  * el objecto contra el que el comando ejecuta la acción
+  * a menudo se puede pasar man de un argumento que será afectado
+  * su uso puede ser opcional, y frequentemente tiene un sujeto por defecto
+
+## Ejecucíon Simple o Enlazada
+
+Usualmente entramos comandos cuya función es simple.
+
+Hacer eco de una palabra en la terminal.
+```
+$ echo "Hola, Mundo!"
+```
+Podemos embuir otros comandos. Aqui damos un saludo e integramos el comando `date` dentro del comando `echo` para mostrar el saludo y la fecha de hoy. Notese que el comando entero a echo esta en doble comillas.
+```
+$ echo "Hola, Mundo! Hoy es `date`"
+```
+En este ejemplo, separamos los comandos con un semicolon `;` para ejecutar los comandos en sucesión.
+```
+$ echo "Hola, Mundo!"; date
+```
+Aqui hacemos eco de la frase, usamos la barra vertical `|` (pipe) para manipular la salida del comando y obtener un resultado modificado.
+```
+$ echo "Hola, Mundo!" | grep -i "mundo"
+```
+Ahora usemos redirección con el símbolo `>` para mandar la salida del comando a un archivo. Luego hacemos uso del comando `cat` para ver el resultado.
+```
+$ echo "Hola, Mundo!" > holamundo.txt
+
+$ cat holamundo.txt
+```
+
+## Comandos en Scripts
+
+Esta bien que usemos instrucciones generales en la CLI. Pero cuando las tareas crecen en complejidad es necesario agrupar tareas en scripts. 
+
+Tomando el ejemplo anterior, escribamos un bash script. 
+```bash
+#!/bin/bash
+#
+# Di hola y muestra la fecha
+#
+DATE=`date +"%m/%d/%y"`
+LOG=greeting.log
+
+# verificar que LOG exist, y si no, crearlo.
+[ -f ${LOG} ] || echo "INFO: creando ${LOG} porque no existe" && touch ${LOG}
+
+# decir hola y mandar el resultado el archivo LOG
+function greeting(){
+  echo "Hola, Mundo! Hoy es `date`" > ${LOG}
+} 
+
+# ejecutemos la funcion
+greeting
+```
+En este script pasan varias cosas:
+- declaramos variables para almacenar valores que usamos en el código
+- verificamos la existencia de un archivo y tomamos una acción de acuerdo al resultado
+- hacemos uso de una funcion para aislar un sección del código que hace una tarea específica
+- usamos el nombre de la funcion para ejecutar el código
+
+Una cosa es clara, scripts ofrecen el método de agrupar comandos para ejecutar tareas que de otra manera seria imposible en la CLI.
+
+Mas tarde veremos en detalle la composición y estructura de bash scripts.
 
 [Return to main page]({{site.baseurl}}/).

@@ -143,7 +143,7 @@ HOSTNAME=centos8-2
 Notese que cada una de las variables es en letras mayúsculas. 
 
 La salida de los comandos arriba se ve de manera muy similar en Ubuntu 22.04.
-El uso y propósite de estas variables es consistente a travéz de todos los sabores de Linux
+El uso y propósito de estas variables es consistente a travéz de todos los sabores de Linux
 
 El propósito de cada una es a seguir:
 
