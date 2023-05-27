@@ -48,7 +48,7 @@ tmpfs           7.9G  377M  7.5G   5% /run
 ```
 La estructura es similar en Ubuntu.
 
-## Terminal 
+## La Terminal 
 
 La terminal es el area de trabajo donde podemos escribir comandos para interactuar con el sistema.
 
@@ -56,7 +56,7 @@ La terminal es el area de trabajo donde podemos escribir comandos para interactu
 
 ## El Shell
 
-El Shell es el programa que accepta los comandos que entramos y los ejecuta. El Shell es la manera fundamental como interactuamos con el Sistema Operativo. 
+El Shell es el programa que accepta los comandos que entramos y los ejecuta para realizar la acción deseada en el sistema. El Shell es la manera fundamental como interactuamos con el Sistema Operativo. 
 
 Típicamente, Linux ofrece el BASH shell de entrada. Pero hay otros que podemos escoger tales como SH, CSH, TCSH, o ZSH.
 
@@ -123,16 +123,16 @@ $
 
 Podeos escribir comandos en el area marcada for el signo `$`.
 
-## El Prompt
+## El Indicator (The Prompt)
 
-El prompt marca la parte de la terminal donde podemos entrar comandos. Generalmente se indica con el signo `$`.
+El indicador marca la parte de la terminal donde podemos entrar comandos. Generalmente se indica con el signo `$`.
 
 {: .warning }
-Si el prompt muestra el signo `#` en lugar de `$`, indica que hemos entrado con la cuenta del superusuario (root), la cual tiene control absoluto del sistema. Un solo comando equivocado y podemos causar gran daño.
+Si el indicador muestra el signo `#` en lugar de `$`, indica que hemos entrado con la cuenta del superusuario (root), la cual tiene control absoluto del sistema. Un solo comando equivocado y podemos causar gran daño.
 
-El prompt es primariamente designado con la variable de ambiente `PS1`, la cual es configurable de la manera que nos plazca. Podemos designar cualquier símbolo en vez de `$` o `#`. 
+El indicador es primariamente designado con la variable de ambiente `PS1`, la cual es configurable de la manera que nos plazca. Podemos designar cualquier símbolo en vez de `$` o `#`. 
 
-En el ejemplo que sigue, el signo de `$` es de facto. Podemos usar el comando `export` para cambiarlo a `comando>> `. Luego usamos `echo` para verificar el ajuste.
+En el ejemplo que sigue, el signo de `$` es por defecto. Podemos usar el comando `export` para cambiarlo a `comando>> `. Luego usamos `echo` para verificar el ajuste.
 ```
 $
 $ export PS1='comando>> '
@@ -144,7 +144,7 @@ comando>>
 Discutiremos el uso del comando `export` en otro documento.
 ## Directorio De Inicio (Home Directory)
 
-El directorio de inicio es donde aterrizamos y es nuestra base de operaciones.
+El directorio de inicio es donde aterrizamos y es nuestra base de operaciones. Es aquí donde creamos y mantenemos todos lo archivos, directorios, documentos, imagenes, programas y personalizaciones particulares a nuestro propio ambiente.
 
 Tan pronto como entramos al sistema, el comando `pwd` nos asiste para mostrarnos la localidad del directorio de inicio.
 ```
@@ -157,11 +157,61 @@ Podemos usar `echo` para mostrar el directorio de inicio en cualquier momento de
 $ echo $HOME
 /root
 ```
+La localidad estándar donde Linux create directorios de inicio es bajo `/home`, de manera que usualmente un usuario tiene `/home/user1`. Pero lo localidad puede cambiar de acuerdo al diseño del administrador de sistemas.
+
 
 ## Páginas Manuales (Man Pages)
 
-Las páginas manuales son documentos disponibles internamente el en sistema que nos proveen información acerca de las diferentes funcioines y comandos disponibles durante la session con el sistema.
+Las páginas manuales son documentos disponibles internamente en el sistema que nos proveen información acerca de las diferentes funciones y comandos disponibles.
 
-Es de notar que las páginas manuales no están instaladas for de facto en máquinas virtuales. El usuario las puede instalar usando la localización que corresponda.
+Por ejemplo la instrucción `man ls` nos muestra la página manual del comando `ls` que usamos para lstar archivos y directorios. Abajo vemos un extracto recortado de la página manual de `ls`.
+```
+NOMBRE
+
+       ls, dir, vdir - listan los contenidos de directorios
+
+SINOPSIS
+
+       ls [opciones] [fichero...]
+       dir [fichero...]
+       vdir [fichero...]
+
+       Opciones de POSIX: [-CFRacdilqrtu1]
+
+       Opciones  de  GNU  (en  la  forma más corta): [-1abcdfghiklmnopqrstuvwxABCDFGHLNQRSUX] [-w
+       cols] [-T cols] [-I  patrón]  [--full-time]  [--show-control-chars]  [--block-size=tamaño]
+       [--format={long,verbose,commas,across,vertical,single-column}]
+
+DESCRIPCIÓN
+
+       El  programa  ls  lista  primero  sus argumentos no directorios fichero, y luego para cada
+       argumento directorio todos los ficheros  susceptibles  de  listarse  contenidos  en  dicho
+       directorio. 
+
+OPCIONES DE POSIX
+
+       -C     Lista los ficheros en columnas, ordenados verticalmente.
+
+       -F     Añade tras cada nombre de directorio un `/', tras cada nombre de  FIFO  un  `|',  y
+              tras cada nombre de un ejecutable un `*'.
+
+(...snip...)             
+```
+
+Las páginas manuales de Ubuntu están disponibles en linea [^1]
+
+Es de notar que las páginas manuales no están instaladas por defecto en **máquinas virtuales**. El usuario puede instalar las páginas manuales para la localización que corresponda al idioma del usuario. Al entrar el comando `man ls` en una máquina virtual de Ubuntu, vemos este mensaje indicando que ha sido optimizada para remover espacio que no es crítico para operaciones normales.
+
+```
+ -> man ls
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, including manpages, you can run the 'unminimize'
+command. You will still need to ensure the 'man-db' package is installed.
+```
+Es bastante común remover componentes innecesarios de servidores que no requieren cosas tales como páginas manuales.
+
+[^1]: [Páginas Manuales de Ubuntu](https://manpages.ubuntu.com/manpages/focal/es/)
 
 [Return to main page]({{site.baseurl}}/).
