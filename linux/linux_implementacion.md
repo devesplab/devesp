@@ -20,7 +20,7 @@ nav_order: 3
 {:toc}
 </details>
 
-Algunos sabores de sistemas operativos son mas facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de production.
+Algunos sabores de sistemas operativos son mas facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de production en los que las exigencias requieren mas potencia de CPU y Memoria.
 
 Una de los mejores características de Linux es que puede personalizarse de la manera que deseamos.
 ## Ambiente en Linux
@@ -32,15 +32,15 @@ Una cuenta típica de usuario se ve de esta manera:
 ```
 devuser:x:2085:2086::/home/devuser:/bin/bash
 ```
-Esa entrada muestra el nombre del usuario `devuser`, el directorio de inicio `/home/devuser` y el shell `/bin/bash`. Cada uno de esos detalles puede ser personalizado. Discutiremos cada  parte en otro articulo.
+Esa entrada muestra el nombre del usuario `devuser`, el directorio de inicio `/home/devuser` y el shell `/bin/bash`. Cada uno de esos detalles puede ser personalizado. Discutiremos cada parte en otros articulos.
 
 ## Directorio de Inicio
 
-Cada usuario puede ver su Directorio de Inicio en manera differente.
+Cada usuario puede organizar su Directorio de Inicio en manera differente.
 
-El directorio puded referirse usando el símbolo de tilde `~` o la variable de ambiente `$HOME`.
+El directorio puede referirse usando el símbolo de tilde `~` o la variable de ambiente `$HOME`.
 
-Si estamos algun otro directorio y queremos ir al directorio de inicio, usemos el comando `cd` como en los ejemplos que siguen.
+Si estamos en algun directorio diferente the `$HOME` y queremos ir al directorio de inicio, podemos usar el comando `cd` como en los ejemplos que siguen.
 
 * Usar `~`
 ```
@@ -53,7 +53,7 @@ devuser@ubuntu2204-1 [DevEsp]
 hist:61 -> cd $HOME
 ```
 
-Para verificar que estamos en nuestro directorio podemos usar varias opciones.
+Para verificar que estamos en nuestro `$HOME` podemos usar varias opciones.
 - el comando `echo`
 - el comando `pwd`
 - la variable de ambiente `PWD` 
@@ -74,15 +74,29 @@ hist:63 -> echo $PWD
 
 ## Las Variables de Ambiente
 
-Linux provee varias variables de ambiente precargadas y disponible para uso immediatate.
+Linux provee varias variables de ambiente precargadas con información útil que disponibles para uso immediato. Por ejemplo, podemos usar el comando `env` para ver las variables disponibles.
 
-Podemos usar el comando `env` para ver las variables disponibles.
+Generalmente, las variables de ambiente estan definidas en `/etc/profile`, `/etc/bashrc`, `~/.bashrc`, o `~/.bash_profile`.
 
-En CentOS 8 Stream se ve de esta manera.
+En CentOS 8, el archivo del usuario `~/.bashrc` muestra un bloque indicando que lee ajustes encontrados en `/etc/bashrc`.
+```
+[user1@centos8-2 ~]$  cat ~/.bashrc
+# .bashrc
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+```
+
+Por ejemplo, en CentOS, el archivo `/etc/bashrc` tiene la definición para el SHELL de facto.
+```
+SHELL=/bin/bash
+```
+
+En CentOS 8 Stream podemos usar el comando `env` para ver todas las variables de ambiente que tenemos disponibles.
 ```
 devuser@centos8-2 [DevEsp]
-~
 hist:18 -> env
 LANG=en_US.UTF-8
 HISTCONTROL=ignoreboth:erasedups
@@ -105,27 +119,33 @@ BASH_FUNC_which%%=() {  ( alias;
 _=/usr/bin/env
 ```
 
-En Ubuntu 22.04 se ve de esta manera.
-
+El comando `set` muestra información aún mas expandida organizada alfabeticamente (parcialmente extraida abajo).
 ```
-devuser@ubuntu2204-1 [DevEsp]
-~
-hist:66 -> env
-SHELL=/bin/bash
-PWD=/home/devuser
-LOGNAME=devuser
+devuser@centos8-2 [DevEsp]
+hist:30 -> set
+BASH=/bin/bash
+BASH_VERSINFO=([0]="4" [1]="4" [2]="20" [3]="1" [4]="release" [5]="x86_64-redhat-linux-gnu")
+BASH_VERSION='4.4.20(1)-release'
+COLUMNS=128
+DIRSTACK=()
+ENVS=/vagrant/shared/DATAM2/learning/learning_env01
+EUID=2074
+GROUPS=()
+HISTCONTROL=ignoreboth:erasedups
+HISTFILE=/home/devuser/.bash_history
+HISTFILESIZE=1000
+HISTSIZE=1000
 HOME=/home/devuser
-TERM=xterm
-USER=devuser
-SHLVL=1
-PATH=/home/devuser/bin:/home/devuser/Library/Python/3.9/bin:/home/devuser/bin:/home/devuser/Library/Python/3.9/bin:/home/devuser/bin:/home/devuser/Library/Python/3.9/bin:/home/devuser/bin:/home/devuser/Library/Python/3.9/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-MAIL=/var/mail/devuser
-OLDPWD=/etc
-_=/usr/bin/env
-
+HOSTNAME=centos8-2
 ```
 
-Cada una de las entrades an letras mayúsculas es una variable de ambiente.
+{: .highlight }
+Notese que cada una de las variables es en letras mayúsculas. 
+
+La salida de los comandos arriba se ve de manera muy similar en Ubuntu 22.04.
+El uso y propósite de estas variables es consistente a travéz de todos los sabores de Linux
+
+El propósito de cada una es a seguir:
 
 SHELL
 : el interfaz que permite entrar comandos que permite al usuario interactuar con el sistema operativo.
@@ -154,21 +174,5 @@ MAIL
 HISTIZE
 : valor configurable para la longitud del almacenamiento de comando ejecutados
 
-## El Prompt
-
-El prompt marca la parte de la terminal donde podemos entrar comandos. Generalmente se indica con el signo `$`.
-
-El prompt es primariamente designado con la variable de ambiente `PS1`, la cual es configurable de la manera que nos plazca. Podemos designar cualquier simbolo. 
-
-En el ejemplo que sigue, el signo de `$` es de facto. Podemos usar el comando `export` y cambiarlo a `comando>> `. Luego usamos `echo` para verificar el ajuste.
-```
-$
-$ export PS1='comando>> '
-comando>> 
-comando>> echo $PS1
-comando>>
-```
-
-Discutiremos el uso del comando `export` en otro documento.
 
 [Return to main page]({{site.baseurl}}/).
