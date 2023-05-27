@@ -21,6 +21,7 @@ nav_order: 4
 </details>
 
 ---
+
 ## First Subtitle
 
 This is the first section of the document.
@@ -32,11 +33,6 @@ Second section of the document.
 
 And this third section of the document.
 
-## Fourth Subtitle
- 
-Some interesting examples follow.
 
-{: .note }
-Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages.
 
 [Return to main page]({{site.baseurl}}/).
