@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Implementacion Minikube
-permalink: /minikube_implementacion/
+permalink: /minikube-implementacion/
 parent: Minikube
 nav_order: 4
 ---

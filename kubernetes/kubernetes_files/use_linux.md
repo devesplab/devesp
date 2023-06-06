@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Usar en Linux
-permalink: /minikube_linux/minikube-use-linux/
+permalink: /usar-kubernetes/
 parent: Instalacion y Uso
 grand_parent: Minikube
 has_children: false

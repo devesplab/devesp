@@ -1,10 +1,11 @@
 ---
 layout: default
 title: DevOps
-permalink: /devops/
+permalink: /devops-en-español/
 nav_order: 1
 has_children: false
 has_toc: false
+last_modified_date: Sun 2023May28 20:15:35 PDT
 ---
 
 [comment]: # (Adds topnav bar above the main image)

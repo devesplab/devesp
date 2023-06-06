@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Manejando Paquetes
-permalink: /paquetes/
+permalink: /manejar-paquetes-linux/
 parent: Linux
 has_children: true
 has_toc: false

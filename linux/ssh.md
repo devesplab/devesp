@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SSH
-permalink: /ssh/
+permalink: /ssh-linux/
 parent: Linux
 has_children: true
 has_toc: false

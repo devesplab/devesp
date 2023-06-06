@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Provisión Ansible
-permalink: /ansible_provision/
+permalink: /provision-de-ansible/
 parent: Ansible
 nav_order: 2
 ---

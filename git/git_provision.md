@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Provisión Git
-permalink: /git_provision/
+permalink: /provision-git/
 parent: Git
 nav_order: 1
 ---
 ---
 
-# Instalacion y Configuración de Git
+# Instalacion y Configuración de Github
 {: .no_toc }
 
 <details open markdown="block">

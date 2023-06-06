@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Usar en MacOS
-permalink: /minikube_linux/minikube-use-macos/
+permalink: /usar-minikube-macos/
 parent: Instalacion y Uso
 grand_parent: Minikube
 has_children: false

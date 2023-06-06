@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Herramientas Utiles
-permalink: /linux_commands/commands_utilities/
+permalink: /linux-utilidades/
 parent: Comandos y Procesos
 grand_parent: Linux
 has_children: false

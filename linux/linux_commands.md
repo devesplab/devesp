@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Comandos y Procesos
-permalink: /linux_commands/
+permalink: /linux-commandos/
 parent: Linux
 has_children: true
 has_toc: false
@@ -20,9 +20,10 @@ nav_order: 4
 {:toc}
 </details>
 
+## Que es un Comando?
 
-
-## Estructura de un Comando
+(what is it, why you need them, and what can you do with them?)
+### Estructura de un Comando
 
 Los comandos en Linux tienen cierto formato mas o menos consistente.
 ```
@@ -30,18 +31,18 @@ Los comandos en Linux tienen cierto formato mas o menos consistente.
 ```
 Podemos definir cada parte de esta manera:
 * comando
-  * el nombre del archivo con atributo de ejecución
+  * el nombre del archivo o programa con atributo de ejecución
   * ejecuta la acción deseada
 * opciones
   * modifica o mejora la salida del comando
   * frequentemente se combina con otras opciones
   * como el nombre lo indica, su uso es opcional
 * argumentos
-  * el objecto contra el que el comando ejecuta la acción
-  * a menudo se puede pasar man de un argumento que será afectado
+  * el objeto contra el que el comando ejecuta la acción
+  * a menudo se puede pasar mas de un argumento
   * su uso puede ser opcional, y frequentemente tiene un sujeto por defecto
 
-## Ejecucíon Simple o Enlazada
+### Ejecucíon Simple o Enlazada
 
 Usualmente entramos comandos cuya función es simple.
 
@@ -68,11 +69,11 @@ $ echo "Hola, Mundo!" > holamundo.txt
 $ cat holamundo.txt
 ```
 
-## Comandos en Scripts
+### Comandos en Scripts
 
 Esta bien que usemos instrucciones generales en la CLI. Pero cuando las tareas crecen en complejidad es necesario agrupar tareas en scripts. 
-
-Tomando el ejemplo anterior, escribamos un bash script. 
+ 
+Escribamos un bash script que combine todos los ejemplos anteriormente expuestos.
 ```bash
 #!/bin/bash
 #
@@ -86,7 +87,7 @@ LOG=greeting.log
 
 # decir hola y mandar el resultado el archivo LOG
 function greeting(){
-  echo "Hola, Mundo! Hoy es `date`" > ${LOG}
+  echo "Hola, Mundo! Hoy es ${DATE}" > ${LOG}
 } 
 
 # ejecutemos la funcion
@@ -101,5 +102,19 @@ En este script pasan varias cosas:
 Una cosa es clara, scripts ofrecen el método de agrupar comandos para ejecutar tareas que de otra manera seria imposible en la CLI.
 
 Mas tarde veremos en detalle la composición y estructura de bash scripts.
+
+<hr style=" border: 0; width: 100%; color:#0369a3; background-color:#0369a3; height: 4px;"/>
+
+## Que es un Proceso?
+
+(what is it, why you need to know them, and what can you do with them?)
+
+Know what your app is doing.
+### Process id: PID, PPID
+
+### Troubleshoot: logs, journalctl
+
+### Track and Monitor: ps, pstree, htop
+### Adjust memory settings (java)
 
 [Return to main page]({{site.baseurl}}/).

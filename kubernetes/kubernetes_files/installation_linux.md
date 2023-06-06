@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Instalacion Linux
-permalink: /minikube_linux/minikube-installation-linux/
+permalink: /instalar-kubernetes/
 parent: Instalacion y Uso
 grand_parent: Minikube
 has_children: false

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Implementación Ansible
-permalink: /ansible_implementation/
+permalink: /implementacion-de-ansible/
 parent: Ansible
 nav_order: 3
 ---

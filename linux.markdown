@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Linux
-permalink: /linux/
+permalink: /linux-en-español/
 nav_order: 2
 has_children: true
 has_toc: false

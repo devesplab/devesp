@@ -12,7 +12,8 @@ layout: home
  <a href="../news">News</a>   
 </div> 
 
-![](../../assets/images/devesp_logo.png)
+![](../../assets/images/devesp_logo.jpg)
+
 
 <h2><font color="#0369a3"> Saludos, Hispania! </font></h2>
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Provisión Kubernetes
-permalink: /kubernetes_provision/
+permalink: /provision-de-kubernetes//
 parent: Kubernetes
 nav_order: 3
 ---

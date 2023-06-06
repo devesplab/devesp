@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Paquetes en Ubuntu
-permalink: /ubuntu_package_management/
+permalink: /ubuntu-manejar-paquetes/
 parent: Manejando Paquetes
 grand_parent: Linux
 has_children: false

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: DirColors en la Terminal
-permalink: /linux_commands/linux_dircolors/
+permalink: /linux-dircolors/
 parent: Comandos y Procesos
 grand_parent: Linux
 has_children: false

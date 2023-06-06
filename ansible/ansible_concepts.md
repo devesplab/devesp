@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conceptos Ansible
-permalink: /ansible_concepts/
+permalink: /conceptos-de-ansible/
 parent: Ansible
 nav_order: 1
 ---

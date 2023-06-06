@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Provision
-permalink: /linux_provision/
+permalink: /linux-provision/
 parent: Linux
 has_toc: false
 nav_order: 2

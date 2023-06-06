@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Implementación
-permalink: /linux_implementacion/
+permalink: /linux-implementacion/
 parent: Linux
 has_toc: false
 nav_order: 3

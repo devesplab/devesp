@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Utilidades Varias
-permalink: /linux_commands/commands_concepts/
+permalink: /linux-comandos-conceptos/
 parent: Comandos y Procesos
 grand_parent: Linux
 has_children: false

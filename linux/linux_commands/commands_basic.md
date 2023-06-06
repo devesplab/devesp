@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Comandos Basicos
-permalink: /linux_commands/commands_basic/
+permalink: /linux-comandos-base/
 parent: Comandos y Procesos
 grand_parent: Linux
 has_children: false

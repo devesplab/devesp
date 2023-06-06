@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Implementación de SSH
-permalink: /ssh/ssh_implementation/
+permalink: /ssh-implementation/
 parent: SSH
 grand_parent: Linux
 has_children: false

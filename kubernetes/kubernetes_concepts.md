@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conceptos Kubernetes
-permalink: /kubernetes_concepts/
+permalink: /conceptos-de-kubernetes/
 parent: Kubernetes
 nav_order: 1
 ---

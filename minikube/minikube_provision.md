@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Provisión Minikube
-permalink: /minikube_provision/
+permalink: /minikube-provision/
 parent: Minikube
 has_children: true
 has_toc: false
