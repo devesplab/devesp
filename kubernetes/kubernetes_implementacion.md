@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Implemetación Kubernetes
-permalink: /kubernetes_implementation/
+permalink: /implementation-de-kubernetes//
 parent: Kubernetes
 nav_order: 3
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Postgresql
-permalink: /postgresql/
+permalink: /postgresql-en-español/
 nav_order: 8
 has_children: true
 has_toc: false

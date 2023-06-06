@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Instalar y Configurar en Ubuntu
-permalink: /ssh/ssh_ubuntu_provision/
+title: Instalar y Configurar SSH en Ubuntu
+permalink: /ssh_ubuntu_provision/
 parent: SSH
 grand_parent: Linux
 has_children: false

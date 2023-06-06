@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Provisión Postgresql
-permalink: /postgresql_provision/
+permalink: /provision-postgresql/
 parent: Postgresql
 nav_order: 3
 ---

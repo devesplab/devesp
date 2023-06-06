@@ -1,7 +1,7 @@
 ---
 layout: default
-title: RPMBuild en CentOS
-permalink: /package_management/rpmbuild/
+title: RPMBuild
+permalink: /rpmbuild-centos-redhat/
 parent: Manejando Paquetes
 grand_parent: Linux
 has_children: false

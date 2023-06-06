@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Implementación Git
-permalink: /git_implementation/
+permalink: /implementation-de-git/
 parent: Git
 nav_order: 3
 ---
 
-This page: Implementacion de Git
+This page: Implementacion de Github
 
 # Implementando Git
 {: .no_toc }

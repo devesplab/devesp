@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conceptos Postgresql
-permalink: /postgresql_concepts/
+permalink: /conceptos-postgresql/
 parent: Postgresql
 nav_order: 1
 ---

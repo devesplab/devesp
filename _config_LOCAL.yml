@@ -18,13 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: DevEsp
+title: DevOps, Informática y Linux en Español
 author: al foot
 email: devesplab@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  DevEsp es DevOps en Español, o Informática en Español.
-  Exposición práctica de Linux en Expañol, y temas relaciondos con Entrega Continua e Integración Continua 
-  en general. Temas a explorar incluyen Git, Ansible, Docker, Kubernetes, Jenkins, Base de Datos, y más.
+  Exposición práctica de Informática, Entrega Continua e Integración Continua.
+  Incluye temas del Sistema Operativo de Linux, Ansible, Docker, Kubernetes, Jenkins, Base de Datos, y más.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://docs.devesp.com/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: "devesplab"
@@ -67,10 +66,6 @@ exclude:
    - package-lock.json
    - Rakefile
    - README.md
-
-
-# Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/just-the-docs.png"
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -174,4 +169,5 @@ compress_html:
 
 # Set a path/url to a favicon that will be displayed by the browser
 favicon_ico: "./assets/images/favicon/favicon.ico"
-logo: "./assets/images/site_logo.png"
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "./assets/images/site_logo.jpg"

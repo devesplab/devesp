@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kubernetes
-permalink: /kubernetes/
+permalink: /kubernetes-en-español/
 nav_order: 7
 has_children: true
 has_toc: false

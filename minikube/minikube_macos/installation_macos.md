@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Instalacion MacOS
-permalink: /minikube_linux/minikube-installation-macos/
+permalink: /instalar-minikube-macos/
 parent: Instalacion y Uso
 grand_parent: Minikube
 has_children: false

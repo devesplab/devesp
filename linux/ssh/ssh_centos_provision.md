@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Instalar y Configurar en CentOS
-permalink: /ssh/ssh_centos_provison/
+title: Instalar y Configurar SSH en CentOS
+permalink: /ssh-centos-provison/
 parent: SSH
 grand_parent: Linux
 has_children: false

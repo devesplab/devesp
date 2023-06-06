@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Paquetes en CentOS
-permalink: /centos_package_management/
+permalink: /centos-package-management/
 parent: Manejando Paquetes
 grand_parent: Linux
 has_children: false

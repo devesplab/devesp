@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Git
-permalink: /git/
+permalink: /git-en-español/
 nav_order: 3
 has_children: true
 has_toc: false

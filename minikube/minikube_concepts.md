@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conceptos Minikube
-permalink: /minikube_concepts/
+permalink: /minikube-conceptos/
 parent: Minikube
 nav_order: 1
 ---

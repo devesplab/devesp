@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Ramas y PR
-permalink: /git_branches_pr/
+permalink: /git-branches-pr/
 parent: Git
 nav_order: 2
 ---
 
-This page: Ramas y PR
+This page: Ramas y PR en Github
 
 # Ramas y Solicitud De Extraccíon en Git
 {: .no_toc }

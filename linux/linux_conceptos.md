@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conceptos
-permalink: /linux_conceptos/
+permalink: /linux-conceptos/
 parent: Linux
 has_toc: false
 nav_order: 1

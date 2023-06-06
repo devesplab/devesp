@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Implemetación Postgresql
-permalink: /postgresql_implementation/
+permalink: /implementation-postgresql/
 parent: Postgresql
 nav_order: 3
 ---
