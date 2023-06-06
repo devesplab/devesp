@@ -14,11 +14,17 @@ layout: home
 
 ![](../../assets/images/devesp_logo.jpg)
 
+* * *
 
-<h2><font color="#0369a3"> Saludos, Hispania! </font></h2>
-
-#### DevEsp es un sitio dedicado a esparcir los conocimientos de informática en el idioma Español.
+<h2><font color="#0369a3"> Hablemos de DevOps, Informática y Linux en Español! </font></h2>
+<h3>
+  Exposición práctica de Informática, Entrega Continua e Integración Continua.
 <br>
+  Incluimos temas del Sistema Operativo de Linux, Ansible, Docker, Kubernetes, Jenkins, Base de Datos, y más.
+</h3>
+
+* * *
+
 El panel a la izquierda muestra differentes categorias de discusíon.
 Expande una categoria para navegar las páginas en la área de interés.
 
