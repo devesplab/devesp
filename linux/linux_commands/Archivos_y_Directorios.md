@@ -134,7 +134,16 @@ Listar ficheros multiples usando el asterisco `*`.
 -> ls -l data/datafile*
 -rw-r--r-- 1 root root  0 Jun 11 02:06 data/datafile1.txt
 -rw-r--r-- 1 root root 13 Jun 11 02:06 data/datafile2.txt
+
+-> ls -l *.txt
+-rw-r--r-- 1 root root  0 Jun 11 02:06 data/datafile1.txt
+-rw-r--r-- 1 root root 13 Jun 11 02:06 data/datafile2.txt
+
+-> ls -l data*.txt
+-rw-r--r-- 1 root root  0 Jun 11 02:06 datafile1.txt
+-rw-r--r-- 1 root root 13 Jun 11 02:06 datafile2.txt
 ```
+
 Listar ficheros usando expresiones regulares [^1].
 ```
 -> ls -l data/datafile[0-9]*.txt
@@ -155,6 +164,20 @@ Usar el comando `tree` para listar el contenido entero de una localidad.
 |   `-- pets
 |       `-- camoa.txt
 `-- temp
+```
+
+Listar contenido en forma recursiva con la opción `-R`.
+```
+-> ls -lR data
+data:
+total 8
+-rw-r--r-- 1 root root    0 Jun 11 02:06 datafile1.txt
+-rw-r--r-- 1 root root   13 Jun 11 02:06 datafile2.txt
+drwxr-xr-x 2 root root 4096 Jun 11 03:53 pets/
+
+data/pets:
+total 4
+-rw-r--r-- 1 root root 94 Jun 11 02:37 camoa.txt
 ```
 
 Listar ficheros y directorios escondidos usando la bandera `-a` en conjunto con la bandera `-l.
@@ -180,7 +203,9 @@ drwxr-xr-x 3 root root  4096 Jun 11 02:35 data/
 drwxr-xr-x 2 root root  4096 Jun 11 00:12 temp/
 ```
 
-Listar solo directorios usando la bandera `-d`
+> para omitir `.` y `..` podemos usar la opción `-A` asi: `ls -lA /root`
+
+Listar solo directorios usando la opcíon `-d`
 ```
 -> ls -ld *
 drwxr-xr-x 2 root root 4096 Jun 11 00:12 Downloads/
