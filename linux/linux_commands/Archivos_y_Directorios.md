@@ -125,9 +125,9 @@ drwxr-xr-x 2 root root 4096 Jun 11 02:37 pets/
 ```
 
 {: .highlight }
-> un guión al inicio de la linea indica que es un fichero común y corriente
+> un guión `-` al inicio de la linea indica que es un fichero común y corriente
 >
-> la letra `d` al principio de la linea indica que es un directorio; notese el simbolo `/` al final del articulo
+> la letra `d` al principio de la linea, y el simbolo `/` al final de la linea. indica que es un directorio.
 
 Listar ficheros multiples usando el asterisco `*`.
 ```
@@ -135,13 +135,13 @@ Listar ficheros multiples usando el asterisco `*`.
 -rw-r--r-- 1 root root  0 Jun 11 02:06 data/datafile1.txt
 -rw-r--r-- 1 root root 13 Jun 11 02:06 data/datafile2.txt
 
--> ls -l *.txt
+-> ls -l data/*.txt
 -rw-r--r-- 1 root root  0 Jun 11 02:06 data/datafile1.txt
 -rw-r--r-- 1 root root 13 Jun 11 02:06 data/datafile2.txt
 
--> ls -l data*.txt
--rw-r--r-- 1 root root  0 Jun 11 02:06 datafile1.txt
--rw-r--r-- 1 root root 13 Jun 11 02:06 datafile2.txt
+ls -l data/data*.txt
+-rw-r--r-- 1 root root  0 Jun 11 02:06 data/datafile1.txt
+-rw-r--r-- 1 root root 13 Jun 11 02:06 data/datafile2.txt
 ```
 
 Listar ficheros usando expresiones regulares [^1].
@@ -222,7 +222,7 @@ drwxr-xr-x 2 root root 4096 Jun 11 02:06 data/
 drwxr-xr-x 2 root root 4096 Jun 11 00:12 temp/
 ```
 
-Listar ficheros con la bandera `-t` usada para mostra los articulos que han sido modificados mas recientememte. Por defecto, mostrara el mas reciente al principio de la lista.
+Listar ficheros con la opción `-t` usada para mostrar los articulos que han sido modificados mas recientememte. Por defecto, mostrara la entrada mas reciente al principio de la lista.
 ```
 -> ls -lt
 total 16
@@ -231,7 +231,7 @@ drwxr-xr-x 2 root root 4096 Jun 11 00:12 temp/
 drwxr-xr-x 2 root root 4096 Jun 11 00:12 Downloads/
 drwxr-xr-x 2 root root 4096 Jun 11 00:12 MyDocuments/
 ```
-Lo mismo que arriba, pero usando la bandera `-r` para clasificar la salida en reverso con lo mas reciente listado por ultimo.
+Lo mismo que arriba, pero usando la opción `-r` para clasificar la salida en reverso con lo mas reciente listado por ultimo.
 ```
 -> ls -ltr
 total 16
@@ -241,7 +241,7 @@ drwxr-xr-x 2 root root 4096 Jun 11 00:12 temp/
 drwxr-xr-x 3 root root 4096 Jun 11 02:35 data/
 ```
 
-Listar el inode correspondiente a un fichero usando la bandera `-i`.
+Listar el inode correspondiente a un fichero usando la opción `-i`.
 ```
 -> ls -li data/pets/camoa.txt
 3044362 -rw-r--r-- 1 root root 94 Jun 11 02:37 data/pets/camoa.txt
@@ -260,12 +260,12 @@ Change: 2023-06-11 02:37:53.149171904 +0000
  Birth: 2023-06-11 02:37:53.148264837 +0000
 ```
 
-Mostrar el tamaño de un fichero usando la bandera `-h`, que indica notación humana legible.
+Mostrar el tamaño de un fichero usando la opción `-h`, que indica notación humana legible.
 ```
 -> ls -lh data/pets/camoa.txt
 -rw-r--r-- 1 root root 94 Jun 11 02:37 data/pets/camoa.txt
 ```
-La bandera `-h` en conjunto con `-l` y `-s` muestran el tamaño del fichero como 1K 234M 2G etc. En el ejemplo anterior, el fichero es de 94K de tamaño.
+La opción `-h` en conjunto con `-l` y `-s` muestran el tamaño del fichero como 1K 234M 2G etc. En el ejemplo anterior, el fichero es de 94K de tamaño.
 
 ## Copiar Directorios y Ficheros
 

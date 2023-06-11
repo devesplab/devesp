@@ -23,7 +23,7 @@ nav_order: 2
 
 ## Permiso de Editar
 
-El comando `ls` muestra los permisos y dueños de los ficheros.
+El comando `ls` muestra los permisos, asi come el grupo y usuario dueño de los ficheros.
 ```
 -> ls -lA
 total 8
@@ -32,7 +32,9 @@ total 8
 drwxr-xr-x 2 root root 4096 Jun 11 03:53 pets/
 ```
 
-Usa la opcion `-n` para ver el number de usuario y de grupo para verificar que tienes acceso a los ficheros.
+Podemos usar la opción `-n` para ver el número del usuario y de grupo para verificar que tienes acceso a los ficheros. 
+
+En este ejemplo, el grupo es zero, asi come el usuario. Esto indica que cada articulo pertenece a `root`.
 ```
 -> ls -lAn
 total 8
