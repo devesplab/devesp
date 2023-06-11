@@ -90,7 +90,7 @@ if [ -f /etc/bashrc ]; then
 fi
 ```
 
-Por ejemplo, en CentOS, el archivo `/etc/bashrc` tiene la definición para el SHELL de facto.
+Por ejemplo, en CentOS, el archivo `/etc/bashrc` tiene la definición para el SHELL por defecto.
 ```
 SHELL=/bin/bash
 ```
@@ -161,7 +161,7 @@ HOME
 : el directorio de inicio
 
 TERM
-: el tipo de terminal asignada de facto for el sistema operativo
+: el tipo de terminal asignada por defecto por el sistema operativo
 
 USER
 : el nombre de usuario, lo mismo que LOGNAME

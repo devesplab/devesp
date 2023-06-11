@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Comandos De Procesos
-permalink: /comandos-de-procesos/
+title: Auditar Procesos
+permalink: /auditar-procesos/
 parent: Comandos y Procesos
 grand_parent: Linux
 has_children: true
@@ -9,7 +9,7 @@ has_toc: false
 nav_order: 3
 ---
 
-# Comandos De Procesos.
+# Auditar Procesos.
 {: .no_toc }
 
 <details open markdown="block">
@@ -21,9 +21,9 @@ nav_order: 3
 {:toc}
 </details>
 
-Es necesario tener idea del funcionamiento del sistema en general.
+Es necesario tener idea del funcionamiento del sistema, aplicaciones y programas en general.
 
-Debemos saber si hay procesos que estan consumiendo recursos en exceso, o si hay aplicaciones que funcionan despacio y necesitan ser atunadas un poco.
+Debemos saber si los procesos estan consumiendo recursos de manera optima o en exceso, o si hay aplicaciones que funcionan despacio y necesitan ser atunadas un poco.
 
 Las utilidades que discutimos en este espacio nos dan una vista interna a la salud de los procesos que estan corriendo en el sistema.
 
@@ -71,6 +71,8 @@ MiB Swap:   1024.0 total,   1024.0 free,      0.0 used.  14499.0 avail Mem
 ```
 
 ## pstree
+
+La utilidad `pstree` sirve para visualizar la asociación entre procesos. Esta utilidad nos muestra el proceso principal y los procesos secundarias bajo el mismo.
 
 En Ubuntu instala el paquete `psmisc`.
 ```

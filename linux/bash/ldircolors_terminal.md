@@ -1,15 +1,15 @@
 ---
 layout: default
 title: DirColors en la Terminal
-permalink: /linux-dircolors/
-parent: Comandos y Procesos
+permalink: /dircolors-terminal/
+parent: Bash 
 grand_parent: Linux
 has_children: false
 has_toc: false
-nav_order: 4
+nav_order: 1
 ---
 
-# Colorizar Con DirColors
+# Colorizar la Terminal Con DirColors
 
 {: .no_toc }
 
@@ -23,7 +23,7 @@ nav_order: 4
 </details>
 
 
-Normalmente cuando usamos el comando `ls` para listar archivos y carpetas, la salida son colores de facto.
+Normalmente cuando usamos el comando `ls` para listar archivos y carpetas, la salida son colores defecto.
 Esto se puede modifiar para ver la salida del comando con ciertos colores que ayuda visualmente para leer mejor lo que vemos en la pantalla.
 
 El proceso para abilitar esto es simple:
@@ -55,7 +55,7 @@ Solo dos archivos son necesarios para esta tarea:
 * **~/.dir_colors** :: Archivo de configuración para el usuario individual
 
 La instalacion crea el archivo `/etc/DIR_COLORS`. 
-Por defacto, este archivo debe ser legible por el mundo.
+Por defecto, este archivo debe ser legible por el mundo.
 ```
 root@centos8-1 [DevEsp]
 hist:344 -> ls -l /etc/DIR_COLORS
@@ -75,7 +75,7 @@ Una vez que hemos copiado el archivo a nuestro directorio de inicio, agregemos e
 ```
 eval $(dircolors ~/.dir_colors)    
 ```
-Esta otra forma es mejor porque verifica que el archivo existe y si no, entoces lee la base de datos de facto disponible internamente en el sistema.
+Esta otra forma es mejor porque verifica que el archivo existe y si no, entoces lee la base de datos disponible internamente en el sistema.
 ```
 [ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) || eval $(dircolors -b)
 ```
@@ -110,7 +110,7 @@ Para comprobar la configuración podemos listar algunos directorios conocidos. L
 
 ## Instalar y Configuración en Ubuntu
 
-En Ubuntu, esta característica la provee el paquete `coreutils`. El paquete deberia estar instalado de facto haciendo disponible el comando `/usr/bin/dircolors` el cual toma una base de datos precargado, o también puede tomar por argumento un archivo con personalizaciones.
+En Ubuntu, esta característica la provee el paquete `coreutils`. El paquete deberia estar instalado defecto haciendo disponible el comando `/usr/bin/dircolors` el cual toma una base de datos precargado, o también puede tomar por argumento un archivo con personalizaciones.
 
 Crear el archivo `~/.dir_colors` es opcional.
 

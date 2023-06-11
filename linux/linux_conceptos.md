@@ -60,7 +60,7 @@ El Shell es el programa que accepta los comandos que entramos y los ejecuta para
 
 Típicamente, Linux ofrece el BASH shell de entrada. Pero hay otros que podemos escoger tales como SH, CSH, TCSH, o ZSH.
 
-Cuando entramos al sistema, decimos que estamos en el Shell. Podemos usar la variable de ambiente `$SHELL` para saber cual nos ha sido asignado de facto. En el ejemplo que sigue, tenemos el BOURNE SHELL o SH.
+Cuando entramos al sistema, decimos que estamos en el Shell. Podemos usar la variable de ambiente `$SHELL` para saber cual nos ha sido asignado defecto. En el ejemplo que sigue, tenemos el BOURNE SHELL o SH.
 
 ```
 $ echo $SHELL
