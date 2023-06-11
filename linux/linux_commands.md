@@ -23,7 +23,7 @@ nav_order: 4
 ## Que es un Comando?
 
 (what is it, why you need them, and what can you do with them?)
-### Estructura de un Comando
+## Estructura de un Comando
 
 Los comandos en Linux tienen cierto formato mas o menos consistente.
 ```
@@ -42,7 +42,20 @@ Podemos definir cada parte de esta manera:
   * a menudo se puede pasar mas de un argumento
   * su uso puede ser opcional, y frequentemente tiene un sujeto por defecto
 
-### Ejecucíon Simple o Enlazada
+## Tipos de Comandos
+
+Linux provee una gran cantidad de comandos y utilidades para manejar ares especificas del sistema operativo. 
+### Comandos de Uso General
+
+Esto son comandos que son usualmente usados para interactuar con el sistem de manera generalizada. Por ejemplo: ls, cd, chown, useradd, etc.
+### Comandos de Procesos
+
+Estos comandos so usados para manejar procesos del sistem y aplicaciones.
+
+### Comandos de Network
+
+Esto son comandos usados en el manejo y configuracion de NICs, IP Addresses, routes, etc.
+## Ejecucíon Simple o Enlazada
 
 Usualmente entramos comandos cuya función es simple.
 
@@ -69,7 +82,7 @@ $ echo "Hola, Mundo!" > holamundo.txt
 $ cat holamundo.txt
 ```
 
-### Comandos en Scripts
+## Comandos en Scripts
 
 Esta bien que usemos instrucciones generales en la CLI. Pero cuando las tareas crecen en complejidad es necesario agrupar tareas en scripts. 
  
