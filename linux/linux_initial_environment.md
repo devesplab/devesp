@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Implementación
-permalink: /linux-implementacion/
+title: Ambiente de Inicio
+permalink: /linux_initial_environment/
 parent: Linux
 has_toc: false
 nav_order: 3
 ---
 
-# Personalización y Extensión
+# Ambiente de Inicio en Linux
 
 {: .no_toc }
 
@@ -23,9 +23,10 @@ nav_order: 3
 Algunos sabores de sistemas operativos son mas facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de production en los que las exigencias requieren mas potencia de CPU y Memoria.
 
 Una de los mejores características de Linux es que puede personalizarse de la manera que deseamos.
-## Ambiente en Linux
 
 El ambiente del usuario es un conjunto de elementos que vienen a hacer la manera en la que el usuario puede interactuar con el sistema operativo.
+
+## Cuenta de Usuario
 
 Para poder entra a un sistema de Linux, necesitamos una cuenta de usuario.
 Una cuenta típica de usuario se ve de esta manera:
@@ -173,6 +174,12 @@ MAIL
 
 HISTIZE
 : valor configurable para la longitud del almacenamiento de comando ejecutados
+
+## Terminal de Acceso
+
+Una que que tenemos la cuenta de usuario y directorio de inicio, necesitamos acceder el sistema a travez de un shell usando como interfaz la terminal. 
+
+La terminal es el area de trabajo donde podemos escribir comandos para interactuar con el sistema.
 
 
 [Return to main page]({{site.baseurl}}/).
