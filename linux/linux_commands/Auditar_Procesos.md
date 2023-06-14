@@ -6,7 +6,7 @@ parent: Comandos y Procesos
 grand_parent: Linux
 has_children: true
 has_toc: false
-nav_order: 3
+nav_order: 4
 ---
 
 # Auditar Procesos.
@@ -30,7 +30,7 @@ Las utilidades que discutimos en este espacio nos dan una vista interna a la sal
 ## ps
 
 El comando `ps` es el metodo mas usado para mostrar lo procesos activos.
-```
+```bash
 -> ps -ef
 UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 00:16 ?        00:00:00 sleep infinity
@@ -40,7 +40,7 @@ ntp         9340       1  0 01:36 ?        00:00:02 /usr/sbin/ntpd -p /var/run/n
 root        9968    8599  0 05:39 pts/0    00:00:00 ps -ef
 ```
 Usando las opciones `-aux` muestra CPU y MEM que cada proceso esta usando.
-```
+```bash
 -> ps -aux
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root           1  0.0  0.0   2788  1012 ?        Ss   00:16   0:00 sleep infinity
@@ -55,7 +55,7 @@ El comando `ps` muestra información estática de un cierto momento en el tiempo
 ## top
 
 El comando top muestra una galeria de recursos corrientemente en uso.
-```
+```bash
 top - 05:27:01 up  5:19,  0 users,  load average: 0.00, 0.00, 0.00
 Tasks:   5 total,   1 running,   3 sleeping,   0 stopped,   1 zombie
 %Cpu(s):  0.1 us,  0.1 sy,  0.0 ni, 99.8 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
@@ -75,17 +75,17 @@ MiB Swap:   1024.0 total,   1024.0 free,      0.0 used.  14499.0 avail Mem
 La utilidad `pstree` sirve para visualizar la asociación entre procesos. Esta utilidad nos muestra el proceso principal y los procesos secundarias bajo el mismo.
 
 En Ubuntu instala el paquete `psmisc`.
-```
+```bash
 -> apt-get install psmisc
 ```
 
 En CentOS instala el paquete `pstree` disponible el repositorio `baseos`.
-```
+```bash
 -> yum whatprovides pstree
 ```
 
 Y luego pudes usar el comando `pstree` para mostrar la organización de procesos en el sistema.
-```
+```bash
 -> pstree
 systemd-+-chronyd
         |-dbus-daemon
