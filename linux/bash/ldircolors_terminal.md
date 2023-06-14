@@ -56,14 +56,14 @@ Solo dos archivos son necesarios para esta tarea:
 
 La instalacion crea el archivo `/etc/DIR_COLORS`. 
 Por defecto, este archivo debe ser legible por el mundo.
-```
+```bash
 root@centos8-1 [DevEsp]
 hist:344 -> ls -l /etc/DIR_COLORS
 -rw-r--r-- 1 root root 4536 Jul 13  2021 /etc/DIR_COLORS
 ```
 
 A partir de ahora, la confiugration está disponible para todos los usuarios. Pero podemos copiar el archivo a `.dir_colors` en nuestro directorio de inicio $HOME para re-escribir los valores predeterminados del sistema. 
-```
+```bash
 -> sudo cp /etc/DIR_COLORS ~/.dir_colors
 ```
 Si modificamos nuestra copia, solo afecta nuestro ambiento.
@@ -72,11 +72,11 @@ Si modificamos nuestra copia, solo afecta nuestro ambiento.
 ### Configurar El Ambiente
 
 Una vez que hemos copiado el archivo a nuestro directorio de inicio, agregemos esta linea en `~/.bash_profile` para abilitar esta característica automáticamente cada vez que entremos al sistema.
-```
+```bash
 eval $(dircolors ~/.dir_colors)    
 ```
 Esta otra forma es mejor porque verifica que el archivo existe y si no, entoces lee la base de datos disponible internamente en el sistema.
-```
+```bash
 [ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) || eval $(dircolors -b)
 ```
 
@@ -87,21 +87,21 @@ Esta otra forma es mejor porque verifica que el archivo existe y si no, entoces 
 ### Usando Color Con Salida de Comandos
 
 Ahora podemos usar el parámetro `--color` con el comando `ls` para ver la salida del comando en color.
-```
+```bash
 -> ls -l --color /usr/bin
 ```
 Ahora, usando cualquiera de esos aliases resultará en salida de comando colorizado, por ejemplo este
 alias produce un listado de archivos formateado en tres columnas.
-```
+```bash
 -> ls
 ```
 Si no deseamos color podemos hacer esto para nulificar el effecto.
-```
+```bash
 alias  ls="ls --color=never"
 ```
 
 Para comprobar la configuración podemos listar algunos directorios conocidos. La salida del comando debería mostrar algunas carpetas y archivos en colores diferentes.
-```
+```bash
 -> ll /etc
 -> ls --color -l /sbin
 ```
@@ -115,12 +115,12 @@ En Ubuntu, esta característica la provee el paquete `coreutils`. El paquete deb
 Crear el archivo `~/.dir_colors` es opcional.
 
 Simplemente úsese asi:
-```
+```bash
 -> ls --color -l /sbin
 ```
 
 Para más información ver la ayuda en línea.
-```
+```bash
 -> /usr/bin/dircolors --help
 ```
 
@@ -129,13 +129,13 @@ Para más información ver la ayuda en línea.
 ## Referencias
 
 * Ver las páginas manuales.
-```
+```bash
 -> man dir_colors
 -> man dircolors
 ```
 
 * Ver el archivo de configuración.
-```
+```bash
 -> cat /etc/DIR_COLORS
 ```
 

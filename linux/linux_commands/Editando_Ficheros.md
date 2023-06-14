@@ -6,7 +6,7 @@ parent: Comandos y Procesos
 grand_parent: Linux
 has_children: true
 has_toc: false
-nav_order: 2
+nav_order: 3
 ---
 
 # Editando Ficheros
@@ -23,8 +23,26 @@ nav_order: 2
 
 ## Permiso de Editar
 
-El comando `ls` muestra los permisos, asi come el grupo y usuario dueño de los ficheros.
+Supongamos que el usuario `devuser` quiere editar el fichero `/etc/passwd` usando el comando `vi`.
+```bash
+devuser@ubuntu1 [ DevEsp ]
+~
+hist:18 -> vi /etc/passwd
 ```
+Al entar el comando vi, e intentar hacer cambios, ve este mensage:
+```bash
+-- INSERT -- W10: Warning: Changing a readonly file
+```
+La razón es que el fichero le pertence al usuario `root` y `devuser` no tiene permiso a hacer cambios.
+```bash
+devuser@ubuntu1 [ DevEsp ]
+~
+hist:17 -> ls -l /etc/passwd
+-rw-r--r-- 1 root root 1596 Jun 14 04:30 /etc/passwd
+```
+
+El comando `ls` muestra los permisos, asi come el grupo y usuario dueño de los ficheros.
+```bash
 -> ls -lA
 total 8
 -rw-r--r-- 1 root root    0 Jun 11 02:06 datafile1.txt
@@ -35,7 +53,7 @@ drwxr-xr-x 2 root root 4096 Jun 11 03:53 pets/
 Podemos usar la opción `-n` para ver el número del usuario y de grupo para verificar que tienes acceso a los ficheros. 
 
 En este ejemplo, el grupo es zero, asi come el usuario. Esto indica que cada articulo pertenece a `root`.
-```
+```bash
 -> ls -lAn
 total 8
 -rw-r--r-- 1 0 0    0 Jun 11 02:06 datafile1.txt

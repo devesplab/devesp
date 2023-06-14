@@ -38,7 +38,7 @@ El diseño, organizacíon y jerarquia del sistema de archivoes puede modificarse
 El admininistrador de sistemas tiene la libertad the hacer ajustes en lo pertinente a la localizacíon absoluta del archivo asi como el tamaño correspondiente de cada parte del mismo.
 
 En este ejemplo, el comando `df` nos muestra la organización típica de un maquina virtual de CentOS 8 Stream.
-```
+```bash
 $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
 overlay          59G   22G   35G  39% /
@@ -62,7 +62,7 @@ Típicamente, Linux ofrece el BASH shell de entrada. Pero hay otros que podemos 
 
 Cuando entramos al sistema, decimos que estamos en el Shell. Podemos usar la variable de ambiente `$SHELL` para saber cual nos ha sido asignado defecto. En el ejemplo que sigue, tenemos el BOURNE SHELL o SH.
 
-```
+```bash
 $ echo $SHELL
 /bin/sh
 ```
@@ -81,7 +81,7 @@ Nos vamos a referir a la Linea De Comandos for sus siglas en Ingles: **CLI**, lo
 Generalmente, la CLI se identifica for el signo de dólar `$` cuando entramos al sistema. Eso puede ser personalizado en cualquier momento.
 
 En este ejemplo, escribimos comandos que nos ayudan a identificar el usuario con que hemos entrado al sistema.
-```
+```bash
 $ id
 uid=0(root) gid=0(root) groups=0(root)
 
@@ -113,11 +113,11 @@ DEL
 : borrar el simbolo en el que se encuentra el cursor
 
 Tipicamente, en CentOS 8 la CLI se ve asi:
-```
+```bash
 [user1@centos8-2 ~]$
 ```
 Mientras que Ubuntu se ve asi:
-```
+```bash
 $
 ```
 
@@ -133,7 +133,7 @@ Si el indicador muestra el signo `#` en lugar de `$`, indica que hemos entrado c
 El indicador es primariamente designado con la variable de ambiente `PS1`, la cual es configurable de la manera que nos plazca. Podemos designar cualquier símbolo en vez de `$` o `#`. 
 
 En el ejemplo que sigue, el signo de `$` es por defecto. Podemos usar el comando `export` para cambiarlo a `comando>> `. Luego usamos `echo` para verificar el ajuste.
-```
+```bash
 $
 $ export PS1='comando>> '
 comando>> 
@@ -147,13 +147,13 @@ Discutiremos el uso del comando `export` en otro documento.
 El directorio de inicio es donde aterrizamos y es nuestra base de operaciones. Es aquí donde creamos y mantenemos todos lo archivos, directorios, documentos, imagenes, programas y personalizaciones particulares a nuestro propio ambiente.
 
 Tan pronto como entramos al sistema, el comando `pwd` nos asiste para mostrarnos la localidad del directorio de inicio.
-```
+```bash
 $ pwd
 /root
 ```
 
 Podemos usar `echo` para mostrar el directorio de inicio en cualquier momento después de esta en una sessión for algun tiempo.
-```
+```bash
 $ echo $HOME
 /root
 ```
@@ -202,7 +202,7 @@ Las páginas manuales de Ubuntu están disponibles en linea [^1]
 
 Es de notar que las páginas manuales no están instaladas por defecto en **máquinas virtuales**. El usuario puede instalar las páginas manuales para la localización que corresponda al idioma del usuario. Al entrar el comando `man ls` en una máquina virtual de Ubuntu, vemos este mensaje indicando que ha sido optimizada para remover espacio que no es crítico para operaciones normales.
 
-```
+```bash
  -> man ls
 This system has been minimized by removing packages and content that are
 not required on a system that users do not log into.
