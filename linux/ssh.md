@@ -21,22 +21,20 @@ nav_order: 7
 </details>
 
 ---
-## First Subtitle
+## Que es SSH?
 
-This is the first section of the document.
-## Second Subtitle
+SSH (Secure SHell) es un programa que sirve para entrar a sistemas remotos. Tambien se usa para ejecutar comandos en forma remota.
 
-Second section of the document.
+SSH es un protocolo seguro que ofrece comunicaciones cifradas y reemplaza a otros protocolos menos seguros tales como RSH o TELNET.
 
-## Third Subtitle
+Esta utilidad usa el protocolo TCP, y por defecto usa el puerto 22. 
 
-And this third section of the document.
+## Cliente Y Servidor
 
-## Fourth Subtitle
- 
-Some interesting examples follow.
+El paquete en RHEL y CentOS se llama OpenSSH y ofrecen el cliente y servidor.
 
-{: .note }
-Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages.
+Generalmente, el paquete de servidor solo se instal en sistemas de computadoras a las que se espera connectar remotament via usuario o aplicacion.
+
+El paquete de cliente se instala en computadoras de usuarios que desean connectarse a servidores a los que tienen accesso.
 
 [Return to main page]({{site.baseurl}}/).
