@@ -183,6 +183,27 @@ Por ejemplo, esto es para `policycoreutils`.
 curl -s https://packages.ubuntu.com/$(lsb_release -cs)/$(dpkg --print-architecture)/policycoreutils/filelist
 ```
 
+## Otros Problemas Con APT
+
+Algunas veces sucede que no podemos instalar o buscar come en este ejemplo.
+```
+-> /usr/bin/apt search vim
+Sorting... Done
+Full Text Search... Done
+```
+Primero hay que actualizar el sistema.
+```
+-> apt-get update
+```
+Y entoces podemos buscar paquetes o instalar como discutimos anteriormente.
+```
+-> /usr/bin/apt search vim
+Sorting... Done
+Full Text Search... Done
+vim/oldstable 2:8.2.2434-3+deb11u1 amd64
+  Vi IMproved - enhanced vi editor
+```
+
 ## Referencias
 
 [^1]: https://packages.ubuntu.com/
