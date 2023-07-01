@@ -79,16 +79,14 @@ En Ubuntu instala el paquete `psmisc`.
 -> apt-get install psmisc
 ```
 
-En CentOS instala el paquete `pstree` disponible el repositorio `baseos`.
+En RHEL instala el paquete `psmisc` disponible el repositorio `baseos`.
 ```bash
--> yum whatprovides pstree
+-> yum whatprovides psmisc
 ```
 
 Y luego pudes usar el comando `pstree` para mostrar la organización de procesos en el sistema.
 ```bash
 -> pstree
-systemd-+-chronyd
-        |-dbus-daemon
-        |-systemd-journal
-        `-systemd-udevd
+systemd─┬─dbus-broker-lau───dbus-broker
+        └─systemd-journal
 ```

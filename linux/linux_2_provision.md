@@ -24,7 +24,7 @@ nav_order: 2
 
 Primero que nada debemos escoger el sabor de linux que queremos implementar.
 
-{: .warning }
+{: .note }
 Se debe tener en mente el ciclo de actualización y desmantelamiento de versiones.
 
 En la discussión de los [conceptos](../linux_conceptos) de Linux mencionamos que podemos escoger una version apta para servidores u otra para usuarios regulares. 
@@ -35,7 +35,18 @@ La manera típica de obtener una distribución es ir al sitio del distribuidor y
 la imagen en formato de ISO.
 
 Podemos descargar el ISO en mas de una manera.
-Por ejemplo, la imagen de _CentOS 8 Stream_.
+
+La imagen ISO de **RHEL9** puede encontrarse en esta URL.
+```
+https://developers.redhat.com/products/rhel/download
+```
+
+La ultima imagen de **CentoS 7.9** se obtiene aqui:
+```
+https://mirrors.edge.kernel.org/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso
+```
+
+La imagen de **CentOS 8 Stream**.
 * directamente del sitio de internet usando el URL en el navegador web.
 ```
 https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso
@@ -44,6 +55,11 @@ https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-2023
 ```
 wget https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso
 ```
+
+{: .warning }
+> CentOS sera eventualmente descontinuado. Se recomienda usar RedHat.<br>
+> La fecha de final de vida de CentOS 7 es Junio 30, 2024.<br>
+> Ver https://endoflife.software/operating-systems/linux/centos
 
 Los ISO estan generalmente disponibles en varias localidades sincronizadas conocidos como "espejos" porque reflejan el mismo contenido. Podemos escoger un espejo que este cerca geograficamente a nuestra localidad para que el descargue sea más rápido; esto es importante en lugares donde la velocidad de internet no es óptima.
 

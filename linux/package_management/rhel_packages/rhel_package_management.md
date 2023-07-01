@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Paquetes en CentOS
-permalink: /centos-package-management/
+title: Paquetes en RedHat
+permalink: /rhel-package-management/
 parent: Manejando Paquetes
 grand_parent: Linux
 has_children: false
@@ -9,7 +9,7 @@ has_toc: false
 nav_order: 98
 ---
 
-# Manejo de Paquetes en CentOS
+# Manejo de Paquetes en RedHat (RHEL)
 {: .no_toc }
 
 <details open markdown="block">
@@ -26,7 +26,7 @@ nav_order: 98
 
 # YUM en RHEL/CentOS
 
-RedHat y CentOS usan el comando `yum` (tambien `dnf` ) para manejar paquetes de software.
+RedHat y sus variantes tales como CentOS y Fedora usan el comando `yum` (tambien `dnf` ) para manejar paquetes de software.
 
 La sintaxis general the YUM es asi:
 ```bash
