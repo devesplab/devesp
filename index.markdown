@@ -32,7 +32,7 @@ Puedes buscar un término en la caja de búsqueda arriba a la izquierda. Tambié
 
 En este espacio discutimos muchos aspectos referentes a Linux.
 
-Siendo que tenemos varias opciones, visitaremos varios sabores de Linux tales como CentOS, Ubuntu, RedHat, y otros como sea neceario.
+Siendo que tenemos varias opciones, visitaremos variantes de Linux tales como RedHat, CentOS, Ubuntu, y otras como sea neceario.
 
 Las exposiciones son prácticas y al punto con el objetivo de aprender a hacer algo específico y útil.
 

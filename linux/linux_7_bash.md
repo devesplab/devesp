@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Bash
-permalink: /bash/
+title: El Shell
+permalink: /linux-shell/
 parent: Linux
 has_children: true
 has_toc: false
-nav_order: 6
+nav_order: 7
 ---
 
 # Introducción a Bash

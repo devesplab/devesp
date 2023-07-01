@@ -37,4 +37,4 @@ nav_order: 5
 
 ## Crear Cuenta en Ubuntu
 
-## Crear Cuenta en CentOS
+## Crear Cuenta en RHEL

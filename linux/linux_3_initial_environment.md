@@ -79,9 +79,9 @@ Linux provee varias variables de ambiente precargadas con información útil que
 
 Generalmente, las variables de ambiente estan definidas en `/etc/profile`, `/etc/bashrc`, `~/.bashrc`, o `~/.bash_profile`.
 
-En CentOS 8, el archivo del usuario `~/.bashrc` muestra un bloque indicando que lee ajustes encontrados en `/etc/bashrc`.
+En RHEL, el archivo del usuario `~/.bashrc` muestra un bloque indicando que lee ajustes encontrados en `/etc/bashrc`.
 ```
-[user1@centos8-2 ~]$  cat ~/.bashrc
+[devuser@rhel9-1-devesp ~]$  cat ~/.bashrc
 # .bashrc
 
 # Source global definitions
@@ -90,18 +90,18 @@ if [ -f /etc/bashrc ]; then
 fi
 ```
 
-Por ejemplo, en CentOS, el archivo `/etc/bashrc` tiene la definición para el SHELL por defecto.
+Por ejemplo, en RHEL, el archivo `/etc/bashrc` tiene la definición para el SHELL por defecto.
 ```
 SHELL=/bin/bash
 ```
 
-En CentOS 8 Stream podemos usar el comando `env` para ver todas las variables de ambiente que tenemos disponibles.
+En RHEL podemos usar el comando `env` para ver todas las variables de ambiente que tenemos disponibles.
 ```
-devuser@centos8-2 [DevEsp]
+devuser@rhel9-1-devesp [DevEsp]
 hist:18 -> env
 LANG=en_US.UTF-8
 HISTCONTROL=ignoreboth:erasedups
-HOSTNAME=centos8-2
+HOSTNAME=rhel9-1-devesp
 which_declare=declare -f
 USER=devuser
 PWD=/home/devuser
@@ -122,7 +122,7 @@ _=/usr/bin/env
 
 El comando `set` muestra información aún mas expandida organizada alfabeticamente (parcialmente extraida abajo).
 ```
-devuser@centos8-2 [DevEsp]
+devuser@rhel9-1-devesp [DevEsp]
 hist:30 -> set
 BASH=/bin/bash
 BASH_VERSINFO=([0]="4" [1]="4" [2]="20" [3]="1" [4]="release" [5]="x86_64-redhat-linux-gnu")
@@ -137,7 +137,7 @@ HISTFILE=/home/devuser/.bash_history
 HISTFILESIZE=1000
 HISTSIZE=1000
 HOME=/home/devuser
-HOSTNAME=centos8-2
+HOSTNAME=rhel9-1-devesp
 ```
 
 {: .highlight }

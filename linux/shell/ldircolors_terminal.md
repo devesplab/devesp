@@ -2,7 +2,7 @@
 layout: default
 title: DirColors en la Terminal
 permalink: /dircolors-terminal/
-parent: Bash 
+parent: El Shell 
 grand_parent: Linux
 has_children: false
 has_toc: false
@@ -33,11 +33,11 @@ El proceso para abilitar esto es simple:
 
 <hr style=" border: 0; width: 100%; color:#0369a3; background-color:#0369a3; height: 4px;"/>
 
-## Instalar y Configuración en CentOS
+## Instalar y Configuración en RHEL
 
-En **CentOS 8 Stream**, es necesario instalar el paquete `coreutils-common` para poder usar colorizacion en el listado the archivos y carpetas.
+En **RHEL**, es necesario instalar el paquete `coreutils-common` para poder usar colorizacion en el listado the archivos y carpetas.
 ```bash
-root@centos8-1 [DevEsp]
+root@rhel9-1 [DevEsp]
 hist:343 -> yum install coreutils-common-8.30-12.el8.x86_64
 Last metadata expiration check: 21:25:08 ago on Tue 16 May 2023 08:04:12 PM PDT.
 Dependencies resolved.
@@ -57,7 +57,7 @@ Solo dos archivos son necesarios para esta tarea:
 La instalacion crea el archivo `/etc/DIR_COLORS`. 
 Por defecto, este archivo debe ser legible por el mundo.
 ```bash
-root@centos8-1 [DevEsp]
+root@rhel9-1 [DevEsp]
 hist:344 -> ls -l /etc/DIR_COLORS
 -rw-r--r-- 1 root root 4536 Jul 13  2021 /etc/DIR_COLORS
 ```
@@ -69,6 +69,7 @@ A partir de ahora, la confiugration está disponible para todos los usuarios. Pe
 Si modificamos nuestra copia, solo afecta nuestro ambiento.
 
 * * *
+
 ### Configurar El Ambiente
 
 Una vez que hemos copiado el archivo a nuestro directorio de inicio, agregemos esta linea en `~/.bash_profile` para abilitar esta característica automáticamente cada vez que entremos al sistema.
@@ -139,6 +140,6 @@ Para más información ver la ayuda en línea.
 -> cat /etc/DIR_COLORS
 ```
 
-* Página manual de [dir_colors para CentOS](https://linux.die.net/man/5/dir_colors) en linea.
+* Página manual de [dir_colors para Linux](https://linux.die.net/man/5/dir_colors) en linea.
 * Página manual de [dir_colors para Ubuntu](https://manpages.ubuntu.com/manpages/trusty/man1/dircolors.1.html) en linea.
 * Ver [vivid](https://github.com/sharkdp/vivid) en Github.
