@@ -64,8 +64,7 @@ Este comando nos muestra le fichero de configuracion `/etc/ssh/sshd_config`.
 En RHEL9, el directorio `/etc/ssh` contiene todos los fichers de configuracion.<br>
 El fichero de configuracion es `/etc/ssh/sshd_config`.
 ```
-root@client3 [ RHEL9 ]
-hist:29 -> ls -l /etc/ssh
+-> ls -l /etc/ssh
 total 584
 -rw-r--r-- 1 root root 578094 Apr 13 13:01 moduli
 -rw-r--r-- 1 root root   1921 Apr 13 13:01 ssh_config
@@ -84,10 +83,7 @@ Las definiciones de cada paquete en CentOS tambien se aplican a Ubuntu.
 
 Este comando nos muestra la lista parcial de ficheros que incluyen el fichero de configuracion.
 ```bash
-Sun 2023Jun25 23:47:03 UTC
-root@client2 [ U2204 ]
-~
-hist:42 ->  dpkg-query -L openssh-server
+->  dpkg-query -L openssh-server
 /.
 /etc
 /etc/init.d/ssh
@@ -101,10 +97,7 @@ hist:42 ->  dpkg-query -L openssh-server
 En Ubuntu, el directorio `/etc/ssh` contiene todos los fichers de configuracion.<br>
 El fichero de configuracion es `/etc/ssh/sshd_config`.
 ```bash
-Sun 2023Jun25 23:51:57 UTC
-root@client2 [ U2204 ]
-/etc/ssh
-hist:47 -> ls -l /etc/ssh
+-> ls -l /etc/ssh
 total 540
 -rw-r--r-- 1 root root 505426 Nov 23  2022 moduli
 -rw-r--r-- 1 root root   1650 Nov 23  2022 ssh_config
@@ -122,22 +115,23 @@ drwxr-xr-x 2 root root   4096 Nov 23  2022 sshd_config.d/
 
 ## Proteger OpenSSH
 
-### Poner permisos al fichero de configuración
+#### Es crucial aplicar los permisos apropiados al fichero de configuración de OpenSSH
 
 {: .warning }
 > Hagamos copias de los ficheros antes de hacer cambios.
 
 Copiemos le fichero `/etc/ssh/sshd_config` para protegerlo de que sea cambiado al quitarle el permiso de escribir.
 ```bash
-cp /etc/ssh/sshd_config /etc/ssh/sshd_config_ORIG
-chmod a-w /etc/ssh/sshd_config_ORIG
+-> cp /etc/ssh/sshd_config /etc/ssh/sshd_config_ORIG
+-> chmod a-w /etc/ssh/sshd_config_ORIG
 ```
 
 Poner los permision apropiados del fichero de configuración.
 ```bash
-chown root:root /etc/ssh/sshd_config 
-chmod og-rwx /etc/ssh/sshd_config
+-> chown root:root /etc/ssh/sshd_config 
+-> chmod og-rwx /etc/ssh/sshd_config
 ```
+
 Verifiquemos.
 ```bash
 -> stat /etc/ssh/sshd_config

@@ -18,7 +18,7 @@ En esta página vamos a agregar temas de interés en el mundo de la informática
 
 ## Final De Ciclo De Vida Para CentOS
 
-Todos los lanzamientos.
+Lista de todos los lanzamientos de CentOS.
 
 Typo      | Fecha de lanzamiento  | Final De Vida     |
 --------- | --------------------- | ------------------|
@@ -27,7 +27,7 @@ CentOS 7  |	July 7, 2014	      | June 30, 2024	  |
 CentOS 6  |	July 10, 2011	      | November 30, 2020 |	
 CentOS 5  |	April 12, 2007	      | March 31, 2017    |
 
-RHEL 7.9 es la versión final de RHEL 7 y el mantenimiento se define en la política de soporte de mantenimiento de 2 fases anterior.
+RHEL 7.9 es la versión final de RHEL 7 y el mantenimiento se define en la política de soporte de mantenimiento de 2 fases anteriores.
 
 Las versiones en la tabla arriba han sido remplazadas por CentoS 8 Stream. Sin embargo, aun esa linea sera desfazada tal como lo indica el [posteo blog](https://blog.centos.org/2023/04/end-dates-are-coming-for-centos-stream-8-and-centos-linux-7/) the CentOS.
 

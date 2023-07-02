@@ -44,9 +44,14 @@ ssh devuser@11.22.33.44
 
 ## Comandos remotos de ssh
 
-La idea central de SSH es que podemos hacer operaciones que pueden ser ejecutadas directamente en el servidor remoto.
+La idea central de SSH es que podemos hacer operaciones que pueden ser ejecutadas directamente en un servidor remoto.
 
-Ejecutar un comando o script remotamente en el sistem.
+La sintaxis es asi:
+```
+ssh <hostname-de-sistema-remoto> <comando-o-script>
+```
+
+Ejecutar un comando o script remotamente en un sistem.
 ```
 -> ssh client3 "Hola, soy el usuario devuse!"
 
@@ -55,7 +60,7 @@ Ejecutar un comando o script remotamente en el sistem.
 -> ssh client3 /usr/local/bin/myscript.sh
 ```
 
-Copiar algo al sistema remote
+Copiar algo a un sistema remoto.
 ```
 -> scp directory1 fichero1 client3:/tmp
 ```
