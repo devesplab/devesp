@@ -33,7 +33,7 @@ Supongamos que el usuario `devuser` se quiere conectar de client2 and client3
 ```bash
 client1 ---> client3
 ```
-En client1 vamos a crear llaves RSA en OpenSSH y copiar la llave a client3.
+En el client1 vamos a crear llaves de OpenSSH de tipo RSA y luego copiaremos la llave a client3.
 
 Veamos pues los pasos para permitir ssh sin contraseña entre servidores remotos.
 
@@ -41,13 +41,10 @@ Veamos pues los pasos para permitir ssh sin contraseña entre servidores remotos
 
 Entremos a cada sistema con el usuario `devuser`
 ```bash
-Sun 2023Jun25 17:52:02 PDT
-root@client1 [ CentOS8 ]
-~
-hist:330 -> su - devuser
+-> su - devuser
 Last login: Sun Jun 25 17:47:06 PDT 2023 on pts/1
 ```
-Notese que estamos en el directorio de inicio denotado per el simbolo `~` en el prompt.
+Usaremos como referencia el directorio de inicio denotado per el simbolo `~` en el prompt.
 
 Crear el directorio `.ssh` y dar el permiso mostrado.
 ```bash
@@ -76,8 +73,7 @@ Verifiquemos.
 Generar la llave aceptando todos los valores per defecto.<br>
 Usamos el comando `ssh-keygen` con la opción `-t` para specificar que deseamos una llave de tipo `RSA`.
 ```bash
-Sun 2023Jun25 18:07:42 PDT
-devuser@client1 [ CentOS8 ]
+devuser@client1 [ RHEL9 ]
 ~
 hist:127 -> ssh-keygen -t rsa
 Generating public/private rsa key pair.
@@ -111,7 +107,7 @@ La operación anterior ha creado dos ficheros en el directorio`~/.ssh`:
 - la llave **pública**: /home/devuser/.ssh/id_rsa.pub
 
 ```bash
-devuser@client1 [ CentOS8 ]
+devuser@client1 [ RHEL9 ]
 ~
 hist:128 -> ls -l ~/.ssh/
 total 12
@@ -122,22 +118,28 @@ total 12
 ```
 
 El fichero `~/.ssh/id_rsa.pub` contiene la llave pública. <br>
-Podemos distribuir esta llave pública a cuantos servidores queramos acceder con esta llave.<br>
+Podemos distribuir esta llave pública a cuantos sistemas remotos queramos acceder con esta llave.<br>
 El comentario al final de la linea indica el servidor a la que esta llave pertenece.<br>
 EL contenido entero de la llave es en una sola linea.
 ```bash
-devuser@client1 [ CentOS8 ]
+devuser@client1 [ RHEL9 ]
 ~
 hist:130 -> cat ~/.ssh/id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9HrNdiFpR2dewlPVkanf0WmD0zbkdpkJlzwzbKw1Pq5fOgZPWBnHNGtcon+GRMCIju0Cy3dlUjz8jIvkxd+ow7DHO/5o28S/sEKYM7384PG2P2al8WWhrIrJC82EYKe6uVuJXYW/E3bEfskqcVP82lkzgLyQ0Dd5GTcSi7qA5KEcicofM+gxl8QgyCir6SGBAXUAC4JWxsYMjn+MUBxGIc/J8dzobZmhPQMXP897/S49NvC+glP8r8jeX6AZ6JNbM+AGJ5hvntP+OrTQvJSSkOdC3OrqMO6lcZ3dbzgObqWSjDeplTP/17/UdYu/ruyo1Ys7TMqMIeWXUDoYIUsuEVP59nEwhRKVFd+h2SsUNtvxUfdrpHZG8+aWVAiGFVwrv5TUfmMpLcrcZxVObz/K+El4SsUj+p3mPd7gTJg+Umj3Mvn52KD9kK7cwNhrpgBVawrdEMTBmUnHDjEHhMLoqrV9Rvo07uRsu3pKZQpL6UD/3nO2jHNwGrg0S5nTZ4ck= devuser@client1
 ```
 
-Copiemos la llave publica a un sistema usando el comando `ssh-copy-id` y pasando como argumento el servidor de destino.
+Copiemos la llave pública a un sistema usando el comando `ssh-copy-id` y pasando como argumento el servidor de destino.
 ```
 -> ssh-copy-id client3
 ```
 
-En seguida podemos usar el comando `ssh` para entrar al sistema remoto.
+{: .highlight }
+> Para información y ejemplos de como usar el comando `ssh-copy-id` ver la ayuda de esta manera:<br>
+> `-> man ssh-copy-id` <br>
+> `-> tldr ssh-copy-id`<br>
+> 
+
+Una vez que nuestra llave pública esta en el sistema remoto, podemos usar el comando `ssh` para entrar al mismo.
 ```
 -> ssh client3
 ```

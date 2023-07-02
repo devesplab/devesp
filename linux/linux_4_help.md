@@ -179,7 +179,11 @@ dnf install info
 
 Luego podemos ver informacion de un comando asi:
 ```
-info vgs
+info <nombre-del-comando>
+```
+Por ejemplo
+```
+info echo
 ```
 
 [Return to main page]({{site.baseurl}}/).

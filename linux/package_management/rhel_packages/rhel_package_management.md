@@ -31,6 +31,8 @@ RedHat y sus variantes tales como CentOS y Fedora usan el comando `yum` (tambien
 La sintaxis general the YUM es asi:
 ```bash
 yum [options] COMMAND
+
+dnf [options] COMMAND
 ```
 ## Operaciones Generales con YUM
 
@@ -47,82 +49,73 @@ En seguida veremos varios comandos que nos permiten hacer lo siguiente:
 
 Cada repositorio en CentOS/RHEL tiene un fichero correspondiente en `/etc/yum.repos.d/`.
 ```bash
-root@client1 [ CentOS8 ]
+devuser@server1 [ RHEL9 ]
 ~
-hist:305 -> ls -l /etc/yum.repos.d/
-total 64
--rw-r--r-- 1 root root  721 Jun 18 18:28 CentOS-Linux-AppStream.repo
--rw-r--r-- 1 root root  706 Jun 18 18:28 CentOS-Linux-BaseOS.repo
--rw-r--r-- 1 root root 1132 Jun 18 18:28 CentOS-Linux-ContinuousRelease.repo
--rw-r--r-- 1 root root  318 Sep 14  2021 CentOS-Linux-Debuginfo.repo
--rw-r--r-- 1 root root  734 Jun 18 18:28 CentOS-Linux-Devel.repo
--rw-r--r-- 1 root root  706 Jun 18 18:28 CentOS-Linux-Extras.repo
--rw-r--r-- 1 root root  721 Jun 18 18:28 CentOS-Linux-FastTrack.repo
--rw-r--r-- 1 root root  742 Jun 18 18:28 CentOS-Linux-HighAvailability.repo
--rw-r--r-- 1 root root  693 Sep 14  2021 CentOS-Linux-Media.repo
--rw-r--r-- 1 root root  708 Jun 18 18:28 CentOS-Linux-Plus.repo
--rw-r--r-- 1 root root  726 Jun 18 19:15 CentOS-Linux-PowerTools.repo
--rw-r--r-- 1 root root 1124 Sep 14  2021 CentOS-Linux-Sources.repo
--rw-r--r-- 1 root root 1680 Apr 17 06:22 epel-modular.repo
--rw-r--r-- 1 root root 1779 Apr 17 06:22 epel-testing-modular.repo
--rw-r--r-- 1 root root 1431 Apr 17 06:22 epel-testing.repo
--rw-r--r-- 1 root root 1332 Apr 17 06:22 epel.repo
+hist:117 -> ls -l /etc/yum.repos.d/
+total 96
+-rw-r--r--  1 root root  1453 Apr 14 14:22 epel.repo
+-rw-r--r--  1 root root  1552 Apr 14 14:22 epel-testing.repo
+-rw-r--r--. 1 root root 88244 Jun 20 18:40 redhat.repo
 ```
 
 Un repositorio esta activo cuando tiene `enabled=1`.<br>
 Si tiene `enabled=0`, indica que esta desabilitado.<br>
-En este ejemplo, el repositorio **powertools** esta activo porque tiene `enabled` igual a `1`.
+En este ejemplo, un sistema de RHEL9, tiene el repositorio **redhat.repo** el cual esta abilitado porque tiene `enabled` igual a `1`.
 ```bash
-root@client1 [ CentOS8 ]
-~
-hist:307 -> cat /etc/yum.repos.d/CentOS-Linux-PowerTools.repo
-# CentOS-Linux-PowerTools.repo
-[powertools]
-name=CentOS Linux $releasever - PowerTools
-baseurl=http://vault.centos.org/$contentdir/$releasever/PowerTools/$basearch/os/
-gpgcheck=1
-enabled=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+devuser@server1 [ RHEL9 ]
+hist:116 -> cat //etc/yum.repos.d/redhat.repo
+[rhel-9-for-x86_64-baseos-rpms]
+name = Red Hat Enterprise Linux 9 for x86_64 - BaseOS (RPMs)
+baseurl = https://cdn.redhat.com/content/dist/rhel9/$releasever/x86_64/baseos/os
+enabled = 1
+gpgcheck = 1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify = 1
+sslcacert = /etc/rhsm/ca/redhat-uep.pem
+sslclientkey = /etc/pki/entitlement/1800058266028775816-key.pem
+sslclientcert = /etc/pki/entitlement/1800058266028775816.pem
+sslverifystatus = 1
+metadata_expire = 86400
+enabled_metadata = 1
 ```
 
 El siguiente comando muestra como listar todos los repositorios disponibles en el sistema.
 ```bash
-root@client1 [ CentOS8 ]
-~
-hist:254 -> yum repolist
+-> yum repolist
 repo id                                repo name
-appstream                              CentOS Linux 8 - AppStream
-baseos                                 CentOS Linux 8 - BaseOS
-epel                                   Extra Packages for Enterprise Linux 8 - x86_64
-extras                                 CentOS Linux 8 - Extras
-powertools                             CentOS Linux 8 - PowerTools
+epel                                   Extra Packages for Enterprise Linux 9 - x86_64
+rhel-9-for-x86_64-appstream-rpms       Red Hat Enterprise Linux 9 for x86_64 - AppStream (RPMs)
+rhel-9-for-x86_64-baseos-rpms          Red Hat Enterprise Linux 9 for x86_64 - BaseOS (RPMs)
 ```
 
 ### Cual paquete nos da una utilidad?
 
-Por ejemplo, esto nos dice que el paquete at-3.1.20-11.el8.x86_64 provee la utilidad `at`
+Este ejemplo nos dice que el paquete `coreutils-8.32-31.el9.x86_64` provee el comando `echo`
 ```bash
-root@client1 [ CentOS8 ]
+devuser@server1 [ RHEL9 ]
 ~
-hist:270 -> yum provides at
-Last metadata expiration check: 0:10:46 ago on Sun Jun 25 13:41:21 2023.
-at-3.1.20-11.el8.x86_64 : Job spooling tools
-Repo        : baseos
+hist:117 -> yum provides echo
+Extra Packages for Enterprise Linux 9 - x86_64                    882 kB/s |  18 MB     00:20
+Red Hat Enterprise Linux 9 for x86_64 - AppStream (RPMs)          6.0 MB/s |  22 MB     00:03
+Red Hat Enterprise Linux 9 for x86_64 - BaseOS (RPMs)             4.7 MB/s |  13 MB     00:02
+Last metadata expiration check: 0:00:02 ago on Sun 02 Jul 2023 02:19:39 PM PDT.
+coreutils-8.32-31.el9.x86_64 : A set of basic GNU tools commonly used in shell scripts
+Repo        : rhel-9-for-x86_64-baseos-rpms
 Matched from:
-Provide    : at = 3.1.20-11.el8
+Provide    : /bin/echo
+Filename    : /usr/bin/echo
 ```
 
 ### Listar paquetes
 
 Podemos listar un solo paquete.<br>
-En este ejemplo listamos el paquete `at`.
+En este ejemplo listamos el paquete `coreutils`.
 ```bash
-root@client1 [ CentOS8 ]
-~
-hist:270 ->  yum list at
-Last metadata expiration check: 0:10:04 ago on Sun Jun 25 13:41:21 2023.
+-> yum list coreutils
+Not root, Subscription Management repositories not updated
+Last metadata expiration check: 0:08:08 ago on Sun Jul  2 14:13:26 2023.
 Available Packages
-at.x86_64                                                     3.1.20-11.el8                                                     baseos
+coreutils.x86_64       8.32-34.el9         ubi-9-baseos-rpms    3.1.20-11.el8      baseos
 ```
 
 Esto muestra la lista completa de todos los paquetes disponibles de todos los repositorios presentes 
@@ -131,9 +124,9 @@ en el sistema.
 -> yum list --available
 ```
 La lista puede ser bastante larga, asi que podemos restringir la busqueda a lo que nos interesa.<br>
-Por ejemplo, aqui buscamos todos los paquetes referentes a `mysql`.
+Por ejemplo, aqui buscamos todos los paquetes referentes a `python`.
 ```bash
--> yum list --available | grep mysql
+-> yum list --available | grep python
 ``` 
 
 ### Instalar un Paquete
@@ -142,42 +135,49 @@ Podemos usar el parametro `install` y pasar el nombre del paquete.<br>
 La operacion encontrara las dependencias disponibles si existen.<br>
 En este ejemplo instalamos el paquete `at`.
 ```bash
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:268 -> yum install at
-Last metadata expiration check: 0:08:46 ago on Sun Jun 25 13:41:21 2023.
+hist:73 -> yum install at
+Updating Subscription Management repositories.
+Unable to read consumer identity
+Subscription Manager is operating in container mode.
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Last metadata expiration check: 1 day, 0:33:33 ago on Sat Jul  1 13:54:55 2023.
 Dependencies resolved.
-=====================================================================================
- Package                    Architecture    Version           Repository        Size
-=====================================================================================
+==================================================================================
+ Package            Architecture     Version           Repository            Size
+==================================================================================
 Installing:
- at                         x86_64          3.1.20-11.el8     baseos            81 k
+ at                 x86_64           3.1.23-11.el9     ubi-9-baseos-rpms     69 k
 
 Transaction Summary
-=====================================================================================
+==================================================================================
 Install  1 Package
 
-Total download size: 81 k
-Installed size: 129 k
+Total download size: 69 k
+Installed size: 124 k
 Is this ok [y/N]: y
 Downloading Packages:
-at-3.1.20-11.el8.x86_64.rpm                               196 kB/s |  81 kB     00:00
--------------------------------------------------------------------------------------
-Total                                                     195 kB/s |  81 kB     00:00
+at-3.1.23-11.el9.x86_64.rpm                         176 kB/s |  69 kB     00:00
+--------------------------------------------------------------------------------
+Total                                               174 kB/s |  69 kB     00:00
 Running transaction check
 Transaction check succeeded.
 Running transaction test
 Transaction test succeeded.
 Running transaction
-  Preparing        :                                                             1/1
-  Installing       : at-3.1.20-11.el8.x86_64                                     1/1
-warning: Unable to get systemd shutdown inhibition lock: Unit systemd-logind.service is masked.
+  Preparing        :                                                        1/1
+  Installing       : at-3.1.23-11.el9.x86_64                                1/1
+  Running scriptlet: at-3.1.23-11.el9.x86_64                                1/1
+Created symlink /etc/systemd/system/multi-user.target.wants/atd.service → /usr/lib/systemd/system/atd.service.
 
-  Running scriptlet: at-3.1.20-11.el8.x86_64                                     1/1
-  Verifying        : at-3.1.20-11.el8.x86_64                                     1/1
+  Verifying        : at-3.1.23-11.el9.x86_64                                1/1
+Installed products updated.
 
 Installed:
-  at-3.1.20-11.el8.x86_64
+  at-3.1.23-11.el9.x86_64
 
 Complete!
 ```
@@ -192,37 +192,44 @@ Para evitar tener que teclear la respuesta a la pregunta `Is this ok [y/N]:`, po
 Para desinstalar in paquete solo tenemos que usar el parametro `remove` y pasar el nombre del paquete.<br>
 En este ejemplo borramos el paquete `at`.
 ```bash
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:269 -> yum remove at
+hist:74 -> yum remove at
+Updating Subscription Management repositories.
+Unable to read consumer identity
+Subscription Manager is operating in container mode.
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
 Dependencies resolved.
-==========================================================================================
- Package                   Architecture    Version             Repository            Size
-==========================================================================================
+=================================================================================
+ Package            Architecture    Version          Repository             Size
+=================================================================================
 Removing:
- at                        x86_64          3.1.20-11.el8       @baseos              129 k
+ at                 x86_64          3.1.23-11.el9    @ubi-9-baseos-rpms    124 k
 
 Transaction Summary
-==========================================================================================
+=================================================================================
 Remove  1 Package
 
-Freed space: 129 k
+Freed space: 124 k
 Is this ok [y/N]: y
 Running transaction check
 Transaction check succeeded.
 Running transaction test
 Transaction test succeeded.
 Running transaction
-  Preparing        :                                                                 1/1
-  Running scriptlet: at-3.1.20-11.el8.x86_64                                         1/1
-warning: Unable to get systemd shutdown inhibition lock: Unit systemd-logind.service is masked.
+  Preparing        :                                                        1/1
+  Running scriptlet: at-3.1.23-11.el9.x86_64                                1/1
+Removed "/etc/systemd/system/multi-user.target.wants/atd.service".
 
-  Erasing          : at-3.1.20-11.el8.x86_64                                         1/1
-  Running scriptlet: at-3.1.20-11.el8.x86_64                                         1/1
-  Verifying        : at-3.1.20-11.el8.x86_64                                         1/1
+  Erasing          : at-3.1.23-11.el9.x86_64                                1/1
+  Running scriptlet: at-3.1.23-11.el9.x86_64                                1/1
+  Verifying        : at-3.1.23-11.el9.x86_64                                1/1
+Installed products updated.
 
 Removed:
-  at-3.1.20-11.el8.x86_64
+  at-3.1.23-11.el9.x86_64
 
 Complete!
 ```
@@ -232,18 +239,25 @@ Complete!
 Para mostrar los detalles pertinentes a un paquete solo tenemos que usar el parametro `info` y pasar el nombre del paquete.<br>
 En este ejemplo obtenemos la información del paquete `at`.
 ```bash
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:266 -> yum info at
-Last metadata expiration check: 0:34:16 ago on Sun Jun 25 13:41:21 2023.
-Available Packages
+hist:75 -> yum info at
+Updating Subscription Management repositories.
+Unable to read consumer identity
+Subscription Manager is operating in container mode.
+
+This system is not registered with an entitlement server. You can use subscription-manager to register.
+
+Last metadata expiration check: 1 day, 0:40:27 ago on Sat Jul  1 13:54:55 2023.
+Installed Packages
 Name         : at
-Version      : 3.1.20
-Release      : 11.el8
+Version      : 3.1.23
+Release      : 11.el9
 Architecture : x86_64
-Size         : 81 k
-Source       : at-3.1.20-11.el8.src.rpm
-Repository   : baseos
+Size         : 124 k
+Source       : at-3.1.23-11.el9.src.rpm
+Repository   : @System
+From repo    : ubi-9-baseos-rpms
 Summary      : Job spooling tools
 URL          : http://ftp.debian.org/debian/pool/main/a/at
 License      : GPLv3+ and GPLv2+ and ISC and MIT and Public Domain
@@ -251,7 +265,7 @@ Description  : At and batch read commands from standard input or from a specifie
              : file. At allows you to specify that a command will be run at a
              : particular time. Batch will execute commands when the system load
              : levels drop to a particular level. Both commands use user's shell.
-             :y
+             :
              : You should install the at package if you need a utility for
              : time-oriented job control. Note: If it is a recurring job that will
              : need to be repeated at the same time every day/week, etc. you should
@@ -274,27 +288,18 @@ Para mostrar todos los paquetes relacionados a una categoria podemos usar el par
 En este ejemplo obtenemos la información del paquete `httpd`.<br>
 La lista mostrada aqui es parcial. 
 ```bash
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:267 -> yum search httpd
-Last metadata expiration check: 0:07:53 ago on Sun Jun 25 13:41:21 2023.
-=========================== Name Exactly Matched: httpd ===================================
+hist:76 ->  yum search httpd
+Last metadata expiration check: 1 day, 0:41:06 ago on Sat Jul  1 13:54:55 2023.
+================ Name Exactly Matched: httpd ================
 httpd.x86_64 : Apache HTTP Server
-=========================== Name Matched: httpd ===========================================
-httpd-devel.x86_64 : Development interfaces for the Apache HTTP server
-httpd-filesystem.noarch : The basic directory layout for the Apache HTTP server
-httpd-manual.noarch : Documentation for the Apache HTTP server
-httpd-tools.x86_64 : Tools for use with the Apache HTTP Server
-libmicrohttpd.i686 : Lightweight library for embedding a webserver in applications
-libmicrohttpd.x86_64 : Lightweight library for embedding a webserver in applications
-lighttpd.x86_64 : Lightning fast webserver with light system requirements
-perl-Test-Fake-HTTPD.noarch : Fake HTTP server module for testing
-sympa-httpd.x86_64 : Sympa with Apache HTTP Server
-sysusage-httpd.noarch : Apache configuration for sysusage
-thttpd.x86_64 : A tiny, turbo, throttleable lightweight HTTP server
-========================= Summary Matched: httpd ===========================================
-mod_auth_mellon.x86_64 : A SAML 2.0 authentication module for the Apache Httpd Server
-mod_dav_svn.x86_64 : Apache httpd module for Subversion server
+================ Name & Summary Matched: httpd ================
+httpd-core.x86_64 : httpd minimal core
+lighttpd-fastcgi.x86_64 : FastCGI module and spawning helper for lighttpd and PHP configuration
+lighttpd-filesystem.noarch : The basic directory layout for lighttpd
+lighttpd-mod_authn_gssapi.x86_64 : Authentication module for lighttpd that uses GSSAPI
+(...snip...)
 ```
 
 ## Otras Opciones Usadas Con YUM
@@ -305,17 +310,15 @@ Has otras actividade menos comunes que podemos hacer con YUM.
 
 Podemos mostrar la historia de actividades recientes que YUM ha ejecutado.
 ```bash
-Sun 2023Jun25 13:46:59 PDT
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:265 -> yum history
-ID     | Command line                          | Date and time    | Action(s)      | Altered
---------------------------------------------------------------------------------------------
-    18 | install authselect -y                 | 2023-06-24 22:38 | Install        |    2 EE
-    17 | install pam-devel                     | 2023-06-24 20:57 | Install        |    1 EE
-    16 | install redhat-rpm-config -y          | 2023-06-24 20:55 | Install        |   16 EE
-    15 | install httpd-devel                   | 2023-06-24 20:52 | Install        |    8 EE
-    14 | install httpd                         | 2023-06-24 20:51 | Install        |   11 EE
+hist:76 -> yum history
+ID     | Command line             | Date and time    | Action(s)      | Altered
+-------------------------------------------------------------------------------
+    15 | install at -y            | 2023-07-02 14:35 | Install        |    1 EE
+    14 | remove at                | 2023-07-02 14:32 | Removed        |    1 EE
+    13 | install at               | 2023-07-02 14:28 | Install        |    1 EE
+
 ```
 Las historia muestra que hemos instalado varios paquetes y la fecha. Esto puede ser muy útil para auditar y encontrar la razón de algun problema.
 
@@ -323,25 +326,26 @@ Las historia muestra que hemos instalado varios paquetes y la fecha. Esto puede 
 
 Si asi lo requerimos, podemos limpiar el caché de la computadora
 ```bash
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:273 -> yum clean all
-45 files removed
+hist:76 -> yum clean all
+37 files removed
 ```
 
 ### Recrear el Caché
 
 Podemos limpiar el caché de la computadora.
 ```bash
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:275 -> yum makecache
-CentOS Linux 8 - AppStream                             6.0 MB/s | 8.4 MB     00:01
-CentOS Linux 8 - BaseOS                                5.9 MB/s | 4.6 MB     00:00
-CentOS Linux 8 - Extras                                 39 kB/s |  10 kB     00:00
-CentOS Linux 8 - PowerTools                            4.0 MB/s | 2.3 MB     00:00
-Extra Packages for Enterprise Linux 8 - x86_64         2.7 MB/s |  16 MB     00:05
+hist:77 -> yum makecache
+Extra Packages for Enterprise Linux 9 - x86_64             2.5 MB/s |  18 MB     00:07
+Red Hat Universal Base Image 9 (RPMs) - BaseOS             735 kB/s | 580 kB     00:00
+Red Hat Universal Base Image 9 (RPMs) - AppStream          2.0 MB/s | 1.9 MB     00:00
+Red Hat Universal Base Image 9 (RPMs) - CodeReady Builder  286 kB/s | 195 kB     00:00
+Last metadata expiration check: 0:00:01 ago on Sun Jul  2 14:39:28 2023.
 Metadata cache created.
+
 ```
 
 ### Grupos de Software
@@ -349,45 +353,26 @@ Metadata cache created.
 Ocasionalmente deseamos intalar un grupo entero de paquetes.<br>
 Podemos usar el parametro `group` para buscar los nombres de grupos de paquetes.
 ```bash
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:276 -> yum group
-Last metadata expiration check: 0:00:45 ago on Sun Jun 25 14:18:31 2023.
-Available Groups: 14
+hist:78 -> yum group
+Last metadata expiration check: 0:01:11 ago on Sun Jul  2 14:39:28 2023.
+Available Groups: 2
 
-Sun 2023Jun25 14:19:17 PDT
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:277 -> yum grouplist
-Last metadata expiration check: 0:00:50 ago on Sun Jun 25 14:18:31 2023.
+hist:79 -> yum grouplist
+Last metadata expiration check: 0:01:36 ago on Sun Jul  2 14:39:28 2023.
 Available Environment Groups:
-   Server with GUI
-   Server
-   Minimal Install
-   Workstation
    KDE Plasma Workspaces
-   Virtualization Host
-   Custom Operating System
 Available Groups:
-   Container Management
-   .NET Core Development
-   RPM Development Tools
-   Development Tools
-   Graphical Administration Tools
-   Headless Management
-   Legacy UNIX Compatibility
-   Network Servers
-   Scientific Support
-   Security Tools
-   Smart Card Support
-   System Tools
    Fedora Packager
    Xfce
 ```
 
 El siguiente comando instala un grupo entero de paquetes.
 ```bash
--> yum groupinstall "Development Tools"
+-> yum groupinstall "KDE Plasma Workspaces"
 ```
 
 ### Usar el SHELL de YUM
@@ -417,20 +402,18 @@ exit (or quit)
 
 Iniciamos la session interactiva con el command `yum shell`.
 ```bash
-root@client1 [ CentOS8 ]
+root@rhel9-1
 ~
-hist:280 -> yum shell
-Last metadata expiration check: 0:02:21 ago on Sun Jun 25 14:18:31 2023.
+hist:80 -> yum shell
 > info httpd
-Installed Packages
+Available Packages
 Name         : httpd
-Version      : 2.4.37
-Release      : 43.module_el8.5.0+1022+b541f3b1
+Version      : 2.4.53
+Release      : 11.el9_2.5
 Architecture : x86_64
-Size         : 4.3 M
-Source       : httpd-2.4.37-43.module_el8.5.0+1022+b541f3b1.src.rpm
-Repository   : @System
-From repo    : appstream
+Size         : 53 k
+Source       : httpd-2.4.53-11.el9_2.5.src.rpm
+Repository   : ubi-9-appstream-rpms
 Summary      : Apache HTTP Server
 URL          : https://httpd.apache.org/
 License      : ASL 2.0
@@ -449,10 +432,10 @@ Package httpd-2.4.37-43.module_el8.5.0+1022+b541f3b1.x86_64 is already installed
 Abilitar o desabilitar in repositorio.
 ```bash
 > repository disable epel
-Last metadata expiration check: 0:06:27 ago on Sun Jun 25 14:18:26 2023.
+Last metadata expiration check: 0:03:51 ago on Sun Jul  2 14:39:28 2023.
 .
 > repository enable epel
-Last metadata expiration check: 0:06:27 ago on Sun Jun 25 14:18:31 2023.
+Last metadata expiration check: 0:03:58 ago on Sun Jul  2 14:39:28 2023.
 >
 ```
 
@@ -469,23 +452,28 @@ Podemos estar en una situación en la que tenemos que instalar un rpm manualment
 Sigamos los pasos siguientes.
 
 Crear directorio donde bajaremos el rpm.
+Cambiemos al directorio que hemos creado.
 ```bash
-root@client1 [ CentOS8 ]
-hist:295 -> mkdir Downloads
+root@rhel9-1
+~
+hist:80 -> mkdir Downloads && cd Downloads
 ```
 Entrar el comando para bajar el rpm.
 ```bash
-root@client1 [ CentOS8 ]
-hist:302 -> yum download  at-3.1.20-11.el8.x86_64 --destdir Downloads
+root@rhel9-1
+~/Downloads
+hist:80 -> yum download  at-3.1.20-11.el8.x86_64 --destdir Downloads
 Last metadata expiration check: 0:40:55 ago on Sun Jun 25 14:18:31 2023.
 at-3.1.20-11.el8.x86_64.rpm                         183 kB/s |  81 kB     00:00
 
-root@client1 [ CentOS8 ]
-hist:303 -> ll Downloads/
+root@rhel9-1
+~Downloads
+hist:80 -> ls 0l ~/Downloads/
 -rw-r--r-- 1 root root 83344 Jun 25 14:59 at-3.1.20-11.el8.x86_64.rpm
 ```
 Entrar el comando para instalar el rpm.
 ```bash
-root@client1 [ CentOS8 ]
-hist:304 -> yum install Downloads/at-3.1.20-11.el8.x86_64.rpm
+root@rhel9-1
+~Downloads
+hist:80 -> yum install Downloads/at-3.1.20-11.el8.x86_64.rpm
 ```
