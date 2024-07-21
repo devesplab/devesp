@@ -4,12 +4,12 @@ title: El Indicador
 permalink: /indicador/
 parent: El Shell
 grand_parent: Linux
-has_children: true
+has_children: false
 has_toc: false
 nav_order: 3
 ---
 
-# LINUX :: cli intro :: el indicador 
+# El Indicador 
 
 {: .no_toc }
 
@@ -24,7 +24,7 @@ nav_order: 3
 
 ---
 
-**DESCRIPCION**
+## Objectivo
 
 En esta leccion:
 - que es la linea de comandos
@@ -35,23 +35,6 @@ Exploremos respuestas as las preguntas siguientes: <br>
 - Que puedo hacer en la linea de comandos?
 - Como saber si una aplicacion esta disponible para mi uso?
 - Como moverse en el sistema? Donde puedo ir? 
-
-**DEPENDENCIAS**
-
-ninguna
-
-**REQUERIMIENTOS**
-
-Sistema de linux Ubuntu. <br>
-Requiere acceso a la Linea de Comandos en una terminal de Linux.
-
-**ADVERTENCIA**
-
-ninguna.
-
-## Working Environment
-
-En esta leccion usamos Ubuntu 22.04.
 
 ```bash
 devuser@ubuntu2204-1-devesp
@@ -187,16 +170,17 @@ whoami
 
 ### Referencias Utiles
 
-DevEsp :: el indicador
-- https://docs.devesp.com/linux-conceptos/#el-indicator-the-prompt
+- [DevEsp :: El indicador](./linux_7_Shell/devesp_shell_7d_cli_intro_SITE.md)
 
-The Linux Documentation Project (TLDP)
-- https://tldp.org/
+- [The Linux Documentation Project (TLDP)]( https://tldp.org/)
 
-Where to practice linux
-- https://duckduckgo.com/?q=linux+simulator+online+free&t=ffab&ia=web
-- https://webminal.org/
-- https://cocalc.com/features/linux
-- https://linuxsurvival.com/
-- [10] https://www.terminaltemple.com/
-- [10] https://bellard.org/jslinux/
+
+### Donde Practicar Linux En Linea
+
+- [webminal](https://webminal.org/)
+- [cocalc](https://cocalc.com/features/linux)
+- [linuxsurvival](https://linuxsurvival.com/)
+- [terminaltemple](https://www.terminaltemple.com/) :: acceso a terminal en linea
+- [bellard](https://bellard.org/jslinux/)
+
+[Return to main page]({{site.baseurl}}/).

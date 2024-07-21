@@ -9,7 +9,7 @@ has_toc: false
 nav_order: 1
 ---
 
-# Ficheros y Directorios
+# Operaciones Con Ficheros y Directorios
 
 {: .no_toc }
 
@@ -24,15 +24,10 @@ nav_order: 1
 
 ---
 
-## Propósito De Directorios y Ficheros
 
-Cuando ha pasado tiempo que hemos trabajado en un projecto, acumulamos mucha informacíon de tópicos diferentes. A un cierto punto es imperativo agrupar información relacionada para que la podamos manejar mas facil.
+## Ubicación En El Sistema De Archivos
 
-Luego tenemos que:
-- Un fichero contiene informacíon de un tema en particular.
-- Un directorio nos ayuda a agrupar ficheros relacionados a un tema.
-
-Los ficheros pueden ser de varios tipos: texto, binario, pdf, zip, jpeg, etc. Este tipo de clasificación no se aplica a directorios.
+En cualqiuer momenta dado cuando entramos a un sistema de Linux, nos encontraremos en un directorio el cual puede o no contener archivos.
 
 Es importante mantener la referencia a el directorio de inicio principal, lo podemos llamar directorio hogar que se denota con `~` or `$HOME`. En cualquier comando que entremos, podemos usar `~` como el punto de referencia a nuestro directorio de inicio.
 
@@ -50,7 +45,7 @@ No importa donde estemos en el estructura de directorios siempre podemos volver 
 Los comands básicos de navegación en la linea de comandos son `ls` y `cd`.
 Podemos usar una variedad de opciones o banderas para influenciar la salida de los comandos.
 
-Usaremos los comados siguientes:
+Con mucha frecuencia usaremos los comados siguientes:
 
 ls
 : listar archivos y ficheros
@@ -80,11 +75,13 @@ tree
 : utilidad para mostrar el árbol completo de la localidad designada
 
 {: .note }
-Estos comandos son de uso universal y funcionan de la misma manera en cualquier sistema operativo.
+Estos comandos son de uso universal y funcionan de la misma manera en cualquier sistema operativo variante de RHEL o Debian.
 
 Cada comando tiene opciones que alteran la salida del comando.
 
 ## Crear Directorios y Ficheros
+
+An algun momento habrá la necesidad de agrupar información acerca de un tema. Esto se logra creado directorios en los que podemos guardar los archivos de interes.
 
 La sintaxis general para crear directorios es asi:
 ```bash
@@ -132,14 +129,20 @@ Crear un fichero escondido usando el editor VI.
 
 ## Listar Directorios y Ficheros
 
+En sistemas donde no hay interfaz gráfico solo podemos usar el [indicador](../linux_7_Shell/devesp_shell_7d_cli_intro_SITE.md). La interacción en el indicador, o linea de comandos, es en texto puro. Asi que estamos limitados a usar comando para navegar archivos y carpetas.
+
 La sintaxis general para listar directorios y ficheros es asi:
+- el comando `ls`
+- opciones del comando
+- localidad a listar
 ```bash
 ls [opciones] /paso/a/diretorio
 ls [opciones] /paso/a/diretorio/fichero
 ```
 
-Listar el contenido de un directorio.
+Veremos a continuación el uso general del comando `ls` para listar contenido.
 
+Listar el contenido de un directorio.<br>
 La linea que contiene el símbolo `/` al final, indica que es un directorio. Los demas son ficheros.
 ```bash
 -> ls data/
@@ -364,6 +367,9 @@ Finalmente, decidimos borrar el archivo `obsidian.txt`.
 
 Borrar directorios requiere la opción `r` si tiene ficheros.
 
+{: .warning }
+Debe observarse mucho cuidado al usar `rm -rf` puesto que es un comando muy destructivo causando daños irreversibles.
+
 > el símbolo `~` indica que esta directamente bajo el directorio de inicio
 
 ```bash
@@ -377,18 +383,20 @@ Podemos usar la opción `-f` para evitar la confirmación por cada articulo a bo
 
 Se puede borrar mas de un fichero o directorio a la vez.
 ```bash
--> rm -rf fichero1 fichero2 data/fichero3
+-> rm -rf fichero1 fichero2 dir/fichero3
 
 -> rm -rf directorio1 dir/subdir
 ```
 
 ## Ficheros y Directorios Escondidos
 
-El sistema operativo puede mantener ciertos fichero fuera de vista con el propósito	de proteger información importante y prevenir que sea alterada o borrada accidentalmente.
+El sistema operativo puede mantener ciertos ficheros fuera de la vista con el propósito	de proteger información importante y prevenir que sea alterada o borrada accidentalmente. Un fichero escondido es generalmente estático y no de uso general, es decir, modificaciones a ficheros escondidos son muy infrequentes.
 
 Se dice que un fichero o directorio es escondido cuando el primer símbolo en el nombre es un punto `.` seguido por letras y números, por ejemplo `.bashrc`
 
-Listar ficheros y directorios escondidos usando la opción `-a` en conjunto con la opción `-l`.  
+Enseguida listemos ficheros y directorios escondidos usando las opciónes siguientes:
+- `-a` para mostrar ficheros escondidos
+- `-l` para producir una lista extendida
 ```bash
 -> ls -la /root
 total 88
@@ -404,7 +412,7 @@ drwxr-xr-x 3 root root  4096 Jun 11 02:35 data/
 drwxr-xr-x 2 root root  4096 Jun 11 00:12 temp/
 ```
 
-para omitir `.` y `..` podemos usar la opción `-A` asi:
+Por defecto, el comando `ls` muestra `.` que indica el directorio corriente y `..` que indica un directorio arriba. Para omitir `.` y `..` podemos usar la opción `-A` asi:
 
 ```bash
 -> ls -lA /root
@@ -429,7 +437,7 @@ El **paso relativo** se refiere a la localización en relación al punto donde n
 
 Veamos un ejemplo.
 
-El usuario `devuser` esta en su directorio de inicio `/home/devuser` con la structure mostrada. Usamos el comando `pwd` para verificar donde nos encontramos, y el comando `tree` para visualizar la estructura del directorio.
+El usuario `devuser` esta en su directorio de inicio `/home/devuser` con la structura mostrada. Usamos el comando `pwd` para verificar donde nos encontramos, y el comando `tree` para visualizar la estructura del directorio. El símbolo `~` indica que nos encontramos en el directorio de inicio del usuario.
 ```bash
 devuser@ubuntu1 [ DevEsp ]
 ~
@@ -461,7 +469,7 @@ hist:14 -> tree
 `-- temp
 ```
 
-Esto muestra como listar el fichero camoa.txt usando el paso absoluto.
+Esto muestra como listar el fichero `camoa.txt` usando el paso absoluto.
 ```bash
 devuser@ubuntu1 [ DevEsp ]
 ~
@@ -484,17 +492,15 @@ hist:16 -> ls -l ../../data/pets/camoa.txt
 {: .highlight }
 Usamos dos puntos `..` para indicar que vamos a escalar un posición arriba; hacemos esto cuantas veces sea necesario para localizar el recurso fuera del directorio donde nos encontramos.
 
-## Recursos
+## Referencias 
 
-Los siguientes enlaces estan disponibles en linea.
+Paginas Manuales
 
-* Página Manual de [ls](https://manpages.ubuntu.com/manpages/focal/es/man1/ls.1.html)
-
-* Página Manual de [mkdir](https://manpages.ubuntu.com/manpages/focal/es/man1/mkdir.1.html)
-
-* Página Manual de [cd](https://www.man7.org/linux/man-pages/man1/cd.1p.html)
-
-* Página Manual de [touch](https://www.man7.org/linux/man-pages/man1/touch.1.html)
-
-* Página Manual de [echo](https://www.man7.org/linux/man-pages/man1/echo.1.html)
+- [ls](https://manpages.ubuntu.com/manpages/focal/es/man1/ls.1.html)
+- [mkdir](https://manpages.ubuntu.com/manpages/focal/es/man1/mkdir.1.html)
+- [cd](https://www.man7.org/linux/man-pages/man1/cd.1p.html)
+- [touch](https://www.man7.org/linux/man-pages/man1/touch.1.html)
+- [echo](https://www.man7.org/linux/man-pages/man1/echo.1.html)
+ 
+ [Return to main page]({{site.baseurl}}/).
  

@@ -20,9 +20,9 @@ nav_order: 4
 {:toc}
 </details>
 
-Frecuentemente no recordamos las opciones disponibles para un comando. O quiza queremos aprender el uso de un comando o utilidad. 
+Frecuentemente no recordamos la sintaxis o las opciones disponibles para un comando. O quizá queremos aprender el uso de un comando o utilidad. 
 
-Linux prove las paginas manuals y otros comandos para encontrar ayuda disponible internamente o externamente.
+Linux prove las páginas manuals y otros comandos para encontrar ayuda disponible internamente o externamente.
 
 Las páginas manuales de Ubuntu están disponibles en linea en Español [^1]
 
@@ -40,7 +40,7 @@ La sintaxis siguiente muestra como usar el comando `man` para mostrar la pagina 
 man <nombre-de-comando>
 ```
 
-Por ejemplo la instrucción `man ls` nos muestra la página manual del comando `ls` que usamos para lstar archivos y directorios. Abajo vemos un extracto recortado de la página manual de `ls`.
+Por ejemplo la instrucción `man ls` nos muestra la página manual del comando `ls` que usamos para listar archivos y directorios. Abajo vemos un extracto recortado de la página manual de `ls`.
 ```
 NOMBRE
 
@@ -74,7 +74,7 @@ OPCIONES DE POSIX
 (...snip...)             
 ```
 
-Es de notar que las páginas manuales no están instaladas por defecto en **máquinas virtuales**. El usuario puede instalar las páginas manuales para la localización que corresponda al idioma del usuario. Al entrar el comando `man ls` en una máquina virtual de Ubuntu, vemos este mensaje indicando que ha sido optimizada para remover espacio que no es crítico para operaciones normales.
+Es de notar que las páginas manuales no están instaladas por defecto en **máquinas virtuales**. El usuario puede instalar las páginas manuales para la localización que corresponda al idioma del usuario. Al entrar el comando `man ls` en una máquina virtual de Ubuntu, vemos este mensaje indicando que ha sido optimizada para remover contenido que no es crítico para operaciones normales.
 
 ```bash
  -> man ls
@@ -84,7 +84,7 @@ not required on a system that users do not log into.
 To restore this content, including manpages, you can run the 'unminimize'
 command. You will still need to ensure the 'man-db' package is installed.
 ```
-Es bastante común remover componentes innecesarios de servidores que no requieren cosas tales como páginas manuales.
+Es bastante común remover componentes innecesarios de servidores que no requieren tales cosas como páginas manuales.
 
 ## Comando TLDR
 
@@ -142,7 +142,7 @@ En este ejemplo entremos el comando `tldr ls` (se usa igual en RHEL y Ubuntu).
 ```
 
 TLDR crea un caché en el directorio de inicio en `$HOME/.cache/tldr`.<br>
-A medida que hacemos busquedas, agrega ficheros .md en el directorio `common` o `linux` dependiendo de la ayuda que buscamos.
+A medida que hacemos búsquedas, agrega ficheros `.md` en el directorio `common` o `linux` dependiendo de la ayuda que buscamos.
 ```bash
 -> ls -lR ~/.cache/tldr/
 /root/.cache/tldr/:
@@ -170,7 +170,7 @@ TLDR [^4] esta disponible en linea como fuente abierta.
 ## Comando INFO
 
 Red Hat describe el paquete `info` de esta manera:<br>
-_"EL proyecto GNU usa el fichera de formato textinfo para su documentación. EL paquete info provee una manera propia en forma de visualizor en la terminal para ver ficheros de textinfo"_
+_"EL proyecto GNU usa el fichero de formato textinfo para su documentación. EL paquete info provee una manera propia en forma de visualizor en la terminal para ver ficheros de textinfo"_
 
 En RHEL9, si por alguna razón el paquete no esta presente se puede instalar asi:
 ```

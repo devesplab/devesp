@@ -22,19 +22,17 @@ nav_order: 2
 ---
 ## Escoger y Obtener una Distribución
 
-Primero que nada debemos escoger el sabor de linux que queremos implementar.
+Primero que nada debemos escoger el sabor de linux que queremos implementar. Esto depende de el área de trabajo y la complejidad de tareas que se harán.
 
 {: .note }
 Se debe tener en mente el ciclo de actualización y desmantelamiento de versiones.
 
-En la discussión de los [conceptos](../linux_conceptos) de Linux mencionamos que podemos escoger una version apta para servidores u otra para usuarios regulares. 
+En la discusión de los [conceptos](./linux_1_Conceptos.md) de Linux mencionamos que podemos escoger una versión apta para servidores u otra para usuarios regulares. 
 
-La sección de [referencias](#referencias) muestra una lista the varios sitios para descargar distribuciones completas de Linux.
+La sección de [referencias](#referencias) de esta página muestra una lista the varios sitios para descargar distribuciones completas de Linux.
 
 La manera típica de obtener una distribución es ir al sitio del distribuidor y descargar 
-la imagen en formato de ISO.
-
-Podemos descargar el ISO en mas de una manera.
+la imagen en formato de ISO, la cual puede descargarse en mas de una manera.
 
 La imagen ISO de **RHEL9** puede encontrarse en esta URL.
 ```

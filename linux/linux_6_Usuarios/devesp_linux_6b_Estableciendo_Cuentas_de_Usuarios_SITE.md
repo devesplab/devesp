@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Entorno De Usuarios
+title: Estableciendo Cuentas De Usuarios
 permalink: /entorno-de-usuarios/
 parent: Usuarios
 grand_parent: Linux
-has_children: true
+has_children: false
 has_toc: false
 nav_order: 1
 ---
 
-# LINUX :: Usuarios :: Entorno De Usuarios
+# Estableciendo Cuentas De Usuarios en Linux
 
 {: .no_toc }
 
@@ -24,34 +24,34 @@ nav_order: 1
 
 ---
 
-**DESCRIPCION**
+## La Primera Cuenta de Usuario
 
-En esta leccion:
-- Conoceremos donde se establecen las cuentas de usuarios.
+Cuando un sistema de Linux es instanciado por primera vez, solo tiene la cuenta del Super Usuario "root". La persona u orgnaización que ha instanciado el sistema determina como crear y administrar cuentas adicionales de usuarios. La manera de crear cuentas varia desde lo más simple creando cuentas locales hasta lo más complejo usando herramientas de terceros en un entorno empresarial de producción.
+
+En esta leccion discutimos brevemente:
+- Entorno donde se establecen las cuentas de usuarios
 - Veremos la estructura de los archivos para manejar cuentas locales
 - Entederemos la diferencia entre Usuario Regular y Cuenta de Sistemas
 
-**DEPENDENCIAS**
-
-ninguna
-
-**REQUERIMIENTOS**
-
-Sistema de Linux Ubuntu. <br>
-Acceso a la terminal de Linux.<br>
-Alguos comandos requieren privilegios elevados.
-
-**ADVERTENCIA**
-
-ninguna.
-
-## Working Environment
-
-En esta leccion usamos el sistema operativo Ubuntu.
-
 ## Métodos De Crear Cuentas de Usuarios
 
-Hay varios métodos de crear cuentas de usuarios. La manera de implementación establece un marco muy diferente en como crear y mantener cuentas de usuarios. Es decir, el uso una cuenta local es muy diferente de una cuenta de red; una cuenta de red requiere conección de red, mientras que una cuenta local no necesita estar en la read para usarse.
+Hay varios métodos de crear cuentas de usuarios. La manera de implementación establece un marco muy diferente en como crear y mantener dichas cuentas. Es decir, el uso una cuenta local es muy diferente de una cuenta de red; una cuenta de red requiere conección de red, mientras que una cuenta local no necesita estar en la read para usarse.
+
+### Cuentas Locales
+
+En corto, una cuenta local es aquella que usa comandos nativos que se encuentran an nivel del sistema operativo y que no necesita de herramientas externas en la red para funcionar.
+
+Cuentas locales son creadas en el sistema donde se intenta operar. Generalmente esto sistemas son de uso personal en los que seguridad no es tan importante como sistemas de negocios.
+
+Linux usa tres archivos para manejar cuentas locales
+- /etc/passwd
+- /etc/shadow
+- /etc/group
+
+{: .highlight }
+Todos los archivos son legibles en texto claro
+
+Para mas información ver la página [Manejando Usuarios](./devesp_linux_6c_Manejando_Usuarios_SITE.md) en donde discutimos los detalles pertinentes al manejo de cuentas locales.
 
 ### LDAP / AD 
 
@@ -82,32 +82,15 @@ Los usuarios reciben un ticket Kerberos, que sirve como prueba de identidad al a
 
 Cabe notar que Kerberos puede integrarse con LDAP para información y autorización de usuarios. Esto permite un proceso de autenticación seguro y fluido en toda la red.
 
+El tema de Kerberos es muy complejo y no apto para discusion en este espacio. Para mas información ver el enlace a la documentatión en linea en la sección de [referencias](#referencias).
+
 ### NIS
 
 NIS (Servicio de información de red) es un sistema que se usa en la autenticación y gestión centralizada de usuarios. La idea era que que sistemas en una red tenian acceso a las cuentas de usuario, contraseñas y membresías de grupos
 
 Sin embargo, NIS se considera una tecnología obsoleta y tiene vulnerabilidades de seguridad, por lo que es recomendable tornar a herramientas más seguras como LDAP (Lightweight Directory Access Protocol) o AD (Active Directory) para la gestión y autenticación de usuarios en un entorno Linux.
 
-### Cuentas Locales
-
-Cuentas locales son creadas en el sistema donde se intenta operar. Generalmente esto sistemas son de uso personal en los que seguridad no es tan importante como sistemas de negocios.
-
-### Archivos Para Manejo De Cuentas Locals
-
-Linux usa tres archivos para manejar cuentas locales
-- /etc/passwd
-- /etc/shadow
-- /etc/group
-
-{: .highlight }
-Todos los archivos son legibles en texto claro
-
-### Estructura de Una Cuenta Local
-
-Hemos discutido que hay varios tipos de usuarios
-- Usuario Regular      
-- Root (Super Usuario) 
-- Cuenta de Sistema   
+El tema de NIS es muy complejo y no apto para discusion en este espacio. Para mas información ver el enlace a la documentatión en linea en la sección de [referencias](#referencias).
 
 ## Conclusion
 
@@ -117,7 +100,7 @@ Para un sistema de uso personal, el uso de Cuentas Locales es suficiente.
 
 Para un sistema en red en un ambiente de negocios de una empresa, es mejor usar herramientas seguras tales como LDAP o AD.
 
-## Referencias 
+## [](referencias)Referencias
 
 ### Glosario De Comandos y Terminos
 
@@ -127,15 +110,16 @@ AD
 LDAP
 : LDAP es "Lightweight Directory Access Protocol" o "Protocolo ligero de acceso a directorios"
 
+Kerberos
+: Kerberos es un protocolo de autenticación de red que se utiliza para proporcionar autenticación segura para usuarios y servicios en un entorno de red.
+
 [^1]: IPC "Comunicación entre procesos" o "Inter Process Communication" se refiere a un conjunto de métodos y protocolos utilizados para la comunicación y el intercambio de datos entre dos o más procesos que se ejecutan simultáneamente en un sistema. Permite que diferentes procesos se comuniquen entre sí y compartan datos, permitiéndoles trabajar juntos y coordinar sus acciones. Los métodos comunes de IPC incluyen canalizaciones, sockets, colas de mensajes, memoria compartida y semáforos.
 
 ### Referencias Utiles
 
-DevEsp :: Linux
-- https://docs.devesp.com/linux-en-espa%C3%B1ol/
+Herramientas de Terceros
+- [LDAP](https://ldap.com/)
+- [Microsoft AD](https://learn.microsoft.com/en-us/windows-server/security/windows-authentication/windows-authentication-overview)
+- [Kerberos](https://kerberos.org/)
 
-Herramienta [LDAP](https://ldap.com/)
-
-Herramienta [Microsoft AD](https://learn.microsoft.com/en-us/windows-server/security/windows-authentication/windows-authentication-overview)
-
-Herramienta [Kerberos](https://kerberos.org/)
+[Return to main page]({{site.baseurl}}/).

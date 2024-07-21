@@ -4,12 +4,12 @@ title: Manejando Usuarios
 permalink: /manejando-usuarios/
 parent: Usuarios
 grand_parent: Linux
-has_children: true
+has_children: false
 has_toc: false
 nav_order: 2
 ---
 
-# LINUX :: Usuarios :: Manejando Usuarios
+# Manejando Usuarios Locales e Linux
 
 {: .no_toc }
 
@@ -24,7 +24,9 @@ nav_order: 2
 
 ---
 
-**DESCRIPCION**
+## Cuentas Locales En Linux
+
+En corto, una cuenta local es aquella que se maneja usando comandos nativos que se encuentran an nivel del sistema operativo y que no necesita de herramientas externas en la red para funcionar.
 
 En esta leccion:
 - Tomaremos un vistazo al manejo de cuentas locales
@@ -32,23 +34,8 @@ En esta leccion:
 - Usaremos comandos para crear, borrar o modificar cuentas de usuarios.
 - Entenderemos como mantener contraseñas.
 
-**DEPENDENCIAS**
-
-ninguna
-
-**REQUERIMIENTOS**
-
-Sistema de Linux Ubuntu. <br>
-Acceso a la terminal de Linux.<br>
-Alguos comandos requieren privilegios elevados.
-
-**ADVERTENCIA**
-
+{: .warning }
 Estos ejercicios no deben hacerse en un sistema de produccíon sin entender los efectos que un cambio puede causar.
-
-## Working Environment
-
-En esta leccion usamos el sistema operativo Ubuntu.
 
 ##  Tipos de Usuarios 
 
@@ -59,7 +46,7 @@ En Linux hay varios tipos de usuarios:
 
 Cada tipo de usuario tiene un rol especifico con alcance diferente. 
 
-Cuentas que requerien interaccion intensa de entrada y salida de datos necesitan poder leer y escribir archivos en diferentes areas. Otros cuentas requieren la habilidad de correr programas que pueden leer y escribir a areas restringidas. El acceso se da de acuerdo al tipo de trabajo que la cuenta requiere.
+Cuentas que requerien interaccion intensa de entrada y salida de datos necesitan poder leer y escribir archivos en diferentes areas. Otros cuentas requieren la habilidad de correr programas que pueden leer y escribir a areas restringidas. El acceso se da de acuerdo al tipo de trabajo que la cuenta requiere; una cuenta no debe tener mas aceso del que requiera para funcionar.
 
 ## Archivos Para Manejo De Cuentas Locals
 
@@ -71,13 +58,13 @@ Linux usa tres archivos para manejar cuentas locales
 {: .highlight }
 Todos los archivos son legibles en texto claro
 
-Los archivos son normalmente manejados por un Administrador de Sistemas de forma manual o programatica.
+Los archivos son normalmente manejados por un Administrador de Sistemas de forma manual o programática.
 
 Debe tenerse mucho cuidado de no causar corrupción que pueded potencialmente bloquear acceso al sistema. Por esta razón es recomendable mantener copias de los archivos en un lugar seguro.
 
 A continuación veamos detalles de cada archivo.
 
-#### Archivo /etc/passwd
+### Archivo /etc/passwd
 
 El archivo `/etc/passwd` Contiene los detalles que identifican la cuenta misma. En particular tiene el nombre del usuario, su id, y su directorio de inicio.
 
@@ -98,7 +85,10 @@ La entrada contiene la siguiente información:
 El Sistema Operativo usa el número de id para diferenciar Usuarios Regulars de Cuentas de Sistema
 
 En Ubuntu, un número de ID menos de `100` indica que son Cuentas de Sistema. Estos ID menores de `100` son reservados para Cuentas de Sistema porque requieren permisos para acceder recursos restringidos.<br> 
-El rango de ID numérico para Cuentas de Sistema es entre `0` y `999`. Muchas aplicaciones de Fuenta Abierta tales como PostgreSQL crean un usuario con número de id en el rango de los cien para darle acceso a areas tales como IPC (Inter Process Communication) [^1]
+
+El rango de ID numérico para Cuentas de Sistema es entre `0` y `999`. Muchas aplicaciones de Fuenta Abierta tales como PostgreSQL crean un usuario con número de id en el rango de los cien para darle acceso a areas tales como IPC (Inter Process Communication - RFC62) [^1]
+
+[^1]:[Inter Process Communication - RFC62](https://datatracker.ietf.org/doc/html/rfc62)
 
 En resúmen una Cuenta Regular tiene acceso a recursos explicitamente asignados a ella, mientras que una Cuenta de Sistema tiene acceso a más areas que incluyen recursos internos restringidos.
 
@@ -109,7 +99,7 @@ SYS_GID_MIN              100
 SYS_GID_MAX              999
 ```
 
-#### Archivo /etc/group
+### Archivo /etc/group
 
 El archivo `/etc/group` contine la relacion de groups a los que los usuarios pertenencen.
 
@@ -135,9 +125,9 @@ En el ejemplo arriba, el nombre del grupo es `user1`, y el nombre del usuario ta
 ```
 
 
-#### Archivo /etc/shadow
+### Archivo /etc/shadow
 
-El archivo `/etc/shadow` es un archivo con vista restricta solo para `root` o usuarios con privilegios de `sudo`. Contiene la contraseña usada para entrar al sistema.
+El archivo `/etc/shadow` es un archivo con vista restricta solo para `root` o usuarios con privilegios de `sudo`. Contiene la contraseña que el usuario usa para entrar al sistema.
 
 Este es un ejemplo en `/etc/shadow` que muestra una entrada típica para un usuario llamado `user1`.
 ```bash
@@ -145,7 +135,7 @@ Este es un ejemplo en `/etc/shadow` que muestra una entrada típica para un usua
 user1:$6$Ozq/xNc8$LADRiie3bHjAp8gkxWvOZlccGthFvmujkbpEoc4jTnf2rgAMFN5ojd2s.ZOikGJQvvF8YEnQzKXVGb2tEVOLZ0:17246:0:99999:7:::
 ```
 La entrada contiene la siguiente información:
-usuario1: El nombre de usuario del usuario.
+- `usuario1`: El nombre de usuario del usuario.
 - `$6$` al principio indica que la contraseña se cifró utilizando el algoritmo hash SHA-512.
 - `Ozq/xNc8$LADRiie3bHjAp8gkxWvOZlccGthFvmujkbpEoc4jTnf2rgAMFN5ojd2s.ZOikGJQvvF8YEnQzKXVGb2tEVOLZ0`: Esta es la contraseña cifrada del usuario.
 - `17246`: el número de días desde la última vez que se cambió la contraseña.
@@ -156,8 +146,8 @@ usuario1: El nombre de usuario del usuario.
 
 ## Manteniendo Cuentas De Usuarios
 
-Hay varias tareas que podemos ejecutar para maneja usuarios en Linux
-- verificar la existenci de un usuario
+Hay varias tareas que podemos ejecutar para manejar usuarios en Linux
+- verificar la existencia de un usuario
 - crear usuarios
 - borrar usuarios
 - modificar usuarios
@@ -181,7 +171,7 @@ Enseguida, veamos is el usuario ficticio `user1` existe.
 -> id user1
 -> grep user1 /etc/passwd
 ```
-> Cambia `user1` por el nombre a chequear.
+> **NOTA:** Cambia `user1` por el nombre a chequear.
 
 ### Crear Usuario
 
@@ -337,15 +327,17 @@ El comando `chage` está restringido al usuario `root`, excepto la opción `-l`,
 Aqui, el usuario `appuser` usa el comando `chage -l` para chequear el estado de su cuenta. 
 ```sh
 appuser@ubuntu2204-1-devesp:~$ chage -l appuser
-Last password change				                : May 18, 2024
-Password expires					                : never
-Password inactive					                : never
-Account expires						                : never
-Minimum number of days between password change		: 0
-Maximum number of days between password change		: 99999
-Number of days of warning before password expires	: 7
+Last password change                                      : May 18, 2024
+Password expires                                          : never
+Password inactive                                         : never
+Account expires                                           : never
+Minimum number of days between password change            : 0
+Maximum number of days between password change            : 99999
+Number of days of warning before password expires         : 7
 ```
 En particular, muestra cuando caducará su contraseña, en esta caso nunca.
+
+Ahora agamos algunas cambios de fecha y tiempo.
 
 Establecer la fecha de vencimiento de la cuenta
 ```sh
@@ -375,13 +367,13 @@ Todas las configuraciones anteriores se pueden hacer juntas así.
 Mostrar todos los cambios.
 ```sh
 -> chage -l appuser
-Last password change					            : May 18, 2024
-Password expires					                : Dec 04, 2024
-Password inactive					                : Jan 03, 2025
-Account expires						                : Dec 31, 2024
-Minimum number of days between password change		: 180
-Maximum number of days between password change		: 200
-Number of days of warning before password expires	: 10
+Last password change                                      : May 18, 2024
+Password expires                                          : Dec 04, 2024
+Password inactive                                         : Jan 03, 2025
+Account expires                                           : Dec 31, 2024
+Minimum number of days between password change            : 180
+Maximum number of days between password change            : 200
+Number of days of warning before password expires         : 10
 ```
 
 Todos los cambion se ven en `/etc/shadow` en los campos correspondientes.
@@ -473,12 +465,15 @@ El comando `userdel` requiere que pasemos el nombre del usuario a borrar como pa
 -> userdel techuser
 ```
 
-En este ejemplo que sigue hacemos lo siguiente
+En algunos casos es importante preservar los datos que un usuario a colectado durante su trabajo. Lo mas posible es que los datos se encuentren en el directorio de inicio del usuario. Al borrar el usuario podemos pasar una opción al comando `deluser` para crear una copia de archivo de los datos.
+
+En este ejemplo que sigue hacemos lo siguiente:
 - Usamos el comando `mkdir` para crear `/tmp/appuser` como destinación para la copia de seguridad del directorio del usuario
-- hacemos una copia de seguridad en el directorio `/tmp/appuser`
+- usamos la opción `--backup-to` para hacer una copia de seguridad en el directorio `/tmp/appuser`
+- usamos la opción `--remove-home` para borrar el directorio de inicio del usuario
 - borramos el usuario `appuser`
-- borramos el directorio de inicio del usuario
 - usamos los comandos `ls` y `tar` para verificar que la copia de seguridad fue creada
+
 ```sh
 -> mkdir /tmp/appuser
 
@@ -542,10 +537,8 @@ grep, awk, cut
 
 ### Referencias Utiles
 
-DevEsp :: Linux
-- https://docs.devesp.com/linux-en-espa%C3%B1ol/
-
 Paginas Manuales (Ubuntu)
+
 - [adduser](https://manpages.ubuntu.com/manpages/focal/en/man8/adduser.8.html)
 - [useradd](https://manpages.ubuntu.com/manpages/focal/en/man8/useradd.8.html)
 - [deluser](https://manpages.ubuntu.com/manpages/focal/en/man8/deluser.8.html)

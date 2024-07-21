@@ -1,15 +1,16 @@
 ---
 layout: default
-title: Tipos de Comandos
-permalink: /tipos_de_comandos/
+title: Tipos de Comandos en Linux
+permalink: /tipos-comandos/
 parent: El Shell
 grand_parent: Linux
-has_children: true
+has_children: false
 has_toc: false
 nav_order: 4
 ---
 
-# Introducción a Comandos y Processos en Linux
+# Tipos de Comandos en Linux
+
 {: .no_toc }
 
 <details open markdown="block">

@@ -4,12 +4,12 @@ title: Instalar Un Shell
 permalink: /manejando-usuarios/
 parent: El Shell
 grand_parent: Linux
-has_children: true
+has_children: false
 has_toc: false
 nav_order: 1
 ---
 
-# LINUX :: SHELL :: Instalar Un Shell
+# Instalar Un Shell
 
 {: .no_toc }
 
@@ -24,117 +24,94 @@ nav_order: 1
 
 ---
 
-**DESCRIPCION**
+## Install BASH en Ubuntu
 
-En esta leccion:
-- borrar o installer un shell
+Para instaler Bash (Bourne Again SHell)  en Ubuntu, has lo siguiente:
 
-**DEPENDENCIAS**
+Para instalar Bash en Ubuntu, podemos usar APT [^1]. Abramos la terminal y corramos los comando siguientes:
 
-ninguna
+[^1]:[Ubuntu APT](../linux_14_Package_Management/devesp_packages_14a_ubuntu_package_management.md )
 
-**REQUERIMIENTOS**
+Actualizemos la lista de paquetes.
 
-Sistema de linux Ubuntu. <br>
-Alguos comandos requieren privilegios elevados.
-
-**ADVERTENCIA**
-
-ninguna.
-
-## Working Environment
-
-En esta leccion usamos el sistema operativo Ubuntu.
-
-## Install BASH from Ubuntu
-
-To install Bash (Bourne Again SHell) in Ubuntu, follow these steps:
-
-Open a terminal window by pressing `Ctrl + Alt + T`.
-Update the package list by running the command:
-
-```     
+```bash     
 sudo apt update
 ```
 
-Install Bash by running the following command:
+Instalemos Bash con este comando.
 
-```
+```bash
 sudo apt install bash
 ```
 
-Once the installation is complete, you can start using Bash by typing bash in the terminal.
+Es todo! Has instalado Bash en tu sistema.
 
-That's it! You have successfully installed Bash on your Ubuntu system.
+Una vez que la instalación termine, puedes empezar a usar Bash entrando comandos en la terminal.
 
-## Remove BASH from Ubuntu
 
-To remove Bash from Ubuntu, you would need to install an alternative shell such as Zsh or Fish, and then set it as the default shell. Here is a general outline of the steps involved:
+## Borrar BASH en Ubuntu
 
-Install the alternative shell (e.g., Zsh):
+Para borrar Bash en Ubuntu, tenemos que instalar un Shell alternativo tal como ZSH o FISH, y luego specificarly como shell predeterminado. En seguida veamos el flujo de trabajo:
+
+Instalar el shell alternativo (e.g., Zsh):
 
 ``` 
 sudo apt-get update
 sudo apt-get install zsh
 ```
 
-Set the alternative shell as the default:
+Ajustar el shell predeterminado  ZSH.
 
-```
+```bash
 chsh -s $(which zsh)
 ```
-Log out and log back in to apply the changes.
 
-After completing these steps, Bash will no longer be the default shell in Ubuntu, and you will be using the alternative shell that you installed (e.g., Zsh).
+Para aplicar el cambio, salgamos del sistema y entremos de nuevo.
 
-## Install BASH from RedHat
+Después de completar los pasos anteriores, Bash no sera mas el shell predeterminado en Ubuntu y estaremos usado el shell que instalamos.
 
-To install bash on Red Hat Enterprise Linux, you can use the yum package manager. Simply open a terminal and run the following command:
+## Instalar BASH en RedHat
 
-``` 
+Para instalar Ban en RHEL (Red Hat Enterprise Linux), podemos usar YUM [^2]. Simplemente abramos la terminal y corramos el comando siguiente:
+
+[^2]:[RedHat YUM](../linux_14_Package_Management/devesp_packages_14b_rhel_package_management.md)
+
+```bash 
 sudo yum install bash
 ```
 
-Once the installation is complete, you can start using the bash shell by typing bash in the terminal.
+Cuando la instalatción termine, podemos empezar a usar el Bash shell entrando comandos en el indicador.
 
-## Remove BASH from RedHat
+## Borrar BASH en RedHat
 
-To remove bash from a Redhat system, you would need to replace it with another shell such as zsh or fish. However, it is not recommended to completely remove bash as it is the default shell for many scripts and system functions on Redhat.
+Para poder borrar Bash en RedHat, tendriamos que reponerlo con otro shell tal come ZSH o FISN. Sin embargo, no se recomienda borrar completamente Bash porque es el shell predeterminado para mucho programas y funciones en Redhat.
 
-If you still want to proceed with removing bash, you can do so by using the following steps:
+Pero, si todavia insistimos con borrar Bash, podemos ejecutar los pasos que siguen.
 
-    Switch to another shell such as zsh or fish. You can do this by running the following command:
-
- 
+Cambiemos a otro shell, por ejemplo ZHH.
+```bash 
 chsh -s /bin/zsh
+```
 
-Replace /bin/zsh with the path to the shell you want to switch to.
+Repongamos `/bin/bash` con el paso del shell al que queremos cambiar with the path to the shell you want to switch to.
+Primero aseguremonos que el nuevo shell esta instalado.
 
-    Make sure the new shell is installed on your system. You can install zsh or fish using the package manager, for example:
-
- 
+Corramos ese comando para instalar ZSH en RedHat.
+```bash 
 sudo yum install zsh
+```
 
-    Remove bash from your system by running the following command:
-
- 
+Borremos Bash del sistema:
+```bash 
 sudo yum remove bash
+```
 
-Please note that this action may break your system as many scripts and system functions rely on bash. Proceed with caution and make sure you have a backup plan in case something goes wrong.
-
-aaa
-
-## Tipos de Usuarios
-
-| Tipo De Usuario      | Esfera De Acción |
-| ---------------------| ---------------- |
-| Usuario Regular      | Reducido al directorio Hogar       |
-| Root (Super Usuario) | Acceso complete al sistem        | 
-| Cuenta de Sistema    | Acceso a un proceo o aplicación        | 
+{: .warning }
+Tenga en cuenta que esta acción puede dañar su sistema, ya que muchos scripts y funciones del sistema dependen de bash. Proceda con precaución y asegúrese de tener un plan de respaldo en caso de que algo salga mal.
 
 ## Conclusion
 
-aaa
+Para la gran mayoría de tareas en Linux, el Bash shell es suficiente. Cambiar a otro shell es cosa de preferencia o alguna funcion especializada que requiere característcas disponible en un shell específico. Debe observarse mucho cuidado si la intencion es cambiar el shell predeterminado.
 
 ## Referencias 
 
@@ -142,16 +119,17 @@ aaa
 
 Los comandos siguientes son usados frecuentemente en sesiones de Linux.
 
-comando1
-: definicion
+apt-get, apt
+: utilidad para manejar paquetes en Ubuntu
 
-comando1
-: definicion
+yum
+: utilidad para manejar paquetes en RedHat
+
+chsh
+: comando para cambiar de un shell a otro
 
 ### Referencias Utiles
 
-DevEsp :: Linux
-- https://docs.devesp.com/linux-en-espa%C3%B1ol/
-
 Paginas Manuales
 
+- [chsh](https://manpages.ubuntu.com/manpages/focal/en/man1/chsh.1.html)

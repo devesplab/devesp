@@ -33,9 +33,9 @@ La estructura general del sistema de archivos de Linux puede representarse the e
   └───────────┘      └──────────────┘     └──────────────┘    └─────────────┘    └────────────┘
 ```
 
-El diseño, organizacíon y jerarquia del sistema de archivoes puede modificarse para satisfacer necesidades específicas.
+El diseño, organizacíon y jerarquia del sistema de archivos puede modificarse para satisfacer necesidades específicas de cada institución en particular.
 
-El admininistrador de sistemas tiene la libertad the hacer ajustes en lo pertinente a la localizacíon absoluta del archivo asi como el tamaño correspondiente de cada parte del mismo.
+El admininistrador de sistemas tiene la libertad the hacer ajustes en lo pertinente a la localizacíon absoluta del archivo asi como el tamaño correspondiente de cada sección.
 
 En este ejemplo, el comando `df` nos muestra la organización típica de un maquina virtual de CentOS 8 Stream.
 ```bash
@@ -46,6 +46,27 @@ tmpfs            64M     0   64M   0% /dev
 shm              64M     0   64M   0% /dev/shm
 tmpfs           7.9G  377M  7.5G   5% /run
 ```
+
+Cada columna signifca lo siguiente:
+
+Filesystem
+: nombre del archivo
+
+Size
+: Tamaño en Gigabytes
+
+Used
+: Cantidad de Gigabytes en uso
+
+Avail
+: Cantidad de Gigabytes disponibles para uso
+
+Use%
+: Porcentaje de la Cantidad de Gigabytes que estan en uso
+
+Mounted on
+: localización del paso absoluto donde reside el archivo en la jerarquia del sistema
+
 La estructura es similar en Ubuntu.
 
 ## La Terminal 
@@ -56,7 +77,7 @@ La terminal es el area de trabajo donde podemos escribir comandos para interactu
 
 ## El Shell
 
-El Shell es el programa que accepta los comandos que entramos y los ejecuta para realizar la acción deseada en el sistema. El Shell es la manera fundamental como interactuamos con el Sistema Operativo. 
+El [Shell](./linux_7_Shell.md) es el programa que accepta los comandos que entramos y los ejecuta para realizar la acción deseada en el sistema. El Shell es la manera fundamental como interactuamos con el Sistema Operativo. 
 
 Típicamente, Linux ofrece el BASH shell de entrada. Pero hay otros que podemos escoger tales como SH, CSH, TCSH, o ZSH.
 
@@ -73,12 +94,12 @@ A menos que indiquemos de otra manera, usaremos el BASH shell en los ejemplos y 
 
 ## Linea De Comandos (Command Line)
 
-La Linea De Comandos es el área de la terminal donde entramos las instrucciones que queremos mandar al sistema operativo. EL shell esta encargado de interpretar los comandos y los pasa a el Kernel para ejecutar la tarea especifica.
+El [Indicador](./linux_7_Shell/devesp_shell_7d_cli_intro_SITE.md) es el área de la terminal donde entramos las instrucciones que queremos mandar al sistema operativo; esta area también es conocida come _La Linea de Comandos_ or CLI. EL shell esta encargado de interpretar los comandos y los pasa al Kernel para ejecutar la tarea especifica.
 
 {: .note }
 Nos vamos a referir a la Linea De Comandos for sus siglas en Ingles: **CLI**, lo que significa _Command Line Inteface_ o Interfaz de la Linea de Comandos.
 
-Generalmente, la CLI se identifica for el signo de dólar `$` cuando entramos al sistema. Eso puede ser personalizado en cualquier momento.
+Generalmente, la CLI se identifica for el signo de dólar `$` cuando entramos al sistema, pero podemos personalizar ese detalle en cualquier momento.
 
 En este ejemplo, escribimos comandos que nos ayudan a identificar el usuario con que hemos entrado al sistema.
 ```bash
@@ -112,9 +133,9 @@ ENTER
 DEL
 : borrar el simbolo en el que se encuentra el cursor
 
-Tipicamente, en CentOS 8 la CLI se ve asi:
+Tipicamente, en RedHat el indicador predeterminado se ve asi:
 ```bash
-[user1@centos8-2 ~]$
+[user2@rhel9-1-devesp ~]$
 ```
 Mientras que Ubuntu se ve asi:
 ```bash
@@ -125,12 +146,12 @@ Podeos escribir comandos en el area marcada for el signo `$`.
 
 ## El Indicator (The Prompt)
 
-El indicador marca la parte de la terminal donde podemos entrar comandos. Generalmente se indica con el signo `$`.
+El  [Indicador](./linux_7_Shell/devesp_shell_7d_cli_intro_SITE.md) marca la parte de la terminal donde podemos entrar comandos. Generalmente se indica con el signo `$`.
 
 {: .warning }
 Si el indicador muestra el signo `#` en lugar de `$`, indica que hemos entrado con la cuenta del superusuario (root), la cual tiene control absoluto del sistema. Un solo comando equivocado y podemos causar gran daño.
 
-El indicador es primariamente designado con la variable de ambiente `PS1`, la cual es configurable de la manera que nos plazca. Podemos designar cualquier símbolo en vez de `$` o `#`. 
+El indicador es primariamente designado con la variable de ambiente `PS1`, la cual es configurable de la manera que nos plazca. Podemos designar cualquier símbolo en lugar de `$` o `#`. 
 
 En el ejemplo que sigue, el signo de `$` es por defecto. Podemos usar el comando `export` para cambiarlo a `comando>> `. Luego usamos `echo` para verificar el ajuste.
 ```bash
@@ -144,7 +165,7 @@ comando>>
 Discutiremos el uso del comando `export` en otro documento.
 ## Directorio De Inicio (Home Directory)
 
-El directorio de inicio es donde aterrizamos y es nuestra base de operaciones. Es aquí donde creamos y mantenemos todos lo archivos, directorios, documentos, imagenes, programas y personalizaciones particulares a nuestro propio ambiente.
+El directorio de inicio, o directorio hogar, es donde aterrizamos cuando entramos al sistema y es nuestra base de operaciones. Es aquí donde creamos y mantenemos todos lo archivos, directorios, documentos, imagenes, programas y personalizaciones particulares nuestro entorno de usuario.
 
 Tan pronto como entramos al sistema, el comando `pwd` nos asiste para mostrarnos la localidad del directorio de inicio.
 ```bash
@@ -152,11 +173,18 @@ $ pwd
 /root
 ```
 
-Podemos usar `echo` para mostrar el directorio de inicio en cualquier momento después de esta en una sessión for algun tiempo.
+Podemos usar `echo` para mostrar el directorio de inicio en cualquier momento que estamos en el sistema.
 ```bash
 $ echo $HOME
 /root
 ```
-La localidad estándar donde Linux create directorios de inicio es bajo `/home`, de manera que usualmente un usuario tiene `/home/user1`. Pero lo localidad puede cambiar de acuerdo al diseño del administrador de sistemas.
+La localidad estándar donde Linux crea directorios de inicio es bajo `/home`, de manera que usualmente un usuario tendría `/home/<usuario>` como la localidad de hogar. La localidad puede cambiarse de acuerdo al diseño del administrador de sistemas que maneja las cuentas de usuariois.
+
+## Referencias 
+
+Para mas información ver los documentos a seguir:
+
+- El [Shell](./linux_7_Shell.md)
+- El [Indicador](./linux_7_Shell/devesp_shell_7d_cli_intro_SITE.md)
 
 [Return to main page]({{site.baseurl}}/).

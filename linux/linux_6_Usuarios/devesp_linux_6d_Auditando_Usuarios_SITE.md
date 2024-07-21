@@ -4,12 +4,12 @@ title: Auditando Usuarios
 permalink: /auditando-usuarios/
 parent: Usuarios
 grand_parent: Linux
-has_children: true
+has_children: false
 has_toc: false
-nav_order: 1
+nav_order: 3
 ---
 
-# LINUX :: Usuarios :: Auditando Usuarios
+# Auditando Usuarios En Linux
 
 {: .no_toc }
 
@@ -24,28 +24,22 @@ nav_order: 1
 
 ---
 
-**DESCRIPCION**
+## Seguridad En Linux
 
-En esta leccion:
-- identificar comandos para rastrear actividad de usuarios
+Hay varias razones por las que debemos tener en mente el tópico de Seguridad en Linux:
+- protección en contra de hackers
+- privilegio de acceso a información propietaria de alta confidencialidad
+- proteger todo el entorno de computación empresarial
+- mantener los requerimientos y regulaciones de la industria
+- minimizar el impacto de perdida en caso de exponer una parte del ambiente
 
-**DEPENDENCIAS**
+La manera mas elemental de proteger los sistemas es enforzar medidas de seguridad para limitar la entrada solo a los usuarios o procesos authorizados.
 
-ninguna
+También adoptamos principios de auditaje para asegurarnos que solo cuentas authorizadas interactuan en el entorno.
 
-**REQUERIMIENTOS**
+Linux proves utilidades nativias básicas que ayudan a indentifar la frequencia y tiempo de acceso a los sistemas.
 
-Sistema de Linux Ubuntu. <br>
-Acceso a la terminal de Linux.<br>
-Alguos comandos requieren privilegios elevados.
-
-**ADVERTENCIA**
-
-ninguna.
-
-## Working Environment
-
-En esta leccion usamos el sistema operativo Ubuntu.
+En esta lección identificamos comandos para rastrear actividad de usuarios en un sistema de Ubuntu.
 
 ## Comandos Para Chequear Actividad de Login
 
@@ -108,7 +102,7 @@ Para más información ver la ayuda en linea del comando.
 -> faillog --help
 ```
 
-## last
+## Last
 
 En la mayoría de variaciones de Linux, el comando `last` muestra quien esta activo en el sistema.
 
@@ -139,11 +133,13 @@ Auditd mantiene los siguientes archivos:
 
 Cada applicacíon de terceros establece particularidades de acceso y seguridad. Un caso notable y muy conocido es SSH, el cuál crea una entrada en su archivo de registro. Otro ejemplos son aplicaciones de bases de datos como MySQL y PostgreSQL. Esta de menos decir que aplicaciones comerciales tienen sofisticaciones internas para rastrear el uso e implementacoin necesarias para diagnosticar problemas que ayudan an mejoras sus productos.
 
-Generalmente los archivos de registros van en `/var/log`, pero en la majoria de los casos, las aplicaciones permiten cambiar a otro lugar.
+La sección de [referencias](#referencias) contiene enlaces a utilidades de Código Abierto tales como Fail2Ban y LogWatch. Podemos instalar esas utilidades en el sistema para observar y rastrear acceso al sistema o bloquear acceso si es necesario.
+
+Generalmente los archivos de registros van en `/var/log`, pero en la majoria de los casos, las aplicaciones permiten cambiar a otro lugar de acuerdo a la política del entorno.
 
 ## Conclusion
 
-Es importante estar informado de la actividad de usuarios en un sistem. Esto puede prevenir que un usuario malicioso entre sin autorización y se propague a otros sistems donde pueda causar daños irreparables.
+Es importante estar informado de la actividad de usuarios en un sistema. Esto puede prevenir que un usuario malicioso entre sin autorización y se propague a otros sistems donde pueda causar daños irreparables. La exposición y pérdida de información puede causar daño a la reputación de individuos o empresas lo que proyecta una mala imagen de manejo de negocios.
 
 ## Referencias 
 
@@ -157,13 +153,15 @@ lastlog
 faillog
 : mostrar registros de fallas o establecer límites de fallas de registro de acceso
 
-### Referencias Utiles
+### [](referencias)Herramientas de Código Abierto
 
-DevEsp :: Linux
-- https://docs.devesp.com/linux-en-espa%C3%B1ol/
+- [Fail2Ban](https://github.com/fail2ban/fail2ban)
+- [LogWatch](https://github.com/gjalves/logwatch)
 
 Paginas Manuales
 - [faillog](https://manpages.ubuntu.com/manpages/focal/en/man8/faillog.8.html)
 - [lastlog](https://manpages.ubuntu.com/manpages/focal/en/man8/lastlog.8.html)
 - [last](https://manpages.ubuntu.com/manpages/focal/en/man1/last.1.html)
 - [auditd](https://manpages.ubuntu.com/manpages/focal/en/man8/auditd.8.html)
+
+[Return to main page]({{site.baseurl}}/).
