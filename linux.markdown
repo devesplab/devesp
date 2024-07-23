@@ -39,6 +39,8 @@ Linux es un sistema operativo muy versátil.
 
 Hay varias versiones de Linux para escoger tales como Debian, Ubuntu, CentOS, Fedora, RedHat, Oracle Linux, OpenSuse, Getoo, y muchos otros [^1]. 
 
+[^1]: [Lista de distrubuciones de Linux](https://en.wikipedia.org/wiki/List_of_Linux_distributions)
+
 Cuál deberia escoger? Depende del caso. 
 - Versiones para el usuario regular: son equipadas con utilidades y configuraciones que facilitan el uso diario.
 - Versiones para servidores: son equipadas para uso mas pesado en un ambiente de produccion empresarial.
@@ -48,7 +50,13 @@ Linux puede usarse en sistemas fisicos y virtuales. La arquitectura del sistema 
 ## Extensible y Configurable
 
 Una vez installado, el ambiente operacional ofrece alternativas para un alto grado de personalization. En el mundo práctio hay una gran variedad de immplementaciones desde lo más básico hasta lo mas complejo y seguro.
- 
-[^1]: [Lista de distrubuciones de Linux](https://en.wikipedia.org/wiki/List_of_Linux_distributions)
+
+## Donde Practicar Linux En Linea
+
+- [webminal](https://webminal.org/)
+- [cocalc](https://cocalc.com/features/linux)
+- [linuxsurvival](https://linuxsurvival.com/)
+- [terminaltemple](https://www.terminaltemple.com/) :: acceso a terminal en linea
+- [bellard](https://bellard.org/jslinux/)
 
 [Return to main page]({{site.baseurl}}/).
