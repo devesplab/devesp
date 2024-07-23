@@ -26,12 +26,9 @@ nav_order: 1
 
 ## La Primera Cuenta de Usuario
 
-Cuando un sistema de Linux es instanciado por primera vez, solo tiene la cuenta del Super Usuario "root". La persona u orgnaización que ha instanciado el sistema determina como crear y administrar cuentas adicionales de usuarios. La manera de crear cuentas varia desde lo más simple creando cuentas locales hasta lo más complejo usando herramientas de terceros en un entorno empresarial de producción.
+Cuando un sistema de Linux es instanciado por primera vez, solo tiene la cuenta del Super Usuario "root". La persona u orgnaización que ha instanciado el sistema determina como crear y administrar cuentas adicionales de usuarios. La manera de crear cuentas varias desde lo más simple creando cuentas locales hasta lo más complejo usando herramientas de terceros en un entorno empresarial de producción.
 
-En esta leccion discutimos brevemente:
-- Entorno donde se establecen las cuentas de usuarios
-- Veremos la estructura de los archivos para manejar cuentas locales
-- Entederemos la diferencia entre Usuario Regular y Cuenta de Sistemas
+En esta leccion discutimos brevemente el entorno donde se establecen las cuentas de usuarios.
 
 ## Métodos De Crear Cuentas de Usuarios
 

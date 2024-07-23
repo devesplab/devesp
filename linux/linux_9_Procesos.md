@@ -45,6 +45,14 @@ ninguna.
 ## Working Environment
 
 
+## Que es un Proceso?  
+(what is it, why you need to know them, and what can you do with them?)
+Know what your app is doing.
+### Process id: PID, PPID
+### Troubleshoot: logs, journalctl
+### Track and Monitor: ps, pstree, htop
+### Adjust memory settings (java)
+
 
 ## Referencias 
 

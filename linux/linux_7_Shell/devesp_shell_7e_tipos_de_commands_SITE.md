@@ -22,6 +22,8 @@ nav_order: 4
 {:toc}
 </details>
 
+---
+
 ## Que es un Comando?
 
 (what is it, why you need them, and what can you do with them?)
@@ -47,14 +49,16 @@ Podemos definir cada parte de esta manera:
 ## Tipos de Comandos
 
 Linux provee una gran cantidad de comandos y utilidades para manejar ares especificas del sistema operativo. 
-### Comandos de Uso General
+
+**Comandos de Uso General**
 
 Esto son comandos que son usualmente usados para interactuar con el sistem de manera generalizada. Por ejemplo: ls, cd, chown, useradd, etc.
-### Comandos de Procesos
+
+**Comandos de Procesos**
 
 Estos comandos so usados para manejar procesos del sistem y aplicaciones.
 
-### Comandos de Network
+**Comandos de Network**
 
 Esto son comandos usados en el manejo y configuracion de NICs, IP Addresses, routes, etc.
 ## Ejecucíon Simple o Enlazada
@@ -84,20 +88,25 @@ $ echo "Hola, Mundo!" > holamundo.txt
 $ cat holamundo.txt
 ```
 
-## Comandos en Scripts
+## Comandos en Programas
 
-Esta bien que usemos instrucciones generales en la CLI. Pero cuando las tareas crecen en complejidad es necesario agrupar tareas en scripts. 
+Esta bien que usemos instrucciones generales en el indicador, pero cuando las tareas crecen en complejidad es necesario agrupar tareas en programs (scripts). 
  
-Escribamos un bash script que combine todos los ejemplos anteriormente expuestos.
+Veamos un bash script que combine todos los ejemplos anteriormente expuestos.
 ```bash
 #!/bin/bash
-#
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 # Di hola y muestra la fecha
 #
+# Variables:
+#   DATE: especifica la fecha en formato mes/dia/año 
+#    LOG: apunta a un archivo de registro para capturar la salida del comandos
+#
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 DATE=`date +"%m/%d/%y"`
 LOG=greeting.log
 
-# verificar que LOG exist, y si no, crearlo.
+# verificar que LOG existe, y si no, crearlo.
 [ -f ${LOG} ] || echo "INFO: creando ${LOG} porque no existe" && touch ${LOG}
 
 # decir hola y mandar el resultado el archivo LOG
@@ -108,28 +117,14 @@ function greeting(){
 # ejecutemos la funcion
 greeting
 ```
-En este script pasan varias cosas:
+En este programa pasan varias cosas:
 - declaramos variables para almacenar valores que usamos en el código
 - verificamos la existencia de un archivo y tomamos una acción de acuerdo al resultado
 - hacemos uso de una funcion para aislar un sección del código que hace una tarea específica
 - usamos el nombre de la funcion para ejecutar el código
 
-Una cosa es clara, scripts ofrecen el método de agrupar comandos para ejecutar tareas que de otra manera seria imposible en la CLI.
+Una cosa es clara, los programas ofrecen el método de agrupar comandos para ejecutar tareas que de otra manera seria imposible en la CLI.
 
-Mas tarde veremos en detalle la composición y estructura de bash scripts.
-
-<hr style=" border: 0; width: 100%; color:#0369a3; background-color:#0369a3; height: 4px;"/>
-
-## Que es un Proceso?
-
-(what is it, why you need to know them, and what can you do with them?)
-
-Know what your app is doing.
-### Process id: PID, PPID
-
-### Troubleshoot: logs, journalctl
-
-### Track and Monitor: ps, pstree, htop
-### Adjust memory settings (java)
+Mas tarde veremos en detalle la composición y estructura de programas de Bash.
 
 [Return to main page]({{site.baseurl}}/).

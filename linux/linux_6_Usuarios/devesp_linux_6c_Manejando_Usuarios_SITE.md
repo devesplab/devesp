@@ -160,13 +160,13 @@ Veamos a continuación los detalles de cada tarea.
 Es buena practica verificar si un usuario existe antes de atentar crearlo, o modifiarlo.
 
 Estos comandos pueden usarse para listar todos los usuarios que existen en el sistema.
-```sh
+```bash
 -> cut -d: -f1 /etc/passwd
 
 -> awk -F: '{print $1}' /etc/passwd
 ```
 Enseguida, veamos is el usuario ficticio `user1` existe.
-```sh
+```bash
 
 -> id user1
 -> grep user1 /etc/passwd
@@ -228,13 +228,13 @@ Toda esa información se agrega al campo del comentario on `/etc/passwd`.
 Si deseas, no entres esos detalles, y solo presiona `Enter` o `Return` por cada pregunta.
 
 Luego verificamos que el usuario fue creado
-```sh
+```bash
 -> grep appuser /etc/passwd
-appuser:x:1000:1000:App User,R101,(111) 111-111,(222) 222-222,For Application Execution:/home/appuser:/bin/bash
+appuser:x:1000:1000:App User,R101,(111) 111-111,(222) 222-222,For Application Execution:/home/appuser:/bin/babash
 ```
 
 Aqui verificamos que el directorio de inicio fue creado. 
-```sh
+```bash
 -> ls -ld /home/appuser
 drwxr-x--- 2 appuser appuser 4096 May 18 21:08 /home/appuser/
 
@@ -250,13 +250,13 @@ drwxr-xr-x 1 root    root    4096 May 18 21:08 ../
 El comando `adduser` mostró la linea `Copying files from /etc/skel` indicando la acción que copió los archivos escondidos que muestra el comando `ls -la`. Cabe notar que el comando `useradd` no hace esto.
 
 Vemos que la contraseña encripta a sido creada
-```sh
--> grep appuser /etc/shadow
+```bash
+-> grep appuser /etc/bashadow
 appuser:$y$j9T$.aN1RbQXlVwzRNvI18uCR.$mPzqtEz2WTyb03eJ2.C7lsroaAjFdfdAh.TssUyYZs7:19861:0:99999:7:::
 ```
 
 El grupo del usuario se ha creado automáticamente
-```sh
+```bash
 -> grep appuser /etc/group
 appuser:x:1000:
 ```
@@ -264,24 +264,24 @@ appuser:x:1000:
 #### Crear Usuario Con Useradd
 
 El comando `useradd` no es interactivo. Simplemente pasemos el nombre usuario como argumento.
-```sh
+```bash
 -> useradd techuser
 ```
 
 Lo primero que notamos es que el campo donde van los comentarios esta vacio.
-```sh
+```bash
 -> grep techuser /etc/passwd
 techuser:x:2096:2097::/home/techuser:/bin/sh
 ```
 
 El directorio de inicio del usuario _no fue creado_. Lo debemos crear manualmente!
-```sh
+```bash
 ->  ls -l /home/techuser
 ls: cannot access '/home/techuser': No such file or directory
 ```
 
 Luego vemos que no se ha generado la contraseña encripta. 
-```sh
+```bash
 -> grep techuser /etc/shadow
 techuser:!:19861:0:99999:7:::
 ```
@@ -296,7 +296,7 @@ El usuario se ha creado sin contraseña y debemos crearla nosotros mismos usando
 
 Para crear la contraseña del usuario usemos el comando `passwd`. <br>
 Debemos entrar la nueva contraseña dos veces.
-```sh
+```bash
 -> passwd techuser
 New password:
 Retype new password:
@@ -304,7 +304,7 @@ passwd: password updated successfully
 ```
 
 Verifiquemos que la contraseña se creo.
-```sh
+```bash
 -> grep techuser /etc/shadow
 techuser:$y$j9T$gQtiW96hN/wjuClWzU0sr.$/NSWKHNtTg01XtCVUPrBrC4jBM3lPa.bqx21d/evRq4:19861:0:99999:7:::
 ```
@@ -325,7 +325,7 @@ En sistemas the Linux usamos el comando `chage` para modificar atributos a cuent
 El comando `chage` está restringido al usuario `root`, excepto la opción `-l`, que puede ser utilizado por un usuario sin privilegios para determinar cuándo caducará su contraseña o cuenta.
 
 Aqui, el usuario `appuser` usa el comando `chage -l` para chequear el estado de su cuenta. 
-```sh
+```bash
 appuser@ubuntu2204-1-devesp:~$ chage -l appuser
 Last password change                                      : May 18, 2024
 Password expires                                          : never
@@ -340,32 +340,36 @@ En particular, muestra cuando caducará su contraseña, en esta caso nunca.
 Ahora agamos algunas cambios de fecha y tiempo.
 
 Establecer la fecha de vencimiento de la cuenta
-```sh
+```bash
 -> chage --expiredate 2024-12-31 appuser
 ```
-Establecer el numero de 10 dias como aviso antes que venza la contraseña.
-```sh
+Establecer el numero de 10 dias como aviso antes que venza la contraseña.<br>
+Indica que el usuario recibirá un aviso por diez días antes que se venza su contraseña.
+```bash
 -> chage  --warndays 10  appuser
 ```
-Establecer el número mínimo de días antes de cambiar la contraseña.
-```sh
+Establecer el número mínimo de días antes de cambiar la contraseña.<br>
+Este ajuste dice la contraseña caduca llegado el numero de dias indicado.
+```bash
 -> chage  --mindays 180  appuser
 ```
-Establecer el número máximo número de días antes de cambiar la contraseña.
-```sh
+Establecer el número máximo de días antes de cambiar la contraseña.<br>
+Este ajuste dice el usuario debe cambiar la contraseña cuando se cumple el número de dias indicado.
+```bash
 -> chage  --maxdays 200  appuser
 ```
-Establecer el número de dias que la cuenta puede estar inactiva en el sistema.
-```sh
+Establecer el número de dias que la cuenta puede estar inactiva en el sistema.<br>
+Esto indica el usuario (la contraseña) puede estar inactivo por no más del número de dias indicado.
+```bash
 -> chage  --inactive 30  appuser
 ```
-Todas las configuraciones anteriores se pueden hacer juntas así.
-```sh
+Todas las configuraciones anteriores se pueden agrupar en un solo comando así.
+```bash
 -> chage --expiredate 2024-12-31 --warndays 10 --mindays 180 --maxdays 200 --inactive 30  appuser
 ```
 
-Mostrar todos los cambios.
-```sh
+Ahora, veamos todos los cambios hechos.
+```bash
 -> chage -l appuser
 Last password change                                      : May 18, 2024
 Password expires                                          : Dec 04, 2024
@@ -377,13 +381,13 @@ Number of days of warning before password expires         : 10
 ```
 
 Todos los cambion se ven en `/etc/shadow` en los campos correspondientes.
-```sh
+```bash
 -> grep appuser /etc/shadow
 appuser:$y$j9T$P2Wk5imw0AqKdMnzMHCoz.$vJxs5FqmYoorHrUAgN18Qq2Z98Xq00BmAK4/lkqHQG1:19861:180:200:10:30:20088:
 ```
 
 Para más información ver la ayuda en linea del comando.
-```
+```bash
 ->  chage --help
 ```
 
@@ -393,50 +397,63 @@ La página manual del comando `usermod` dice lo siguiente:
 "_El comando usermod modifica los archivos de la cuenta del sistema para reflejar los cambios que se especificado en la línea de comando._"
 
 Cambiemos el UID a `2000` para `appuser`
-```sh
+```bash
 -> usermod --uid 2000 appuser
 ```
+
 Cambiemos la contraseña de `appuser` a `secret`. El cambio se refleja en `/etc/shadow`.
-```sh
+```bash
 -> usermod --password secret appuser
 
 -> grep appuser /etc/shadow
 appuser:secret:19861:180:200:10:30:20088:
 ```
+
 Agreguemos el ususario `appuser` al group `staff` en adición a los que ya pertenece.
-```sh  
+```bash  
 -> usermod --groups  staff appuser
 -> id appuser
 uid=2000(appuser) gid=1000(appuser) groups=1000(appuser),50(staff)
 ```
-Borremos el usuario `appuser` del group `staff`.<br>
+El comando `id <usuario>` muestra todos los grupos a los que un usuario pertence.
+
+Enseguida, borremos el usuario `appuser` del group `staff`.<br>
 Para borrar un usuario de un grupo, hay que listar los groups a los que queremos mantenar y dejar fuera los que queremos borrar. En este ejemplo, el `appuser` pertencera solo al `appgroup`.
-```
+```bash
 usermod --groups appgroup appuser
 ```
 
-Bloquer y desbloquer un usuario.
-```
+### Bloquer Usuario
+
+Podemos bloquear o desbloquear un usuario con el commando `usermod`.<br>
+- El ajuste `--lock` bloquea
+- El ajuste `--unlock` desbloquea
+
+```bash
 -> usermod --lock appuser
 -> usermod --unlock appuser
 ```
 
 Para más información ver la ayuda en linea del comando.
-```
+```bash
 ->  usermod --help
 ```
 
-### Bloquer Usuario
-
+Tambien podemos bloquer o desbloquer con el commando `passwd`.<br>
 Para bloquear un usuario usemos la bandera `-l` asi:
-```sh
+```bash
+-> passwd -l techuser
+```
+
+Podemos chequear el estado del usuario de esta manera:
+```bash
 -> grep techuser /etc/shadow
 techuser:!$y$j9T$gQtiW96hN/wjuClWzU0sr.$/NSWKHNtTg01XtCVUPrBrC4jBM3lPa.bqx21d/evRq4:19861:0:99999:7:::
 ```
 El símbolo `!` se agregó despues del primer `:` indicando esta cuenta esta bloqueada y no puede usarse para entrar al sistema.
 
-Para remover el bloqueo de un usuario usemos la bandera `-u` asi:
-```sh
+Para remover el bloqueo de un usuario usando `passwd` usemos la bandera `-u` asi:
+```bash
 -> passwd -u techuser
 passwd: password expiry information changed.
 ```
@@ -447,12 +464,12 @@ El símbolo `!` se remueve después de esta operación indicando que esta cuenta
 En Ubuntu y RedHat hay dos comandos para crear usuarios: `deluser` y `userdel`.
 
 {: .warning }
-Debemos decidir si mantener or borrar el directorio de inicio cuando borramos una cuenta de usuario en Linux
+Debemos decidir si deseamos mantener or borrar el directorio de inicio cuando borramos una cuenta de usuario en Linux
 
 En los dos ejemplos que siguen, el directorio de inicio es preservado.
 
 El comando `deluser` pregunta el nombre del usuario a borrar.
-```sh
+```bash
 -> deluser
 Enter a user name to remove: appuser
 Removing user `appuser' ...
@@ -461,7 +478,7 @@ Done.
 ```
 
 El comando `userdel` requiere que pasemos el nombre del usuario a borrar como parámetro.
-```sh
+```bash
 -> userdel techuser
 ```
 
@@ -474,7 +491,7 @@ En este ejemplo que sigue hacemos lo siguiente:
 - borramos el usuario `appuser`
 - usamos los comandos `ls` y `tar` para verificar que la copia de seguridad fue creada
 
-```sh
+```bash
 -> mkdir /tmp/appuser
 
 -> deluser appuser  --remove-home  --backup-to /tmp/appuser
@@ -501,7 +518,7 @@ Done.
 El comando solo eliminó el usuario `appuser` y eliminó su directorio de inicio mientras realizó una copia de seguridad del contenido en `/tmp/appuser`.
 
 Finalmente, usemos el comando `id` para verificar que el usuario has sido borrado.
-```sh
+```bash
 -> id appuser
 id: 'appuser': no such user
 ```
@@ -523,7 +540,7 @@ Los comandos siguientes son usados frecuentemente en sesiones de Linux.
 adduser, useradd
 : agregar cuenta de usuario en Linux
 
-deluser, userdl
+deluser, userdel
 : borrar cuenta de usuario en Linux
 
 passwd

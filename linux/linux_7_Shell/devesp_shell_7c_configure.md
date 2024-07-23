@@ -143,12 +143,10 @@ devuser@ubuntu2204-1-devesp
 ~
 hist:213 -> env
 SHELL=/bin/bash
-GITTOKEN=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
 PWD=/home/devuser
 LOGNAME=devuser
 XDG_SESSION_TYPE=tty
 HOME=/home/devuser
-GITTOKENDEVESP=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
 XDG_SESSION_CLASS=user
 TERM=xterm
 USER=devuser

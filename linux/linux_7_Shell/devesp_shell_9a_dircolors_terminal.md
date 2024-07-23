@@ -9,7 +9,7 @@ has_toc: false
 nav_order: 9
 ---
 
-# LINUX :: SHELL :: Colorizar la Terminal de Bash Con DirColors
+# Colorizar la Terminal de Bash Con DirColors
 
 {: .no_toc }
 
@@ -23,6 +23,8 @@ nav_order: 9
 </details>
 
 ---
+
+## Acerca de DirColors
 
 Normalmente cuando usamos el comando `ls` para listar archivos y carpetas, la salida son colores defecto.
 Esto se puede modifiar para ver la salida del comando con ciertos colores que ayuda visualmente para leer mejor lo que vemos en la pantalla.
@@ -141,6 +143,10 @@ Para más información ver la ayuda en línea.
 -> cat /etc/DIR_COLORS
 ```
 
-* Página manual de [dir_colors para Linux](https://linux.die.net/man/5/dir_colors) en linea.
-* Página manual de [dir_colors para Ubuntu](https://manpages.ubuntu.com/manpages/trusty/man1/dircolors.1.html) en linea.
-* Ver [vivid](https://github.com/sharkdp/vivid) en Github.
+Páginas manuales
+
+- [dir_colors para Linux](https://linux.die.net/man/5/dir_colors) en linea.
+- [dir_colors para Ubuntu](https://manpages.ubuntu.com/manpages/trusty/man1/dircolors.1.html) en linea.
+- [vivid](https://github.com/sharkdp/vivid) en Github.
+
+[Return to main page]({{site.baseurl}}/).

@@ -9,7 +9,7 @@ has_toc: false
 nav_order: 5
 ---
 
-# LINUX :: comandos basicos del usuario 
+# Comandos Básicos de Linux Para el Usuario 
 
 {: .no_toc }
 
@@ -24,32 +24,21 @@ nav_order: 5
 
 ---
 
-**DESCRIPCION**
+## Conocimiento Básicos y Util de Comandos en Linux
 
-En esta leccion:
+En esta página vamos a explorar como usar vario comandos en la terminal.
 - Comandos para manejar archivos y carpetas
 - Comandos para editar y ver contenidos de archivos
 - Comandos para ver la fecha
 
-**DEPENDENCIAS**
-
-En Ubuntu 22.04 el paquete `bsdmainutils` debe estar instalado para poder esar el comando `date` para mostrar fechas y calendarios.
-
-**REQUERIMIENTOS**
-
-Esta leccion requiere acceso a la Linea de Comandos en una terminal de Linux.
-
 En esta leccion usamos Ubuntu 22.04 y el BASH Shell.
-
 Se requiere acceso administrativo para poder instaler paquetes cuando sea necessario.
 
-**ADVERTENCIA**
+## Ayuda Para Comandos
 
-ninguna.
+Cuando no hemos usado un comando o lo hemos usado muy poco nos vemos con la dificultad que no sabemos que hacer. Aun mas concerniente es que podriamos usar el comando en la forma equivocada y causar daños irreparables; por ejemplo el comando `rm` y `fsck` pueden ser destructivos si se usan de manera inapropiada.
 
-## Ayuda para comandos
-
-Linux ofrece ayuda en la forma de utilidades y manuales que proveen informacion acerca de comandos.
+Linux ofrece ayuda en la forma de páginas manuales que proveen información acerca de comandos.
 
 Podemos usar el comando `which` para saber si un comando esta disponible
 ```bash
@@ -59,7 +48,7 @@ La bandera `--help` facilita informacion compacta del uso del comando
 ```bash
 <comando> --help
 ```
-Podemos acceder las paginas manuales si estan disponibles.
+Podemos acceder las páginas manuales si estan disponibles.
 ```bash
 man <comando>
 ```
@@ -70,9 +59,13 @@ info <comando>
 
 ## Comandos para listar y encontrar archivos y carpetas
 
-### comando: ls
+Si no tenemos disponibles un interfaz gráfico, tenemos que usar la terminal y el indicador para navegar el sistem de archivos.
 
-El comando `ls` se usa para listar recursos.
+Veamos a continuación lo que podemos usar en la terminal.
+
+### Comando: ls
+
+El comando `ls` se usa para listar archivos y directorios.
 
 ```bash
 -> ls
@@ -108,11 +101,11 @@ drwxrwxr-x 4 devuser devuser   4096 Feb 11 21:51 ../
 -rw-rw-r-- 1 devuser devuser 376919 Feb 11 21:25 afile03a.txt
 drwxrwxr-x 2 devuser devuser   4096 Feb 11 21:25 subdir2/
 ```
-Notese el archivo `.afileHidden` en la salida del comando anterior.<br>
+En la lista arriba, nótese que el archivo `.afileHidden` comienza con un punto indicando que es un archivo escondido. <br>
 El punto `.` en la salida anterior indica el directorio corriente.<br>
 EL doble punto `..` indica el directorio principal (arriba) de donde nos encontramos.
 
-Usemos la bandera `-lah` para mostar el tamaño de archivos.<br>
+Agregamos la bandera `-h` para mostar el tamaño de cada archivos.<br>
 La quinta columna muestra el tamaño del archivo. Por ejemploe el archivo `afile02a.txt` es `29K` (kilobytes) de tamaño.
 ```bash
 -> ls -lah afile*
@@ -124,7 +117,7 @@ La quinta columna muestra el tamaño del archivo. Por ejemploe el archivo `afile
 -rw-rw-r-- 1 devuser devuser 369K Feb 11 21:25 afile03a.txtl
 ```
 
-Usemos las bandera `-i` para mostar el inodo.<br>
+Usemos la bandera `-i` para mostar el inodo de cada archivo.<br>
 EL inodo es el numero en la primera columna.
 ```bash
 -> ls -li afile*
@@ -141,9 +134,9 @@ Usemos las bandera `-tr` para mostar la lista de archivos con fecha de modificat
 -rwxr-xr-x 1 devuser devuser 901 Feb  2 05:10 afile03*
 ```
 
-### comando: find
+### Comando: find
 
-El comando `find` es muy bueno para encontrar archivos o carpetas que son dificiles de encontrar. Este comando es usado muy frecuentemente por administradores en programas de mantenimiento.
+El comando `find` es muy bueno para encontrar archivos o carpetas que son dificiles de encontrar. Este comando es usado muy frecuentemente por administradores en trabajos programados de mantenimiento.
 ```bash
 -> find . -name myDirectory
 
@@ -157,7 +150,7 @@ El comando `find` es muy bueno para encontrar archivos o carpetas que son difici
 {: .note }
 Vamos a explorar el comando `find` extensivamente como parte de otro ejercicio.
 
-### comando: locate
+### Comando: locate
 
 El comando `locate` provee una forma rapida para mostrar si un archivo esta presente en el sistema.
 ```bash
@@ -186,7 +179,7 @@ comando>> mkdir Downloads
 comando>> mkdir Pictures
 ```
 
-#### comando: cd y pwd
+#### Comando: cd y pwd
 
 El comando `cd` facilita moverse (o cambiar) de una carpeta a otra.<br>
 Solo tenemos que saber el nombre de la carpeta y pasarla como argumento al comando `cd`.<br>
@@ -217,7 +210,7 @@ comando>> pwd
 
 ## Comandos para editar y ver contenido de archivos
 
-### comando: vi
+### Comando: vi
 
 El comando `vi` es usado para editar archivos de texto usando el estandard ANSI.<br>
 Solo podemos editar un archivo a la ves en la misma terminal.
@@ -225,7 +218,7 @@ Solo podemos editar un archivo a la ves en la misma terminal.
 comando>> vi pets.txt
 ```
 
-### comando: cat
+### Comando: cat
 
 Usamos el comando `cat` para ver el contenido de un archivo.
 ```bash
@@ -234,7 +227,7 @@ cat
 dog
 ```
 
-### comando: touch, cp
+### Comando: touch, cp
 
 El comando `touch` se usa para crear archivos si no existen.<br>
 El comando `cp` copia carpetas o directorios. 
@@ -261,7 +254,7 @@ comando>> touch file1.txt
 
 ## Comandos para borrar archivos y carpetas
 
-### comando: rm
+### Comando: rm
 
 El comando `rm` se usa para borrar archivos o carpetas<br>
 En el caso de carpetas, debemos usar la bandera `-r` para tomar la accion de forma recursiva.<br> 
@@ -284,6 +277,8 @@ rm: remove directory 'workdir/'? yes
 
 ## Comandos de fecha y calendario
 
+En Ubuntu 22.04 el paquete `bsdmainutils` debe estar instalado para poder esar el comando `date` para mostrar fechas y calendarios.
+
 Entrando el comando `date` sin argumentos muestra la fecha de hoy.
 ```bash
 ->  date
@@ -301,7 +296,6 @@ Por ejemplo, esto muestra la hora, minutos y segundos.
 ```bash
 -> date "+%H:%M:%S"
 ```
-
 
 El comando `touch` refresca la fecha de un archivo or carpeta.
 ```bash
@@ -339,21 +333,13 @@ date
 : mostrar la fecha de hoy o calendario deseado
 
 find
-; encontrar files y archivos
+: encontrar files y archivos
 
 locate
-; encontrar files y archivos
+: encontrar files y archivos
 
 ### Referencias Utiles
 
-DevEsp :: el indicador
-- https://docs.devesp.com/linux-conceptos/#el-indicator-the-prompt
+Pare saber mas acerca de `find`, y `locate` ver [GNU Findutils](https://www.gnu.org/software/findutils/)
 
-DevEsp :: repositorio de Github
-- https://github.com/devesplab/linux-devesp.git
-
-Comandos `find`, y `locate`
-- https://www.gnu.org/software/findutils/
-
-Editor `vi`
-- https://www.vim.org/docs.php
+[Return to main page]({{site.baseurl}}/).

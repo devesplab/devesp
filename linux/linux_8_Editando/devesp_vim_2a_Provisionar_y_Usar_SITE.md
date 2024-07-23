@@ -289,3 +289,5 @@ Haz click en el enlace para ir al sitio red del editor.
 - [Vim](https://www.vim.org/)
 - [Libro para aprender Vim Gratis](https://riptutorial.com/ebook/vim)
 - [Vim color themes](https://github.com/rafi/awesome-vim-colorschemes)
+
+[Return to main page]({{site.baseurl}}/).

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Instalar Un Shell
-permalink: /manejando-usuarios/
+permalink: /instalar-shell/
 parent: El Shell
 grand_parent: Linux
 has_children: false
