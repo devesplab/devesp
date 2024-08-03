@@ -32,13 +32,13 @@ Puedes buscar un término en la caja de búsqueda arriba a la izquierda. Tambié
 
 En este espacio discutimos muchos aspectos referentes a Linux.
 
-Siendo que tenemos varias opciones, visitaremos variantes de Linux tales como RedHat, CentOS, Ubuntu, y otras como sea neceario.
+Visitaremos variantes de Linux tales como RedHat y Ubuntu, y otras como sea neceario.
 
 Las exposiciones son prácticas y al punto con el objetivo de aprender a hacer algo específico y útil.
+
+{: .important }
+> El contenido de este sitio es bastante dinámico y puede ser actualizado en la medida que sea necesaria para poder reflejar los cambios rápidos del mundo de la informática.
 
 En la mayoría de los casos vamos a explorar la linea de comandos viendo el resultado de acciones dentro y fuera del ambiente del usuario que los ejecute.
 
 Harémos uso de referencias a documentos o ejemplos externas cuando sea necesario para expandir los conceptos o dar recursos prácticos para enfatizar lo explicado.
-
-{: .important }
-> El contenido de este sitio es bastante dinámico y puede ser actualizado en la medida que sea necesaria para poder reflejar los cambios rápidos del mundo de la informática.

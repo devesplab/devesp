@@ -28,29 +28,15 @@ nav_order: 2
 
 # GIT :: Conceptos Fundamentales
 
-**DESCRIPCION**
-
 En esta leccion exponemos los conceptos fundamentales de Git:
 - que es código fuente?
 - que es control de versiones?
 - El Rol de Git Con Código Fuente 
 
-**DEPENDENCIAS**
-
-ninguna
-
 **REQUERIMIENTOS**
 
 Instalar el cliente de Git en el sistema local.<br>
 Usamos el cliente de Git >= 2.0
-
-**ADVERTENCIA**
-
-ninguna.
-
-## Working Environment
-
-En esta leccion usamos el sistema operativo Ubuntu.
 
 ## La Importancia de Control de Versiones Explicada
 
@@ -59,7 +45,7 @@ Tratemos de entender la importancia de Control de Versiones con un ejemplo prác
 {: .note }
 Control de Versiones se conoce como Version Control System (VCS) en Inglés.
 
-Supongamos que tenemos una carpeta con archivos que mantienen información climática de cada año en forma de CVS. Juntamente tenemos código fuente para generar programas para hacer predicciones climáticas de años futuros. Luego supongamos que un equipo de seis metereólogos mantienen esa información que se comparte con la comunidad de metereologa a nivel internacional. 
+Supongamos que tenemos una carpeta con archivos que mantienen información climática de cada año acerca de lluvias, sequías, huracanes, mareas, etc. El archivo es en en forma de CVS. Juntamente tenemos código fuente para generar programas para hacer predicciones climáticas de años futuros. Luego supongamos que un equipo de seis metereólogos mantienen esa información que se comparte con la comunidad de metereologa a nivel internacional. 
 
 Supongamos que estas personas tiene cada uno una copia en su laptop personal. O talvez para mejorar, toda esa información se mantiene en un servidor de datos en el cuarto de un edificio. 
 
@@ -67,7 +53,7 @@ Varias preguntas surgen que meritan respuesta:
 1. Cómo coordinan los mantenedores la actualización de datos día a día?
 2. Siendo que el clima es muy dinámico, cómo se agrega nuevos datos continuamente?
 3. Que pasa si uno de los metereólogos pierde su laptop? Qué pasaría si un desastre, tales como un incendio, destruye el edificio donde se encuentra el servidor de datos?
-4. Cómo se recuperan los datos?
+4. Cómo se recuperan los datos en caso de pérdida desastrosa?
 
 Es posible que algun ingeniero tenga una copia vieja de los datos en su laptop local y algo pueda recuperarse. O talvez hay una copia en un servidor de respaldo en otro edificio. Pero hay un problema: que tan actualizada será esa copia? Qué diferencia de datos se habrá perdido desde la ultima copia que se hizo?
 
@@ -96,10 +82,10 @@ En el mundo de desarrollo de software casi siempre se encuentran bugs, funciones
 La accíon de clonar es básicamente obtener una copia idéntica de un codigo fuente con la intencíon de hacer ajustes y actualizaciones que pueden ser registradas y rastreadas en el futuro en el repositorio de github. 
 
 Un repositorio de Github puede clonarse usando varios protocolos (git, https, ssh, file):
-- git://github.com/devesplab/git-devesp.git
-- https://github.com/devesplab/git-devesp.git
-- ssh://user@github.com/devesplab/git-devesp.git
-- file:///myProject/pets.git
+- `git://github.com/devesplab/git-devesp.git`
+- `https://github.com/devesplab/git-devesp.git`
+- `ssh://user@github.com/devesplab/git-devesp.git`
+- `file:///myProject/pets.git`
 
 Por regla general, usamos el protocolo HTTPS para obtener una copia usando el cliente de git de esta manera:
 ```

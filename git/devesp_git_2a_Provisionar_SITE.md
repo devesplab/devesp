@@ -8,7 +8,7 @@ has_toc: false
 nav_order: 1
 ---
 
-# GIT :: Provisionar El Cliente De Git
+# Provisionar El Cliente De Git
 
 {: .no_toc }
 
@@ -23,12 +23,12 @@ nav_order: 1
 
 ---
 
-**DESCRIPCION**
+Antes que podamos hacer operaciones de control de revision, debemos instalar el cliente de Git.
 
-En esta leccion:
-- Instalar el cliente de git.
+En esta leccion exploramos como instalar el cliente de git.
 
-Debemos instalar el cliente de Git antes que podamos usarlo.
+En esta leccion usamos el sistema operativo Ubuntu y RedHat.<br>
+Usamos el cliente de Git >= 2.0
 
 <style>.note-custom {
     background-color: #a4dded;
@@ -49,19 +49,12 @@ Debemos instalar el cliente de Git antes que podamos usarlo.
     <ul> WINGET : usada por Microsoft</ul>
 </div>
 
-## Ambiente De Trabajo
-
-En esta leccion usamos el sistema operativo Ubuntu y RedHat.<br>
-Usamos el cliente de Git >= 2.0
-
-## Instalar Git en Ubuntu
+## Instalar el Client Git en Ubuntu
 
 Hacemos lo siguiente en `Ubuntu 22.04.2 LTS`.
 
 Veamos si el paquete esta disponible.
 ```bash
-devuser@ubuntu2204-2-devesp
-~
 hist:13 -> sudo apt show  git -a
 Package: git
 Version: 1:2.34.1-1ubuntu1.9
@@ -76,8 +69,8 @@ Instalar el paquete.
 Verificar la instalacion.
 ```bash
 -> dpkg --get-selections | grep git
-git						    install
-git-man						install
+git               install
+git-man           install
 ```
 
 Verificar el binario
@@ -94,7 +87,7 @@ Si por alguna razón es necesario, podemos desinstalar git en Ubuntu.
 -> sudo apt remove  git -y
 ```
 
-## Instalar Git en RedHat
+## Instalar el cliente Git en RedHat
 
 Hacemos lo siguiente en `Red Hat Enterprise Linux 9.2 (Plow)`.
 
@@ -102,8 +95,7 @@ Ver si el paquete esta disponible.
 
 Podemos usar la bandera `provides` o `list` como se muestra a continuación.
 ```bash
-devuser@rhel9-1-devesp
-hist:25 -> yum provides git
+-> yum provides git
 Not root, Subscription Management repositories not updated
 Last metadata expiration check: 0:01:18 ago on Mon May 27 20:03:13 2024.
 git-2.43.0-1.el9.x86_64 : Fast Version Control System
@@ -111,8 +103,7 @@ Repo        : ubi-9-appstream-rpms
 Matched from:
 Provide    : git = 2.43.0-1.el9
 
-devuser@rhel9-1-devesp
-hist:25 -> yum list git
+-> yum list git
 Not root, Subscription Management repositories not updated
 Last metadata expiration check: 0:01:34 ago on Mon May 27 20:03:13 2024.
 Available Packages
@@ -121,20 +112,17 @@ git.x86_64                           2.43.0-1.el9                           ubi-
 
 Instalar el paquete.
 ```bash
-devuser@rhel9-1-devesp
-hist:25 -> sudo yum install git
+-> sudo yum install git
 ```
 
 Para verificar la instalacion podemos usar el comando `yum` o `rpm` como se muestra a continuación.
 ```bash
-devuser@rhel9-1-devesp
-hist:30 -> yum list git
+-> yum list git
 Not root, Subscription Management repositories not updated
 Last metadata expiration check: 0:10:56 ago on Mon May 27 20:03:13 2024.
 Installed Packages
 git.x86_64
 
-devuser@rhel9-1-devesp
 hist:25 ->  rpm -qa | grep git
 crypto-policies-20221215-1.git9a18988.el9.noarch
 crypto-policies-scripts-20221215-1.git9a18988.el9.noarch
@@ -147,12 +135,10 @@ git-2.43.0-1.el9.x86_64
 
 Verificar el binario
 ```bash
-devuser@rhel9-1-devesp
-hist:29 -> which git
+-> which git
 /usr/bin/git
 
-devuser@rhel9-1-devesp
-hist:29 -> git --version
+-> git --version
 git version 2.43.0
 ```
 
@@ -235,3 +221,5 @@ Utilidades Para Adminstrar Paquetes
 - [Yum](https://access.redhat.com/solutions/9934) para RedHat
 - [Homebrew](https://brew.sh/) para MacOS
 - [Winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) para Windows
+
+[Return to main page]({{site.baseurl}}/).
