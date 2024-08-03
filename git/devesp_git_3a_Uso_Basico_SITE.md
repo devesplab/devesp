@@ -8,7 +8,7 @@ has_toc: false
 nav_order: 2
 ---
 
-# GIT :: Uso Básico de Git
+# Uso Básico de Git
 
 {: .no_toc }
 
@@ -23,39 +23,21 @@ nav_order: 2
 
 ---
 
-**DESCRIPCION**
-
-En esta leccion:
+En esta página discutimos lo siguiente:
 - inicializar una carpeta para uso con control de revision
 - clonar un repositorio existente de github
 - entender origen (origin) de github
 - hacer cambios locales y propagarlos a un repositorio
 
-**DEPENDENCIAS**
-
-Instalacion local del cliente de github.
-
-**REQUERIMIENTOS**
-
-Sistema de linux Ubuntu. <br>
-Acceso en linea a Github en https://github.com
-
-**ADVERTENCIA**
-
-ninguna.
-
-## Working Environment
-
-En esta leccion usamos el sistema operativo Ubuntu.
+En esta leccion usamos el sistema operativo Ubuntu.<br>
 Usamos el cliente de Git >= 2.0
-
 
 ## Usando Git Por Vez Primera
 
 En nuestro ordenador local es fácil empezar usar git para control de revision. 
 
 En este ejemplo básico, creamos un directorio, cambiamos a ese directorio y lo inicializamos para que este bajo control de revision con git.
-```
+```bash
 -> mkdir data
 -> cd data
 -> git init
@@ -63,7 +45,7 @@ En este ejemplo básico, creamos un directorio, cambiamos a ese directorio y lo 
 A partir de este momento tenemos la habilidad de registrar todo cambio hecho a los datos del repositorio.
 
 El comando `git init` crea el directorio escondido `.git`
-```
+```bash
 -> ls -la ~/data
 total 28
 drwxrwxr-x 3 devuser devuser 4096 Jun  9 01:05 ./
@@ -90,7 +72,7 @@ drwxrwxr-x  5 devuser devuser 4096 Jun  9 01:02 refs/
 {: .warning }
 El directorio `.git` nunca debe ser intencionalmente alterado manualmente. No se debe copiar, mover, editar or borrar archivos o carpetas. 
 
-El directorio `.git` es donde Git guarda toda la información y metadata del repositorio. Contiene toda la historia del projecto, incluyendo los cambios hechos, ramas, tags, y ajustes de configuración. Este directorio es escencial para mantener un registro necesario para el control de revisión. En caso que el directorio `.git` sea borrado, se pierde toda referencia historica del desarrollo del projecto.
+El directorio `.git` es donde Git guarda toda la información y metadata del repositorio. Contiene toda la historia del projecto, incluyendo los cambios hechos, ramas, etiquetas, y ajustes de configuración. Este directorio es escencial para mantener un registro necesario para el control de revisión. En caso que el directorio `.git` sea borrado, se pierde toda referencia historica del desarrollo del projecto.
 
 ## Manejando La Rama Predeterminada
 
@@ -100,32 +82,45 @@ Inicialmente, la rama predeterminada de un repositorio de github recien creado s
 Podemos usar cualquier nombre que deseamos para nombrar la rama prederminada de un repositorio de github.
 
 Si así lo deseamos, podemos configurar nuestro sistema local de tal manera que cada vez que creamos un repositorio tomará `main` como el nombre de la rama predeterminada. Para lograr esto usamos el comando siguiente:
-```
+
+```bash
 -> git config --global init.defaultBranch main
 ```
+
 Para verificar el ajuste usemos este comando.
-```
+
+```bash
 -> git config --global init.defaultbranch
 ```
+
 Para listar todos los ajustes que tenemos usemos este comando
-```
+
+```bash
 -> git config --global --list
 ```
+
 Si tiempo después de hacer el ajuste a usar `main` como rama predeterminada, queremos usar una nueva rama llamada `develop`, la podemos cambiar así:
-```
+
+```bash
 git config --global init.defaultBranch develop
 ```
+
 Si no deseamos tener rama predeterminada en nuestro sistema local, hacemos lo siguiente:
-```
+
+```bash
 -> git config --global --unset init.defaultBranch
 ```
+
 Github registra todos los ajustes personalizados en el archvo `$HOME/.gitconfig`. El ajuste para rama predeterminada se ve así:
-```
+
+```bash
 [init]
 	defaultBranch = main
 ```
+
 Además de hacer el ajuste con `git config`, debemos cambiar el repositorio en que estamos trabajando de esta manera:
-```
+
+```bash
 -> git branch -m main
 ```
 
@@ -136,9 +131,9 @@ Github provee el cliente de `git` para manipular control de revision en nuestra 
 {: .important }
 Si aún no lo has hecho, sigue las instructiones para instalar el cliente de git en tu sistema.
 
-Para usar un repositorio que ya existe, solo tenemos que clonarlo usando el cliente the git.
+Para usar un repositorio existente en [github](https://github.com), solo tenemos que clonarlo usando el cliente the git.
 ```
-git clone https://github.com/devesplab/git-devesp.git
+-> git clone https://github.com/devesplab/git-devesp.git
 ```
 
 El comando anterior creará un directorio con el nombre del repositorio `git-devesp`. Podemos cambiar a ese directorio y empezar a trabajar.
@@ -160,7 +155,8 @@ Siguiendo el ejemplo que estamos discutiendo:
 - agregamos un origen remoto usando un TOKEN para autenticación.
 - verificamos el origen remoto
 - immediatamente bajamos el contenido del repositorio y la rama predeterminada
-```
+
+```bash
 devuser@ubuntu2204-2-devesp
 hist:41 -> mkdir data
 
@@ -193,7 +189,7 @@ En el ejemplo anterior truncamos el token para mejor legibilidad.
 ## Hacer y Empujar Cambios
 
 En nuestro ejemplo, usamos el comando `git status` que muestra que inicialmente no tenemos nada.
-```
+```bash
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
 hist:43 -> git status
@@ -205,14 +201,14 @@ nothing to commit (create/copy files and use "git add" to track)
 ```
 
 De ahora en adelante hacemos referencia a "origin" para cualquier operación que envuelva bajar o empujar cambios. Enseguida creamos un nuevo archivo.
-```
+```bash
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
 hist:43 -> echo "Hello, Devesp!" > hello.txt
 
 ```
 Y ahora empujamos el nuevo cambio.
-```
+```bash
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
 hist:43 -> git add hello.txt
@@ -235,7 +231,7 @@ To https://github.com/devesplab/git-devesp.git
 ```
 
 Para verificar solo habramos el repositorio en el navegador web.
-```
+```bash
 https://github.com/devesplab/git-devesp.git
 ```
 
@@ -255,10 +251,12 @@ git
 ### Referencias Utiles
 
 DevEsp :: Linux
-- https://docs.devesp.com/linux-en-espa%C3%B1ol/
-- https://github.com/devesplab/git-devesp.git
+
+- [git-devesp](https://github.com/devesplab/git-devesp.git)
 
 Referencias en línea:
 - [Documentación General de Git](https://git-scm.com/docs)
 - Client de [git](https://git-scm.com/docs/git)
 - Parámetros de [git-config](https://git-scm.com/docs/git-config/2.22.0)
+
+[Return to main page]({{site.baseurl}}/).
