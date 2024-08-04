@@ -30,25 +30,6 @@ En esta leccion exploramos como instalar el cliente de git.
 En esta leccion usamos el sistema operativo Ubuntu y RedHat.<br>
 Usamos el cliente de Git >= 2.0
 
-<style>.note-custom {
-    background-color: #a4dded;
-    color: #23297a;
-    border: 2px solid black;
-    margin-left: 2%;
-    margin: 40px;
-    padding: 10px;
-    text-align: left;
-}
-</style>
-
-<div class="note-custom">
-  <h2>Utilidades Para Manejar Paquetes Por Sistema Operativo</h2>
-    <ul> APT    : usada por Ubuntu</ul>
-    <ul> YUM    : usada por RedHat</ul>
-    <ul> BREW   : usada por MacOS</ul>
-    <ul> WINGET : usada por Microsoft</ul>
-</div>
-
 ## Instalar el Client Git en Ubuntu
 
 Hacemos lo siguiente en `Ubuntu 22.04.2 LTS`.
