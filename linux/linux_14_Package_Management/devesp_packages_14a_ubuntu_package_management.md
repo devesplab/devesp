@@ -23,6 +23,24 @@ nav_order: 1
 
 ---
 
+## Identificando La Versión De Sistema Operativo
+
+Primero que nada debemore saber la version del sistema operativo antes de instalar o actualizar paquetes.
+
+Ubuntu ofrece el comando `lsb_release` que principalmente muestra el distribuidor y la versión de lanzamiento
+
+Luego usamos el comando `lsb_release` para ver la revision corriente del sistema operativo.
+```bash
+devuser@ubuntu2204-2-devesp
+~
+hist:62 ->  lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.2 LTS
+Release:	22.04
+Codename:	jammy
+```
+
 ## Advanced Packaging Tool – APT
 
 The utilidad Advanced Packaging Tool (APT) se usa para instalar, mejorar o actualizar paquetes en Ubuntu.
@@ -206,4 +224,12 @@ vim/oldstable 2:8.2.2434-3+deb11u1 amd64
 
 ## Referencias
 
+### Referencias Utiles
+
+Paginas Manuales
+- [apt](https://manpages.ubuntu.com/manpages/focal/en/man8/apt.8.html)
+
+
 [^1]: https://packages.ubuntu.com/
+
+[Return to main page]({{site.baseurl}}/).
