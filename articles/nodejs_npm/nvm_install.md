@@ -113,19 +113,13 @@ NodeJS provee el comando `node` y `npm`.
 
 Verificar la version de NODE.
 ```bash
-Sat 2025Feb15 19:15:41 PST
-orion@devesp
-~
-hist:413 -> node -v
+-> node -v
 v23.8.0
 ```
 
 Verificar la version the NPM.
 ```bash
-Sat 2025Feb15 19:15:47 PST
-orion@devesp
-~
-hist:414 -> npm --version
+-> npm --version
 10.9.2
 ```
 
@@ -133,10 +127,7 @@ hist:414 -> npm --version
 
 Ahora, instalemos otra version de nodejs.
 ```bash
-Sat 2025Feb15 19:31:41 PST
-orion@devesp
-~
-hist:419 -> nvm install 18
+-> nvm install 18
 Downloading and installing node v18.20.6...
 Downloading https://nodejs.org/dist/v18.20.6/node-v18.20.6-darwin-x64.tar.xz...
 ############################################################################### 100.0%
@@ -147,16 +138,14 @@ Now using node v18.20.6 (npm v10.8.2)
 
 Usemos `nvm` para seleccionar la nueva version que hemos instalado.
 ```bash
-Sat 2025Feb15 19:35:13 PST
-orion@devesp
-~
-hist:420 -> nvm use 18
+-> nvm use 18
 Now using node v18.20.6 (npm v10.8.2)
 ```
 
 ## Listar versiones de nodejs
 
 Usemos el comando `nvm` para ver todas las instalaciones de nodejs en nuestro sistema.
+La versión activa esta marcada con `->`.
 ```bash
 Sat 2025Feb15 19:37:13 PST
 orion@devesp
