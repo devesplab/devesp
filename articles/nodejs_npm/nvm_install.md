@@ -135,7 +135,7 @@ Ahora, instalemos otra version de nodejs.
 ```bash
 Sat 2025Feb15 19:31:41 PST
 orion@devesp
-~/Documents/DATAM2/myJEKYLL/site2
+~
 hist:419 -> nvm install 18
 Downloading and installing node v18.20.6...
 Downloading https://nodejs.org/dist/v18.20.6/node-v18.20.6-darwin-x64.tar.xz...
@@ -149,7 +149,7 @@ Usemos `nvm` para seleccionar la nueva version que hemos instalado.
 ```bash
 Sat 2025Feb15 19:35:13 PST
 orion@devesp
-~/Documents/DATAM2/myJEKYLL/site2
+~
 hist:420 -> nvm use 18
 Now using node v18.20.6 (npm v10.8.2)
 ```
@@ -160,7 +160,7 @@ Usemos el comando `nvm` para ver todas las instalaciones de nodejs en nuestro si
 ```bash
 Sat 2025Feb15 19:37:13 PST
 orion@devesp
-~/Documents/DATAM2/myJEKYLL/site2
+~
 hist:424 -> nvm ls
        v18.20.6
 ->      v23.8.0

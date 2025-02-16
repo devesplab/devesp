@@ -512,14 +512,14 @@
   },"73": {
     "doc": "Usar NVM para Instalar NodeJS",
     "title": "Instalar version adicional de nodejs",
-    "content": "Ahora, instalemos otra version de nodejs. Sat 2025Feb15 19:31:41 PST orion@devesp ~/Documents/DATAM2/myJEKYLL/site2 hist:419 -&gt; nvm install 18 Downloading and installing node v18.20.6... Downloading https://nodejs.org/dist/v18.20.6/node-v18.20.6-darwin-x64.tar.xz... ############################################################################### 100.0% Computing checksum with sha256sum Checksums matched! Now using node v18.20.6 (npm v10.8.2) . Usemos nvm para seleccionar la nueva version que hemos instalado. Sat 2025Feb15 19:35:13 PST orion@devesp ~/Documents/DATAM2/myJEKYLL/site2 hist:420 -&gt; nvm use 18 Now using node v18.20.6 (npm v10.8.2) . ",
+    "content": "Ahora, instalemos otra version de nodejs. Sat 2025Feb15 19:31:41 PST orion@devesp ~ hist:419 -&gt; nvm install 18 Downloading and installing node v18.20.6... Downloading https://nodejs.org/dist/v18.20.6/node-v18.20.6-darwin-x64.tar.xz... ############################################################################### 100.0% Computing checksum with sha256sum Checksums matched! Now using node v18.20.6 (npm v10.8.2) . Usemos nvm para seleccionar la nueva version que hemos instalado. Sat 2025Feb15 19:35:13 PST orion@devesp ~ hist:420 -&gt; nvm use 18 Now using node v18.20.6 (npm v10.8.2) . ",
     "url": "/nvn_nodejs/#instalar-version-adicional-de-nodejs",
     
     "relUrl": "/nvn_nodejs/#instalar-version-adicional-de-nodejs"
   },"74": {
     "doc": "Usar NVM para Instalar NodeJS",
     "title": "Listar versiones de nodejs",
-    "content": "Usemos el comando nvm para ver todas las instalaciones de nodejs en nuestro sistema. Sat 2025Feb15 19:37:13 PST orion@devesp ~/Documents/DATAM2/myJEKYLL/site2 hist:424 -&gt; nvm ls v18.20.6 -&gt; v23.8.0 default -&gt; 23.8.0 (-&gt; v23.8.0) iojs -&gt; N/A (default) unstable -&gt; N/A (default) node -&gt; stable (-&gt; v23.8.0) (default) stable -&gt; 23.8 (-&gt; v23.8.0) (default) lts/* -&gt; lts/jod (-&gt; N/A) lts/argon -&gt; v4.9.1 (-&gt; N/A) lts/boron -&gt; v6.17.1 (-&gt; N/A) lts/carbon -&gt; v8.17.0 (-&gt; N/A) lts/dubnium -&gt; v10.24.1 (-&gt; N/A) lts/erbium -&gt; v12.22.12 (-&gt; N/A) lts/fermium -&gt; v14.21.3 (-&gt; N/A) lts/gallium -&gt; v16.20.2 (-&gt; N/A) lts/hydrogen -&gt; v18.20.6 lts/iron -&gt; v20.18.3 (-&gt; N/A) lts/jod -&gt; v22.14.0 (-&gt; N/A) . ",
+    "content": "Usemos el comando nvm para ver todas las instalaciones de nodejs en nuestro sistema. Sat 2025Feb15 19:37:13 PST orion@devesp ~ hist:424 -&gt; nvm ls v18.20.6 -&gt; v23.8.0 default -&gt; 23.8.0 (-&gt; v23.8.0) iojs -&gt; N/A (default) unstable -&gt; N/A (default) node -&gt; stable (-&gt; v23.8.0) (default) stable -&gt; 23.8 (-&gt; v23.8.0) (default) lts/* -&gt; lts/jod (-&gt; N/A) lts/argon -&gt; v4.9.1 (-&gt; N/A) lts/boron -&gt; v6.17.1 (-&gt; N/A) lts/carbon -&gt; v8.17.0 (-&gt; N/A) lts/dubnium -&gt; v10.24.1 (-&gt; N/A) lts/erbium -&gt; v12.22.12 (-&gt; N/A) lts/fermium -&gt; v14.21.3 (-&gt; N/A) lts/gallium -&gt; v16.20.2 (-&gt; N/A) lts/hydrogen -&gt; v18.20.6 lts/iron -&gt; v20.18.3 (-&gt; N/A) lts/jod -&gt; v22.14.0 (-&gt; N/A) . ",
     "url": "/nvn_nodejs/#listar-versiones-de-nodejs",
     
     "relUrl": "/nvn_nodejs/#listar-versiones-de-nodejs"
