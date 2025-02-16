@@ -98,10 +98,7 @@ Tomar nota del mensaje indicando "Now using node..." or "Ahora usando node...".
 
 Entremos el comando para seleccionar la version a usar.
 ```bash
-Sat 2025Feb15 19:15:14 PST
-orion@devesp
-~
-hist:412 -> nvm use 23.8.0
+-> nvm use 23.8.0
 Now using node v23.8.0 (npm v10.9.2)
 ```
 Desde este momento, La version activa de NodeJS es ` 23.8.0`.
