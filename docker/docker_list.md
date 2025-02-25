@@ -6,28 +6,27 @@ parent: Docker
 nav_order: 3
 ---
 
-## Listar la version de Docker 
+## Ver la version de Docker 
 
-Ejecutemos el comando para listar la version the minikube instalada localmente.
+Ejecutemos el comando para listar la version the docker instalado localmente.
 
 ```bash
 -> docker version
-Client:
- Cloud integration: v1.0.29
- Version:           20.10.22
- API version:       1.41
- Go version:        go1.18.9
- Git commit:        3a2c30b
- Built:             Thu Dec 15 22:28:41 2022
- OS/Arch:           darwin/amd64
+Client: Docker Engine - Community
+ Version:           28.0.0
+ API version:       1.48
+ Go version:        go1.23.6
+ Git commit:        f9ced58
+ Built:             Wed Feb 19 22:10:30 2025
+ OS/Arch:           linux/amd64
  Context:           default
- Experimental:      true
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.48/version": dial unix /var/run/docker.sock: connect: permission denied
 ```
 
-Tambien se pueded listar de esta manera.
+Tambien se puede ver de esta manera.
 ```
 -> docker --version
-Docker version 20.10.22, build 3a2c30b
+Docker version 28.0.0, build f9ced58bc
 ```
 
 ## Listar Imagenes de Docker
@@ -35,17 +34,12 @@ Docker version 20.10.22, build 3a2c30b
 El comando `docker image ls` lista las imagenes de docker presentes en el sistema.
 
 {: .note }
-La lista es dinámica y puede cambiar a medida que agregamos o borramos imagenes
+La lista es dinámica y crece a medida que agregamos o borramos imagenes para correr contenedores.
 
 ```bash
--> docker image ls
-REPOSITORY                                      TAG              IMAGE ID       CREATED         SIZE
-prom/prometheus                                 latest           a5624f16ebec   2 months ago    223MB
-ubuntu                                          22.04            6b7dfa7e8fdb   2 months ago    77.8MB
-ubuntu                                          20.04            d5447fc01ae6   2 months ago    72.8MB
-grafana/grafana                                 latest           179ad45e2c74   2 months ago    315MB
-docker/volumes-backup-extension                 1.1.1            afd08623b0ee   2 months ago    118MB
-portainer/portainer-ce                          alpine           ecdb4fbad999   3 months ago    292MB
+-> sudo docker image ls
+REPOSITORY    TAG       IMAGE ID       CREATED       SIZE
+hello-world   latest    74cc54e27dc4   4 weeks ago   10.1kB
 ```
 
 Definición de terminos basado el la informacíon arriba.
