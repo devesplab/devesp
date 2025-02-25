@@ -3,7 +3,7 @@ layout: default
 title: Listar En Docker
 permalink: /docker_list/
 parent: Docker
-nav_order: 1
+nav_order: 3
 ---
 
 ## Listar la version de Docker 

@@ -64,7 +64,7 @@ Durante este proceso, todos los comandos son ejecutados estando en el directorio
 ```bash
 Fri 2025Feb21 04:15:09 UTC
 devuser@ubuntu2204-1-devesp
-~
+/home/devuser
 hist:188 -> pwd
 /home/devuser
 ```
@@ -74,7 +74,7 @@ El argumento `~/.rbenv` indica el destino local donde deseamos clonar el reposit
 ```bash
 Fri 2025Feb21 04:15:09 UTC
 devuser@ubuntu2204-1-devesp
-~
+/home/devuser
 hist:187 -> git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 Cloning into '/home/devuser/.rbenv'...
 remote: Enumerating objects: 3379, done.
@@ -90,12 +90,12 @@ El comando anterior crea la carpeta `/home/devuser/.rbenv`.
 Enseguida, initicializemos rbenv.
 ```bash
 devuser@ubuntu2204-1-devesp
-~
+/home/devuser
 hist:189 -> ~/.rbenv/bin/rbenv init
 writing ~/.bash_profile: now configured for rbenv.
 
 devuser@ubuntu2204-1-devesp
-~
+/home/devuser
 hist:191 -> source ~/.bash_profile
 ```
 
