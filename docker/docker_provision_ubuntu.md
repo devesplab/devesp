@@ -3,7 +3,7 @@ layout: default
 title: Provisión Docker en Ubuntu
 permalink: /docker_provision/
 parent: Docker
-nav_order: 2
+nav_order: 1
 ---
 ---
 

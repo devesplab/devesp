@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Implementación Docker
-permalink: /docker_implementation/
+title: Docker Básico
+permalink: /docker_basics/
 parent: Docker
-nav_order: 3
+nav_order: 2
 ---
 
 This page: Implementacion de Docker
