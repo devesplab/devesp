@@ -22,9 +22,9 @@ nav_order: 3
 
 Esta página contiene una lista concisa de trucos a usar con docker. La página puede usarse como referencia para recordar la sintaxis u organización de comandos.
 
-## Listar docker images on your local 
+## Listar imagenes de Docker en el sistema local 
 
-Listar todas las imagenes de docker guardadas localmente en nuestra maquina.
+Lo siguiente muestra como listar todas las imagenes de docker guardadas localmente en nuestra maquina.
 ```
 Sat 2025Mar08 16:54:53 UTC
 devuser@ubuntu2204-3-devesp
@@ -40,7 +40,7 @@ nginx         latest    b52e0b094bc0   4 weeks ago   192MB
 hello-world   latest    74cc54e27dc4   6 weeks ago   10.1kB
 ```
 
-Con la opcion de `--filter` podemos filtrar la salida del comando para que nos de las imagenes que son mas viejas que el tiempo dado. Aqui vemos imagenes viejas de mas de 8 horas.
+Con la opcion de `--filter` podemos filtrar la salida del comando para que nos de las imagenes que son mas viejas que el tiempo especificado. Aqui vemos imagenes viejas de mas de 8 horas.
 ```
 -> sudo docker images --filter "until=8h"
 REPOSITORY    TAG       IMAGE ID       CREATED       SIZE
@@ -75,12 +75,12 @@ Conectar al contenedor en el TTY activo (no un nuevo SHELL)
   docker attach <containerID>
 ```
 
-Correr un comando a un contenedor activo, desde el docker host, sin entrar al contenedor.
+Correr un comando en un contenedor activo, desde el docker host, sin entrar al contenedor.
 ```
   docker exec <containerID> head /etc/profile
 ```
 
-Mostrar la historia de actividad del contenedor.
+Ver los registros para mostrar la historia de actividad del contenedor.
 ```
   docker logs <containerID>
 ```
@@ -122,6 +122,7 @@ Para referencia ver este [posteo de Stackoverflow](https://stackoverflow.com/que
 
 ## Remover imagenes sin etiqueta
 
+No es buena practica crear imagenes de docker sin etiqueta. Por esta razon es mejor deshacernos de ellas.
 ```
 -> docker images | grep "<none>" | awk '{print $3}' | xargs docker rmi
 ```
@@ -166,8 +167,10 @@ La salida completa viene con formato JSON que puede ser analyzado con otras herr
 
 Para referencia ver este [posteo de Stackoverflow](https://stackoverflow.com/questions/17157721/how-to-get-a-docker-containers-ip-address-from-the-host).
 
+En este ejemplo usamos un id de contenedor imaginario.
+
 ```
--> docker inspect cb4671987611  | grep "IPAddress"
+-> docker inspect 9c729a87fc6f  | grep "IPAddress"
             "SecondaryIPAddresses": null,
             "IPAddress": "",
                     "IPAddress": "172.18.0.3",
