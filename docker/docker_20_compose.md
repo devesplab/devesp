@@ -199,7 +199,7 @@ ubuntu2204-1-devesp
 ubuntu2204-2-devesp
 ```
 
-## Entar a un contenedor
+## Entrar a un contenedor
 
 Para entrar a un contenedor y tener accesso a la terminal, podemos usar el comando a seguir en el host de Docker.<br>
 Para esto usamos el nombre del contenedor bajo la columna NAME de la salida de `docker compose ps`.
@@ -216,7 +216,7 @@ ubuntuOne
 Desde ese momento podemos interactuar con el contenedor de acuerdo al propósito que tenemos en mente.
 
 
-## Parar y Reempezer un Contenedor
+## Parar y Restablecer un Contenedor
 
 Podemos parar un contenedor específico usando el nombre del servicio.
 ```
@@ -232,7 +232,7 @@ Tambien podemos re-empezar un contendor que hemos parado.
  ✔ Container ubuntu2204-2-ubuntuTwo  Started
 ```
 
-## Destruir y  restablecer un contenedor
+## Destruir y Restablecer un contenedor
 
 Tomando la list de servicios dados for el comando `docker-compose config --services`
 Aplicamos la sintaxis a seguir"
@@ -258,9 +258,9 @@ Por ejemplo, aqui destruimos y recobramos el contenedor `ubuntu2204-2-devesp`:
 Attaching to ubuntu2204-2-ubuntuTwo
 ```
 
-## Destruir el Ambiente De Docker Compose
+## Destruir el Ambiente de Docker Compose
 
-Podemos destruir el ambiente de docker compose usando el argumento `down`.
+Podemos destruir completamente el ambiente de docker compose usando el argumento `down`.
 
 ```
 -> docker compose down -v
@@ -274,7 +274,7 @@ Podemos destruir el ambiente de docker compose usando el argumento `down`.
 {: .warning }
 Al destruir el ambiente se pierden todas las persolizaciones y datos creadas dentro del contenedor.
 
-Para evitar perder data que hemos generado se recomienda agregar un volumen a la configuración. Por esta razón agregamos esto al archivo usado aqui. 
+Para evitar perder data que hemos generado se recomienda agregar un volumen[^1] a la configuración. Por esta razón agregamos esto al archivo usado aqui. 
 ```
     volumes:
       - "./:/hostdata
@@ -286,8 +286,11 @@ Ahora corroboremos que no hay mas contenedors corriendo.
 NAME      IMAGE     COMMAND   SERVICE   CREATED   STATUS    PORTS
 ```
 
+
 ## Referencias
 
 Ver la documentación oficial en linea de [Docker Complse](https://docs.docker.com/compose/)
+
+[^1]: Ver la documentación acerca [volumenes en Docker Compose](https://docs.docker.com/engine/storage/volumes/)
 
 [Return to main page]({{site.baseurl}}/).
