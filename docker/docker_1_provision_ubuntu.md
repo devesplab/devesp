@@ -5,7 +5,6 @@ permalink: /docker_provision/
 parent: Docker
 nav_order: 1
 ---
----
 
 # Instalacion y Configuración de Docker en Ubuntu
 {: .no_toc }
