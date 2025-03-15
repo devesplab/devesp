@@ -25,26 +25,65 @@ has_toc: false
 {:toc}
 </details>
 
-En este document hablaremos the Docker.
-_El objectivo es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Docker._
-
 ---
-## First Subtitle
+## Docker como herramienta
 
-This is the first section of the document.
-## Second Subtitle
+En esta sección hablaremos the Docker.
 
-Second section of the document.
+Docker es una plataforma de código abierto que se usa para gestionar la automatizacion
+de aplicaciones en un ambiente de dessarrollo virtual en un ambiete de contenedores ligeros y portátiles.
 
-## Third Subtitle
+{: .highlight }
+Docker no es la única herramienta para crear contenedores. Hay otras tales como Podman, LXC, containerd, etc.
 
-And this third section of the document.
+Un contenedor es una implementación usada para empaquetar una unidad de código y las dependencias requeridas para que funcione sin problemas, de manera confiable y que se pueda repetir de la misma manera cada vez.
 
-## Fourth Subtitle
- 
-Some interesting examples follow.
+Docker usa el modelo de servidor y cliente, es decir un demonio corre en el sistema y los clientes se comunican con el para poder crear contenedores..
 
-{: .note }
-Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages.
+> El objectivo de esta sección es enternder la manera de usar esta herramienta para crear un ambiente para probar varios aspectos de Docker.
+
+
+## Propósito General de uso de Docker
+
+**Aislar** un aplicacíon es una de las razones principales para usar docker. Esto permite proveer un ambiente contenerizado para correr una aplicacíon de forma separada con respecto al sistema en el que de el demonio de docker esta corriendo.
+
+Otra razón puede ser proveer un **ambiente de desarrollo versátil** en el que se puede hacer las mutaciones necesarias para fabricar la aplicación. A veces es necesario empaquetar una aplicacíon con librerias específicas y ajustes muy particulares.
+
+**Escalabilidad** es quizá una de las razones pricipales para usar docker. Frequentemene se requiere correr varias instancias de una aplicacíon simultaneamente. Esto solo puede lograrse con technologias tales como **Docker Compose** que Docker provee. 
+
+La facilidad de implementar **actualizaciones incrementales** es otra buena razón para usar contenedores. Podemos hacer cambios menores y empujar esos cambios en incrementos pequeños que pueden probarse y asegurarnos que todo trabaja bien antes de un major lanzamiento para uso general.
+
+
+## Mejores prácticas para usar Docker
+
+Hay ciertas practicas generales que podemos tomar en consideración para usar docker de manera óptima.
+- Tratemos de usar imagenes de docker oficiales o generalmente mantenidas y actualizadas regularmente
+- El aspecto de **seguridad** es sumamente importante; debemos evitar la introducción de vulnerabilidades y accesso inapropriado de usuarios, servicios, demonios y otros aspectos de accesso en un ambiente de computación seguro.
+- no empaquetar componentes innecesarios tales como librerias, ejecutables, binarios u otros componentes que no contribuyen a la implementación optima del contenedor
+- evitar codificar variables o valores directamente en la imagen, en vez deberiamos usar variables de entorno que retornan valores dinámicamente
+- Usar **volumenes** para persistir datos en vez de usar informacion dentro del conteneor que puede perderse en caso de corrupción de datos o la necesidad de restablecer el ambiente de la aplicacíon.
+- Siendo que los recursos de fuente abierta cambian frequentemente, es buena practica actualizar imagenes de docker con regularidad. Debe tomarse en cuenta cuestiones de compatibilidad, y la implementacion de herramientas actualizadas.
+
+## Limitaciones del uso de Docker
+
+Los contenedores creados con una imagen de docker son ligeros, pero a cierto punto, cuando intensificamos su uso, produce un sobrecargo de rendimiento. Debemos tener en cuenta la _cantidad de recursos_ disponibles en el ambiente en el cual la aplicacion corre.
+
+{: .important }
+Docker esta limitado por la _cantidad de recursos_ disponibles en el ambiente en el cual la aplicacion corre.
+
+Es decir, tenemos que tomar en cuenta lo siguiente:
+- el número de núcleos de CPU
+- la cantidad y tipo de memoria
+- el ancho de banda de la red
+- la cantidad y tipo de disco de almacenamiento (Disco Duro, SSD, NAS, etc)
+
+Asi que, el tipo y cantidad de recursos pone de manifiesto las limitaciones y dificultades que pueden presentarse en una implementacíon de un ambiente de contenedores. De hecho, esto indica el **máximo numero** de contenedores que podemos correr simultaneamente.
+
+## En Resumen
+
+Hay una cierta curva de aprendizaje para implementar Docker, pero es un esfuerzo bien gastado.<br>
+Podemos desarrollar aplicaciones con rapidez y eficiencia.<br>
+La implementacion de buenas practicas garantizan que nuestras aplicaciones seran eficientes y seguras.<br>
+Al cononcer las limitaciones de recursos podemos desarrollar la aplicacion de manera optima.<br>
 
 [Return to main page]({{site.baseurl}}/).
