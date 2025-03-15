@@ -55,7 +55,7 @@ Empezemos un contenedor
   docker start <containerID>
 ```
 
-Empezemos un contenedor y dar un nombre al contenedor.
+Empezemos un contenedor y le damos un nombre.
 ```
   docker run --name my_container_name image_name
 ```
@@ -85,12 +85,12 @@ Ver los registros para mostrar la historia de actividad del contenedor.
   docker logs <containerID>
 ```
 
-Mostrar los ajustes del contenedor.
+Mostrar todos los ajustes del contenedor.
 ```
   docker inspect <containerID>
 ```
 
-Mostrar los contenedore que han corrido, pero ahora estan parados.
+Mostrar los contenedore que han corrido, pero ahora estan terminados.
 ```
   docker ps -a
 ```
@@ -101,7 +101,7 @@ Mostrar los contenedore que han corrido, pero ahora estan parados.
 {: .warning }
 No podemos borrar un contenedor activo.
 
-Para borrar el contenedor solo proveemos el nombre.
+Para borrar el contenedor solo proveemos el nombre o el id.
 ```
   docker rm <containerID>
 ```
@@ -149,9 +149,9 @@ Borrar imagenes que muestran `<none>`
   docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 ```
 
-## Informatcion del Contenedor
+## Informacion del Contenedor
 
-Conseguir información acerca de  una imagen en tu libreria local.
+Conseguir información acerca de  una imagen en tu biblioteca local.
 - que servicios contiene la imagen
 - puertos expuestos
 - información del ambiente
@@ -163,7 +163,7 @@ La salida completa viene con formato JSON que puede ser analyzado con otras herr
 -> docker inspect nginx
 ```
 
-## Conseguir la IP Address del Contenedor
+## Conseguir la Dirección de IP del Contenedor
 
 Para referencia ver este [posteo de Stackoverflow](https://stackoverflow.com/questions/17157721/how-to-get-a-docker-containers-ip-address-from-the-host).
 
@@ -176,8 +176,15 @@ En este ejemplo usamos un id de contenedor imaginario.
                     "IPAddress": "172.18.0.3",
 ```
 
+Tambien podemos usar el nombre del contenedor.
+
+```
+-> docker inspect devesp_container  | grep "IPAddress"
+```
 
 ## Verificar si estamos en un contenedor o no
+
+Si por una razón u otra no estamos seguros si estamos en el indicador de un contenedor o no, podemos hacer un chequeo como se muestra en esta sección.
 
 Docker crea el archivo vacío `.dockerenv` en la parte superior del árbol de directorios del contenedor, por lo que es posible que quieras verificar si existen.
 
@@ -195,7 +202,7 @@ Corramos un contenedor de Ubuntu para hacer las observaciones.
 ```
 
 
-Puedes poner este código en un script bash y ejecutarlo.
+Puedes poner este código en un escrito de bash y ejecutarlo.
 ```
 #!/bin/bash
 if [ -f /.dockerenv ]; then

@@ -22,13 +22,13 @@ nav_order: 2
 ---
 ## Como Empezar Docker
 
-Pues bién, hemos instalado Docker en nuestro sistema. Para simplificar las cosas, supongames que hemos instalado Docker a un sistem de Ubuntu.
+Pues bién, hemos instalado Docker en nuestro sistema. Para simplificar las cosas, supongamos que hemos instalado Docker a un sistema de Ubuntu.
 
 Y ahora que hacemos? Cómo lo usamos? 
 
 Lo primero que hacemos es asegurarnos que el servicio de Docker esta corriendo.
 
-Entremos el comando para ver es estado del serivicio. Si dice `inactive (dead)` indica que no esta corriendo.
+Entremos el comando para ver el estado del serivicio. Si dice `inactive (dead)` indica que no esta corriendo.
 
 ```
 -> sudo service docker status
@@ -42,23 +42,27 @@ TriggeredBy: ● docker.socket
         CPU: 461ms
 ```
 
-Lo que hacemos a seguir es entrar el comando para empezar el servicio.
+Enseguida entramos el comando para empezar el servicio.
 ```
 -> sudo service docker start
 ```
 
-Ahora estamos listo para correr contenedores... pero cuál contenedor? Primero tenemos que decidir lo que queremos hacer. Por ejemplo, correr hacer una prueba simple de correr un sitio web con Nginx.
+Ahora estamos listos para correr contenedores... pero cuál contenedor? Primero tenemos que decidir lo que queremos hacer. Por ejemplo, podemos decidir hacer una prueba simple de correr un sitio web con Nginx.
+
+Lo primero que tenemos que hacer es buscar una imagen de Docker para la herramienta que deseamos usar.
 
 ## Buscar Imagenes de Docker
 
-Para correr un contenedor necesitamos un Imagen de Docker. Una imagen de Docker es un paquete de software liviano, independiente y ejecutable que incluye todo lo necesario para ejecutar un programa, incluido el código, el entorno de ejecución, las bibliotecas, las variables de entorno y los archivos de configuración. Las imágenes de Docker se utilizan para crear contenedores, que son las instancias en ejecución de estas imágenes.
+Para correr un contenedor necesitamos un Imagen de Docker. 
+
+Una imagen de Docker es un paquete de software liviano, independiente y ejecutable que incluye todo lo necesario para ejecutar un programa, incluido el código, el entorno de ejecución, las bibliotecas, las variables de entorno y los archivos de configuración. Las imágenes de Docker se utilizan para crear contenedores, que son las instancias en ejecución de estas imágenes.
 
 Empezamos por buscar las imagenes disponibles de Nginx. Para ello usamos el comando con la sintáxis siguente:
 ```
 sudo docker search <nombre-de-imagen>
 ```
 
-Al ejecutar la busqueda, veremos un lista corta o larga. Aqui vemos una lista parcial de la imagenes disponibles de Nginx.
+Al ejecutar la busqueda, veremos un lista corta o larga dependiendo de la popularidad de la  herramienta. Aqui vemos una lista parcial de las imagenes disponibles de Nginx.
 ```
 -> sudo docker search nginx
 NAME                                     DESCRIPTION                                     STARS     OFFICIAL
@@ -77,19 +81,19 @@ NAME
 : el nombre de la imagen
 
 DESCRIPTION
-: desciption concisa de las capabilidades the la imagen
+: descripcion concisa de las capabilidades the la imagen
 
 STARS
 : número indicativo de la popularidad de la imagen
 
 OFFICIAL
-: marca designando la imagen oficial del producto, posiblemente lanzada por la compañia originadora
+: marca designando la imagen oficial del producto (o herramienta), posiblemente lanzada por la compañia originadora
 
 ## Bajando una Imagen de Docker 
 
 De la lista anterior de imagenes de Ngins, decidimos escoger la imagen oficial `nginx`.<br>
 Pero tambien necesitamos saber la etiqueta de la imagen deseada.<br>
-Vamos pues a [https://hub.docker.com/_/nginx] y vemos una larga lista de etiquetas alpha numericas.
+Vamos pues a **Docker Hub** en busqueda de [Nginx](https://hub.docker.com/_/nginx) y vemos una larga lista de etiquetas en formato alpha numerico.
 
 {: .note }
 En Docker, una etiqueta es un rótulo que se utiliza para identificar distintas versiones de una imagen de Docker. Las etiquetas permiten gestionar y diferenciar entre distintas compilaciones o iteraciones de una imagen. El sistema de etiquetado es especialmente útil para controlar las versiones y garantizar que se puedan implementar o hacer referencia a versiones específicas de una imagen con facilidad. 
@@ -102,7 +106,10 @@ Por simplicidad escogemos la etiqueta `latest`, o lo ultimo.
 
 ## Corriendo un Contenedor
 
-Pero no tenemos que bajar la imagen de antemano. Podeos correr el comando como vemos a seguir.
+Para correr un contenedor de Nginx, podemos correr el comando siguente.
+
+{: .note }
+No tenemos que bajar la imagen de antemano. Si la imagen no existe localmente, Docker la bajará del origen.
 
 ```
 -> sudo docker run --name ngnix-local -d -p 8080:80 nginx:latest
@@ -120,7 +127,7 @@ Status: Downloaded newer image for nginx:latest
 ea6a1e952b04e9f4b4af461a3b77c4bac826532aa6831b99d75e1a112f25999a
 ```
 
-Vemos que docker bajó la imagen porque no la encontro localmente. Para otros intentos que sigan, la imagen ya estara disponible localment y no sera necesario bajar la imagen otra vez.
+Vemos que docker bajó la imagen porque no la encontro localmente. Para otros intentos que sigan, la imagen ya estara disponible localmente y no sera necesario bajar la imagen otra vez.
 
 Enseguida veamos el contenedor que se ha inicializado.
 ```
@@ -146,7 +153,7 @@ ETag: "67a34638-267"
 Accept-Ranges: bytes
 ```
 
-Ahora podemos hacer login al contenedor
+Ahora podemos entrar al contenedor
 ```
 -> sudo docker exec -it ngnix-local /bin/bash
 ```
@@ -158,30 +165,31 @@ nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
-Tambien podemos chequer los archivos de registro
+Cuando entramos a un contenedor, el indicador muestra un cadena tal como `ea6a1e952b04`. Esta cadena es el ID que indentifica al contenedor -- mas tarde aprenderemos mas hacerca de esto.
+
+Tambien podemos chequear los archivos de registro
 ```
 root@ea6a1e952b04:/#  tail -f /var/log/nginx/access.log
 
 root@ea6a1e952b04:/# tail -f /var/log/nginx/error.log
 ```
 
-Ahora salgomos del contenedor
+Ahora salgomos del contenedor usando el comando `exit`.
 ```
 root@ea6a1e952b04:/# exit
 ```
 
-Y terminemos el contenedor
+De regreso al indicador del Docker Host, terminemos el contenedor
 ```
 -> sudo docker stop ngnix-local
 ```
 
-Por ultimo verifiquemos que el contenedor no esta corriendo. Si el contenedor no esta listado, indica que no esta corriendo. 
+Por ultimo verifiquemos que el contenedor no esta corriendo. Si el contenedor no esta listado, indica que ha terminado. 
 ```
 -> sudo docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 ```
 
-El ejemplo que hemos visto muestra el flujo típico de correr un contendor de Docker.<br>
-Empezamos for decidir lo que queremos hacer, luego buscar la imagen, correr el contendor, entra al contenedor, salir de el, y por ultimo terminarlo.
+El ejemplo que hemos visto muestra el flujo típico de correr un contendor de Docker. Empezamos for decidir lo que queremos hacer, luego buscar la imagen, correr el contendor, entra al contenedor, salir de el, y por ultimo terminarlo.
 
 [Return to main page]({{site.baseurl}}/).
