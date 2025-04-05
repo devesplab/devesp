@@ -59,7 +59,7 @@ Hagamos lo siguiente como pre-requisito
 Para empezar, estamos en la carpeta de inicio del usuario.
 
 {: .highlight }
-Durante este proceso, todos los comandos son ejecutados estando en el directorio de inicio del usuario.
+Todo el proceso descrito aqui es ejecutado estando en el directorio de inicio de un usuario regular (no root).
 
 ```bash
 Fri 2025Feb21 04:15:09 UTC
@@ -72,10 +72,7 @@ hist:188 -> pwd
 Clonemos el repositorio de git.
 El argumento `~/.rbenv` indica el destino local donde deseamos clonar el repositorio.
 ```bash
-Fri 2025Feb21 04:15:09 UTC
-devuser@ubuntu2204-1-devesp
-/home/devuser
-hist:187 -> git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+-> git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 Cloning into '/home/devuser/.rbenv'...
 remote: Enumerating objects: 3379, done.
 remote: Counting objects: 100% (280/280), done.
@@ -89,22 +86,16 @@ El comando anterior crea la carpeta `/home/devuser/.rbenv`.
 
 Enseguida, initicializemos rbenv.
 ```bash
-devuser@ubuntu2204-1-devesp
-/home/devuser
-hist:189 -> ~/.rbenv/bin/rbenv init
+-> ~/.rbenv/bin/rbenv init
 writing ~/.bash_profile: now configured for rbenv.
 
-devuser@ubuntu2204-1-devesp
-/home/devuser
-hist:191 -> source ~/.bash_profile
+-> source ~/.bash_profile
 ```
 
 Mostremos el contenido de la carpeta bin.
 
 ```bash
-devuser@ubuntu2204-1-devesp
-~
-hist:193 -> ls -l ~/.rbenv/bin/
+-> ls -l ~/.rbenv/bin/
 total 0
 lrwxrwxrwx 1 devuser devuser 16 Feb 21 04:15 rbenv -> ../libexec/rbenv*
 ```
@@ -120,9 +111,10 @@ El plugin de ruby-build es una utilidad que simplifica la instalacion de cualqui
 Clonemos el repositorio de git y sigamos los pasos para abilitar el paquete.
 
 ```bash
-devuser@ubuntu2204-1-devesp
-~
-hist:194 -> git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+-> pwd
+/home/devuser
+
+-> git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 Cloning into '/home/devuser/.rbenv/plugins/ruby-build'...
 remote: Enumerating objects: 16810, done.
 remote: Counting objects: 100% (4554/4554), done.
@@ -131,30 +123,22 @@ remote: Total 16810 (delta 4422), reused 4177 (delta 4137), pack-reused 12256 (f
 Receiving objects: 100% (16810/16810), 3.33 MiB | 1.54 MiB/s, done.
 Resolving deltas: 100% (11927/11927), done.
 
-devuser@ubuntu2204-1-devesp
-~
-hist:195 -> git -C "$(rbenv root)"/plugins/ruby-build pull
+-> git -C "$(rbenv root)"/plugins/ruby-build pull
 Already up to date.
 
-devuser@ubuntu2204-1-devesp
-~
-hist:197 ->  rbenv root
+->  rbenv root
 /home/devuser/.rbenv
 ```
 
 Verifiquemos que rbenv esta en el paso del usuario.
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:192 ->  which rbenv
+->  which rbenv
 /home/devuser/.rbenv/bin/rbenv
 ```
 
 Verifiquemos la version de rbenv.
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:192 -> rbenv
+-> rbenv
 rbenv 1.3.2
 Usage: rbenv <command> [<args>...]
 
@@ -189,6 +173,7 @@ Una instalacion de ruby toma alrededor de **5 minutos**!<br>
 Puede tomar un poco mas de tiempo en sistemas con bajos recursos.<br>
 Este proceso instala algunas dependencias destras de escena.
 
+Este proceso lo hacemos en el directorio hogar del usuario que no es root.
 ```
 devuser@ubuntu2204-1-devesp
 ~
@@ -221,17 +206,13 @@ Notemos que el paso de las instalacion es `/home/devuser/.rbenv/versions/3.3.5`
 Como lo recomienda el comando anterior, establescamos la version global.
 
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:215 -> rbenv global 3.3.5
+-> rbenv global 3.3.5
 ```
 
 Esta acción crea el archivo `~/.rbenv/version` el cual contiene la version activa.
 
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:216 -> cat ~/.rbenv/version
+-> cat ~/.rbenv/version
 3.3.5
 ```
 
@@ -240,28 +221,20 @@ El comando `rbenv global <version>` establece la version de ruby. En cualquier m
 Usemos el comando `rbenv versions` para listar las versiones de ruby disponibles al momento.
 
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:218 -> rbenv versions
+-> rbenv versions
 * 3.3.5 (set by /home/devuser/.rbenv/version)
 
-devuser@ubuntu2204-1-devesp
-~
-hist:219 -> ruby --version
+-> ruby --version
 ruby 3.3.5 (2024-09-03 revision ef084cc8f4) [x86_64-linux]
 
-devuser@ubuntu2204-1-devesp
-~
-hist:220 -> which ruby
+-> which ruby
 /home/devuser/.rbenv/shims/ruby
 ```
 
 La instalacion de ruby agrega el comando `gem`, el cual se usa para instalar paquetes adicionales de ruby conocidos come **gemas** que extienden la funcionalidad de ruby.
 
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:221 -> which gem
+-> which gem
 /home/devuser/.rbenv/shims/gem
 ```
 
@@ -269,9 +242,7 @@ La instalacion entera de rbenv va en la carpeta `~/.rbenv/shims/`.<br>
 Notese la presencia de los binarios `bundler`, `gem`, `rake` y `ruby`.
 
 ```bash
-devuser@ubuntu2204-1-devesp
-~
-hist:222 -> ls -l ~/.rbenv/shims/
+-> ls -l ~/.rbenv/shims/
 total 104
 -rwxrwxr-x 1 devuser devuser 397 Feb 21 04:53 bundle*
 -rwxrwxr-x 1 devuser devuser 397 Feb 21 04:53 bundle.lock*
@@ -354,10 +325,8 @@ RubyGems Environment:
 Al instalar nuevas gemas, van en el paso de la version activa de ruby.
 En este ejemplo el paso de la version activa es ` $HOME/.rbenv/versions/3.3.5`.
 
-```bash
-devuser@ubuntu2204-1-devesp
-~
-hist:227 -> ls -l $HOME/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/
+```
+-> ls -l $HOME/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/
 total 344
 drwxr-xr-x  2 devuser devuser 4096 Feb 21 04:53 abbrev-0.1.2/
 drwxr-xr-x  2 devuser devuser 4096 Feb 21 04:53 base64-0.2.0/
@@ -378,9 +347,7 @@ Podemos listar las gemas que son instaladas por defecto. La lista abajo es parci
 Al inspeccionar la lista podemos encontrar si tenemos las dependecias requeridas para desarrollar un proyecto
 
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:228 -> gem list | head
+-> gem list | head
 abbrev (default: 0.1.2)
 base64 (default: 0.2.0)
 benchmark (default: 0.3.0)
@@ -412,9 +379,7 @@ La [lista entera de lanzamientos](https://www.ruby-lang.org/en/downloads/release
 Consultemos las versiones instaladas corrientemente.
 
 ```bash
-devuser@ubuntu2204-1-devesp
-~
-hist:230 -> ls -l $HOME/.rbenv/versions
+-> ls -l $HOME/.rbenv/versions
 total 12
 drwxrwxr-x 7 devuser devuser 4096 Feb 21 05:13 2.7.2/
 drwxrwxr-x 7 devuser devuser 4096 Feb 21 04:53 3.3.5/
@@ -424,9 +389,7 @@ drwxrwxr-x 7 devuser devuser 4096 Feb 21 05:06 3.4.2/
 En esta salida, la version señalada con un asterisco '*' indica que es la version activa.
 
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:231 -> rbenv versions
+-> rbenv versions
   2.7.2
 * 3.3.5 (set by /home/devuser/.rbenv/version)
   3.4.2
@@ -437,24 +400,18 @@ Ahora simplemente podemos editar el achivo `~/.rbenv/version` con la version que
 A seguir, editemos el archivo escribiendo `3.4.2` para hacer esa la version global.
 
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:231 ->  vi  ~/.rbenv/version
+->  vi  ~/.rbenv/version
 ```
 
 Verificar la nueva version global.
 
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:231 -> rbenv versions
+-> rbenv versions
   2.7.2
   3.3.5
 * 3.4.2 (set by /home/devuser/.rbenv/version)
 
-devuser@ubuntu2204-1-devesp
-~
-hist:231 -> ruby --version
+-> ruby --version
 ruby 3.4.2 (2025-02-15 revision d2930f8e7a) +PRISM [x86_64-linux]
 ```
 
@@ -464,13 +421,9 @@ Ahora podemos anular la version GOGAL al establecer la version LOCAL.
 La versión global de Ruby es la versión de Ruby que está configurada para usarse en todo el sistema para todos los proyectos, a menos que la anule una versión local. La versión local de Ruby es específica de un proyecto en particular y se puede configurar para anular la versión global. Esto le permite mantener dependencias y entornos específicos del proyecto sin afectar otros proyectos.
 
 ```
-devuser@ubuntu2204-1-devesp
-~
-hist:231 -> rbenv local 2.7.2
+-> rbenv local 2.7.2
 
-devuser@ubuntu2204-1-devesp
-~
-hist:232 -> rbenv versions
+-> rbenv versions
 * 2.7.2 (set by /home/devuser/.ruby-version)
   3.3.5
   3.4.2
