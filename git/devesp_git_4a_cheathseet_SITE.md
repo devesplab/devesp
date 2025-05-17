@@ -5,7 +5,7 @@ permalink: /git_cheatsheet/
 parent: Git
 has_children: false
 has_toc: false
-nav_order: 3
+nav_order: 4
 ---
 
 #  Trucos Técnicos de Git
