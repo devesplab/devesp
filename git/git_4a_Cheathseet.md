@@ -50,7 +50,7 @@ EL protocolo `HTTP` no se usa.
 
 ## Crear un repositorio Git
 
-Aqui explicames la primera tarea necesaria para implementar el control de revisiones en un proyecto.
+Aqui explicamos la primera tarea necesaria para implementar el control de revisiones en un proyecto.
 
 Un usuario sigue una sequencia mas o menos así:
 
@@ -107,7 +107,6 @@ SYNOPSIS
 
 Usemos `add` para agregar un nuevo control remoto
 ```
--> cd projectX
 -> git remote add origin https://github.com/devesplab/linux-devesp.git
 ```
 
@@ -123,7 +122,7 @@ Verificar la configuración de origen.
 ```
 -> git config --get remote.origin.url
 ```
-La configuración es agregada en la sección `[remote "origin"]` del archive de configuración.
+La configuración es agregada en la sección `[remote "origin"]` del archivo de configuración.
 ```
 [remote "origin"]
     url = git@172.16.15.199:project.git
@@ -151,7 +150,7 @@ El comando `git config` escribe la configuración en el archivo `.git/config` de
 ```
 
 Asi es que `git config` hace lo siguente:
-- Escribe en el archivo .git/config dentro de tu repositorio local.
+- Escribe en el archivo `.git/config` dentro de tu repositorio local.
 - Actualiza la URL asociada al repositorio remoto de origen.
 - Este cambio es local para tu repositorio; no afecta al repositorio remoto en sí. 
 
@@ -173,6 +172,12 @@ Primero, debemos agregar los cambios a la rama local.
 Luego podemos comparar los cambios localos contra la rama principal. De esta manera sabremos que es lo que estamos enviando.
 ```
 -> git diff --stat origin/main
+```
+
+Salvemos los cambios.<br>
+Usamos las banderas `-am` para proveer un mensaje explicando el cambio.
+```
+-> git commit -am"save the changes"
 ```
 
 Envía los cambios al servidor Git.
@@ -212,19 +217,19 @@ En **MACOS X** ignoremos las carpetas ocultas nombradas `.DS_Store` [^3].
 [^3]: Vea esta publicación de stackoverflow sobre [ignoring .DS_Store]( http://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder) activado en cada carpeta y subcarpeta
 
 Este comando encuentra toda carpeta que tiene el patrón `.DS_Store` como parte del nombre de la carpeta.<br>
-El comando se ejecuta dentro del repositorio local y borra todas las carpetas que encuentra que coincide con la expresion regular.
+El comando se ejecuta dentro del repositorio local y borra todas las carpetas que encuentra que coincide con la expresion regular especificada por el argumento a `-name`.
 ```
 -> find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch??
 ```
-Crear un archive `.gitignore` global.
+Crear un archivo `.gitignore` global.
 ```
 -> echo ".DS_Store" > /Users/devuser/.gitignore
 ```
-Configurar git para usar global `.gitignore`
+Configurar git para usar `.gitignore` globalmente.
 ```
 -> git config --global core.excludesfile /Users/devuser/.gitignore
 ```
-Como observamos, hemos creado `$HOME/.gitignore`. Eso hace que la configuración este disponible por defecto a todo repositoio de git que se encuentre en el directorioß hogar del usuario.
+Como observamos, hemos creado `$HOME/.gitignore`. Eso hace que la configuración este disponible por defecto a todo repositorio de git que se encuentre en el directorio hogar del usuario.
 
 Añade contenido a `.gitignore`. <br>
 
@@ -409,8 +414,6 @@ $ git pull
 
 Cuando ejecuta `git fetch`, recupera actualizaciones de un repositorio remoto y actualiza su copia local de las ramas remotas (como origin/main), pero no modifica automáticamente su directorio de trabajo actual ni sus ramas locales.
 
-Los cambios locales se pierden. <br>
-Las confirmaciones locales que no se hayan enviado se perderán.
 ```
 -> git fetch --all
 ```
