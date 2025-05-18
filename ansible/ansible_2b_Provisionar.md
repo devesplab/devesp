@@ -1,14 +1,27 @@
 ---
 layout: default
-title: Instalacion Linux
-permalink: /some-git-file-here/
-parent: Instalacion y Uso
-grand_parent: Minikube
+title: Provisión Ansible
+permalink: /provision-de-ansible/
+parent: Ansible
 has_children: false
+has_toc: false
 nav_order: 1
 ---
 
-This page: add GIT content here 
+
+# Instalacion y Configuración de Ansible
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 
 ## First Subtitle
 

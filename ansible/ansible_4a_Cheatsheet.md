@@ -1,14 +1,28 @@
 ---
 layout: default
-title: Instalacion Linux
-permalink: /some-git-file-here/
-parent: Instalacion y Uso
-grand_parent: Minikube
+title: Trucos Técnicos de Ansible
+permalink: /cheatsheet_cheatsheet/
+parent: Ansible
 has_children: false
-nav_order: 1
+has_toc: false
+nav_order: 3
 ---
 
-This page: add GIT content here 
+
+#  Trucos Técnicos de Ansible
+
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 
 ## First Subtitle
 
@@ -27,5 +41,8 @@ Some interesting examples follow.
 
 {: .note }
 Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages.
+
+
+## Referencias
 
 [Return to main page]({{site.baseurl}}/).

@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Instalacion Linux
+title: About Ansible
 permalink: /some-git-file-here/
-parent: Instalacion y Uso
-grand_parent: Minikube
+parent: About Ansible
+grand_parent: aaa
 has_children: false
-nav_order: 1
+nav_order: 111
 ---
 
-This page: add GIT content here 
+This page: add Ansible content here 
 
 ## First Subtitle
 
