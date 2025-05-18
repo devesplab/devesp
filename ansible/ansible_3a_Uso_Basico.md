@@ -1,13 +1,15 @@
 ---
 layout: default
-title: Provisión Ansible
-permalink: /provision-de-ansible/
+title: Implementación Ansible
+permalink: /implementacion-de-ansible/
 parent: Ansible
+has_children: false
+has_toc: false
 nav_order: 2
 ---
----
 
-# Instalacion y Configuración de Ansible
+
+# Implementacion de Ansible
 {: .no_toc }
 
 <details open markdown="block">
@@ -20,6 +22,7 @@ nav_order: 2
 </details>
 
 ---
+
 ## First Subtitle
 
 This is the first section of the document.
