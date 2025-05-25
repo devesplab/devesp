@@ -6,6 +6,20 @@ parent: Docker
 nav_order: 4
 ---
 
+# Trucos Técnicos de Docker
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
+
 ## Ver la version de Docker 
 
 Ejecutemos el comando para listar la version the docker instalado localmente.
@@ -58,7 +72,7 @@ Definición de terminos basado el la informacíon arriba.
 </dl>
 </div>
 
-## Getting Image Details
+## Obtener Detalles de una Imagen
 
 Los contenedores y las imágenes se almacenan en el sistema de archivos local en `/var/lib/docker`.
 Para referencia ver este [posteo de Stackoverflow](https://stackoverflow.com/questions/19234831/where-are-docker-images-stored-on-the-host-machine).
