@@ -6,7 +6,7 @@ parent: Manejando Paquetes
 grand_parent: Linux
 has_children: false
 has_toc: false
-nav_order: 2
+nav_order: 50
 ---
 
 # Manejo de Paquetes en RedHat con YUM
