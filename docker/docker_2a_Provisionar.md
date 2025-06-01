@@ -21,21 +21,21 @@ nav_order: 1
 ---
 ## Instalar Docker
 
-Uno de los metodos de instalación es el [escrito de conveniencia](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script) que Docker hace disponible.
+Uno de los metodos de instalación es el [escrito de conveniencia](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script){:target="_blank"} que Docker hace disponible.
 Usemos el escrito de conveniencia para instalar Docker
 
 ```bash
 -> curl -fsSL https://get.docker.com -o get-docker.sh
 ```
 
-El comando CURL baja el escrito de instalación a nuestro sistema local.
+El comando CURL solamente baja el escrito de instalación a nuestro sistema local.
 ```bash
 ->  ls -l
 total 24
 -rw-rw-r-- 1 devuser devuser 22592 Feb 25 05:37 get-docker.sh
 ```
 
-Corramos el escrito usando `sudo`.
+Enseguida, corramos el escrito usando `sudo`.
 ```bash
 -> sudo sh get-docker.sh
 # Executing docker install script, commit: 4c94a56999e10efcf48c5b8e3f6afea464f9108e
@@ -76,6 +76,8 @@ Docker version 28.0.0, build f9ced58
 
 Al usar `sudo` podemos ver una version extendida de la version de Docker.
 
+> Este comando provee información despues de empezar el service. Ver la sección siguiente.
+
 ```bash
 ->  sudo docker version
 Client: Docker Engine - Community
@@ -111,7 +113,9 @@ Server: Docker Engine - Community
 
 Antes de poder inicializar contenedores, debemos asegurarnos que el servicio de Docker esta corriendo.
 
-Los comandos siguientes se usan para empezar, terminar o ver el estatus del servicio correspondientemente.
+Los comandos siguientes se usan para empezar, terminar o ver el estatus del servicio correspondientemente.<br>
+A este punto es pertinente tener en cuenta la [Nota Referente A Privilegio Del Servicio](#non-root-privilege)
+
 ```bash
 -> sudo service docker start
 -> sudo service docker stop
@@ -212,5 +216,23 @@ El error simplemente indica que el service de Docker no esta corriendo y tenemos
 ```
 
 Una vez empezado el servicio, podemos correr el comando para empezar el contenedor.
+
+## Nota Referente A Privilegio Del Servicio {#non-root-privilege}
+
+Normalmente, al correr ciertos comandos de Docker, se requiere privilegio de raíz. Al correr el escrito que instala Docker, hay una nota al final indicando que podemos correr el servico en forma no-prilegiada.
+
+```
+Para ejecutar Docker como un usuario sin privilegios, considere configurar el demonio de Docker en modo rootless para su usuario:
+
+$ dockerd-rootless-setuptool.sh install
+
+Visite https://docs.docker.com/go/rootless/ para obtener más información sobre el modo rootless.
+
+Para ejecutar el demonio de Docker como un servicio con todos los privilegios, pero otorgando acceso a usuarios sin privilegios root, consulte https://docs.docker.com/go/daemon-access/
+
+ADVERTENCIA: El acceso a la API remota en un demonio de Docker con privilegios equivale al acceso root en el host. Consulte la documentación sobre la superficie de ataque del demonio de Docker para obtener más información: https://docs.docker.com/go/attack-surface/
+```
+
+[Regresar a Manejar el Servicio de Docker](#manejar--el-servicio-de-docker)
 
 [Return to main page]({{site.baseurl}}/).
