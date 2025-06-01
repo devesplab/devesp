@@ -95,6 +95,13 @@ Mostrar los contenedore que han corrido, pero ahora estan terminados.
   docker ps -a
 ```
 
+## Empezar Contenedor Con Redireccion De Puertos
+
+Para asignar el puerto 80 al puerto 8081 al empezar un contenedor se hace asi:
+
+```
+-> sudo docker run -d -p 8081:80 nginx:latest
+```
 
 ## Remover un contenedor
 
@@ -149,6 +156,37 @@ Borrar imagenes que muestran `<none>`
   docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
 ```
 
+## Borrar Todos los Contenedores Activos
+
+Este comando para y borra todos los contenedores activos -- usa esto con cuidado.
+
+```
+sudo docker stop $(sudo docker ps -a -q) && \
+sudo docker rm $(sudo docker ps -a -q) && \
+sudo docker rmi $(sudo docker images -q) -f
+```
+
+## Evitando Usar Sudo Con Docker
+
+Al correr comandos de Docker como un usuario regular, podemos ver este tipo de error:
+
+```
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.50/containers/json?all=1": dial unix /var/run/docker.sock: connect: permission denied
+```
+
+Para arreglar eso podemos hacer lo que sigue.
+
+Agrega tu usuario al grupo de docker (solución permanente).
+```
+-> sudo usermod -aG docker $USER
+```
+
+Aplica los cambios -- puede que tengas que salir del sistema y entrar otra vez, o usa este comando.
+```
+-> newgrp docker
+```
+
+
 ## Informacion del Contenedor
 
 Conseguir información acerca de  una imagen en tu biblioteca local.
@@ -180,6 +218,28 @@ Tambien podemos usar el nombre del contenedor.
 
 ```
 -> docker inspect devesp_container  | grep "IPAddress"
+```
+
+## Correr on Comando Usando una Imagen
+
+Puedes ejecutar un comando contra una IMAGEN y salir inmediatamente.<br>
+El comando se ejecuta, y el contenedor se termina.
+
+```
+Sat 2025May31 21:00:58 UTC
+devuser@ubuntu2204-allpurpose  git(main)
+hist:52 -> sudo docker run ubuntu:22.04 echo "Hiya, there."
+Hiya, there.
+```
+
+Al consultar con docker ps, se muestra el COMANDO que se ejecutó para ese contenedor.
+
+```
+Sat 2025May31 21:01:09 UTC
+devuser@ubuntu2204-allpurpose  git(main)
+hist:53 -> sudo docker ps -a
+CONTAINER ID   IMAGE          COMMAND                 CREATED             STATUS                         PORTS     NAMES
+f203fa01eaa5   ubuntu:22.04   "echo 'Hiya, there.'"   10 seconds ago      Exited (0) 8 seconds ago                 pensive_leakey
 ```
 
 ## Verificar si estamos en un contenedor o no

@@ -60,13 +60,30 @@ Un usuario sigue una sequencia mas o menos así:
 
 Ejemplo:
 
-En este ejemplo, el usuario crea el directorio `projectX` en `$HOME`. Luego, cambia a esa ubicación y usa el cliente Git con el parámetro `init` para comenzar a implementar el control de revisión.
+En este ejemplo, el usuario crea el directorio `docker-devesp` en `$HOME`. <br>
+Luego, cambia a esa ubicación y usa el cliente Git con el parámetro `init` para comenzar a implementar el control de revisión.
 
+Crear un nuevo repositorio desde la línea de comandos
 ```
 -> cd /home/devuser/
--> mkdir projectX
--> cd projectX/
+-> mkdir docker-devesp
+-> cd docker-devesp/
+
+-> echo "# docker-devesp" >> README.md
 -> git init
+-> git add README.md
+-> git commit -m "first commit"
+-> git branch -M main
+-> git remote add origin https://github.com/devesplab/docker-devesp.git
+-> git push -u origin main
+
+```
+
+…o enviar un repositorio existente desde la línea de comandos
+```
+-> git remote add origin https://github.com/devesplab/docker-devesp.git
+-> git branch -M main
+-> git push -u origin main
 ```
 
 {: .note }
@@ -158,31 +175,6 @@ Veamos la lista de orígenes disponibles en el repositorio local
 ```
 -> git remote
 -> git remote -v
-```
-
-## GIT Push
-
-
-Tras realizar cambios en el proyecto y para preservarlos, el objetivo es transferirlos a una ubicación remota.
-
-Primero, debemos agregar los cambios a la rama local.
-```
--> git add .
-```
-Luego podemos comparar los cambios localos contra la rama principal. De esta manera sabremos que es lo que estamos enviando.
-```
--> git diff --stat origin/main
-```
-
-Salvemos los cambios.<br>
-Usamos las banderas `-am` para proveer un mensaje explicando el cambio.
-```
--> git commit -am"save the changes"
-```
-
-Envía los cambios al servidor Git.
-```
--> git push origin main
 ```
 
 ### Eliminar origen
@@ -408,6 +400,31 @@ Especifique el nombre de la rama a sincronizar
 El comando `git pull` sin argumentos proporciona información útil sobre las ramas presentes en el repositorio remoto.
 ```
 $ git pull
+```
+
+## GIT Push
+
+
+Tras realizar cambios en el proyecto y para preservarlos, el objetivo es transferirlos a una ubicación remota.
+
+Primero, debemos agregar los cambios a la rama local.
+```
+-> git add .
+```
+Luego podemos comparar los cambios localos contra la rama principal. De esta manera sabremos que es lo que estamos enviando.
+```
+-> git diff --stat origin/main
+```
+
+Salvemos los cambios.<br>
+Usamos las banderas `-am` para proveer un mensaje explicando el cambio.
+```
+-> git commit -am"save the changes"
+```
+
+Envía los cambios al servidor Git.
+```
+-> git push origin main
 ```
 
 ## Git FETCH
