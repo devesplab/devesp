@@ -95,6 +95,37 @@ Mostrar los contenedore que han corrido, pero ahora estan terminados.
   docker ps -a
 ```
 
+## Etiquetas de Docker
+
+Obtén la ayuda del comando de esta manera:
+```
+-> docker tag --help
+```
+
+Etiqueta las imágenes así:
+```
+-> docker tag <IMAGE ID> custom/ubuntu:v1.0
+-> docker tag <IMANGE NAME> custom/ubuntu:v1.0
+```
+
+Primero veamos los detalles the las imagenes.
+```
+-> docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+ubuntu       custom    17249a388181   22 minutes ago   141MB
+ubuntu       22.04     c42dedf797ba   4 weeks ago      77.9MB
+```
+
+Ejemplo de etiquetar una imagen usando el ID del contenedor.<br>
+```
+-> docker tag 17249a388181 custom/ubuntu:v1.0
+```
+
+Ejemplo de etiquetar una imagen usando el nombre de la imagen
+```
+-> docker tag custom/ubuntu:v1.0 ubuntu2204-allpurpose/ubuntu:v1.0.1b
+```
+
 ## Empezar Contenedor Con Redireccion De Puertos
 
 Para asignar el puerto 80 al puerto 8081 al empezar un contenedor se hace asi:
@@ -186,7 +217,6 @@ Aplica los cambios -- puede que tengas que salir del sistema y entrar otra vez, 
 -> newgrp docker
 ```
 
-
 ## Informacion del Contenedor
 
 Conseguir información acerca de  una imagen en tu biblioteca local.
@@ -240,6 +270,105 @@ devuser@ubuntu2204-allpurpose  git(main)
 hist:53 -> sudo docker ps -a
 CONTAINER ID   IMAGE          COMMAND                 CREATED             STATUS                         PORTS     NAMES
 f203fa01eaa5   ubuntu:22.04   "echo 'Hiya, there.'"   10 seconds ago      Exited (0) 8 seconds ago                 pensive_leakey
+```
+
+## Ejecutar un contenedor separado
+
+Aquí discutimos cómo ejecutar un contenedor y mantenerlo en ejecución sin que se detenga.
+
+Si ejecutas un contenedor de esta manera, se cierra inmediatamente.
+```
+-> docker run -d ubuntu:22.04 /bin/bash
+```
+
+Cuando ejecutas un contenedor con un comando como /bin/bash, se iniciará y luego se cerrará inmediatamente porque el proceso bash se ejecuta de forma interactiva o como un proceso en primer plano, pero sin ningún comando que lo mantenga vivo o sin una terminal interactiva conectada.
+
+Puedes iniciar una sesión bash interactiva de este modo:
+```
+-> docker run -it ubuntu:22.04 /bin/bash
+```
+Esto mantendrá el contenedor ejecutándose de forma interactiva hasta que salgas. Con este comando aterrizaz en el indicador del contenedor.
+
+Si deseas que el contenedor se ejecute en modo desconectado usando `-d` y permanezca activo, puedes sobrescribir el comando con algo que no se cierre inmediatamente, como `tail -f /dev/null`:
+```
+-> docker run -d ubuntu:22.04 /bin/bash -c "tail -f /dev/null"
+```
+De esta manera, el contenedor se ejecuta en segundo plano y permanece activo.
+
+Una tercera forma es ejecutar un comando que se repita indefinidamente:
+```
+-> docker run -d ubuntu:22.04 /bin/bash -c "while true; do sleep 600; done"
+```
+Esto mantiene el contenedor en ejecución mediante un bucle de espera.
+
+Talvez la manera mas efectiva es correr el contenedor en segundo plano mientras mantenemos acceso al indicador del docker host. Esto se logra usando las banderas `-dit` como vemos aqui:
+```
+-> docker run -dit ubuntu:22.04 /bin/bash
+```
+
+## Inspeccionando Eventos de Docker
+
+Todos los eventos de Docker se registran cuando detienes, inicias o matas un contenedor.
+
+Puedes monitorear los eventos de Docker en tiempo real pasando el argumento `events` a docker. <br>
+Esto es similar a usar `tail -f logfile.log` en Linux.
+
+Ver la ayuda del commando para eventos
+```
+docker events since --help
+```
+
+Mostrar lo que ha sucedido en la última hora.
+```
+-> docker events --since '1h'
+```
+
+Lo mismo que arriba, pero solo eventos por los ultimos 30 minutos.
+```
+docker events --since '30m'
+```
+
+{: .note }
+generalmente no se admite la especificación directa de segundos (p. ej., "30 s") en el parámetro `--since`. El uso más común implica minutos, horas o marcas de tiempo específicas.
+
+
+(i) Si el indicador en tu sistem muestra la fecha, la marca de tiempo en el indicador se vuelve útil para relacionarla con los registros de eventos.
+
+¿Qué pasa si solo queremos ver eventos de conexión (`attach`)?
+Puedes iniciar el escaneo de eventos, filtrando por el evento `attach`.
+```
+docker events --filter event=attach --since '1h'
+```
+
+Agrega más filtros como este para ver más eventos.
+
+```
+-> docker events --filter event=attach --filter event=die --filter event=stop --since '1h'
+```
+
+## Inspeccionar el Historial de una Imagen Docker
+
+Puede ser útil saber qué se utilizó para construir una imagen de Docker.
+Podemos usar la opción `history` con otras banderas para obtener la información histórica.
+
+Cada entrada representa una capa utilizada para crear la imagen.
+```
+-> docker history ubuntu:custom 
+```
+
+Utiliza la bandera de no truncamiento para ver los comandos completos utilizados.
+De interés es el sha256 completo de la imagen.
+```
+-> docker history --no-trunc ubuntu:custom
+```
+
+Ver solo el ID de la IMAGEN con una cadena SHA corta.
+```
+-> docker history --quiet ubuntu:custom
+```
+Lo mismo que el anterior, pero con la cadena SHA larga completa.
+```
+-> docker history --quiet --no-trunc   ubuntu:custom
 ```
 
 ## Verificar si estamos en un contenedor o no
