@@ -232,6 +232,25 @@ Tambien podemos re-empezar un contendor que hemos parado.
  ✔ Container ubuntu2204-2-ubuntuTwo  Started
 ```
 
+## Reiniciar un Contenedor dn Docker Compose
+
+Tuve un escenario con la siguiente situación:
+    • Un entorno de docker compose estaba completamente levantado y en ejecución
+    • Había instalado node_exporter en tres máquinas virtuales Ubuntu
+    • Quería que la instancia de P8s recolectara métricas de esas máquinas virtuales Ubuntu.
+
+Para lograr esto, hice lo siguiente:
+    • En el host Docker, mientras estaba en VSCode, edité el archivo prometheus.yml (no inicié sesión en el contenedor de P8s)
+    • Reinicié el contenedor de P8s
+    • Verifiqué en la WebUI de P8s que podía ver el job_name y las métricas de los targets
+
+Reinicié el contenedor
+```
+-> docker compose restart prometheus-cicd
+[+] Reiniciando 1/1
+ ✔ Contenedor prometheus-cicd  Iniciado
+```
+
 ## Destruir y Restablecer un contenedor
 
 Tomando la list de servicios dados for el comando `docker-compose config --services`
