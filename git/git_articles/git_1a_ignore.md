@@ -1,0 +1,74 @@
+---
+layout: default
+title: Ignorando Archivos DStore
+permalink: /ignore_DStore/
+parent: Artículos De Git  
+has_children: false
+has_toc: false
+nav_order: 1
+---
+
+# Ignorando Archivos .DStore en Git (MacOS)
+
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Tabla de contenidos
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
+
+{: .note }
+Este articulo es especifico a MacOS, pero el concepto de ignorar archivos es aplicable a cualquier sistema operativo y a cualquier tipo de archivo que use Git.
+
+Es una buena práctica ignorar ciertos archivos en tu repositorio Git que no son necesarios para tu proyecto. Un archivo común que debe ser ignorado es `.DS_Store`, el cual es creado por macOS para almacenar atributos personalizados de una carpeta. Estos archivos son creados por el Finder de macOS para guardar atributos personalizados de una carpeta, como posiciones de iconos y opciones de vista. No son necesarios para tu proyecto y pueden saturar tu repositorio Git. Para evitar que estos archivos sean rastreados por Git, puedes agregarlos a tu archivo `.gitignore`.
+
+```
+-> cat .gitignore
+.DS_Store
+```
+Esto le indica a Git que ignore cualquier archivo `.DS_Store` en tu repositorio, evitando que sean rastreados o añadidos.
+
+Pero incluso después de agregar `.DS_Store` a tu `.gitignore`, podrías seguir viéndolo en la salida de `git status`.
+
+Aquí discutimos la razón por la cual `.DS_Store` aparece en la salida de git status incluso después de agregarlo a `.gitignore` y cómo resolverlo.
+
+Para revisar el estado de tu repositorio Git, puedes ejecutar el comando:
+```
+-> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .DS_Store
+        deleted:    scripts/update_U2004.sh
+        modified:   scripts/install_docker.sh
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chrony_install/install_chrony_Ubuntu_U2204.sh
+```
+La salida del comando anterior muestra la línea ` modified:   .DS_Store`. No queremos eso.
+
+Si git status aún muestra `.DS_Store` después de haberlo agregado a tu `.gitignore`, probablemente se deba a que `.DS_Store` ya estaba siendo rastreado por git antes de actualizar `.gitignore`. El archivo `.gitignore` solo previene que nuevos archivos sean rastreados; no afecta archivos que ya están en el repositorio.
+
+Para dejar de rastrear `.DS_Store` y asegurarte de que sea ignorado en el futuro, puedes seguir estos pasos:
+1. Asegúrate de que `.DS_Store` esté listado en tu archivo `.gitignore`.
+2. Elimina `.DS_Store` del índice (área de preparación) manteniéndolo en tu sistema de archivos local.
+3. Haz commit de los cambios para actualizar el repositorio.
+```
+git rm --cached .DS_Store
+git add .gitignore
+git commit -m "Dejar de rastrear .DS_Store y actualizar .gitignore"
+```
+
+Esto eliminará `.DS_Store` del repositorio (pero no de tu sistema de archivos local) y asegurará que sea ignorado en el futuro.
+
+[Regresar a la página principal]({{site.baseurl}}/).
