@@ -91,10 +91,8 @@ Lista todas las versiones de JAVA con `sdk list java`
 
 Lista solo JAVA.
 ```
-Sat 2025Jul26 22:47:15 UTC
-devuser@devops-u1
-~
-hist:98 -> sdk list java
+-> sdk list java
+
 ================================================================================
 Available Java Versions for Linux 64bit
 ================================================================================
@@ -239,10 +237,7 @@ Lista solo las versiones de JAVA.
 
 El comando de listar muestra las versiones instaladas marcadas port la palabra `installed`.
 ```
-Sat 2025Jul26 22:57:13 UTC
-devuser@devops-u1
-~
-hist:101 -> sdk list java
+-> sdk list java
 
                |     | 11.0.26      | zulu    |            | 11.0.26-zulu
                | >>> | 8.0.462      | zulu    | installed  | 8.0.462-zulu

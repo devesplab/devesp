@@ -32,10 +32,8 @@ native: 0.7.4 (linux x86_64)
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] &amp;&amp; source "$HOME/.sdkman/bin/sdkman-init.sh"
 </code></pre></div></div><p>De esta manera, cada vez que abras una terminal, SDKMAN estará disponible para su uso.</p><p>Lista todos los candidatos.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-&gt; sdk list
-</code></pre></div></div><h2 id="instalar-y-gestionar-versiones-de-java"> <a href="#instalar-y-gestionar-versiones-de-java" class="anchor-heading" aria-labelledby="instalar-y-gestionar-versiones-de-java"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Instalar y gestionar versiones de Java</h2><p>Lista todas las versiones de JAVA con <code class="language-plaintext highlighter-rouge">sdk list java</code></p><p>Lista solo JAVA.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sat 2025Jul26 22:47:15 UTC
-devuser@devops-u1
-~
-hist:98 -&gt; sdk list java
+</code></pre></div></div><h2 id="instalar-y-gestionar-versiones-de-java"> <a href="#instalar-y-gestionar-versiones-de-java" class="anchor-heading" aria-labelledby="instalar-y-gestionar-versiones-de-java"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Instalar y gestionar versiones de Java</h2><p>Lista todas las versiones de JAVA con <code class="language-plaintext highlighter-rouge">sdk list java</code></p><p>Lista solo JAVA.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-&gt; sdk list java
+
 ================================================================================
 Available Java Versions for Linux 64bit
 ================================================================================
@@ -137,10 +135,7 @@ Do you want java 17.0.16-zulu to be set as default? (Y/n): n
 </code></pre></div></div><p>Verifica cuál es la version de java actual activa por defecto.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-&gt; sdk current java
 Using java version 11.0.28-zulu
 </code></pre></div></div><h2 id="desinstalar-version-de-java"> <a href="#desinstalar-version-de-java" class="anchor-heading" aria-labelledby="desinstalar-version-de-java"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Desinstalar Version de Java</h2><p>Para desinstalar alguna version de JAVA simplemente haz lo contrario del comando de instalación.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-&gt; sdk uninstall java 11.0.28-zulu
-</code></pre></div></div><h2 id="listar-versiones-de-java"> <a href="#listar-versiones-de-java" class="anchor-heading" aria-labelledby="listar-versiones-de-java"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Listar Versiones de Java</h2><p>Lista solo las versiones de JAVA.</p><p>El comando de listar muestra las versiones instaladas marcadas port la palabra <code class="language-plaintext highlighter-rouge">installed</code>.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sat 2025Jul26 22:57:13 UTC
-devuser@devops-u1
-~
-hist:101 -&gt; sdk list java
+</code></pre></div></div><h2 id="listar-versiones-de-java"> <a href="#listar-versiones-de-java" class="anchor-heading" aria-labelledby="listar-versiones-de-java"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Listar Versiones de Java</h2><p>Lista solo las versiones de JAVA.</p><p>El comando de listar muestra las versiones instaladas marcadas port la palabra <code class="language-plaintext highlighter-rouge">installed</code>.</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-&gt; sdk list java
 
                |     | 11.0.26      | zulu    |            | 11.0.26-zulu
                | &gt;&gt;&gt; | 8.0.462      | zulu    | installed  | 8.0.462-zulu
