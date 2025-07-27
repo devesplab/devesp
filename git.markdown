@@ -26,7 +26,10 @@ nav_order: 2
 {:toc}
 </details>
 
-# GIT :: Conceptos Fundamentales
+# Conceptos Fundamentales de Git
+
+Git es un sistema de control de versiones distribuido que permite a los desarrolladores rastrear cambios en el código fuente a lo largo del tiempo. Es una herramienta esencial para la colaboración en proyectos de software, ya que permite a múltiples desarrolladores trabajar en el mismo proyecto sin conflictos.
+Git es ampliamente utilizado en la industria del software y es una habilidad fundamental para cualquier desarrollador moderno. En esta lección, exploraremos los conceptos básicos de Git, su importancia en el desarrollo de software y cómo se utiliza para gestionar el código fuente.
 
 En esta leccion exponemos los conceptos fundamentales de Git:
 - que es código fuente?
