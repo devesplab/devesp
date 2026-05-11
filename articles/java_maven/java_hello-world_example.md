@@ -232,7 +232,7 @@ mvn -Dmaven.compiler.release=8 package
 Esto construye y ejecuta pruebas unitarias.
 
 {: .note }
-> Maven descargará las dependencias requeridas desde [repositorio central de Maven](https://repo.maven.apache.org/maven2): el repositorio remoto predeterminado utilizado por Maven si no se declaran repositorios en el POM. Maven comprueba `~/.m2/repository` primero y solo descarga artefactos de Maven Central si el archivo no existe.
+> Maven descargará las dependencias requeridas desde el [Repositorio Central de Maven](https://repo.maven.apache.org/maven2) que es el repositorio remoto predeterminado utilizado por Maven si no se declaran repositorios en el archivo POM. Maven comprueba el archivo `~/.m2/repository` primero y solo descarga artefactos de Maven Central si el archivo no existe.
 
 Salida esperada de `mvn` (listado parcial):
 ```log
@@ -298,7 +298,7 @@ target
 21 directories, 11 files
 ```
 
-Run the application:
+Ejecute la aplicación:
 ```sh
 -> java -cp target/classes com.yourcompany.helloworld.App
 Hello World!
@@ -308,7 +308,8 @@ Hello World!
 
 Si se ejecuta en un contenedor, Java podría lanzar un error como este:
 ```log
-[0.001s][warning][os,container] Cgroup cpu controller path at '/sys/fs/cgroup' seems to have moved to '/../../user.slice/user-1001.slice/session-c3.scope', detected limits won't be accurate
+[0.001s][warning][os,container] Cgroup cpu controller path at '/sys/fs/cgroup' seems to \
+have moved to '/../../user.slice/user-1001.slice/session-c3.scope', detected limits won't be accurate
 ```
 Para silenciar ese mensaje, crea el archivo `/etc/profile.d/java.sh` con la configuración para la compatibilidad con CGroup.
 ```sh
@@ -322,7 +323,7 @@ sudo chown root:root /etc/profile.d/java.sh
 
 sudo chmod 644 /etc/profile.d/java.sh
 ```
-Los nuevas shells de inicio de sesión lo detectarán automáticamente; para aplicarlo ahora a su shell actual:
+Los nuevos shells de inicio de sesión lo detectarán automáticamente; para aplicarlo ahora a su shell actual:
 ```sh
 -> source /etc/profile.d/java.sh
 ```
@@ -340,27 +341,29 @@ Hello World!
 
 ## Conclusion
 
-Tras configurar el entorno Java tal como se explica en este documento, deberíamos poder crear proyectos Java y ejecutar la aplicación Java.
+Tras configurar el entorno Java tal como se explica en este documento, deberíamos poder crear proyectos Java y ejecutar la aplicación.
 
 ## Referencias 
 
 ### Que es Maven Central?
 
-El Repositorio Central de Maven es el principal repositorio público de bibliotecas y artefactos para Java y la JVM. Los desarrolladores y las herramientas de construcción (Maven, Gradle, SBT, etc.) obtienen de él las dependencias publicadas y pueden publicar allí sus propios artefactos finalizados para que otros puedan consumirlos.
+El Repositorio Central de Maven es el repositorio principal público de bibliotecas y artefactos para Java y la JVM. Los desarrolladores y las herramientas de construcción (Maven, Gradle, SBT, etc.) obtienen de él las dependencias publicadas y pueden publicar allí sus propios artefactos finalizados para que otros puedan consumirlos.
 
 Sus características principales son:
 
 - Aloja artefactos binarios versionados (archivos JAR), metadatos (archivos POM) y sumas de verificación (checksums).
-- Utiliza un sistema de coordenadas groupId:artifactId:version para identificar los artefactos.
+- Utiliza un sistema de coordenadas `groupId:artifactId:version` para identificar los artefactos.
 - Se accede a él a través de HTTP(S); las herramientas de construcción utilizan automáticamente los puntos de acceso (endpoints) habituales.
 - Aplica reglas de firma/validación y de publicación (a través de Sonatype OSSRH para proyectos nuevos) para el despliegue oficial en el Repositorio Central.
 - Es ampliamente replicado y almacenado en caché por redes de distribución de contenidos (CDN) para garantizar su disponibilidad global.
 
-El usos típicos de Maven Central es la resolución de dependencias durante el proceso de construcción, recuperación de dependencias transitivas y distribución de bibliotecas.
+El uso típicos de Maven Central es la resolución de dependencias durante el proceso de construcción, recuperación de dependencias transitivas y distribución de bibliotecas.
 
 ### Definición básica de un archivo POM
 
-Un archivo POM (Project Object Model) es un pequeño archivo XML que le indica a Maven qué es su proyecto y qué necesita. En términos sencillos:
+Un archivo POM (Project Object Model) es un pequeño archivo XML que le indica a Maven qué es su proyecto y qué necesita. 
+
+En términos sencillos:
 - Identifica el proyecto (grupo, artefacto, versión).
 - Enumera las bibliotecas de las que depende su código para que Maven pueda descargarlas.
 - Define cómo se debe construir el proyecto (tipo de empaquetado, complementos, pasos de construcción).
