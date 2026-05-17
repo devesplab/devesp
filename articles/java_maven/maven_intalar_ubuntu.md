@@ -33,7 +33,7 @@ Maven es una herramienta que ayuda a los desarrolladores de Java a crear y gesti
 Maven es principalmente para proyectos basados ​​en Java y JVM (Java, Kotlin, Scala, Groovy). También admite la creación de artefactos relacionados (JAR, WAR, EAR) y proyectos de múltiples módulos. Con complementos, se puede utilizar para tareas que no sean Java (generar documentos, ejecutar scripts, empaquetar recursos nativos) e incluso otros lenguajes, pero el soporte completo de primera clase es para ecosistemas JVM.
 
 Apache Maven puede ser instalado por la mayoría de los administradores de paquetes o manualmente descargando el archivo y agregándolo a su PATH.
-Puede instalar la distribución en cualquier director de su elección siempre que tenga permisos de escritura.
+Puede instalar la distribución en cualquier carpeta de su elección siempre y cuando que tenga permisos de escritura.
 
 En esta lección exploraremos lo siguiente:
 - obtener la distribución maven
@@ -42,14 +42,15 @@ En esta lección exploraremos lo siguiente:
 
 **REQUISITOS**
 
-Requiere Java JDK instalado antes de usar maven.
-Debe tener disponible el comando TAR y UNZIP.
+- Requiere Java JDK instalado antes de usar maven.
+- Debe tener disponible el comando TAR y UNZIP.
+- Para referencia ver el documento como [Installar Java](./java_instalar_ubuntu.md).
 
 Para instalar Maven en Ubuntu, necesita tener instalado un kit de desarrollo de Java (JDK), específicamente JDK 8 o superior para Maven 3.9.15, y JDK 17 o superior para Maven 4.x. Además, asegúrese de que su sistema tenga suficiente espacio en disco y memoria para admitir la instalación y el funcionamiento de Maven.
 
 **ADVERTENCIAS**
 
-Los problemas comunes al instalar Maven en Ubuntu incluyen versiones desactualizadas del administrador de paquetes predeterminado y configuraciones incorrectas de las variables de entorno. Para resolverlos, puede descargar manualmente los archivos binarios de Maven más recientes desde el sitio web oficial de Apache Maven y configurar las variables de entorno necesarias como JAVA_HOME y M2_HOME.
+Los problemas comunes al instalar Maven en Ubuntu incluyen versiones desactualizadas del administrador de paquetes predeterminado y configuraciones incorrectas de las variables de entorno. Para resolverlos, puede descargar manualmente los archivos binarios de Maven más recientes desde el sitio web oficial de Apache Maven y configurar las variables de entorno necesarias como `JAVA_HOME` y `M2_HOME`.
 
 ## Ambiente de trabajo
 
@@ -64,7 +65,7 @@ Codename:	noble
 
 ## Requisitos previos
 
-Necesita tener instalado un kit de desarrollo de Java (JDK). Configure la variable de entorno JAVA_HOME en el PATH de su instalación de JDK o tenga el ejecutable de Java en su PATH.
+Necesita tener instalado un kit de desarrollo de Java (JDK). Configure la variable de entorno `JAVA_HOME` en el `PATH` de su instalación de JDK o tenga el ejecutable de Java en su `PATH`.
 
 La versión estable actual `3.9.15` requiere `JDK 8+`, pero cualquier versión reciente funcionará bien.
 
@@ -72,7 +73,7 @@ La versión estable actual `3.9.15` requiere `JDK 8+`, pero cualquier versión r
 
 Vaya al [Sitio Oficial de Maven](https://maven.apache.org/download.cgi) y obtenga una distribución.
 
-Para instalar Apache Maven, extraiga el archivo y agregue su directorio bin a  PATH. Esto funciona en cualquier sistema operativo, pero la configuración de PATH y las variables de entorno depende del sistema operativo.
+Para instalar Apache Maven, extraiga el archivo y agregue su directorio bin a  `PATH`. Esto funciona en cualquier sistema operativo, pero la configuración de `PATH` y las variables de entorno depende del sistema operativo.
 
 Los pasos detallados son:
 
@@ -94,7 +95,7 @@ Nombre del sistema operativo: "mac os x", versión: "10.8.5", arco: "x86_64", fa
 
 ## Descargar Maven
 
-En este ejemplo, usaremos la distribución Maven `apache-maven-3.9.15`. Ajústelo en consecuencia para la versión que desee.
+En este ejemplo, usaremos la distribución Maven `apache-maven-3.9.15`. Ajústelo para la versión que desee.
 
 Vaya a la página [Descarga de Maven](https://maven.apache.org/download.cgi) y obtenga una distribución.
 ```
@@ -118,7 +119,7 @@ configuración/
 biblioteca/
 ```
 
-Cree un enlace simbólico a una ubicación conocida como `/usr/local/bin`.
+Crea un enlace simbólico a una ubicación conocida como `/usr/local/bin`.
 ```
 -> sudo ln -s /opt/apache-maven-3.9.15 /usr/local/bin/maven
 
@@ -126,7 +127,7 @@ Cree un enlace simbólico a una ubicación conocida como `/usr/local/bin`.
 lrwxrwxrwx 1 raíz raíz 24 8 de mayo 04:49 /usr/local/bin/maven -> /opt/apache-maven-3.9.15/
 ```
 
-Cree un archivo para las variables de entorno de Maven. Haga que el archivo sea ejecutable.
+Crea un archivo para las variables de entorno de Maven. Haga que el archivo sea ejecutable.
 ```
 -> sudo vi /etc/profile.d/maven.sh
 
@@ -172,8 +173,7 @@ Maven ya está listo para usarse en este sistema.
 
 ## Conclusión
 
-La utilidad maven es para construir proyectos JAVA. 
-Piense en ello como un administrador de recetas y una ayuda que facilita la creación, el intercambio y el mantenimiento de proyectos Java. Maven es una herramienta muy conocida en la comunidad de desarrolladores de software y, como tal, está bien documentada y respaldada.
+La utilidad maven es para construir proyectos JAVA que juega el rol de administrador que facilita la creación, el intercambio y el mantenimiento de proyectos Java. Maven es una herramienta muy conocida en la comunidad de desarrolladores de software y, como tal, está bien documentada y respaldada.
 
 ## Referencias
 

@@ -21,7 +21,7 @@ nav_order: 1
 
 # Propósito de RBENV
 
-rbenv es una herramienta para gestionar diferentes versiones de Ruby en un único sistema. Su objetivo principal es permitir a los desarrolladores cambiar fácilmente entre múltiples versiones de Ruby y garantizar que se utilice la versión correcta para un proyecto específico.
+rbenv es una herramienta para gestionar diferentes versiones de Ruby en un sistema. Su objetivo principal es permitir a los desarrolladores cambiar fácilmente entre múltiples versiones de Ruby y garantizar que se utilice la versión correcta para un proyecto específico.
 
 ## Instalar RBENV
 
@@ -29,25 +29,20 @@ Este documento explica lo siguiente:
 - Obtener rbenv
 - Instalar rbenv
 - Usar rbenv para instalar una version de ruby
--Usar rbenv para establecer la version de ruby en forma local o global 
+- Usar rbenv para establecer la version de ruby en forma local o global 
 
-Para el proceso entero detallado aquí usamos Ubuntu 22.04.
-Usamos el commando `hostnamectl` para mostrar los detalles del sistema donde estamos trabajando.
+Para el proceso entero detallado aquí usamos Ubuntu 24.04.
+Usamos el commando `lsb_release` para mostrar los detalles del sistema donde estamos trabajando.
 
 ```bash
-Fri 2025Feb21 05:21:47 UTC
-devuser@ubuntu2204-1-devesp
+Sat 2026May16 18:29:24 UTC
+devuser@devesp
 ~
-hist:233 -> hostnamectl
- Static hostname: ubuntu2204-1-devesp
-       Icon name: computer-container
-         Chassis: container
-      Machine ID: 68646fed809a4c54ab836048028d6896
-         Boot ID: 34f42aa3a9b34e4bae91c3b50b3864a5
-  Virtualization: docker
-Operating System: Ubuntu 22.04.4 LTS
-          Kernel: Linux 6.3.13-linuxkit
-    Architecture: x86-64
+hist:270 -> lsb_release -a
+Distributor ID:	Ubuntu
+Description:	Ubuntu 24.04.4 LTS
+Release:	24.04
+Codename:	noble
 ```
 
 ## Obtener RBENV
@@ -62,9 +57,7 @@ Para empezar, estamos en la carpeta de inicio del usuario.
 Todo el proceso descrito aqui es ejecutado estando en el directorio de inicio de un usuario regular (no root).
 
 ```bash
-Fri 2025Feb21 04:15:09 UTC
-devuser@ubuntu2204-1-devesp
-/home/devuser
+devuser@devesp
 hist:188 -> pwd
 /home/devuser
 ```
@@ -74,12 +67,12 @@ El argumento `~/.rbenv` indica el destino local donde deseamos clonar el reposit
 ```bash
 -> git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 Cloning into '/home/devuser/.rbenv'...
-remote: Enumerating objects: 3379, done.
-remote: Counting objects: 100% (280/280), done.
-remote: Compressing objects: 100% (114/114), done.
-remote: Total 3379 (delta 224), reused 166 (delta 166), pack-reused 3099 (from 3)
-Receiving objects: 100% (3379/3379), 714.84 KiB | 1.80 MiB/s, done.
-Resolving deltas: 100% (2082/2082), done.
+remote: Enumerating objects: 3441, done.
+remote: Counting objects: 100% (300/300), done.
+remote: Compressing objects: 100% (132/132), done.
+remote: Total 3441 (delta 242), reused 168 (delta 168), pack-reused 3141 (from 4)
+Receiving objects: 100% (3441/3441), 740.47 KiB | 4.36 MiB/s, done.
+Resolving deltas: 100% (2109/2109), done.
 ```
 
 El comando anterior crea la carpeta `/home/devuser/.rbenv`.
@@ -116,12 +109,12 @@ Clonemos el repositorio de git y sigamos los pasos para abilitar el paquete.
 
 -> git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 Cloning into '/home/devuser/.rbenv/plugins/ruby-build'...
-remote: Enumerating objects: 16810, done.
-remote: Counting objects: 100% (4554/4554), done.
-remote: Compressing objects: 100% (412/412), done.
-remote: Total 16810 (delta 4422), reused 4177 (delta 4137), pack-reused 12256 (from 3)
-Receiving objects: 100% (16810/16810), 3.33 MiB | 1.54 MiB/s, done.
-Resolving deltas: 100% (11927/11927), done.
+remote: Enumerating objects: 17840, done.
+remote: Counting objects: 100% (5023/5023), done.
+remote: Compressing objects: 100% (381/381), done.
+remote: Total 17840 (delta 4862), reused 4654 (delta 4640), pack-reused 12817 (from 5)
+Receiving objects: 100% (17840/17840), 3.56 MiB | 11.29 MiB/s, done.
+Resolving deltas: 100% (12474/12474), done.
 
 -> git -C "$(rbenv root)"/plugins/ruby-build pull
 Already up to date.
@@ -138,12 +131,16 @@ Verifiquemos que rbenv esta en el paso del usuario.
 
 Verifiquemos la version de rbenv.
 ```
--> rbenv
-rbenv 1.3.2
+devuser@devesp
+~
+hist:277 -> rbenv
+rbenv 1.3.2-20-g23c3041
 Usage: rbenv <command> [<args>...]
 
 Commands to manage available Ruby versions:
    versions    List installed Ruby versions
+   install     Install a Ruby version using ruby-build
+   uninstall   Uninstall a specific Ruby version
    rehash      Regenerate rbenv shims
 
 Commands to view or change the current Ruby version:
@@ -156,7 +153,50 @@ See `rbenv help <command>' for information on a specific command.
 For full documentation, see: https://github.com/rbenv/rbenv#readme
 ```
 
-## Instalar una version de ruby (primera instalacion)
+## Listar versiones dispoanible the Ruby
+
+El comando `rbenv` provee la opción `-l` or `--list-all` para ver las versiones de ruby.
+
+`-l`
+: listar versiones disponibles de ruby (incluyendo aliases como `jruby`)
+
+`--list-all`
+: muestra todas las versiones disponibles (si son apoyadas corrientemente)
+
+Por ejemplo:
+```
+-> rbenv install -l
+3.2.11
+3.3.11
+3.4.9
+4.0.4
+jruby-10.1.0.0
+mruby-4.0.0
+picoruby-3.4.2
+truffleruby-34.0.1
+truffleruby+graalvm-34.0.1
+```
+O la lista mas larga:
+```
+3.3.5
+3.3.6
+...
+4.0.4
+4.1-dev
+...
+jruby-10.0.5.0
+jruby-10.1.0.0
+...
+mruby-3.4.0
+mruby-4.0.0
+...
+rbx-4.20
+rbx-5.0
+...
+etc
+```
+
+## Instalar una version de Ruby (primera instalacion)
 
 El ambiente esta ahora listo y podemos proceder a instalar nuestra primera version de ruby.
 
@@ -175,7 +215,7 @@ Este proceso instala algunas dependencias destras de escena.
 
 Este proceso lo hacemos en el directorio hogar del usuario que no es root.
 ```
-devuser@ubuntu2204-1-devesp
+devuser@devesp
 ~
 hist:215 -> rbenv install 3.3.5
 ==> Downloading openssl-3.0.15.tar.gz...
@@ -275,7 +315,7 @@ total 104
 El comando `gem` es parte del sistema de manejo de paquetes de Ruby. Se usa para mostrar información acerca del ambiente de ruby. Esto es útil cuando deseamos saber la versión activa de ruby, la localidad donde se instalarían gemas y otras partes importantes.
 
 ```bash
-devuser@ubuntu2204-1-devesp
+devuser@devesp
 ~
 hist:223 -> gem env
 RubyGems Environment:
@@ -429,10 +469,9 @@ La versión global de Ruby es la versión de Ruby que está configurada para usa
   3.4.2
 ```
 
-EL comando gem env muestra la nueva version activa y las carpetas relevantes al ambiente.
-
+EL comando `gem env` muestra la nueva version activa y las carpetas relevantes al ambiente.
 ```
-devuser@ubuntu2204-1-devesp
+devuser@devesp
 ~
 hist:232 -> gem env
 RubyGems Environment:
@@ -485,9 +524,9 @@ A partir de este momento, tenemos un ambiente de ruby listo para usar!
 
 Pongamos nuestrao nuevo ambiente de ruby a la prueba.
 
-Deseamos instalar una gema llamada abbrev.
+Deseamos instalar una gema llamada `abbrev`.
 
-Usemos el comando gem para saber si la gema abbrev existe.
+Usemos el comando `gem` para saber si la gema `abbrev` existe.
 
 ```
 -> gem search abbrev
@@ -525,7 +564,7 @@ Verifiquemos que la gema fue instalada.
 abbrev (0.1.2)
 ```
 
-De donde viene esa gema? Viene del recurso remoto que vimos al correr el comando gem env. El recurso remote se denota con la variable de ambiente REMOTE SOURCE dentro del ambiente de ruby.
+De donde viene esa gema? Viene del recurso remoto que vimos al correr el comando `gem env`. El recurso remoto se denota con la variable de ambiente REMOTE SOURCES dentro del ambiente de ruby.
 
 ```
 -> gem env

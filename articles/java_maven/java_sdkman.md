@@ -23,7 +23,7 @@ nav_order: 1
 
 SDKMAN! es una herramienta de línea de comandos para gestionar versiones de software de desarrollo en sistemas Unix. Permite instalar, actualizar y cambiar entre diferentes versiones de herramientas como Java, Groovy, Scala, Kotlin, entre otros.
 
-En este artículo, veremos cómo instalar SDKMAN! y cómo usarlo para gestionar versiones de Java.
+En este artículo, veremos cómo instalar **SDKMAN!** y cómo usarlo para gestionar versiones de Java.
  
 ## Instalar SDKMAN
 
@@ -59,7 +59,7 @@ Then issue the following command:
 Enjoy!!!
 ```
 
-Cárgalo (source) tal como lo sugirió el instalador.
+Cárga (source) el script de Shell tal como lo sugirió el instalador.
 ```
 ->  source "/home/devuser/.sdkman/bin/sdkman-init.sh"
 ```
@@ -72,7 +72,7 @@ script: 5.19.0
 native: 0.7.4 (linux x86_64)
 ```
 
-La instalación agrega un comando export a `~/.bashrc`.
+La instalación agrega un comando `export` a `~/.bashrc`.
 ```
 #ESTO DEBE ESTAR AL FINAL DEL ARCHIVO PARA QUE SDKMAN FUNCIONE!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -84,6 +84,21 @@ Lista todos los candidatos.
 ```
 -> sdk list
 ```
+La salida del comando muestra varias opciones para lenguajes diferentes, entre ellos Java. En este ejemplo nos provee el comando para instalar java.
+```
+--------------------------------------------------------------------------------
+Java (25.0.3-tem)        https://projects.eclipse.org/projects/adoptium.temurin/
+
+Java Platform, Standard Edition (or Java SE) is a widely used platform for
+development and deployment of portable code for desktop and server environments.
+Java SE uses the object-oriented Java programming language. It is part of the
+Java software-platform family. Java SE defines a wide range of general-purpose
+APIs – such as Java APIs for the Java Class Library – and also includes the Java
+Language Specification and the Java Virtual Machine Specification.
+
+                                                              $ sdk install java
+```
+
 
 ## Instalar y gestionar versiones de Java
 
@@ -99,59 +114,44 @@ Available Java Versions for Linux 64bit
  Vendor        | Use | Version      | Dist    | Status     | Identifier
 --------------------------------------------------------------------------------
 …
- Oracle        |     | 24.0.2       | oracle  |            | 24.0.2-oracle
-               |     | 24.0.1       | oracle  |            | 24.0.1-oracle
-               |     | 24           | oracle  |            | 24-oracle
-               |     | 23.0.2       | oracle  |            | 23.0.2-oracle
-               |     | 22.0.2       | oracle  |            | 22.0.2-oracle
-               |     | 21.0.8       | oracle  |            | 21.0.8-oracle
-               |     | 21.0.7       | oracle  |            | 21.0.7-oracle
-               |     | 21.0.6       | oracle  |            | 21.0.6-oracle
+ Oracle        |     | 26.0.1       | oracle  |            | 26.0.1-oracle
+               |     | 25.0.3       | oracle  |            | 25.0.3-oracle
+               |     | 21.0.11      | oracle  |            | 21.0.11-oracle
                |     | 17.0.12      | oracle  |            | 17.0.12-oracle
 …
 
- Zulu          |     | 24.crac      | zulu    |            | 24.crac-zulu
-               |     | 24.fx        | zulu    |            | 24.fx-zulu
-               |     | 24.0.2       | zulu    |            | 24.0.2-zulu
-               |     | 24.0.1.crac  | zulu    |            | 24.0.1.crac-zulu
-               |     | 24.0.1.fx    | zulu    |            | 24.0.1.fx-zulu
-               |     | 24.0.1       | zulu    |            | 24.0.1-zulu
-               |     | 24           | zulu    |            | 24-zulu
-               |     | 23.0.2.fx    | zulu    |            | 23.0.2.fx-zulu
-               |     | 23.0.2       | zulu    |            | 23.0.2-zulu
-               |     | 23.0.1.crac  | zulu    |            | 23.0.1.crac-zulu
-               |     | 21.0.8       | zulu    |            | 21.0.8-zulu
-               |     | 21.0.7.crac  | zulu    |            | 21.0.7.crac-zulu
-               |     | 21.0.7.fx    | zulu    |            | 21.0.7.fx-zulu
-               |     | 21.0.7       | zulu    |            | 21.0.7-zulu
-               |     | 21.0.6.crac  | zulu    |            | 21.0.6.crac-zulu
-               |     | 21.0.6.fx    | zulu    |            | 21.0.6.fx-zulu
-               |     | 21.0.6       | zulu    |            | 21.0.6-zulu
-               |     | 21.0.5.crac  | zulu    |            | 21.0.5.crac-zulu
-               |     | 17.0.16      | zulu    |            | 17.0.16-zulu
-               |     | 17.0.15.crac | zulu    |            | 17.0.15.crac-zulu
-               |     | 17.0.15.fx   | zulu    |            | 17.0.15.fx-zulu
-               |     | 17.0.15      | zulu    |            | 17.0.15-zulu
-               |     | 17.0.14.crac | zulu    |            | 17.0.14.crac-zulu
-               |     | 17.0.14.fx   | zulu    |            | 17.0.14.fx-zulu
-               |     | 17.0.14      | zulu    |            | 17.0.14-zulu
-               |     | 17.0.13.crac | zulu    |            | 17.0.13.crac-zulu
-               |     | 11.0.28      | zulu    |            | 11.0.28-zulu
-               |     | 11.0.27.fx   | zulu    |            | 11.0.27.fx-zulu
-               |     | 11.0.27      | zulu    |            | 11.0.27-zulu
-               |     | 11.0.26.fx   | zulu    |            | 11.0.26.fx-zulu
-               |     | 11.0.26      | zulu    |            | 11.0.26-zulu
-               |     | 8.0.462      | zulu    |            | 8.0.462-zulu
-               |     | 8.0.452.fx   | zulu    |            | 8.0.452.fx-zulu
-               |     | 8.0.452      | zulu    |            | 8.0.452-zulu
-               |     | 8.0.442.fx   | zulu    |            | 8.0.442.fx-zulu
-               |     | 8.0.442      | zulu    |            | 8.0.442-zulu
+Zulu           |     | 26.crac      | zulu    |            | 26.crac-zulu
+               |     | 26.fx        | zulu    |            | 26.fx-zulu
+               |     | 26.0.1.crac  | zulu    |            | 26.0.1.crac-zulu
+               |     | 26.0.1.fx    | zulu    |            | 26.0.1.fx-zulu
+               |     | 26.0.1       | zulu    |            | 26.0.1-zulu
+               |     | 25.0.3.crac  | zulu    |            | 25.0.3.crac-zulu
+               |     | 25.0.3.fx    | zulu    |            | 25.0.3.fx-zulu
+               |     | 25.0.3       | zulu    |            | 25.0.3-zulu
+               |     | 25.0.2.crac  | zulu    |            | 25.0.2.crac-zulu
+               |     | 25.0.2.fx    | zulu    |            | 25.0.2.fx-zulu
+               |     | 21.0.11.crac | zulu    |            | 21.0.11.crac-zulu
+               |     | 21.0.11.fx   | zulu    |            | 21.0.11.fx-zulu
+               |     | 21.0.11      | zulu    |            | 21.0.11-zulu
+               |     | 21.0.10.crac | zulu    |            | 21.0.10.crac-zulu
+               |     | 21.0.10.fx   | zulu    |            | 21.0.10.fx-zulu
+               |     | 17.0.19.crac | zulu    |            | 17.0.19.crac-zulu
+               |     | 17.0.19.fx   | zulu    |            | 17.0.19.fx-zulu
+               |     | 17.0.19      | zulu    |            | 17.0.19-zulu
+               |     | 17.0.18.crac | zulu    |            | 17.0.18.crac-zulu
+               |     | 17.0.18.fx   | zulu    |            | 17.0.18.fx-zulu
+               |     | 11.0.31.fx   | zulu    |            | 11.0.31.fx-zulu
+               |     | 11.0.31      | zulu    |            | 11.0.31-zulu
+               |     | 11.0.30.fx   | zulu    |            | 11.0.30.fx-zulu
+               |     | 8.0.492.fx   | zulu    |            | 8.0.492.fx-zulu
+               |     | 8.0.492      | zulu    |            | 8.0.492-zulu
+               |     | 8.0.482.fx   | zulu    |            | 8.0.482.fx-zulu
                |     | 7.0.352      | zulu    |            | 7.0.352-zulu
                |     | 6.0.119      | zulu    |            | 6.0.119-zulu
 =================================================================================
 ```
 
-La lista muestra las versiones disponibles de Java a esta fecha. Muestra el proveedor (Vendor), el estado (Status) y el identificador (Identifier) para cada versión.
+La lista muestra las versiones disponibles de Java a esta fecha. Muestra el proveedor (Vendor), el estado (Status) y el identificador (Identifier) para cada versión. La lista es actualizada pasado el tiempo cuando viejas versiones son obsoletas y nuevas versiones son publicadas.
 
 Si ejecutas el comando de instalación y presionas tab, listará todo así (salida recortada)
 ```
@@ -192,9 +192,7 @@ Repackaging Java 8.0.462-zulu...
 Done repackaging...
 ```
 
-Instalar otra versión.
-
-Nota que, si ya tienes otra versión instalada previamente, preguntará si deseas establecer esta nueva instalación como predeterminada. Simplemente responde `y` o `n` según lo que desees.
+Ahora tratemos de instalar otra versión. Nota que, si ya tienes otra versión instalada previamente, preguntará si deseas establecer esta nueva instalación como predeterminada. Simplemente responde `y` o `n` según lo que desees.
 ```
 -> sdk install java 11.0.28-zulu
 Downloading: java 11.0.28-zulu
