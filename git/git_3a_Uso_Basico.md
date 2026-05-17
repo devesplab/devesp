@@ -32,7 +32,42 @@ En esta página discutimos lo siguiente:
 En esta leccion usamos el sistema operativo Ubuntu.<br>
 Usamos el cliente de Git >= 2.0
 
+## Comandos Básicod de Git
+
+Estos son los comandos que usamos con frequencia cuando interactuamos con git.
+
+Inicializar repositorio:
+```
+git init myRepo
+```
+Hacer seguimiento de archivos que cambian:
+```
+git add <archivo> 
+```
+Confirmar cambios en un archivo:
+```
+git commit -am"mis actualizaciones"
+```
+Agregar un origin:
+```
+git remote add <nombre-de-origen> <git-url>
+```
+Empujar cambios locales:
+```
+git push <archivo> <rama>
+```
+Clonar un repositorio de git:
+```
+git clone <git-url>
+```
+Bajar las actualizaciones mas recientes:
+```
+git pull origin <branch>
+```
+
 ## Usando Git Por Vez Primera
+
+A continuación vamos a ejercitar el uso de git.
 
 En nuestro ordenador local es fácil empezar usar git para control de revision. 
 
@@ -69,6 +104,8 @@ drwxrwxr-x  5 devuser devuser 4096 Jun  9 01:02 refs/
 
 ```
 
+Mantén el directorio `.git` privado y bajo control de versiones solo por Git: no lo muevas a tu árbol de trabajo, no lo añadas a otros repositorios y nunca lo comprometas en otro repositorio; Haz una copia de seguridad por separado (o usa git bundle) si necesitas una copia de seguridad completa del repositorio.
+
 {: .warning }
 El directorio `.git` nunca debe ser intencionalmente alterado manualmente. No se debe copiar, mover, editar or borrar archivos o carpetas. 
 
@@ -77,6 +114,8 @@ El directorio `.git` es donde Git guarda toda la información y metadata del rep
 ## Manejando La Rama Predeterminada
 
 Inicialmente, la rama predeterminada de un repositorio de github recien creado se llama `master`. Sin embargo, hoy día la convención general es nombrar la rama `main`.
+
+Git crea la rama predeterminada cuando inicializamos un repositorio con el propósito de usarla como la rama primaria de desarrollo, es decir, el lugar donde hacemos toda operacion inicial de desarrollo. Otros desarrolladores vendran a esta rama como lugar de empiezo para su trabajo.
 
 {: .note }
 Podemos usar cualquier nombre que deseamos para nombrar la rama prederminada de un repositorio de github.
@@ -158,27 +197,28 @@ Siguiendo el ejemplo que estamos discutiendo:
 
 ```bash
 devuser@ubuntu2204-2-devesp
-hist:41 -> mkdir data
+-> mkdir data
 
 devuser@ubuntu2204-2-devesp
 hist:41 ->  cd data
 
 devuser@ubuntu2204-2-devesp
-~/data -> git init
+~/data 
+-> git init
 
 devuser@ubuntu2204-2-devesp
-~/data
-hist:41 -> git remote add origin https://devesplab:github_pat_11A2GKDGA0...ADFewfsdfs122@github.com/devesplab/git-devesp.git
+~/data 
+-> git remote add origin https://devesplab:<myGitToken>@github.com/devesplab/git-devesp.git
 
 devuser@ubuntu2204-2-devesp  git(main)
-~/data
-hist:42 -> git remote -v
-origin	https://devesplab:github_pat_11A2GKDGA0...ADFewfsdfs122@github.com/devesplab/git-devesp.git (fetch)
-origin	https://devesplab:github_pat_11A2GKDGA0...ADFewfsdfs122@github.com/devesplab/git-devesp.git (push)
+~/data 
+-> git remote -v
+origin	https://devesplab:<myGitToken>@github.com/devesplab/git-devesp.git (fetch)
+origin	https://devesplab:<myGitToken>@github.com/devesplab/git-devesp.git (push)
 
 devuser@ubuntu2204-2-devesp
-~/data
-hist:41 -> git pull origin main
+~/data 
+-> git pull origin main
 ```
 
 {: .warning }
@@ -192,7 +232,7 @@ En nuestro ejemplo, usamos el comando `git status` que muestra que inicialmente 
 ```bash
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
-hist:43 -> git status
+-> git status
 On branch main
 
 No commits yet
@@ -204,22 +244,22 @@ De ahora en adelante hacemos referencia a "origin" para cualquier operación que
 ```bash
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
-hist:43 -> echo "Hello, Devesp!" > hello.txt
+-> echo "Hello, Devesp!" > hello.txt
 
 ```
 Y ahora empujamos el nuevo cambio.
 ```bash
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
-hist:43 -> git add hello.txt
+-> git add hello.txt
 
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
-hist:43 -> git commit -am "agregar data"
+-> git commit -am "agregar data"
 
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
-hist:67 -> git push origin main
+-> git push origin main
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 6 threads

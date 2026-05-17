@@ -25,10 +25,12 @@ nav_order: 2
 
 Este tutorial proporciona orientación básica sobre el uso de la cadena de herramientas de Java para el desarrollo en Ubuntu. Muestra cómo crear un programa "¡Hola, mundo!" y explica cómo crear proyectos utilizando Maven.
 
-Hablamos sobre la configuración y construcción de un nuevo proyecto Java utilizando la herramienta Apache Maven.
+Hablamos sobre la configuración y construcción de un nuevo proyecto Java utilizando la herramienta **Apache Maven**.
 
 En esta lección:
-- Utilice el comando `mvn` para crear un esqueleto de proyecto Java
+- Entendimiento básico de que es [Maven Central](#que-es-maven-central)
+- Definición básica de un [archivo POM](#que-es-archivo-de-pom)
+- Utilizar el comando `mvn` para crear un esqueleto de proyecto Java
 - Compilar el proyecto.
 - Ejecute la aplicación Java
 
@@ -74,7 +76,9 @@ mvn archetype:generate -DgroupId=com.yourcompany \
      -DarchetypeVersion=1.0
 ```
 
-Salida esperada (salida parcial en este listado)
+(i) Vea la definición básica de [Arquetipo Maven](#que-es-arquetipe-de-maven).
+
+Salida esperada de la genración del arquetipo (listado parcial):
 ```log
 ...snip...
 [INFO] Using property: groupId = com.yourcompany
@@ -104,7 +108,7 @@ package: com.yourcompany.helloworld
 [INFO] ------------------------------------------------------------------------
 ```
 
-Presione Entrar cuando se le solicite que confirme su selección.
+Presione el teclado `Enter` (o `Return`) cuando se le solicite que confirme su selección.
 
 Esto crea un nuevo proyecto utilizando **Maven Quickstart Archetype**.
 
@@ -345,7 +349,7 @@ Tras configurar el entorno Java tal como se explica en este documento, deberíam
 
 ## Referencias 
 
-### Que es Maven Central?
+### Que es Maven Central? {#que-es-maven-central}
 
 El Repositorio Central de Maven es el repositorio principal público de bibliotecas y artefactos para Java y la JVM. Los desarrolladores y las herramientas de construcción (Maven, Gradle, SBT, etc.) obtienen de él las dependencias publicadas y pueden publicar allí sus propios artefactos finalizados para que otros puedan consumirlos.
 
@@ -359,7 +363,7 @@ Sus características principales son:
 
 El uso típicos de Maven Central es la resolución de dependencias durante el proceso de construcción, recuperación de dependencias transitivas y distribución de bibliotecas.
 
-### Definición básica de un archivo POM
+### Definición básica de un archivo POM {#que-es-archivo-de-pom}
 
 Un archivo POM (Project Object Model) es un pequeño archivo XML que le indica a Maven qué es su proyecto y qué necesita. 
 
@@ -370,6 +374,22 @@ En términos sencillos:
 - Puede contener metadatos del proyecto (nombre, URL, desarrolladores), así como la configuración de repositorios y perfiles.
 
 Los archivos POM le proporcionan a Maven todos los elementos y componentes necesarios para construir la aplicación.
+
+### Definición básica de Arquetipo Maven Quickstart {#que-es-arquetipe-de-maven}
+
+El Arquetipo Maven Quickstart es una plantilla de proyecto (arquetipo) que genera una estructura mínima y estándar de proyecto en Java Maven con archivos básicos para empezar rápidamente. 
+Genera: 
+- Diseño estándar de directorios (`src/main/java`, `src/test/java`, `recursos`) 
+- Un ejemplo `App.java` y `AppTest.java` 
+- un `pom.xml` con `groupId`, `artifactId`, `version`, empaquetado y configuración básica de compilación/prueba 
+El propósito es proporcionar un punto de partida sencillo y convencional para nuevos proyectos Java para que puedas ejecutar compilación/prueba/paquete mvn inmediatamente. 
+
+Comando común para generar uno:
+```
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-app \
+  -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+```
 
 ### Propósito del directorio de destino (target)
 

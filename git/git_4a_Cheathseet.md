@@ -281,7 +281,7 @@ Esta sección es solo de referencia. Deberíamos usar una **PAT** de Github para
 [^4]: Aprender acerca de Github [Manage Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
 {: .warning }
-Se recomienda encarecidamente utilizar PAT de Github para las operaciones del cliente Git [^4].
+Se recomienda enfáticamente utilizar PAT de Github para las operaciones del cliente Git [^4].
 
 "_Los tokens de acceso personal (PAT) son una alternativa al uso de contraseñas para la autenticación en GitHub cuando se utiliza la API de GitHub o la línea de comandos ._"
 

@@ -42,7 +42,12 @@ Version: 1:2.34.1-1ubuntu1.9
 (...snip...)
 ```
 
-Instalar el paquete.
+Actualizemos el index, o cache, the Ubuntu APT. Esto consigue la lista de paquetes disponible hasta ese momento.
+```bash
+-> sudo apt update
+```
+
+Instalar el paquete de `git`.
 ```bash
 -> sudo apt install  git
 ```
