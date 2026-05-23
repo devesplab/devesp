@@ -29,20 +29,20 @@ Entenderemos que es un usuario, que hace en el sistema y cuál es la esfera de a
 
 Linux es un sistema compartido por usuarios multiples y es necesario tener un método de catalogar, auditar y administrar el acceso a los recursos del ambiente operativo. Para alcanzar ese objetivo Linux usa **Cuentas de Usuarios**. Por lo tanto es importante entender este tema desde el ángulo de Administración De Sistemas.
 
-Los usuarios de Linux tienen ciertas particularidades: los usuarios de Linux suelen ser personas conocedoras de la tecnología y con buenos conocimientos de tecnología informática y programación. Por regla general, los usuarios de Linux suelen preferir el software de código abierto y valoran la flexibilidad y las opciones de personalización que ofrecen los sistemas operativos Linux. Tambien tienden a ser más conscientes de la seguridad y más centrados en la privacidad en comparación con los usuarios de otros sistemas operativos. La categoría de usuarios varía desde los usuarios domésticos ocasionales hasta desarrolladores profesionales y administradores de sistemas, cada uno con sus propias necesidades y preferencias específicas.  Los usuarios de Linux son parte de una comunidad global que colabora en el desarrollo y mejora del ecosistema Linux, compartiendo conocimientos y recursos entre sí.
+Los usuarios de Linux tienen ciertas particularidades: los usuarios de Linux suelen ser personas conocedoras de la tecnología y con buenos conocimientos de tecnología informática y programación. Por regla general, los usuarios de Linux suelen preferir el software de código abierto y valoran la flexibilidad y las opciones de personalización disponibles. Tambien tienden a ser más conscientes de la seguridad y más centrados en la privacidad en comparación con los usuarios de otros sistemas operativos. La categoría de usuarios varía desde los usuarios domésticos ocasionales hasta desarrolladores profesionales y administradores de sistemas, cada uno con sus propias necesidades y preferencias específicas.  Los usuarios de Linux son parte de una comunidad global que colabora en el desarrollo y mejora del ecosistema Linux, compartiendo conocimientos y recursos entre sí.
 
 En lo referente al modo de interacción con el sistema, los usuarios de Linux suelen tener una fuerte preferencia por la interfaz de línea de comandos y se sienten cómodos realizando tareas utilizando la terminal.
 
 ## Conceptos de Usuarios y Grupos
 
-Un Usuario en Linux tiene un nombre de usuario que se usa para identificar a un operador en forma distintiva de otros operadores. El nombre del usuario se usa para entrar al sistema y acceder recursos tales como archivos y carpetas.
+Linux hace uso de nombres de usuarios para identificar a un operador en forma distintiva de otros operadores. El nombre del usuario se usa para entrar al sistema y acceder recursos tales como archivos y carpetas.
 
 Linux usa grupos para juntar usuarios que tiene algo en común, por ejemplo, compartir una carpeta, un proceso, una tarea o un proyecto. Un grupo en si no es un usuario, no se puede entrar a un sistema usando el nombre del grupo.
 
 {: .note }
 Es posible que un usuario pertenesca a grupos multiples!
 
-No viene al caso decir que debemos asegurarnos que no debería haber duplicación de nombres de usuario o groups.
+Esta demas decir que debemos asegurarnos que no debería haber duplicación de nombres de usuario o groups.
 
 ## Tipos de Usuarios
 
@@ -54,7 +54,7 @@ Dependiendo del radio de acción los usuarios en Linux tienen diferente clasific
 | Super Usuario        | Acceso completo al sistema       | 
 | Cuenta de Sistema    | Acceso a un proceo o aplicación  | 
 
-Un ejempo the usuario regular is `devuser` que puede ser una cuenta local creada for el Administrador de Sistemas.<br>
+Un ejempo the usuario regular es `devuser` que puede ser una cuenta local creada for el Administrador de Sistemas.<br>
 
 Un ejemplo de **Super Usuario** es `root` que esta presente en cada sistema de Linux y tiene 100% acceso al sistem entero.<br>
 
@@ -65,8 +65,10 @@ Veamos a continuación una ilustración breve del efecto de usar diferente tipos
 Entremos como el usuario `root` a un sistema y verifiquemos. Luego tratemos de ver el archivo `/etc/shadow` que es muy restrictivo.
 ```
 -> sudo su -
+
 -> id
 uid=0(root) gid=0(root) groups=0(root)
+
 -> tail /etc/shadow
 systemd-timesync:*:19553:0:99999:7:::
 tcpdump:*:19553:0:99999:7:::
@@ -78,8 +80,10 @@ No hay problema con el usuario `root` puesto que tiene aceso a 100% del sistema.
 Cambiemos a un usuario regular y tratemos de ver el archivo `/etc/shadow`.
 ```
 -> su - devuser
+
 -> id
 uid=2045(devuser) gid=2046(devuser) groups=2046(devuser),27(sudo)
+
 -> tail /etc/shadow
 tail: cannot open '/etc/shadow' for reading: Permission denied
 ```

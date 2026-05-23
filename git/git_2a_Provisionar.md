@@ -25,9 +25,6 @@ nav_order: 1
 
 Antes que podamos hacer operaciones de control de revision, debemos instalar el cliente de Git.
 
-En esta leccion exploramos como instalar el cliente de git.
-
-En esta leccion usamos el sistema operativo Ubuntu y RedHat.<br>
 Usamos el cliente de Git >= 2.0
 
 ## Instalar el Client Git en Ubuntu
@@ -36,7 +33,7 @@ Hacemos lo siguiente en `Ubuntu 22.04.2 LTS`.
 
 Veamos si el paquete esta disponible.
 ```bash
-hist:13 -> sudo apt show  git -a
+-> sudo apt show  git -a
 Package: git
 Version: 1:2.34.1-1ubuntu1.9
 (...snip...)

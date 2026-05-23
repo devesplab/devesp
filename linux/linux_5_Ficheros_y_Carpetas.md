@@ -35,6 +35,19 @@ En Linux, los archivos están organizados en una estructura de directorios jerá
 
 Los directorios en Linux son importantes para organizar y administrar archivos y carpetas. Proporcionan una estructura jerárquica que ayuda a los usuarios a navegar fácilmente a través de diferentes directorios y acceder a archivos específicos. Los directorios también ayudan a mantener un sistema de archivos limpio y estructurado, lo que facilita la localización y administración de archivos. Además, los directorios ayudan a configurar permisos y controles de acceso para diferentes usuarios, garantizando la seguridad y privacidad de archivos y datos.
 
+## Listado de Ejemplo de Archivos y Carpetas
+
+Este ejemplo muestra el listado del comando `ls -l` de una carpeta de OpenJDK.
+
+Notese que el carácter inicial de la linea indica el tipo de activo:
+- la letra `d` indica que es una carpeta
+- el simbolo de guión `-` indica que es un archivo
+- la letra `l` indica que es un enlace a otro archivo (or carpeta on otros casos)
+
+![](../../assets/images/archivos-y-carpetas_v1.png)
+
+Las carpetas también pueden identificarse por la barra de terminación `/`.
+
 ## Propósito De Directorios y Ficheros
 
 Cuando ha pasado tiempo que hemos trabajado en un projecto, acumulamos mucha informacíon de tópicos diferentes. A un cierto punto es imperativo agrupar información relacionada para que la podamos manejar mas facil.

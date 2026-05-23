@@ -24,9 +24,9 @@ Frecuentemente no recordamos la sintaxis o las opciones disponibles para un coma
 
 Linux prove las páginas manuals y otros comandos para encontrar ayuda disponible internamente o externamente.
 
-Las páginas manuales de Ubuntu están disponibles en linea en Español [^1]
-
-Las páginas manuales de Linux están disponibles en linea en Inglés [^2]
+Las páginas manuales de Ubuntu están disponibles en linea: 
+- en Español [^1]
+- en Inglés [^2]
 
 [^1]: [Páginas Manuales de Ubuntu en Español](https://manpages.ubuntu.com/manpages/focal/es/)
 [^2]: [Páginas Manuales de Linux en Inglés](https://man7.org/linux/man-pages/index.html)
@@ -172,7 +172,12 @@ TLDR [^4] esta disponible en linea como fuente abierta.
 Red Hat describe el paquete `info` de esta manera:<br>
 _"EL proyecto GNU usa el fichero de formato textinfo para su documentación. EL paquete info provee una manera propia en forma de visualizor en la terminal para ver ficheros de textinfo"_
 
-En RHEL9, si por alguna razón el paquete no esta presente se puede instalar asi:
+En Ubuntu, instalar asi:
+```
+sudo apt install info
+```
+
+En RHEL9, instalar asi:
 ```
 dnf install info
 ```

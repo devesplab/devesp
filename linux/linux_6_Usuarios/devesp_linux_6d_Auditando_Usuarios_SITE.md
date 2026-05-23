@@ -37,7 +37,7 @@ La manera mas elemental de proteger los sistemas es enforzar medidas de segurida
 
 También adoptamos principios de auditaje para asegurarnos que solo cuentas authorizadas interactuan en el entorno.
 
-Linux proves utilidades nativias básicas que ayudan a indentifar la frequencia y tiempo de acceso a los sistemas.
+Linux provee utilidades nativas básicas que ayudan a identifar la frequencia y tiempo de acceso a los sistemas.
 
 En esta lección identificamos comandos para rastrear actividad de usuarios en un sistema de Ubuntu.
 
@@ -78,29 +78,14 @@ Para más información ver la ayuda en linea del comando.
 -> lastlog --help
 ```
 
-## Faillog
+## journalctl
 
-El comando `failog` también puede usarse para chequer actividad de usuarios.
+El comando `journalctl` también puede usarse para chequer actividad de usuarios.
 ```
-root@ubuntu2204-1-devesp
-hist:104 -> faillog -a
-Login       Failures Maximum Latest                   On
-root            0        0   01/01/70 00:00:00 +0000
-daemon          0        0   01/01/70 00:00:00 +0000
-bin             0        0   01/01/70 00:00:00 +0000
-sys             0        0   01/01/70 00:00:00 +0000
-sync            0        0   01/01/70 00:00:00 +0000
-games           0        0   01/01/70 00:00:00 +0000
-man             0        0   01/01/70 00:00:00 +0000
-lp              0        0   01/01/70 00:00:00 +0000
-mail            0        0   01/01/70 00:00:00 +0000
+--> journalctl -u devuser
+-- No entries --
 ```
-El comando `failog`  usa el archivo `/var/log/faillog` para almazenar su información.
-
-Para más información ver la ayuda en linea del comando.
-```
--> faillog --help
-```
+En este ejemplo no hay actividad el usuario `devuser`.
 
 ## Last
 
@@ -112,6 +97,48 @@ reboot   system boot  6.3.13-linuxkit  Sat May 18 20:13   still running
 reboot   system boot  6.3.13-linuxkit  Sat May 18 20:11   still running
 
 wtmp begins Sat May 18 20:11:22 2024
+```
+
+## auth.log
+
+En sistemas Linux como Ubuntu, /var/log/auth.log es un archivo de registro que registra eventos relacionados con la autenticación y la seguridad. Se utiliza principalmente por sistemas que ejecutan syslog tradicional (como rsyslog) para rastrear cualquier cosa relacionada con el inicio de sesión y la verificación de identidad.
+
+Para habilitar esta función, haz esto:
+```
+-> sudo apt install rsyslog
+
+-> sudo systemctl enable --now rsyslog
+```
+Luego podras ver la actividad del sistema en el archivo `/var/log/auth.log`.
+```
+-> sudo tail -f /var/log/auth.log
+```
+Las entradas típicas incluyen: 
+- Intentos de inicio de sesión por SSH (exitosos y fallidos) 
+- Inicios de sesión locales (TTY, sesiones de interfaz gráfica) 
+- Uso de sudo (quién usaba qué como root) 
+- Fallos de autenticación (contraseña incorrecta, usuario inválido) 
+- Eventos PAM (Módulos de Autenticación Enchufables) 
+- Bloqueos de cuenta (si están configurados)
+
+En este ejemplo el usuario `devuser` atenta hacer login a `root` y falla.<br>
+El archivo `auth.log` capturó la actividad indicando la razón: `FAILED SU`
+```
+devuser@devesp
+~
+hist:232 -> su - root
+Password:
+su: Authentication failure
+
+
+Sat 2026May23 04:38:26 UTC
+devuser@devesp
+~
+hist:233 -> sudo tail -f /var/log/auth.log
+2026-05-23T04:38:23.839909+00:00 client1 su: pam_unix(su-l:auth): authentication failure; logname= uid=1001 euid=0 tty=/dev/pts/1 ruser=devuser rhost=  user=root
+2026-05-23T04:38:25.318905+00:00 client1 su[3293]: FAILED SU (to root) devuser on pts/1
+2026-05-23T04:38:32.545058+00:00 client1 sudo:  devuser : TTY=pts/1 ; PWD=/home/devuser ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/auth.log
+2026-05-23T04:38:32.545425+00:00 client1 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
 ```
 
 ## Auditd

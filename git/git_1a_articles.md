@@ -25,6 +25,6 @@ nav_order: 0
 
 En esta sección se encuentran artículos relacionados con Git, incluyendo trucos técnicos, guías de uso y mejores prácticas.
 
-Estaremos agregando más artículos en el futturo a medida que avancemos en el curso y descubramos nuevas funcionalidades y técnicas útiles.
+Estaremos agregando más artículos en el futturo a medida que avancemos en el tema y descubramos nuevas funcionalidades y técnicas útiles.
 
 [Return to main page]({{site.baseurl}}/).

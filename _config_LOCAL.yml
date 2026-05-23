@@ -171,3 +171,6 @@ compress_html:
 favicon_ico: "./assets/images/favicon/favicon.ico"
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "./assets/images/site_logo.jpg"
+
+# For copy button on code
+enable_copy_code_button: true

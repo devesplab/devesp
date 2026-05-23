@@ -3,3 +3,7 @@ markdown*
 *BAK*
 *scratch*
 scratch/
+_site/
+.jekyll-metadata
+.bundle/
+vendor/

@@ -7,7 +7,7 @@ has_toc: false
 nav_order: 1
 ---
 
-# Conceptos e Introducción
+# Conceptos e Introducción a Linux
 {: .no_toc }
 
 <details open markdown="block">
@@ -81,16 +81,16 @@ El [Shell](./linux_7_Shell.md) es el programa que accepta los comandos que entra
 
 Típicamente, Linux ofrece el BASH shell de entrada. Pero hay otros que podemos escoger tales como SH, CSH, TCSH, o ZSH.
 
-Cuando entramos al sistema, decimos que estamos en el Shell. Podemos usar la variable de ambiente `$SHELL` para saber cual nos ha sido asignado defecto. En el ejemplo que sigue, tenemos el BOURNE SHELL o SH.
+Cuando entramos al sistema, decimos que estamos en el Shell. Podemos usar la variable de ambiente `$SHELL` para saber cual Shell tenemos. En el ejemplo que sigue, tenemos el BOURNE SHELL o SH.
 
 ```bash
 $ echo $SHELL
 /bin/sh
 ```
 
-El Shell provee el prompt designado por el signo `$` arriba. El prompt viene a ser el lugar donde podemos entrar comandos. Esto se conoce como la Linea De Comandos.
+El Shell provee el indicador que es designado por el signo dólar `$` arriba. El indicador viene a ser el lugar donde podemos entrar comandos. Esto se conoce como la Linea De Comandos.
 
-A menos que indiquemos de otra manera, usaremos el BASH shell en los ejemplos y ejercicions que hemos de exponer.
+En la documentación general de este sitio, a menos que indiquemos de otra manera, usaremos el BASH shell en los ejemplos y ejercicions que hemos de exponer.
 
 ## Linea De Comandos (Command Line)
 
@@ -165,7 +165,7 @@ comando>>
 Discutiremos el uso del comando `export` en otro documento.
 ## Directorio De Inicio (Home Directory)
 
-El directorio de inicio, o directorio hogar, es donde aterrizamos cuando entramos al sistema y es nuestra base de operaciones. Es aquí donde creamos y mantenemos todos lo archivos, directorios, documentos, imagenes, programas y personalizaciones particulares nuestro entorno de usuario.
+El directorio de inicio, o directorio hogar, es donde aterrizamos cuando entramos al sistema y es nuestra base de operaciones. Es aquí donde creamos y mantenemos todos lo archivos, carpetas, documentos, imagenes, programas y personalizaciones particulares nuestro entorno de usuario.
 
 Tan pronto como entramos al sistema, el comando `pwd` nos asiste para mostrarnos la localidad del directorio de inicio.
 ```bash
@@ -178,7 +178,7 @@ Podemos usar `echo` para mostrar el directorio de inicio en cualquier momento qu
 $ echo $HOME
 /root
 ```
-La localidad estándar donde Linux crea directorios de inicio es bajo `/home`, de manera que usualmente un usuario tendría `/home/<usuario>` como la localidad de hogar. La localidad puede cambiarse de acuerdo al diseño del administrador de sistemas que maneja las cuentas de usuariois.
+La localidad estándar donde Linux crea carpetas de inicio es bajo `/home`, de manera que usualmente un usuario tendría `/home/<usuario>` como la localidad de hogar. La localidad puede cambiarse de acuerdo al diseño del administrador de sistemas que maneja las cuentas de usuariois.
 
 ## Referencias 
 

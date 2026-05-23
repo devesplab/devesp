@@ -26,7 +26,7 @@ nav_order: 2
 
 ## Cuentas Locales En Linux
 
-En corto, una cuenta local es aquella que se maneja usando comandos nativos que se encuentran an nivel del sistema operativo y que no necesita de herramientas externas en la red para funcionar.
+En corto, una cuenta local es aquella que se maneja usando comandos nativos que se encuentran a nivel del sistema operativo y que no necesita de herramientas externas en la red para funcionar.
 
 En esta leccion:
 - Tomaremos un vistazo al manejo de cuentas locales
@@ -132,12 +132,12 @@ El archivo `/etc/shadow` es un archivo con vista restricta solo para `root` o us
 Este es un ejemplo en `/etc/shadow` que muestra una entrada típica para un usuario llamado `user1`.
 ```bash
 -> sudo grep user1 /etc/shadow
-user1:$6$Ozq/xNc8$LADRiie3bHjAp8gkxWvOZlccGthFvmujkbpEoc4jTnf2rgAMFN5ojd2s.ZOikGJQvvF8YEnQzKXVGb2tEVOLZ0:17246:0:99999:7:::
+user1:$6$Una-Cadena-De-Letras-Largas:17246:0:99999:7:::
 ```
 La entrada contiene la siguiente información:
 - `usuario1`: El nombre de usuario del usuario.
 - `$6$` al principio indica que la contraseña se cifró utilizando el algoritmo hash SHA-512.
-- `Ozq/xNc8$LADRiie3bHjAp8gkxWvOZlccGthFvmujkbpEoc4jTnf2rgAMFN5ojd2s.ZOikGJQvvF8YEnQzKXVGb2tEVOLZ0`: Esta es la contraseña cifrada del usuario.
+- `Una-Cadena-De-Letras-Largas`: Esta es la contraseña cifrada del usuario.
 - `17246`: el número de días desde la última vez que se cambió la contraseña.
 - `0`: El número mínimo de días antes de que se pueda cambiar la contraseña.
 - `99999`: El número máximo de días antes de que se deba cambiar la contraseña.
@@ -167,7 +167,6 @@ Estos comandos pueden usarse para listar todos los usuarios que existen en el si
 ```
 Enseguida, veamos is el usuario ficticio `user1` existe.
 ```bash
-
 -> id user1
 -> grep user1 /etc/passwd
 ```
@@ -177,7 +176,7 @@ Enseguida, veamos is el usuario ficticio `user1` existe.
 
 En Ubuntu y RedHat hay dos comandos para crear usuarios: `useradd` y `adduser`.
 
-La diferencia básica entre `/usr/sbin/useradd` y `/usr/sbin/adduser` es que `useradd` es mas simple de usar, mientras que `adduser` es una interfaz más amigable e interactivo`, es decir, nos permite entrar la información requerida al momento de crear la cuenta.
+La diferencia básica entre `/usr/sbin/useradd` y `/usr/sbin/adduser` es que `useradd` es mas simple de usar, mientras que `adduser` es una interfaz más amigable e interactivo, es decir, nos permite entrar la información requerida al momento de crear la cuenta.
 
 El comando `useradd` se puede utilizar para crear nuevos usuarios con configuraciones y opciones _predeterminadas_ especificadas en la línea de comando o en archivos de configuración. Requiere especificar todos los parámetros _explícitamente_ al crear una nueva cuenta de usuario.
 
@@ -195,7 +194,7 @@ Para crear un usuario interactivamente, simplemente pasemos el nombre del usuari
 
 > Tanto el id del usuario como el id del group son generados automáticamente
 
-```yaml
+```sh
 -> adduser appuser
 Adding user `appuser' ...
 Adding new group `appuser' (1000) ...
@@ -252,7 +251,7 @@ El comando `adduser` mostró la linea `Copying files from /etc/skel` indicando l
 Vemos que la contraseña encripta a sido creada
 ```bash
 -> grep appuser /etc/bashadow
-appuser:$y$j9T$.aN1RbQXlVwzRNvI18uCR.$mPzqtEz2WTyb03eJ2.C7lsroaAjFdfdAh.TssUyYZs7:19861:0:99999:7:::
+appuser:$y$Una-Cadena-De-Letras-Largas:19861:0:99999:7:::
 ```
 
 El grupo del usuario se ha creado automáticamente
@@ -306,7 +305,7 @@ passwd: password updated successfully
 Verifiquemos que la contraseña se creo.
 ```bash
 -> grep techuser /etc/shadow
-techuser:$y$j9T$gQtiW96hN/wjuClWzU0sr.$/NSWKHNtTg01XtCVUPrBrC4jBM3lPa.bqx21d/evRq4:19861:0:99999:7:::
+techuser:$y$Una-Cadena-De-Letras-Largas:19861:0:99999:7:::
 ```
 
 ### Modificar Usuario
@@ -326,7 +325,7 @@ El comando `chage` está restringido al usuario `root`, excepto la opción `-l`,
 
 Aqui, el usuario `appuser` usa el comando `chage -l` para chequear el estado de su cuenta. 
 ```bash
-appuser@ubuntu2204-1-devesp:~$ chage -l appuser
+-> chage -l appuser
 Last password change                                      : May 18, 2024
 Password expires                                          : never
 Password inactive                                         : never
@@ -383,7 +382,7 @@ Number of days of warning before password expires         : 10
 Todos los cambion se ven en `/etc/shadow` en los campos correspondientes.
 ```bash
 -> grep appuser /etc/shadow
-appuser:$y$j9T$P2Wk5imw0AqKdMnzMHCoz.$vJxs5FqmYoorHrUAgN18Qq2Z98Xq00BmAK4/lkqHQG1:19861:180:200:10:30:20088:
+appuser:$y$Una-Cadena-De-Letras-Largas:19861:180:200:10:30:20088:
 ```
 
 Para más información ver la ayuda en linea del comando.
@@ -448,7 +447,7 @@ Para bloquear un usuario usemos la bandera `-l` asi:
 Podemos chequear el estado del usuario de esta manera:
 ```bash
 -> grep techuser /etc/shadow
-techuser:!$y$j9T$gQtiW96hN/wjuClWzU0sr.$/NSWKHNtTg01XtCVUPrBrC4jBM3lPa.bqx21d/evRq4:19861:0:99999:7:::
+techuser:!$y$Una-Cadena-De-Letras-Largas:19861:0:99999:7:::
 ```
 El símbolo `!` se agregó despues del primer `:` indicando esta cuenta esta bloqueada y no puede usarse para entrar al sistema.
 
