@@ -40,11 +40,11 @@ Cambia a root o usa sudo para todos los comandos:
 ```
 -> sudo -i
 ```
-Detén servicios no esenciales para liberar E/S y evitar crecimiento de logs:
+Detén servicios no esenciales para evitar crecimiento de logs (ajusta según el sistema):
 ```
--> sudo systemctl stop apache2 mysql postfix docker  (ajusta según el sistema)
+-> sudo systemctl stop apache2 mysql postfix docker  
 ```   
-Abre una consola raíz en un tty separado si la interfaz gráfica no responde: Ctrl+Alt+F3.
+Abre una consola raíz en un tty separado si el interfaz gráfico no responde.  
 
 ## Identificar qué está lleno
 
@@ -120,47 +120,94 @@ Eliminar paquetes huérfanos y cachés:
 
 Localiza y borra un archivo grande no esencial (alivio temporal). Ejemplo:
 ```
--> sudo rm /ruta/a/archivo-grande
+-> sudo rm /paso/a/archivo-grande
 ```   
 
-Si rm falla por archivos borrados pero abiertos, identifícalos y libera su espacio:
+Si `rm` falla por archivos borrados pero abiertos, identifícalos y libera su espacio:
 ```
 -> sudo lsof -nP | grep '(deleted)'
--> reinicia el servicio propietario o mata el PID: sudo systemctl restart <servicio> o sudo kill -9 <PID>
+```
+
+Crea espacio temporal moviendo archivos grandes a otra partición:
+```
+-> sudo mv /paso/a/archivo-grande /mnt/temporal/
 ```   
 
-Crea espacio temporal moviendo archivos grandes a otro disco o USB:
-```
--> sudo mv /ruta/archivo-grande /mnt/usb/
-```   
+{: .warning }
+NO HAGAS ESTO: `sudo rm -rf /paso/archivo-grande/*`<br>
+Esa acción en un sistema activo puede tener resultados inesperados.
 
-Si /tmp está lleno, limpia de forma segura:
+## Limpiar Archivo Grande
+
+Supongamos que queremos limpiar `/tmp`. <br>
+Primero que nada, no debemos borrar el contenido entero the un sistema que esta corriendo.<br>
+No hagas esto:
 ```
--> sudo rm -rf /tmp/*
+rm -rf /tmp/*
 ```
+
+Para limpiar un archivo grande, sigue los pasos a seguir.
+
+Por ejemplo, operemos en archivos de 7 dias os más de viejos.
+
+Listar archivos viejos:
+```
+find /tmp -type f -mtime +7
+```
+Borrar archivos 7 días o más de viejos.
+```
+sudo find /tmp -type f -mtime +7 -delete
+```
+Borrar carpetas 7 días o más de viejos..
+```
+sudo find /tmp -mindepth 1 -mtime +7 -exec rm -rf {} +
+```
+En sistemas que utilizan systemd, el enfoque preferido suele ser:
+```
+systemd-tmpfiles --clean
+```
+porque respeta las políticas de limpieza configuradas. 
+
+Puedes consultar la póliza aquí:
+```
+cat /usr/lib/tmpfiles.d/tmp.conf
+```
+o aqui:
+```
+cat /etc/tmpfiles.d/*.conf
+```
+Un patrón de limpieza manual más seguro en los sistemas de producción es:
+```
+sudo find /tmp -xdev -type f -atime +3 -delete
+```
+Eso evita cruzar los límites del sistema de archivos y solo elimina archivos antiguos no utilizados.
+
+También nota: 
+- muchos sistemas Linux limpian automáticamente /tmp 
+- Reiniciar puede borrar /tmp dependiendo de la distribución/configuración 
+- /var/tmp está pensado para archivos temporales de mayor duración y normalmente sobrevive al reinicio
 
 ## Comprobar la salud del sistema de archivos
 
-1. Para particiones desmontadas, ejecuta fsck (desde recuperación o live USB):
+1. Para particiones desmontadas, ejecuta `fsck` (desde recuperación o live USB):
 ```
 -> sudo umount /dev/sdXN
 -> sudo fsck -f /dev/sdXN
 ```   
-2. Para la raíz, arranca en recuperación o usa medios en vivo para ejecutar fsck.
+2. Para la raíz, arranca en recuperación o usa medios en vivo para ejecutar `fsck`.
 
 ## Prevenir recurrencias (tareas de seguimiento)
 
 1. Añade monitorización y alertas:
-   - Scripts cron sencillos que envíen df -h por correo o usa monitorización (Prometheus + node_exporter, Netdata).
+   - Scripts cron sencillos que envíen df -h por correo o usa monitorización (Prometheus + node_exporter + Grafana).
 2. Añade herramientas de análisis de uso:
-   - Instala ncdu para análisis interactivo: `sudo apt-get install ncdu`
+   - Instala `ncdu` para análisis interactivo: `sudo apt-get install ncdu`
    - Ejecuta: `sudo ncdu /`
 3. Configura rotación de logs y limita el tamaño del journal:
    - Edita `/etc/systemd/journald.conf: SystemMaxUse=200M`
    - Asegura políticas adecuadas en `/etc/logrotate.d`.
 4. Mueve directorios grandes y volátiles a particiones más grandes (ej.: mover `/var/lib/docker` o `/home` a otro disco) y usa bind-mounts.
-5. Considera snapshots LVM o redimensionar volúmenes para flexibilidad (comandos LVM o herramientas del proveedor cloud).
-6. Usa cuotas en sistemas multiusuario:
+5. Usa cuotas en sistemas multiusuario:
    - `sudo apt-get install quota`; configura `/etc/fstab` y `edquota`.
 
 ## Comandos diagnósticos rápidos (one-liners)

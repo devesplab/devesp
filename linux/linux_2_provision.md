@@ -34,30 +34,29 @@ La sección de [referencias](#referencias) de esta página muestra una lista the
 La manera típica de obtener una distribución es ir al sitio del distribuidor y descargar 
 la imagen en formato de ISO, la cual puede descargarse en mas de una manera.
 
+La imagen **Ubuntu** puede obtenerse aquí:
+```
+https://ubuntu.com/download?utm_source=chatgpt.com
+```
+Ver la documentatción para [Instalar Ubuntu](https://documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop/?utm_source=chatgpt.com).
+
 La imagen ISO de **RHEL9** puede encontrarse en esta URL.
 ```
 https://developers.redhat.com/products/rhel/download
 ```
 
-La ultima imagen de **CentoS 7.9** se obtiene aqui:
+Las imagenes de **CentoS 7.9** se obtiene aqui:
 ```
-https://mirrors.edge.kernel.org/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso
-```
-
-La imagen de **CentOS 8 Stream**.
-* directamente del sitio de internet usando el URL en el navegador web.
-```
-https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso
-```
-* directamente en la linea de comandos en un terminal usando el el comando `wget`
-```
-wget https://mirrors.edge.kernel.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230509.0-x86_64-dvd1.iso
+https://vault.centos.org/7.9.2009/
+https://vault.centos.org/7.9.2009/isos/x86_64/
 ```
 
 {: .warning }
-> CentOS sera eventualmente descontinuado. Se recomienda usar RedHat.<br>
-> La fecha de final de vida de CentOS 7 es Junio 30, 2024.<br>
+> CentOS ha sideo descontinuado. Se recomienda usar RedHat.<br>
+> La fecha de final de vida de CentOS 7 fue Junio 30, 2024.<br>
 > Ver https://endoflife.software/operating-systems/linux/centos
+
+Es mas recomendable descargar [RedHat](https://developers.redhat.com/products/rhel/download?utm_source=chatgpt.com#downloadsbyrelease).
 
 Los ISO estan generalmente disponibles en varias localidades sincronizadas conocidos como "espejos" porque reflejan el mismo contenido. Podemos escoger un espejo que este cerca geograficamente a nuestra localidad para que el descargue sea más rápido; esto es importante en lugares donde la velocidad de internet no es óptima.
 
@@ -84,7 +83,8 @@ El requerimiento de disco duro aumenta dependiendo de los paquetes escogidos par
 
 ### Entender Actualización y Seguridad
 
-Fedora tiene un [ciclo](https://docs.fedoraproject.org/en-US/releases/lifecycle/) se actualizacion agresivo de cada seis meses lo que hace muy difícil mantener los sistemas al dia. De otro lado, Ubuntu tiene un [ciclo](https://ubuntu.com/about/release-cycle) mas largo; la version  mas estable se conoce come la version de lanzamiento a largo plazo (LTS, o Long Term Support).
+Diferentes sistemas operativos tienen distintos ciclos de actualización. Por ejemplo, el [ciclo de Fedora](https://docs.fedoraproject.org/en-US/releases/lifecycle/) es agresivo, ya que publica una nueva versión cada seis meses, lo que hace más difícil mantener los sistemas al día. Por otro lado, el [ciclo de Ubuntu](https://ubuntu.com/about/release-cycle) es más largo; la versión más estable se conoce como la versión de soporte a largo plazo (LTS, o Long Term Support).
+
 
 {: .note }
 Es importante entender el ciclo de vida de los diferentes sistems operativos.

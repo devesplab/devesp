@@ -33,7 +33,7 @@ Una cuenta típica de usuario se ve de esta manera:
 ```bash
 devuser:x:2085:2086::/home/devuser:/bin/bash
 ```
-Esa entrada muestra el nombre del usuario `devuser`, el directorio de inicio `/home/devuser` y el shell `/bin/bash`. Cada uno de esos detalles puede ser personalizado. Para mas información ver la página referente a [Usuarios](linux_6_Usuarios.md).
+Esa entrada muestra el nombre del usuario `devuser`, el directorio de inicio `/home/devuser` y el shell `/bin/bash`. Cada uno de esos detalles puede ser personalizado. Para mas información ver la página referente a [Usuarios](./linux_6_Usuarios.md).
 
 ## Directorio de Inicio
 

@@ -23,9 +23,9 @@ nav_order: 1
 
 ---
 
-# Ansible Hello World
+## Ejemplo Simple De Ansible Playbook
 
-Ansible Hello World es un playbook sencillo que demuestra la estructura básica y la funcionalidad de un playbook de Ansible. A menudo se utiliza como punto de partida para aprender Ansible o para probar instalaciones de Ansible.
+Ansible Hello World es un playbook sencillo que demuestra la estructura básica y la funcionalidad de un playbook de Ansible. A menudo se utiliza como punto de partida para aprender o para probar instalaciones de Ansible.
 ```yaml
 - name: Ansible Hello World
   hosts: localhost

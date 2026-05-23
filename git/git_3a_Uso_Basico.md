@@ -32,15 +32,27 @@ En esta página discutimos lo siguiente:
 En esta leccion usamos el sistema operativo Ubuntu.<br>
 Usamos el cliente de Git >= 2.0
 
-## Comandos Básicod de Git
+## Comandos Básico de Git
 
-Estos son los comandos que usamos con frequencia cuando interactuamos con git.
+Supongamos que tenemos una fuente de código en la que deseamos implementar control de revision.
 
+Lo primero que hacemos es cambiar a esa carpeta que contiene el código.
+```
+-> cd myApp
+```
 Inicializar repositorio:
 ```
-git init myRepo
+-> git init myApp
+```
+Hagamos `main` la rama por defecto (sugerido for el comando init anterior).
+```
+-> git branch -m main
 ```
 Hacer seguimiento de archivos que cambian:
+```
+git status
+```
+Pongamos archivos bajo revision.
 ```
 git add <archivo> 
 ```
@@ -48,11 +60,16 @@ Confirmar cambios en un archivo:
 ```
 git commit -am"mis actualizaciones"
 ```
-Agregar un origin:
+Ahora tenemos que mandar nuestro fuente de código a un origen. <br>
+
+{: .note }
+En Git, `origin` [origen] es el apodo predeterminado del repositorio remoto al que está conectado tu repositorio local.
+
+Procedamos a agregar un origen:
 ```
 git remote add <nombre-de-origen> <git-url>
 ```
-Empujar cambios locales:
+Empujar cambios locales al origen:
 ```
 git push <archivo> <rama>
 ```
@@ -65,7 +82,15 @@ Bajar las actualizaciones mas recientes:
 git pull origin <branch>
 ```
 
-## Usando Git Por Vez Primera
+El cliente de git identifica un origen con dos parámetros:
+
+nombre-de-origen 
+: es el nombre legible con el que git indentifica la connexion remota
+
+git-url
+: es la URL conocida en el servido de Github
+
+## Ejemplo Usando Git Por Vez Primera
 
 A continuación vamos a ejercitar el uso de git.
 
@@ -123,19 +148,19 @@ Podemos usar cualquier nombre que deseamos para nombrar la rama prederminada de 
 Si así lo deseamos, podemos configurar nuestro sistema local de tal manera que cada vez que creamos un repositorio tomará `main` como el nombre de la rama predeterminada. Para lograr esto usamos el comando siguiente:
 
 ```bash
--> git config --global init.defaultBranch main
+git config --global init.defaultBranch main
 ```
 
 Para verificar el ajuste usemos este comando.
 
 ```bash
--> git config --global init.defaultbranch
+git config --global init.defaultbranch
 ```
 
 Para listar todos los ajustes que tenemos usemos este comando
 
 ```bash
--> git config --global --list
+git config --global --list
 ```
 
 Si tiempo después de hacer el ajuste a usar `main` como rama predeterminada, queremos usar una nueva rama llamada `develop`, la podemos cambiar así:
@@ -147,7 +172,7 @@ git config --global init.defaultBranch develop
 Si no deseamos tener rama predeterminada en nuestro sistema local, hacemos lo siguiente:
 
 ```bash
--> git config --global --unset init.defaultBranch
+git config --global --unset init.defaultBranch
 ```
 
 Github registra todos los ajustes personalizados en el archvo `$HOME/.gitconfig`. El ajuste para rama predeterminada se ve así:
@@ -160,7 +185,7 @@ Github registra todos los ajustes personalizados en el archvo `$HOME/.gitconfig`
 Además de hacer el ajuste con `git config`, debemos cambiar el repositorio en que estamos trabajando de esta manera:
 
 ```bash
--> git branch -m main
+git branch -m main
 ```
 
 ## Clonar Repositorio Externo
@@ -168,23 +193,23 @@ Además de hacer el ajuste con `git config`, debemos cambiar el repositorio en q
 Github provee el cliente de `git` para manipular control de revision en nuestra sistema local.
 
 {: .important }
-Si aún no lo has hecho, sigue las instructiones para instalar el cliente de git en tu sistema.
+Si aún no lo has hecho, sigue las instructiones para [instalar el cliente de git](git_2a_Provisionar.md) en tu sistema.
 
-Para usar un repositorio existente en [github](https://github.com), solo tenemos que clonarlo usando el cliente the git.
-```
--> git clone https://github.com/devesplab/git-devesp.git
+Para usar un repositorio existente en [github](https://github.com), solo tenemos que clonarlo usando el cliente the git. Usemos aqui un ejemplo con un repositorio real:
+```bash
+git clone https://github.com/devesplab/git-devesp.git
 ```
 
 El comando anterior creará un directorio con el nombre del repositorio `git-devesp`. Podemos cambiar a ese directorio y empezar a trabajar.
-```
--> cd git-devesp
+```bash
+cd git-devesp
 ```
 
 ## Manejando El Origen
 
 El origen ("origin" en Inglés) de git es una referencia a la URL o API de punto de donde podemos bajar o empujar cambios.
 
-Cuando clonamos un repositorio usando `git clone`, el origin es `origin` for defecto y apuntando a la URL de Github.
+Cuando clonamos un repositorio usando `git clone`, el origin predeterminado se llama `origin` y apunta a la URL de Github.
 
 Cuando creamos un repositorio local, debemos agregar la referencia al origen para poder bajar y empujar cambios.
 
@@ -222,7 +247,7 @@ devuser@ubuntu2204-2-devesp
 ```
 
 {: .warning }
-Github no permite el uso de contraseñas. Debemos usar un TOKEN para autenticación.
+En lo referente a autenticación, Github no permite el uso de contraseñas. Debemos usar un TOKEN.
 
 En el ejemplo anterior truncamos el token para mejor legibilidad.
 
@@ -234,9 +259,7 @@ devuser@ubuntu2204-2-devesp  git(main)
 ~/data
 -> git status
 On branch main
-
 No commits yet
-
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
@@ -289,9 +312,8 @@ git
 : cliente de github para la manipulación local de control de version de repositorios de github
 
 ### Referencias Utiles
-
+<br>
 DevEsp :: Linux
-
 - [git-devesp](https://github.com/devesplab/git-devesp.git)
 
 Referencias en línea:
