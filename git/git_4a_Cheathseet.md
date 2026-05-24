@@ -203,7 +203,7 @@ Este comando confirma el remoto con el cual interactuamos.
 
 En ocasiones deseamos omitir, o no rastrear cambios a archivos o carpetas que no son relevantes a la fuente de código en la que estamos trabajando. Github provee tal mecanismo via el archivo de configuración `.gitignore`.
 
-> Vea el articulo relacionado con [Ignorar Archivos de Git en Linux](./git_articles/git-1b-ignore-LINUX.md), y tambien [Ignorar Archivos de Git en Linux](./git_articles/git-1a-gnore-MACOS.md)
+> Vea el articulo relacionado con [Ignorar Archivos de Git en Linux](./git_articles/git-1b-ignore-LINUX.md), y tambien [Ignorar Archivos de Git en MacOS](./git_articles/git-1a-gnore-MACOS.md)
 
 El contenido del archivo `.gitignore` causa que el cliente de git no rastree cambios o adiciones a la fuente de código que coinciden con los patrónes de regex que hemos definido.
 ```
@@ -220,6 +220,8 @@ miArchivoExcluido
 .chef/*.pem
 .chef/encrypted_data_bag_secret
 ```
+
+De aqui en adelante debemos mantener ese archivo y actualizarlo come sea necessario.
 
 ## Rastrear un Archivo en GIT
 
