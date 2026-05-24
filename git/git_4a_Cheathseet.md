@@ -221,6 +221,8 @@ miArchivoExcluido
 .chef/encrypted_data_bag_secret
 ```
 
+De aqui en adelante debemos mantener ese archivo y actualizarlo come sea necessario.
+
 ## Rastrear un Archivo en GIT
 
 Crea un archivo y ponerlo bajo control de revisión.
