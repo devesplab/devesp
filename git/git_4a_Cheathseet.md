@@ -86,9 +86,6 @@ Crear un nuevo repositorio desde la línea de comandos
 -> git push -u origin main
 ```
 
-{: .note }
-Más adelante, el usuario sube el repositorio a una ubicación externa tal como `github.com`. Explicamos esto mas adelante.
-
 ## Operaciones de origen de GIT
 
 Añadir un origen a un repositorio Git permite especificar lo localidad remota predeterminada asociada a tu proyecto local. Esto simplifica la colaboración y el control de versiones, ya que proporciona un punto de referencia práctico para enviar cambios y obtener actualizaciones desde una ubicación remota compartida. El origen actúa como un _alias_ para la URL del repositorio remoto, que suele estar alojado en plataformas como GitHub, GitLab o Bitbucket. Esto facilita la gestión de conexiones remotas.
@@ -204,32 +201,14 @@ Este comando confirma el remoto con el cual interactuamos.
 
 ## Ignorar archivos en Git
 
-En **MACOS X** ignoremos las carpetas ocultas nombradas `.DS_Store` [^3].
+En ocasiones deseamos omitir, o no rastrear cambios a archivos o carpetas que no son relevantes a la fuente de código en la que estamos trabajando. Github provee tal mecanismo via el archivo de configuración `.gitignore`.
 
-[^3]: Vea esta publicación de stackoverflow sobre [ignoring .DS_Store]( http://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder) activado en cada carpeta y subcarpeta
+> Vea el articulo relacionado con [Ignorar Archivos de Git en Linux](./git_articles/git-1b-ignore-LINUX.md), y tambien [Ignorar Archivos de Git en Linux](./git_articles/git-1a-gnore-MACOS.md)
 
-Este comando encuentra toda carpeta que tiene el patrón `.DS_Store` como parte del nombre de la carpeta.<br>
-El comando se ejecuta dentro del repositorio local y borra todas las carpetas que encuentra que coincide con la expresion regular especificada por el argumento a `-name`.
-```
--> find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch??
-```
-Crear un archivo `.gitignore` global.
-```
--> echo ".DS_Store" > /Users/devuser/.gitignore
-```
-Configurar git para usar `.gitignore` globalmente.
-```
--> git config --global core.excludesfile /Users/devuser/.gitignore
-```
-Como observamos, hemos creado `$HOME/.gitignore`. Eso hace que la configuración este disponible por defecto a todo repositorio de git que se encuentre en el directorio hogar del usuario.
-
-Añade contenido a `.gitignore`. <br>
-
-> Ten en cuenta que puedes añadir comentarios usando `#`.
-
+El contenido del archivo `.gitignore` causa que el cliente de git no rastree cambios o adiciones a la fuente de código que coinciden con los patrónes de regex que hemos definido.
 ```
 -> cat .gitignore
-.DS_Store
+miArchivoExcluido
 *.iso
 *.log
 *.tar.gz
@@ -241,11 +220,8 @@ Añade contenido a `.gitignore`. <br>
 .chef/*.pem
 .chef/encrypted_data_bag_secret
 ```
-Lo configuración anterior indica que no queremos enviar archivos de tipo ISO, LOG, TAR o GZ. <br>
-Podemos añadir mas patrones de expresiones regulares según sea necesario. <br>
-La entrada `.*` ignora archivos ocultos como `.bashrc`.
 
-## Operaciones con archivos GIT
+## Rastrear un Archivo en GIT
 
 Crea un archivo y ponerlo bajo control de revisión.
 ```
@@ -336,7 +312,7 @@ Supongamos que tenemos una rama de desarrollo llamada `dev1` y deseamos comparar
 -> git diff origin dev1
 -> git push origin dev1 --dry-run
 ```
-Usa [difftool](https://git-scm.com/docs/git-difftool) en MACOC, lo cual muestra una interfaz de usuario JAVA
+Usa [difftool](https://git-scm.com/docs/git-difftool) en MACOS, lo cual muestra una interfaz de usuario JAVA
 ```
 -> git difftool origin/dev1
 ```
@@ -382,7 +358,15 @@ El comando `git log` se utiliza para mostrar un historial cronológico de las co
 -> git log --pretty=format:"%h %s" --graph
 ```
 
-## Git PULL
+## Acciones de Git 
+
+A seguir, vemos las operaciones principales que conducimos cuando interactuamos coun una fuente de código:
+- bajamos la fuente de código
+- hacemos cambios
+- empujamos los cambios
+- manipulamos las ramas... etc
+
+### Git PULL
 
 El comando `git pull` es para operaciones de `Fusionar - Sincronizar` un repositorio local con las ultimas actualizaciones que se encuentras en el repositorio remoto. 
 
@@ -402,8 +386,7 @@ El comando `git pull` sin argumentos proporciona información útil sobre las ra
 $ git pull
 ```
 
-## GIT Push
-
+### GIT Push
 
 Tras realizar cambios en el proyecto y para preservarlos, el objetivo es transferirlos a una ubicación remota.
 
@@ -427,7 +410,7 @@ Envía los cambios al servidor Git.
 -> git push origin main
 ```
 
-## Git FETCH
+### Git FETCH
 
 Cuando ejecuta `git fetch`, recupera actualizaciones de un repositorio remoto y actualiza su copia local de las ramas remotas (como origin/main), pero no modifica automáticamente su directorio de trabajo actual ni sus ramas locales.
 
@@ -441,7 +424,7 @@ El comando `git fetch` descarga todas las ramas del repositorio.
 La operacion de `fetch` descarga lo último del control remoto sin intentar fusionar o rebasar nada.
 
 
-## Git RESET
+### Git RESET
 
 El comando `git reset` sincroniza forzosamente tu rama actual con la rama principal remota, descartando todos los cambios y confirmaciones locales que no se hayan enviado ni fusionado. Úsalo con precaución, ya que puede provocar la pérdida de datos de trabajos no enviados ni enviados.
 
@@ -456,7 +439,10 @@ Luego, `git reset` restablece la rama principal a lo que acabas de obtener. La o
 
 ## Ramas de GIT
 
-La gestión de ramas en GitHub es un aspecto clave del desarrollo colaborativo de software, ya que permite a los equipos trabajar en diferentes funciones, correcciones o experimentos simultáneamente sin conflictos. A continuación, se presentan algunos conceptos generales:
+La gestión de ramas en GitHub es un aspecto clave del desarrollo colaborativo de software, ya que permite a los equipos trabajar en diferentes funciones, correcciones o experimentos simultáneamente sin conflictos.  
+
+{: .highlight }
+No es posible trabajar con el control de revisiones sin una comprensión básica de las ramas.
 
 Puedes realizar las siguientes tareas:
 
@@ -464,9 +450,6 @@ Puedes realizar las siguientes tareas:
 - Crear y fusionar solicitudes de extracción
 - Aplicar reglas de protección de ramas para evitar anulaciones accidentales
 - Adoptar una estrategia de sucursales, como sucursales de larga o corta duración.
-
-{: .highlight }
-No es posible trabajar con el control de revisiones sin una comprensión básica de las ramas.
 
 Una buena comprensión de las tareas de las ramas garantizará que los equipos colaboren eficazmente para mantener el código.
 

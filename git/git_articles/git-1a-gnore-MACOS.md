@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Ignorando Archivos DStore
-permalink: /ignore_DStore/
+title: Ignorando Archivos en MacOS
+permalink: /git-ignore-macos/
 parent: Artículos De Git  
 has_children: false
 has_toc: false
 nav_order: 1
 ---
 
-# Ignorando Archivos .DStore en Git (MacOS)
+# Ignorar archivos de Git en MACOS
 
 {: .no_toc }
 
@@ -23,10 +23,20 @@ nav_order: 1
 
 ---
 
+Ignorar cierto tipo de recursos en una fuente de código puede ser tan impmortante como los recursos que deseamos rastrear. Ester articulo se concentra como manejamos esto en MACOS X.
+
+## Ignorando Archivos .DStore en Git (MacOS)
+
 {: .note }
-Este articulo es especifico a MacOS, pero el concepto de ignorar archivos es aplicable a cualquier sistema operativo y a cualquier tipo de archivo que use Git.
+Este sección es especifico a MacOS, pero el concepto de ignorar archivos es aplicable a cualquier sistema operativo y a cualquier tipo de archivo que use Git.
 
 Es una buena práctica ignorar ciertos archivos en tu repositorio de Git que no son necesarios para tu proyecto. Un archivo común que debe ser ignorado es `.DS_Store`. Estos archivos son creados por el Finder de macOS para guardar atributos personalizados de una carpeta, como posiciones de iconos y opciones de visualizaciíon. No son necesarios para tu proyecto y pueden saturar tu repositorio Git. Para evitar que estos archivos sean rastreados por Git, puedes agregarlos a tu archivo `.gitignore`.
+
+> En **MACOS X** ignoremos las carpetas ocultas nombradas `.DS_Store` [^1].<br>
+
+[^1]: Vea esta publicación de stackoverflow sobre [ignoring .DS_Store]( http://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder) activado en cada carpeta y subcarpeta
+
+Para excluir un archivo tal como `.DS_Store` de toda actividad de git, agregamos el nombre del archivo a `.gitignore`.
 
 ```
 -> cat .gitignore
