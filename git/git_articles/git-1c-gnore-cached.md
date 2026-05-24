@@ -56,6 +56,7 @@ Para evitar que Git rastree la carpeta `_site/`, hacemos lo siguiente:
 
 ```
 git rm -r --cached _site/
+echo "_site/" >> .gitignore
 git add .gitignore
 git commit -m "Dejar de rastrear _site/ y actualizar .gitignore"
 ```
@@ -63,8 +64,9 @@ git commit -m "Dejar de rastrear _site/ y actualizar .gitignore"
 Lo anterior indica lo siguiente: 
 - `--cached` elimina archivos solo del seguimiento de Git 
 - `-r` es requerida para traversar la carpeta
-- El directorio `_site/` real permanece en el disco 
-- Los futuros cambios bajo `_site/` serán ignorados 
+- `echo` agrega el nombre de la carpeta a `.gitignore`
+- la carpeta `_site/` real permanece en el disco 
+- `git commit` es para que los futuros cambios bajo `_site/` serán ignorados 
 
 Puedes comprobarlo después con:
 ```
@@ -79,6 +81,7 @@ Podemos dejar de rastrear archivos de la misma manera que lo hicimos con carpeta
 
 ```
 git rm --cached nombreDeArchivo
+echo "nombreDeArchivo" >> .gitignore
 git commit -m "Stop tracking nombreDeArchivo"
 git status
 ```
