@@ -227,3 +227,5 @@ readlink
 
 Paginas Manuales
 - [readlink](https://manpages.ubuntu.com/manpages/stonking/man1/readlink.1.html)
+
+[Return to main page]({{site.baseurl}}/)

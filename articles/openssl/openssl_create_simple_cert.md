@@ -8,6 +8,9 @@ has_toc: false
 nav_order: 1
 ---
 
+## Creación de Certificados PEM con Openssl
+
+
 {: .no_toc }
 
 <details open markdown="block">
@@ -18,9 +21,6 @@ nav_order: 1
 - TOC
 {:toc}
 </details>
-
-
-# Creación de Certificados PEM con Openssl
 
 **DESCRIPCION**
 
@@ -37,7 +37,7 @@ ninguna
 **REQUERIMIENTOS**
 
 Sistema de linux Ubuntu. <br>
-Alguos comandos requieren privilegios elevados.<br>
+Algunos comandos requieren privilegios elevados.<br>
 Instalar el paquete de OpenSSL.
 
 **ADVERTENCIA**
@@ -48,7 +48,7 @@ Aunque no está estrictamente prohibido, nunca deberías usar un certificado sin
 
 En esta leccion usamos el sistema operativo Ubuntu.
 
-```
+```bash
 -> lsb_release -a
 Distributor ID:	Ubuntu
 Description:	Ubuntu 24.04.4 LTS
@@ -57,15 +57,33 @@ Codename:	noble
 ```
 
 Version de OpenSSL.
-```
+
+```bash
 -> openssl version
 OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
 ```
 
-## Instalar Openssl
+## Guía Rápida
+
+Comandos para crear un certificado SSL PEM sencillo sin contraseña:
+
+```bash
+# instalar openssl
+sudo apt update
+sudo apt install openssl ca-certificates -y
+
+# crear certificado
+openssl genrsa -out server.pem 2048
+openssl req -new -x509 -key server.pem -out server.crt -days 9999
+cp server.pem server.key
+openssl req -new -x509 -key server.key -out server.crt -days 9999
+```
+
+## Instalar OpenSSL
 
 Antes de continuar, instala el paquete de openssl:
-```
+
+```bash
 sudo apt update
 sudo apt install openssl ca-certificates -y
 ```
@@ -78,34 +96,26 @@ En Ubuntu hace lo siguiente:
 - Proporciona el `/etc/ca-certificates.conf` que lista las CA gestionadas. 
 - Proporciona la utilidad `update-ca-certificates` para añadir/eliminar/actualizar las CA de confianza y regenerar el paquete.
 
-
-## Pasos en resumen para crear un certificado PEM
-
-Comandos para crear un certificado SSL PEM sencillo sin contraseña:
-```
--> openssl genrsa -out server.pem 2048
--> openssl req -new -x509 -key server.pem -out server.crt -days 9999
--> cp server.pem server.key
--> openssl req -new -x509 -key server.key -out server.crt -days 9999
-```
-
 ## Crear Certificado
 
 Crea un directorio donde hacer tu trabajo. Cambio en el directorio
-```
+
+```bash
 Sat 2026May16 22:37:03 UTC
 devuser@devesp
 ~
 hist:288 -> mkdir ssl-workdir && cd ssl-workdir
 ```
 
-Genera una nueva clave privada RSA de `2048 bits` y escríbela en el archivo `server.key`. El archivo clave estará en formato PEM (sin cifrar).
-```
+Genera una nueva clave privada RSA de `2048 bits` y escríbele en el archivo `server.key`. El archivo clave estará en formato PEM (sin cifrar).
+
+```bash
 -> openssl genrsa -out server.key 2048
 ```
 
 A continuación, genera un certificado `X.509` autofirmado a partir de la clave privada y escríbelo en `server.crt`. Pulsa "enter" en todas las preguntas dejando en blanco. El resultado es un archivo en texto plano. 
-```
+
+```bash
 -> openssl req -new -x509 -key server.key -out server.crt -days 9999
 You are about to be asked to enter information that will be incorporated
 into your certificate request.
@@ -122,23 +132,26 @@ Organizational Unit Name (eg, section) []:
 Common Name (e.g. server FQDN or YOUR name) []:
 Email Address []:
 ```
-Opciones utilizadas: 
+
+Opciones utilizadas:
+
 - `OpenSSL Req`: solicitud de certificados y utilidad generadora de certificados. 
-- `-new`: crear una nueva solicitud (aquí usada para crear un certificado). 
-- `-x509`: emite un certificado autofirmado en lugar de un CSR. 
-- `-key server.key`: usar la clave privada en server.key. 
-- `-out server.crt`: escribe el certificado en server.crt (formato PEM). 
+- `-new`: crear una nueva solicitud (aquí usada para crear un certificado).
+- `-x509`: emite un certificado autofirmado en lugar de un CSR.
+- `-key server.key`: usar la clave privada en server.key.
+- `-out server.crt`: escribe el certificado en server.crt (formato PEM).
 - `-days 9999`: haz que el certificado sea válido durante 9999 días.
 
 Por defecto, ese comando escribe un certificado X.509 codificado en PEM `(ASCII with "-----BEGIN CERTIFICATE-----"/"-----END CERTIFICATE-----")`.
 
 Esto te pedirá campos temáticos (país, CN, etc.). Si `server.key` está cifrado, se te pedirá su contraseña. Para incluir extensiones (SANs) o producir un CSR en su lugar, se requieren diferentes banderas/configuraciones.
 
-El proceso anterior produjo estos archivos: 
+El proceso anterior produjo estos archivos:
+
 - `server.crt`: el certificado PEM 
 - `server.key`: la clave de certificado
 
-```
+```bash
 -> ls -l
 total 8
 -rw-rw-r-- 1 devuser devuser 1249 May 16 22:42 server.crt
@@ -146,7 +159,8 @@ total 8
 ```
 
 Utiliza el comando estándar `file` de Linux para comprobar el tipo de contenido
-```
+
+```bash
 -> file server.key
 server.key: OpenSSH private key (no password)
 
@@ -158,7 +172,7 @@ server.crt: PEM certificate
 
 Este documento proporciona una guía sencilla para crear un certificado PEM sin cifrar que puede usarse con fines de aprendizaje.
 
-## Referencias 
+## Referencias
 
 ### Glosario De Comandos
 
@@ -170,9 +184,10 @@ file:
 openssl
 : utilidad estándar para operar con certificados SSL
 
-### Referencias Utiles
+### Referencias Útiles
 
 Recursos oficiales de OpenSSL:
+
 - [Openssl Documentacion Oficial](https://www.openssl.org/)
 - [Documentacion General OpenSSL](https://docs.openssl.org/master/man7/ossl-guide-introduction/)
 - [OpenSSL Repositorio De Github](https://github.com/openssl/openssl.git)
