@@ -57,9 +57,46 @@ Release:	24.04
 Codename:	noble
 ```
 
-## Prerrequisitos
+## Cuando Usar Java
 
-Necesita privilegios SUDO, una conexión a Internet y aproximadamente 200 MB de espacio en disco.
+Java es un lenguaje popular orientado a objetos que es bueno para principiantes porque enseña conceptos básicos de programación, funciona en varios sistemas operativos y tiene un ecosistema amplio. Instalar el JDK te permite escribir, compilar y ejecutar programas localmente, facilitando la experimentación y desarollo local o sistemas distribuidos. Su sintaxis estricta y su reglas estáticas detectan muchos errores a tiempo y promueven una codificación disciplinada que se transfiere a otros lenguajes. Los IDEs (VSCode, IntelliJ, Eclipse), las herramientas de construcción (Maven/Gradle) y la abundancia de tutoriales hacen que el aprendizaje sea práctico. Java se utiliza ampliamente en backends web, Android y software empresarial, por lo que aprenderlo abre oportunidades de proyectos y empleo.
+
+## Guía Rápida
+
+Guía concisa para instalar Java en Ubuntu.
+
+```bash
+# Actualizar el sistema
+sudo apt update
+
+# instalar la version predeterminada
+sudo apt install default-jdk
+
+# buscar versiones disponibles de openjdk
+sudo apt-cache search ^openjdk
+
+# instalar version especifica
+sudo apt install openjdk-<version>-jdk
+
+# ver lo que esta instalado
+dpkg -l | grep openjdk
+
+# ver la ruta al binario corriente
+readlink -f /usr/bin/java
+
+# crear archivo para variables de entorno
+# activar las variables
+# verificar las variables
+sudo vi /etc/profile.d/java.sh
+sudo chmod +x /etc/profile.d/java.sh
+source /etc/profile.d/java.sh
+env | grep -i java
+
+# verificar la instalación de java
+echo $JAVA_HOME
+which java
+java -version
+```
 
 ## Distribución binaria
 
@@ -90,6 +127,7 @@ Instala una versión específica de OpenJDK con:
 ```bash
 sudo apt install openjdk-<version>-jdk
 ```
+
 Por ejemplo, instalemos `openjdk-21`:
 
 ```bash
@@ -125,12 +163,13 @@ Utilice el comando `readlink` para obtener la ruta al binario de Java.
 /usr/lib/jvm/java-21-openjdk-amd64/bin/java
 ```
 
-Crea un archivo para las variables de entorno de Java. Haz que el archivo sea ejecutable.
+## Crear Archivo Para Variables de Entorno
+
+Crea un archivo para las variables de entorno de Java.
 
 ```bash
--> sudo vi /etc/profile.d/java.sh
-
--> sudo chmod +x /etc/profile.d/java.sh
+# crear el archivo
+sudo vi /etc/profile.d/java.sh
 ```
 
 En el archivo, añada las siguientes líneas para establecer las variables de entorno.<br>
@@ -147,7 +186,13 @@ Incluya `${JAVA_HOME}/bin` en la variable PATH para que los comandos `java` y `j
 Coloque el archivo en `/etc/profile.d/` (los scripts ubicados allí son cargados por `/etc/profile` para las *login shells*). Para las *non-login shells*, algunas distribuciones cargan `/etc/profile`; para cubrir también las *non-login shells* interactivas, puede crear un pequeño enlace simbólico o cargar este archivo desde `/etc/bash.bashrc` si fuera necesario.<br>
 Utilice rutas absolutas y evite incluir en este archivo comandos que puedan fallar durante las etapas iniciales del arranque del sistema.<br>
 
-Tras añadir el archivo, reinicie el sistema o cárguelo manualmente (`source`) para aplicar los cambios de inmediato en la sesión actual.
+Hacer el archivo ejecutable.
+
+```bash
+sudo chmod +x /etc/profile.d/java.sh
+```
+
+Tras añadir el archivo, reinicie el sistema o cárgalo manualmente para aplicar los cambios de inmediato en la sesión actual.
 
 ```bash
 source /etc/profile.d/java.sh
@@ -156,10 +201,17 @@ source /etc/profile.d/java.sh
 {: .note }
 Los archivos en `/etc/profile.d` se leen automáticamente para las sesiones de inicio de sesión interactivas y las sesiones gráficas que utilizan `/etc/profile`.
 
+Si colocas un script en `/etc/profile.d/` (por ejemplo, `/etc/profile.d/java.sh)` que exporta variables de entorno o ajusta PATH, será asignado a interfaces interactivas de inicio de sesión y muchas interfaces interactivas sin inicio de sesión mediante el mecanismo de perfil a nivel de sistema, por lo que normalmente no necesitas añadir las mismas líneas a `~/.bashrc` de cada usuario que entra al sistema.
+
+A este punto, para ver las variable de entorno tenemos dos opciones:
+
+1. salir y re-entrar al sistema para establecer una nueva sesión de trabajo
+2. permanecer en la sesión de trabajo corriente y abrir una terminal nueva
+
 Utilice el comando `env` para verificar las variables de entorno.
 
 ```bash
--> env | grep -i java
+env | grep -i java
 ```
 
 Verifique la instalación con
@@ -181,16 +233,19 @@ Eliminar el paquete, pero conservar los archivos de configuración:
 ```bash
 sudo apt remove openjdk-21-jdk
 ```
+
 Eliminar el paquete y los archivos de configuración:
 
 ```bash
 sudo apt purge openjdk-21-jdk
 ```
+
 Elimine cualquier dependencia instalada automáticamente que ya no se utilice:
 
 ```bash
 sudo apt autoremove --purge
 ```
+
 Verifique que no queden binarios de Java de ese paquete:
 
 ```bash
@@ -198,6 +253,7 @@ dpkg -l | grep openjdk
 which java
 java -version
 ```
+
 Si existen otros paquetes de OpenJDK y también desea eliminarlos, reemplace `openjdk-21-jdk` con el nombre del paquete que aparece en la lista de `dpkg -l | grep openjdk`.
 
 Elimine el archivo de perfil si lo había creado.
@@ -212,7 +268,7 @@ La utilidad de Java sirve para construir proyectos Java.
 
 Java es un lenguaje de programación que se utiliza para indicarle a una computadora qué debe hacer. Permite escribir programas que pueden ejecutarse en una gran variedad de dispositivos sin necesidad de modificar el código. Java se emplea habitualmente para desarrollar sitios web, aplicaciones móviles (Android), programas de escritorio y software para servidores. Ofrece herramientas que hacen que los programas sean más seguros y fáciles de gestionar (como la verificación de errores antes de la ejecución). Los desarrolladores prefieren Java porque es estable, cuenta con un amplio soporte y dispone de una gran cantidad de bibliotecas reutilizables.
 
-## Referencias 
+## Referencias
 
 ### Glosario De Comandos
 
@@ -222,10 +278,12 @@ readlink
 ### Referencias Útiles
 
 - Usando [SDKMAN!](./java_sdkman.md) para manejar versiones de Java y otras utilidades.
+- Ejemplo de Java [Hola Mundo](./java_hello-world_example.md)
 - [Cómo configurar un entorno de desarrollo para Java en Ubuntu](https://documentation.ubuntu.com/ubuntu-for-developers/howto/java-setup/#install-java)
 - [Desarrollar con Java en Ubuntu](https://documentation.ubuntu.com/ubuntu-for-developers/tutorials/java-use/#use-java)
 
 Paginas Manuales
+
 - [readlink](https://manpages.ubuntu.com/manpages/stonking/man1/readlink.1.html)
 
 [Return to main page]({{site.baseurl}}/)

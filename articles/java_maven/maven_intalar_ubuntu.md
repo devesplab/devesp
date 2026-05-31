@@ -8,6 +8,8 @@ has_toc: false
 nav_order: 4
 ---
 
+## Instalación MAVEN en Ubuntu
+
 {: .no_toc }
 
 <details open markdown="block">
@@ -18,8 +20,6 @@ nav_order: 4
 - TOC
 {:toc}
 </details>
-
-# Instalación MAVEN en Ubuntu
 
 **DESCRIPCIÓN**
 
@@ -55,13 +55,24 @@ Los problemas comunes al instalar Maven en Ubuntu incluyen versiones desactualiz
 ## Ambiente de trabajo
 
 Esta lección se realiza en un sistema Linux Ubuntu.
-```
+
+```bash
 -> lsb_release -a
 Distributor ID:	Ubuntu
 Description:	Ubuntu 24.04.4 LTS
 Release:	24.04
 Codename:	noble
 ```
+
+## Cuando Usar Maven
+
+Usa Maven cuando necesites una herramienta de compilación estandarizada, declarativa y gestión de dependencias para proyectos Java (y JVM).
+
+Por ejemplo:
+
+- construir proyectos de Java
+- integrar con ambientes the CI/CD
+- publicar artefactos a Maven Central
 
 ## Requisitos previos
 

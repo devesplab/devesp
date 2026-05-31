@@ -45,6 +45,11 @@ ninguno
 - Apache Maven
 - acceso a internet
 
+Ver esto documentos:
+
+- [Instalar Maven en Ubuntu](./maven_intalar_ubuntu.md)
+- [Instalar Java en Ubuntu](./java_instalar_ubuntu.md)
+
 **ADVERTENCIA**
 
 El ejemplo descrito aquí no funcionará sin una conexión a Internet. Maven requiere una conexión a Maven Central.
@@ -61,15 +66,11 @@ Release:	24.04
 Codename:	noble
 ```
 
-## Cuando Usar Maven
+## Cuando Usar Java Hello World
 
-Usa Maven cuando necesites una herramienta de compilación estandarizada, declarativa y gestión de dependencias para proyectos Java (y JVM).
+Usas el ejemplo de Java "Hello World" como tu primer programa práctico para verificar tu configuración de Java y aprender el flujo de trabajo básico: escribir un archivo.java, compilar con javac y ejecutar con java. Demuestra la estructura de clases y métodos, la firma principal del método y la salida simple (System.out.println), enseñando compilación vs. ejecución, mensajes de error y cómo corregir errores de sintaxis. Úsalo al instalar el JDK, probar un IDE o editor, practicar la compilación de línea de comandos o introducir conceptos como métodos estáticos y el entorno de ejecución de Java: es una forma segura y mínima de ganar confianza antes de pasar a variables, control de flujos e ideas orientadas a objetos.
 
-Por ejemplo:
-
-- construir proyectos de Java
-- integrar con ambientes the CI/CD
-- publicar artefactos a Maven Central
+Recomiendo que veas la sección de REQUISITOS en este documento.
 
 ## Creando un proyecto Java usando Maven
 
@@ -453,9 +454,16 @@ El directorio de destino (target directory) es la carpeta de salida de la compil
 
 ### Referencias Útiles
 
+Documentos Internos
+
+- [Instalar Maven en Ubuntu](./maven_intalar_ubuntu.md)
+- [Instalar Java en Ubuntu](./java_instalar_ubuntu.md)
+
+Documentos Externos
+
 - [Apache Maven](https://maven.apache.org/index.html) Project.
-  - [Maven Archetypes](https://maven.apache.org/archetypes/index.html) list.
-  - [Running Apache Maven](https://maven.apache.org/run.html)
-- Official documentation for [Canonical’s build of OpenJDK for Ubuntu](https://ubuntu.com/toolchains/java)
+- [Maven Archetypes](https://maven.apache.org/archetypes/index.html) list.
+- [Running Apache Maven](https://maven.apache.org/run.html)
+- Documentación Official de [Canonical’s build of OpenJDK for Ubuntu](https://ubuntu.com/toolchains/java)
 
 [Return to main page]({{site.baseurl}}/)
