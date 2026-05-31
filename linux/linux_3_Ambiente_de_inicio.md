@@ -7,7 +7,7 @@ has_toc: false
 nav_order: 3
 ---
 
-# Ambiente de Inicio en Linux
+## Ambiente de Inicio en Linux
 
 {: .no_toc }
 
@@ -20,7 +20,7 @@ nav_order: 3
 {:toc}
 </details>
 
-Algunos sabores de sistemas operativos son más facil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de producción en los que las exigencias requieren mas potencia de CPU y Memoria.
+Algunos sabores de sistemas operativos son más fácil de usar desde punto de vista del usuario casual, mientras que otros son para uso serio en un ambiente de producción en los que las exigencias requieren mas potencia de CPU y Memoria.
 
 Una de los mejores características de Linux es que puede personalizarse de la manera que deseamos.
 
@@ -30,31 +30,37 @@ El ambiente del usuario es un conjunto de elementos que vienen a hacer la manera
 
 Para poder entrar a un sistema de Linux, necesitamos una cuenta de usuario.
 Una cuenta típica de usuario se ve de esta manera:
+
 ```bash
 devuser:x:2085:2086::/home/devuser:/bin/bash
 ```
+
 Esa entrada muestra el nombre del usuario `devuser`, el directorio de inicio `/home/devuser` y el shell `/bin/bash`. Cada uno de esos detalles puede ser personalizado. Para mas información ver la página referente a [Usuarios](./linux_6_Usuarios.md).
 
 ## Directorio de Inicio
 
-Cada usuario puede organizar su Directorio de Inicio en manera differente.
+Cada usuario puede organizar su Directorio de Inicio en manera diferente.
 
 El directorio puede referirse usando el símbolo de tilde `~` o la variable de ambiente `$HOME`.
 
 Si estamos en algun directorio diferente de `$HOME` y queremos ir al directorio de inicio, podemos usar el comando `cd` como en los ejemplos que siguen.
 
 * Usar `~`
+
 ```bash
 devuser@ubuntu2204-1 [DevEsp]
 hist:60 -> cd ~
 ```
+
 * Usar `$HOME`
+
 ```bash
 devuser@ubuntu2204-1 [DevEsp]
 hist:61 -> cd $HOME
 ```
 
 Para verificar que estamos en nuestro directorio hogar `$HOME` podemos usar varias opciones.
+
 - el comando `echo`
 - el comando `pwd`
 - la variable de ambiente `PWD` 
@@ -80,6 +86,7 @@ Linux provee varias variables de ambiente precargadas con información útil que
 Generalmente, las variables de ambiente estan definidas en `/etc/profile`, `/etc/bashrc`, `~/.bashrc`, o `~/.bash_profile`.
 
 En RHEL, el archivo del usuario `~/.bashrc` muestra un bloque indicando que lee ajustes encontrados en `/etc/bashrc`.
+
 ```bash
 [devuser@rhel9-1-devesp ~]$  cat ~/.bashrc
 # .bashrc
@@ -91,11 +98,13 @@ fi
 ```
 
 En RHEL, el archivo `/etc/bashrc` tiene la definición para el SHELL predeterminado.
+
 ```bash
 SHELL=/bin/bash
 ```
 
 En RHEL podemos usar el comando `env` para ver todas las variables de ambiente que tenemos disponibles.
+
 ```bash
 devuser@rhel9-1-devesp [DevEsp]
 hist:18 -> env
@@ -121,6 +130,7 @@ _=/usr/bin/env
 ```
 
 El comando `set` muestra información aún mas expandida organizada alfabeticamente (parcialmente extraida abajo).
+
 ```bash
 devuser@rhel9-1-devesp [DevEsp]
 hist:30 -> set
@@ -141,7 +151,7 @@ HOSTNAME=rhel9-1-devesp
 ```
 
 {: .highlight }
-Notese que cada una de las variables es en letras mayúsculas. 
+Nótese que cada una de las variables es en letras mayúsculas. 
 
 La salida de los comandos arriba se ve de manera muy similar en Ubuntu 22.04.
 El uso y propósito de estas variables es consistente a travéz de todos los sabores de Linux
@@ -167,7 +177,7 @@ USER
 : el nombre de usuario, lo mismo que LOGNAME
 
 PATH
-: colección de directorios con paso absoluto para dar accesso a utilidades y comandos
+: colección de directorios con paso absoluto para dar acceso a utilidades y comandos
 
 MAIL
 : paso absolute para donde el usuario recibe correo electrónico
@@ -177,9 +187,8 @@ HISTIZE
 
 ## Terminal de Acceso
 
-Una que que tenemos la cuenta de usuario y directorio de inicio, necesitamos acceder el sistema a travez de un shell usando como interfaz la terminal. La página acercal de el [Shell](./linux_7_Shell.md) expande en este asunto.
+Una que que tenemos la cuenta de usuario y directorio de inicio, necesitamos acceder el sistema a través de un shell usando como interfaz la terminal. La página acerca del [Shell](./linux_7_Shell.md) expande en este asunto.
 
 La terminal es el area de trabajo donde podemos escribir comandos para interactuar con el sistema.
-
 
 [Return to main page]({{site.baseurl}}/).

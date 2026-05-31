@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Provision
+title: Provisionar Linux
 permalink: /linux-provision/
 parent: Linux
 has_toc: false
 nav_order: 2
 ---
 
-# Provisonar Ambiente de Linux
+## Provisonar Ambiente de Linux
+
 {: .no_toc }
 
 <details open markdown="block">
@@ -20,6 +21,7 @@ nav_order: 2
 </details>
 
 ---
+
 ## Escoger y Obtener una Distribución
 
 Primero que nada debemos escoger el sabor de linux que queremos implementar. Esto depende de el área de trabajo y la complejidad de tareas que se harán.
@@ -27,26 +29,28 @@ Primero que nada debemos escoger el sabor de linux que queremos implementar. Est
 {: .note }
 Se debe tener en mente el ciclo de actualización y desmantelamiento de versiones.
 
-En la discusión de los [conceptos](./linux_1_Conceptos.md) de Linux mencionamos que podemos escoger una versión apta para servidores u otra para usuarios regulares. 
+En la discusión de los [conceptos](./linux_1_Conceptos.md) de Linux mencionamos que podemos escoger una versión apta para servidores u otra para usuarios regulares.
 
 La sección de [referencias](#referencias) de esta página muestra una lista the varios sitios para descargar distribuciones completas de Linux.
 
-La manera típica de obtener una distribución es ir al sitio del distribuidor y descargar 
-la imagen en formato de ISO, la cual puede descargarse en mas de una manera.
+La manera típica de obtener una distribución es ir al sitio del distribuidor y descargar la imagen en formato de ISO, la cual puede descargarse en mas de una manera.
 
 La imagen **Ubuntu** puede obtenerse aquí:
-```
+
+```bash
 https://ubuntu.com/download?utm_source=chatgpt.com
 ```
 Ver la documentatción para [Instalar Ubuntu](https://documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop/?utm_source=chatgpt.com).
 
 La imagen ISO de **RHEL9** puede encontrarse en esta URL.
-```
+
+```bash
 https://developers.redhat.com/products/rhel/download
 ```
 
-Las imagenes de **CentoS 7.9** se obtiene aqui:
-```
+Las imágenes de **CentoS 7.9** se obtiene aqui:
+
+```bash
 https://vault.centos.org/7.9.2009/
 https://vault.centos.org/7.9.2009/isos/x86_64/
 ```
@@ -58,11 +62,11 @@ https://vault.centos.org/7.9.2009/isos/x86_64/
 
 Es mas recomendable descargar [RedHat](https://developers.redhat.com/products/rhel/download?utm_source=chatgpt.com#downloadsbyrelease).
 
-Los ISO estan generalmente disponibles en varias localidades sincronizadas conocidos como "espejos" porque reflejan el mismo contenido. Podemos escoger un espejo que este cerca geograficamente a nuestra localidad para que el descargue sea más rápido; esto es importante en lugares donde la velocidad de internet no es óptima.
+Los ISO están generalmente disponibles en varias localidades sincronizadas conocidos como "espejos" porque reflejan el mismo contenido. Podemos escoger un espejo que este cerca geográficamente a nuestra localidad para que el descargue sea más rápido; esto es importante en lugares donde la velocidad de internet no es óptima.
 
 ### Recursos de Computación Requeridos
 
-Hoy día la vasta mayoría de hardware es the arquictectura AMD64, Intel 64, and 64-bit ARM.
+Hoy día la vasta mayoría de hardware es the arquitectura AMD64, Intel 64, and 64-bit ARM.
 
 La página de [CentOS](https://docs.centos.org/en-US/8-docs/standard-install/assembly_system-requirements-reference/) indica que los siguiente es necesario para instalar el sistema operativo:
 
@@ -77,9 +81,9 @@ Los requerimientos para [Ubuntu](https://help.ubuntu.com/community/Installation/
 * 25 GB (8.6 GB por lo menos) 
 * VGA capaz de 1024x768 resolución de pantalla
 
-Cuando se usa HTTP/HTTPS/FTP como método de instalación se require mas memoria porque el tráfico del internet lledo y vieniendo a travéz del cable es muy intenso.
+Cuando se usa HTTP/HTTPS/FTP como método de instalación se require mas memoria porque el tráfico del internet que va y viene a través del cable es muy intenso.
 
-El requerimiento de disco duro aumenta dependiendo de los paquetes escogidos para provisionar el sistema. Por ejemplo, instalar el sistema gráfico de GNOME consume mas disco duro, y tambiem mas memoria fisica para correr normalmente.
+El requerimiento de disco duro aumenta dependiendo de los paquetes escogidos para provisionar el sistema. Por ejemplo, instalar el sistema gráfico de GNOME consume mas disco duro, y también mas memoria física para correr normalmente.
 
 ### Entender Actualización y Seguridad
 
@@ -94,16 +98,16 @@ Es importante entender el ciclo de vida de los diferentes sistems operativos.
 Todas las distribuciones de Linux tienen un sistema y opciones similares de instalación.
 
 ISO
-: usando le imagen ISO descargarda de la internet
+: usando le imagen ISO descargada de la internet
 
 DVD
 : usando un disco óptico en una unidad de DVD 
 
 USB
-: usando una targeta de memoria adjunta a un puerto de USB
+: usando una tarjeta de memoria adjunta a un puerto de USB
 
 Kickstart/NFS
-: método usado por RedHat/CentOS/Fedora a travéz del cable de network
+: método usado por RedHat/CentOS/Fedora a través del cable de network
 
 Clonar
 : copiar un sistema a otro con la misma configuración de hardware
@@ -114,7 +118,6 @@ Linux puede descargarse de cualquier espejo disponible.
 Varios sabores de linux estan disponibles en [kernel.org](https://mirrors.edge.kernel.org/)
 Algunos sabores de Linux de fuente abierta tales come CentOS [^2], Fedora [^3], Ubuntu [^4], Debian [^5], Gentoo [^6], están disponibles gratis en varias versiones.
 Otras versiones tales como RedHat [^7], requieren un licensia de usuario.
-
 
 ## [](referencias)Referencias
 

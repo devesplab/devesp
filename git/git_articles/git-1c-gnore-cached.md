@@ -8,7 +8,7 @@ has_toc: false
 nav_order: 3
 ---
 
-# Ignorar archivos de Git en CACHE
+## Ignorar archivos de Git en CACHE
 
 {: .no_toc }
 
@@ -23,7 +23,7 @@ nav_order: 3
 
 ---
 
-En algun momento encontramos que git esta rastreando recursos que no son necesarios empujar a la fuente de código que distribuimos. Por esa razón, tomamos las acciones descritas en este documento y asi mantener una fuente de código limpia.
+En algún momento encontramos que git esta rastreando recursos que no son necesarios empujar a la fuente de código que distribuimos. Por esa razón, tomamos las acciones descritas en este documento y asi mantener una fuente de código limpia.
 
 ## Ignorando Carpetas Rastreadas en Git
 
@@ -31,10 +31,11 @@ En este ejemplo, dejamos de rastrear una carpeta llamada `_site/`.
 
 > Este es un ejemplo real usando Jekyll
 
-Aqui estamos en una rama de git llamada `myRamaDeTrabajo`. Cuando inspeccionamos los cambios, vemos varias entradas con `_site/`. 
+Aquí estamos en una rama de git llamada `myRamaDeTrabajo`. Cuando inspeccionamos los cambios, vemos varias entradas con `_site/`. 
 
 Pero no deseamos que Git rastree esa carpeta.
-```
+
+```bash
 -> git status
 On branch myRamaDeTrabajo
 Your branch is up to date with 'origin/myRamaDeTrabajo'.
@@ -54,7 +55,7 @@ Para evitar que Git rastree la carpeta `_site/`, hacemos lo siguiente:
 
 > Usamos la bandera `-r` porque estamos operando en una carpeta.
 
-```
+```bash
 git rm -r --cached _site/
 echo "_site/" >> .gitignore
 git add .gitignore
@@ -62,6 +63,7 @@ git commit -m "Dejar de rastrear _site/ y actualizar .gitignore"
 ```
 
 Lo anterior indica lo siguiente: 
+
 - `--cached` elimina archivos solo del seguimiento de Git 
 - `-r` es requerida para traversar la carpeta
 - `echo` agrega el nombre de la carpeta a `.gitignore`
@@ -69,7 +71,8 @@ Lo anterior indica lo siguiente:
 - `git commit` es para que los futuros cambios bajo `_site/` serán ignorados 
 
 Puedes comprobarlo después con:
-```
+
+```bash
 git status
 ```
 
@@ -79,7 +82,7 @@ Esto eliminará `_site/` del repositorio (pero no de tu sistema de archivos loca
 
 Podemos dejar de rastrear archivos de la misma manera que lo hicimos con carpetas.
 
-```
+```bash
 git rm --cached nombreDeArchivo
 echo "nombreDeArchivo" >> .gitignore
 git commit -m "Stop tracking nombreDeArchivo"
@@ -87,6 +90,5 @@ git status
 ```
 
 Esto eliminará `nombreDeArchivo` del repositorio (pero no de tu sistema de archivos local) y asegurará que sea ignorado en el futuro.
-
 
 [Regresar a la página principal]({{site.baseurl}}/).

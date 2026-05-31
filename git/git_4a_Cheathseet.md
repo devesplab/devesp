@@ -36,23 +36,24 @@ git push   client->server  sube o publica tus cambios en el repositorio remoto
 git add    client only     solo pone los archivos bajo control de revisión en el espacio de trabajo local
 git commit client only     solo registra los cambios en el espacio de trabajo local
 ```
+
 Se puede acceder a un repositorio git remoto de varias maneras según el protocolo:
 
-- git://example.com/proj/project.git
-- https://example.com/proj/project.git
-- ssh://user@example.com/proj/project.git
+- <git://example.com/proj/project.git>
+- <https://example.com/proj/project.git>
+- <ssh://user@example.com/proj/project.git>
 
 Cada ejemplo utiliza un protocolo diferente.<br>
-La manera mas frequente de acceso es `HTTPS`. 
+La manera mas frequente de acceso es `HTTPS`.
 
 {: .note }
 EL protocolo `HTTP` no se usa.
 
 ## Crear un repositorio Git
 
-Aqui explicamos la primera tarea necesaria para implementar el control de revisiones en un proyecto.
+Aquí explicamos la primera tarea necesaria para implementar el control de revisiones en un proyecto.
 
-Un usuario sigue una sequencia mas o menos así:
+Un usuario sigue una secuencia mas o menos así:
 
 - Crear un proyecto en su máquina local.
 - Ir a la ubicación donde se ubicará el proyecto. Debe ser una ubicación donde el usuario tenga acceso completo.
@@ -64,7 +65,8 @@ En este ejemplo, el usuario crea el directorio `docker-devesp` en `$HOME`. <br>
 Luego, cambia a esa ubicación y usa el cliente Git con el parámetro `init` para comenzar a implementar el control de revisión.
 
 Crear un nuevo repositorio desde la línea de comandos
-```
+
+```bash
 -> cd /home/devuser/
 -> mkdir docker-devesp
 -> cd docker-devesp/
@@ -80,7 +82,8 @@ Crear un nuevo repositorio desde la línea de comandos
 ```
 
 …o enviar un repositorio existente desde la línea de comandos
-```
+
+```bash
 -> git remote add origin https://github.com/devesplab/docker-devesp.git
 -> git branch -M main
 -> git push -u origin main
@@ -93,6 +96,7 @@ Añadir un origen a un repositorio Git permite especificar lo localidad remota p
 ### Añadir origen
 
 A continuacion establecemos donde queremos subir los cambios a un  projecto:
+
 - Configura el cliente para que envíe sus confirmaciones al servidor Git remoto.<br>
 - Proporciona el nombre de host o la dirección IP del servidor Git.<br>
 - Para ello, debemos especificar la URL de origen remoto. [^1]
@@ -100,7 +104,8 @@ A continuacion establecemos donde queremos subir los cambios a un  projecto:
 [^1]: Ver [administrar controles remotos](https://stackoverflow.com/questions/42830557/git-remote-add-origin-vs-remote-set-url-origin) on stackoverflow
 
 Ver la ayuda del client `git` para [manejar remotos](https://git-scm.com/docs/git-remote#Documentation/git-remote.txt-remove).
-```
+
+```bash
 NAME
        git-remote - manage set of tracked repositories
 SYNOPSIS
@@ -120,7 +125,8 @@ SYNOPSIS
 **:: Usando `add`**
 
 Usemos `add` para agregar un nuevo control remoto
-```
+
+```bash
 -> git remote add origin https://github.com/devesplab/linux-devesp.git
 ```
 
@@ -129,22 +135,28 @@ Usemos `add` para agregar un nuevo control remoto
 Usemos `set-url` para cambiar (o reemplazar) la URL de un repositorio remoto existente
 
 Cambiar el origen para usar SSH
-```
+
+```bash
 -> git remote set-url origin https://github.com/devesplab/linux-devesp.git
 ```
+
 Verificar la configuración de origen.
-```
+
+```bash
 -> git config --get remote.origin.url
 ```
+
 La configuración es agregada en la sección `[remote "origin"]` del archivo de configuración.
-```
+
+```bash
 [remote "origin"]
     url = git@172.16.15.199:project.git
     fetch = +refs/heads/*:refs/remotes/origin/*
 ```
 
 El comando `git config` escribe la configuración en el archivo `.git/config` dentro del repositorio en el que estamos trabajando.  
-```
+
+```bash
 -> cat .git/config
 
 [core]
@@ -164,12 +176,14 @@ El comando `git config` escribe la configuración en el archivo `.git/config` de
 ```
 
 Asi es que `git config` hace lo siguente:
+
 - Escribe en el archivo `.git/config` dentro de tu repositorio local.
 - Actualiza la URL asociada al repositorio remoto de origen.
 - Este cambio es local para tu repositorio; no afecta al repositorio remoto en sí. 
 
 Veamos la lista de orígenes disponibles en el repositorio local
-```
+
+```bash
 -> git remote
 -> git remote -v
 ```
@@ -184,18 +198,22 @@ Pasos para eliminar un remoto de git [^2].
 Puedes agregar un remoto en cualquier momento. Puede ser el mismo que eliminaste u otro.
 
 Syntax:
-```
+
+```bash
 git remote rm <destination>
 ```
+
 Example:
-```
+
+```bash
 -> git remote rm origin   
 ```
 
 ### Comprueba el remoto donde estamos enviando datos
 
 Este comando confirma el remoto con el cual interactuamos.
-```
+
+```bash
 -> git remote show origin
 ```
 
@@ -205,8 +223,9 @@ En ocasiones deseamos omitir, o no rastrear cambios a archivos o carpetas que no
 
 > Vea el articulo relacionado con [Ignorar Archivos de Git en Linux](./git_articles/git-1b-ignore-LINUX.md), y tambien [Ignorar Archivos de Git en MacOS](./git_articles/git-1a-gnore-MACOS.md)
 
-El contenido del archivo `.gitignore` causa que el cliente de git no rastree cambios o adiciones a la fuente de código que coinciden con los patrónes de regex que hemos definido.
-```
+El contenido del archivo `.gitignore` causa que el cliente de git no rastree cambios o adiciones a la fuente de código que coinciden con los patrones de regex que hemos definido.
+
+```bash
 -> cat .gitignore
 miArchivoExcluido
 *.iso
@@ -226,29 +245,37 @@ De aqui en adelante debemos mantener ese archivo y actualizarlo come sea necessa
 ## Rastrear un Archivo en GIT
 
 Crea un archivo y ponerlo bajo control de revisión.
-```
+
+```bash
 -> cd /home/devuser/projectX
 -> vi file.txt
 -> git add file.txt
 -> git commit -m"Added new file" file.txt
 ```
+
 Si has realizado varios cambios en un archivo, puedes olvidarlos. Regresa a la versión más reciente registrada.
-```
+
+```bash
 -> git checkout -- file.txt
 ```
+
 Cambiar el nombre de un archivo
-```
+
+```bash
 -> git mv <oldname> <newname>
 ```
+
 Un archivo se puede eliminar del repositorio de dos maneras:
 
 [a] solo del repositorio; el archivo permanece en el sistema de archivos local
-```
+
+```bash
 -> git rm --cache <file>
 ```
+
 [b] del repositorio y del sistema de archivos local
 
-```
+```bash
 -> git rm <file>
 ```
 
@@ -266,14 +293,17 @@ Se recomienda enfáticamente utilizar PAT de Github para las operaciones del cli
 (a) Clonar usando el protocolo SSH (no se recomienda)
 
 Si hubiera un proyecto nombrado `projectX` en el servidor git, entonces clónelo con el siguiente comando.
-```
+
+```bash
 -> git clone git@git-server:/home/devuser/projectX
 -> git clone git@192.168.65.139:bye.git
 ```
+
 Como vemos, podemos usar el FQDN o la dirección de red.
 
 (b) Clonar usando el protocolo HTTPS
-```
+
+```bash
 -> git clone https://github.com//mygitrepo.git
 ```
 
@@ -288,34 +318,44 @@ En algún momento querrás confirmar los cambios antes de enviarlos a un reposit
 Descubra las diferencias entre su copia local y el repositorio remoto.
 
 Primero, debe agregar los cambios a la rama local.
-```
+
+```bash
 -> git add
 ```
+
 Luego puedes comparar con la rama principal.
 
 ME GUSTA ESTE: comparar copia local vs. servidor
-```
+
+```bash
 -> git diff origin/main 
 ```
+
 Comprobar la actividad del repositorioy
-```
+
+```bash
 -> git log 
 ```
+
 Verifique lo que se comprometerá.
 
-```
+```bash
 -> git diff --staged
 -> git diff --cached
 ```
+
 ¿Cómo puedo ver lo que estoy a punto de enviar con git?<br>
 Supongamos que tenemos una rama de desarrollo llamada `dev1` y deseamos comparar con la rama pricipal.
-```
+
+```bash
 -> git diff --stat origin/main HEAD
 -> git diff origin dev1
 -> git push origin dev1 --dry-run
 ```
+
 Usa [difftool](https://git-scm.com/docs/git-difftool) en MACOS, lo cual muestra una interfaz de usuario JAVA
-```
+
+```bash
 -> git difftool origin/dev1
 ```
 
@@ -323,7 +363,8 @@ Usa [difftool](https://git-scm.com/docs/git-difftool) en MACOS, lo cual muestra 
 
 Comandos ejecutados en el cliente. 
 Lista el contenido actual del repositorio.
-```
+
+```bash
 -> git ls-files
 -> git ls-tree -r main --name-only
 -> git ls-tree -r main --full-name
@@ -336,11 +377,14 @@ Lista el contenido actual del repositorio.
 Mostrar el contenido de un archivo en una rama
 
 Sintaxis:
-```
+
+```bash
 -> git show <branch>:file
 ```
+
 Mostrar el contenido de un archivo en la rama dev1 y la rama principal.
-```
+
+```bash
 -> git show dev1:cfile.txt
 -> git show main:cfile.txt
 ```
@@ -349,7 +393,7 @@ Mostrar el contenido de un archivo en la rama dev1 y la rama principal.
 
 El comando `git log` se utiliza para mostrar un historial cronológico de las confirmaciones en un repositorio Git. Proporciona detalles como hashes de las confirmaciones, información del autor, fechas y mensajes de confirmación, lo que permite a los usuarios revisar el historial de desarrollo del proyecto. El objetivo principal de git log es ayudar a los usuarios a comprender la secuencia de cambios, rastrear las modificaciones a lo largo del tiempo y analizar la evolución del código.
 
-```
+```bash
 -> git log -p afile.txt         # show change history of a file
 -> git log -p -2		# last two commits
 -> git log			# show change history of all files
@@ -363,6 +407,7 @@ El comando `git log` se utiliza para mostrar un historial cronológico de las co
 ## Acciones de Git 
 
 A seguir, vemos las operaciones principales que conducimos cuando interactuamos coun una fuente de código:
+
 - bajamos la fuente de código
 - hacemos cambios
 - empujamos los cambios
@@ -376,15 +421,19 @@ El comando `git pull` es para operaciones de `Fusionar - Sincronizar` un reposit
 Se recomienda encarecidamente obtener los últimos cambios originales antes de empezar a trabajar en una base de código. De lo contrario, podrían surgir conflictos que generen confusión y sean difíciles de resolver..
 
 Sincronizar el repositorio local con el repositorio remoto
-```
+
+```bash
 -> git pull origin
 ```
+
 Especifique el nombre de la rama a sincronizar
-```
+
+```bash
 -> git pull origin <mybranch>
 ```
 El comando `git pull` sin argumentos proporciona información útil sobre las ramas presentes en el repositorio remoto.
-```
+
+```bash
 $ git pull
 ```
 
@@ -393,22 +442,27 @@ $ git pull
 Tras realizar cambios en el proyecto y para preservarlos, el objetivo es transferirlos a una ubicación remota.
 
 Primero, debemos agregar los cambios a la rama local.
-```
+
+```bash
 -> git add .
 ```
+
 Luego podemos comparar los cambios localos contra la rama principal. De esta manera sabremos que es lo que estamos enviando.
-```
+
+```bash
 -> git diff --stat origin/main
 ```
 
 Salvemos los cambios.<br>
 Usamos las banderas `-am` para proveer un mensaje explicando el cambio.
-```
+
+```bash
 -> git commit -am"save the changes"
 ```
 
 Envía los cambios al servidor Git.
-```
+
+```bash
 -> git push origin main
 ```
 
@@ -416,15 +470,17 @@ Envía los cambios al servidor Git.
 
 Cuando ejecuta `git fetch`, recupera actualizaciones de un repositorio remoto y actualiza su copia local de las ramas remotas (como origin/main), pero no modifica automáticamente su directorio de trabajo actual ni sus ramas locales.
 
-```
+```bash
 -> git fetch --all
 ```
+
 El comando `git fetch` descarga todas las ramas del repositorio.
-```
+
+```bash
 -> git fetch origin
 ```
-La operacion de `fetch` descarga lo último del control remoto sin intentar fusionar o rebasar nada.
 
+La operacion de `fetch` descarga lo último del control remoto sin intentar fusionar o rebasar nada.
 
 ### Git RESET
 
@@ -433,11 +489,11 @@ El comando `git reset` sincroniza forzosamente tu rama actual con la rama princi
 {: .warning }
 Ejecuta la operación `git reset` juiciosamemte... puede provocar pérdida de datos.
 
-```
+```bash
 -> git reset --hard origin/main
 ```
-Luego, `git reset` restablece la rama principal a lo que acabas de obtener. La opción `--hard` cambia todos los archivos en tu árbol de trabajo para que coincidan con los archivos en `origin/main`.
 
+Luego, `git reset` restablece la rama principal a lo que acabas de obtener. La opción `--hard` cambia todos los archivos en tu árbol de trabajo para que coincidan con los archivos en `origin/main`.
 
 ## Ramas de GIT
 
@@ -457,7 +513,7 @@ Una buena comprensión de las tareas de las ramas garantizará que los equipos c
 
 ### Lista de ramas remotas
 
-```
+```bash
 -> git branch
 -> git branch -a
 -> git branch -r
@@ -467,15 +523,20 @@ Una buena comprensión de las tareas de las ramas garantizará que los equipos c
 ### Crear rama
 
 Comprueba en qué rama estás.
-```
+
+```bash
 -> git branch -v
 ```
+
 Crear una nueva rama (mientras esté en la rama principal, por ejemplo)
-```
+
+```bash
 -> git checkout -b new_branch
 ```
+
 Enviar nueva rama al repositorio después de realizar cambios.
-```
+
+```bash
 -> git add .
 -> git commit -am “updates”
 -> git push origin new_branch
@@ -488,17 +549,22 @@ Extrae la nueva rama a tu rama principal local.
 [^6]: Ver en Stackoverflow este posteo acerca de [clonar rama especifica](http://stackoverflow.com/questions/1911109/clone-a-specific-git-branch)
 
  La rama nueva en el repositorio local tendrá el mismo nombre que en el repositorio remoto..
-```
+
+```bash
 -> git pull origin new_branch
 -> git checkout <lbranch>
 ```
+
 O bien, baja la rama remota _rbranch_ y asígnele el nombre _lbranch_ localmente.
-```
+
+```bash
 -> git fetch <remote> <rbranch>:<lbranch>
 -> git checkout <lbranch>
 ```
+
 Ejemplo: extraer la rama _dev1_ desde el origen
-```
+
+```bash
 -> git fetch origin dev1:dev1test
 -> git checkout dev1test
 ```
@@ -510,13 +576,15 @@ Un repositorio de git puede ha veces contener dozenas the ramas. Lo mas probable
 > Se requiere Git **v1.7.10** para usar `--single-branch`.
 
 Clonar una sola rama de un repositorio.
-```
+
+```bash
 -> git clone -b <my_branch> --single-branch https://github.com/data/pets.git
 ```
 
 ### Eliminar rama
 
 Hay dos maneras de elimiar or borrar una rama
+
 1. borrar la rama en el repositorio de git
 2. borrar la rama en el repositorio local
 
@@ -524,18 +592,23 @@ Hay dos maneras de elimiar or borrar una rama
 La tarea de borrar la rama en el remoto no la borra en tu local; lo mismo es cierto en viceversa.
 
 Eliminar una rama REMOTA (reemplace origin con el nombre que desee darle):
-```
+
+```bash
 -> git push origin --delete <branch> #Git version 1.7.0 or newer 
 -> git push origin :<branch>         #Git versions older than 1.7.0 
 ```
+
 Eliminar una rama LOCAL:
-```
+
+```bash
 -> git branch --delete <branch> 
 -> git branch -d <branch>            #Shorter version 
 -> git branch -D <branch>            #Force delete unmerged branches 
 ```
+
 Eliminar una rama local de seguimiento en el repositorio git
-```
+
+```bash
 -> git branch -a                     # get a branch listing 
 -> git branch --delete --remotes <remote>/<branch> # use the output of the ‘git branch -a
 -> git branch -dr <remote>/<branch>  #Shorter 
@@ -544,12 +617,12 @@ Eliminar una rama local de seguimiento en el repositorio git
 ```
 No es necesario realizar git commit ni nada después de eliminar una rama.
 
-
 ### Fusión de ramas
 
 Secuencia para crear una nueva rama, agregar contenidos y fusionarla con la rama principal. <br>
 (!) Los archivos en `newBranch` anularán los archivos en la rama principal.
-```
+
+```bash
 -> git checkout -b newBranch	 # crea la rama
 -> vi file1                      # edita un archivo
 -> git add file1                 # añade el archivo
@@ -563,32 +636,42 @@ Secuencia para crear una nueva rama, agregar contenidos y fusionarla con la rama
 ### Estableciendo la Rama Predeterminada con `.gitconfig`
 
 Establezca la rama predeterminada globalmente para el usuario activo el la terminal.
-```
+
+```bash
 -> git config --global init.defaultBranch main
 ```
+
 Todos los repositorios recién creados tendrán la rama principal como rama predeterminada. 
 El cambio se guarda en `~/.gitconfig`.
-```
+
+```bash
 [init]
   defaultBranch = main
 ```
+
 Además de la configuración global, cambie el repositorio local.
-```
+
+```bash
 -> git branch -m main
 ```
+
 Comprobar la rama predeterminada con cualquiera de los comandos aquí:
-```
+
+```bash
 -> git config --global init.defaultbranch
 -> git symbolic-ref --short HEAD
 -> grep defaultBranch ~/.gitconfig
 ```
+
 Para cambiar otra rama predeterminada, en los comandos anteriores, simplemente cambie el nombre de la rama a cualquier otro. Elimine la configuración de la rama predeterminada. No habrá ninguna después de esto.
-```
+
+```bash
 -> git config --global --unset init.defaultBranch
 ```
 
 Este en un ejemplo completo de `.gitconfig`.
-```
+
+```bash
 # Este es mi configuración para el cliente git
 [user]
 	name = DevEsp

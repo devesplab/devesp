@@ -9,7 +9,7 @@ has_toc: false
 nav_order: 2
 ---
 
-# Configurar, Usar, Personalizar Bash
+# Configurar, Usar, y Personalizar Bash
 
 {: .no_toc }
 
@@ -29,19 +29,21 @@ nav_order: 2
 {: .highlight }
 Este documento es en el contexto del Sistema Operativo UBUNTU a menos que se aclare de otra manera.
 
-En su forma nativa y sin requerir ningun cambio, Bash ofrece lo necesario para empezar a trabajar immediatamente cuando entramos al sistems.
+En su forma nativa y sin requerir ningún cambio, Bash ofrece lo necesario para empezar a trabajar inmediatamente cuando entramos al sistema.
 
 Entre otras características Bash ofrece lo siguiente:
-- la abilidad de entrar comandos y ver el resultado
-- functiones para agrupar comandos para tareas complejas
-- combinar comandos directamete en la linea de comandos para alterar el resultado
+
+- la habilidad de entrar comandos y ver el resultado
+- funciones para agrupar comandos para tareas complejas
+- combinar comandos directamente en la linea de comandos para alterar el resultado
 - parámetros para guardar valores que pueden ser usados en el entorno o programas
-- carácters especiales para expandir el rango de accíon de los comandos
+- caracteres especiales para expandir el rango de acción de los comandos
 
 ## Primicias del BASH Shell
 
 Para usar BASH solo entramos comandos y vemos el resultado. <br>
 En esta ejemplo, usamos el comando `ping` para probar el paso de red a nuestro sitio externo de internet `docs.devesp.com`.
+
 ```bash
 devuser@ubuntu2204-1-devesp  
 ~/linux-devesp
@@ -55,9 +57,10 @@ rtt min/avg/max/mdev = 31.012/31.012/31.012/0.000 ms
 
 ## Usando Aliases en BASH
 
-Bash posee la característca que ofrece el uso de aliases. El propósito es crear nombres familiares y cortos para agrupar comandos repetitivos y talvez largos; en lugar de teclear un comando largo, solo usamos el alias. Podemos crear aliases que combinan banderas para obtener mejores resultados. <br>
+Bash posee la característica que ofrece el uso de aliases. El propósito es crear nombres familiares y cortos para agrupar comandos repetitivos y Y quizá largos; en lugar de teclear un comando largo, solo usamos el alias. Podemos crear aliases que combinan banderas para obtener mejores resultados. <br>
 
-Por ejemplo, aqui creamos el alias `ll` equivalente a `ls --color -l`. 
+Por ejemplo, aqui creamos el alias `ll` equivalente a `ls --color -l`.
+
 ```bash
 devuser@ubuntu2204-1-devesp
 ~/linux-devesp
@@ -69,6 +72,7 @@ alias ld='ls --color -1F'
 ```
 
 Ahora podemos usar `ll` en lugar de `ls --color -l` y obtener una lista larga de archivos.
+
 ```bash
 devuser@ubuntu2204-1-devesp
 ~/linux-devesp
@@ -86,8 +90,9 @@ drwxrwxr-x 2 devuser devuser  4096 May 25 22:45 linux-scripts/
 
 El Bash shell permite crear, ver y ejecutar programas. <br>
 En este ejemplo hacemos lo siguiente:
+
 - usamos el comando `cat` para mostrar el contenido del programa `greeting.sh`
-- usamos el comand `ls` que muestra el permiso de ejecutar del programa
+- usamos el comando `ls` que muestra el permiso de ejecutar del programa
 - corremos el programa que crea un archivo de registro
 - usamos el comando `cat` para mostrar el contenido del archivo de registro
 
@@ -138,6 +143,7 @@ Hola, Mundo! Hoy es 06/21/24
 ## Exportando Variables de Entorno en BASH
 
 El Bash Shell provee varias variables en el ambiente del usuario. Estas pueden verse con el comando `env`.
+
 ```bash
 devuser@ubuntu2204-1-devesp
 ~
@@ -161,7 +167,8 @@ _=/usr/bin/env
 ```
 
 Podemos crear y usar variables de ambiente que demuestra los aspectos dinámicos y versátiles del Shell. <br>
-En este ejemplo exportamos la variable `MYSITE` asignandole un valor, y luego la usamos en un comando. 
+En este ejemplo exportamos la variable `MYSITE` asignándole un valor, y luego la usamos en un comando. 
+
 ```bash
 devuser@ubuntu2204-1-devesp
 ~/linux-devesp
@@ -190,6 +197,7 @@ drwxr-xr-x 1 root    root     4096 May 18 22:55 ../
 -rw------- 1 devuser devuser    20 Jun  9 00:01 .lesshst
 -rw-r--r-- 1 devuser devuser    35 Jul 15  2023 .profile
 ```
+
 Bash usa esos archivos para diferentes actividades.
 
 .aliasrc
@@ -217,10 +225,12 @@ Hablemos de dos archivos en particular que el usuario puede cambiar para persona
 Ejemplo de `.bashrc` mostrando la inicialización estandard a nivel de usuario.<br>
 En este archivo el usuario puede poner ajustes especificos a su gusto. <br>
 Un ejemplo puede ser:
-- agregar aliass del archivo `.aliasrc`
+
+- agregar alias del archivo `.aliasrc`
 - declarar personalizaciones para manejo de historia de comandos
-- modificar la variable de ambiete `PS1` para el indicador en la terminal
-- usar el comando `export` para agregar pasos a carpetas que continenen untilidades
+- modificar la variable de ambiente `PS1` para el indicador en la terminal
+- usar el comando `export` para agregar pasos a carpetas que contienen utilidades
+
 ```bash
 devuser@ubuntu2204-1-devesp
 ~
@@ -231,7 +241,8 @@ PS1='-->'
 export PATH=$HOME/bin:$HOME/Library/Python/3.9/bin:$HOME/mycode:$PATH
 ```
 
-Ejemplo de `.bash_profile` mostrando la inicialización estandard a nivel de sistema. Nótese que incluye una instrucción para cargar el contenido de ` ~/.bashrc` si existe.
+Ejemplo de `.bash_profile` mostrando la inicialización estándar a nivel de sistema. Nótese que incluye una instrucción para cargar el contenido de `~/.bashrc` si existe.
+
 ```bash
 devuser@ubuntu2204-1-devesp
 ~
@@ -251,6 +262,7 @@ if [ -f ~/.bashrc ]; then
 En bash existen ciertas facilidades que permiten el manejo inteligente de ciertas tareas.
 
 Los tipos de expaciones so a seguir:
+
 - expansión de corsé
 - expansión de tilde
 - expansión de parámetros y variables
@@ -259,11 +271,12 @@ Los tipos de expaciones so a seguir:
 - división de palabras
 - expansión de nombre de archivo
 
-Discutiremos expansión en BASH on otra lección. Pero veamos unos ejemplos simples y de uso frequente aquí.
+Discutiremos expansión en BASH on otra lección. Pero veamos unos ejemplos simples y de uso frecuente aquí.
 
 ### Expansión de Tilde
 
 En Bash la tilde `~` denota el directorio de inicio del usuario. Podemos demostrar esto usando el comando `echo`.
+
 ```bash
 devuser@ubuntu2204-1-devesp  
 ~
@@ -284,6 +297,7 @@ greeting.sh*
 ```
 
 Usando `echo` vemos el paso absoluto del programa.
+
 ```bash
 devuser@ubuntu2204-1-devesp
 ~
@@ -295,6 +309,7 @@ hist:218 -> echo ~/linux-devesp/linux-scripts
 Los archivos y programas usados aqui estan disponibles en [linux-devesp](https://github.com/devesplab/linux-devesp.git)
 
 Podemos ejecutar el program de esta manera.
+
 ```bash
 devuser@ubuntu2204-1-devesp
 ~
@@ -306,11 +321,13 @@ Hello, DevESP... today is Sat Jun 22 18:51:52 UTC 2024
 ### Expansión de Corsé
 
 Aqui usamos la variable de entorno `$HOME` y el corsé para agrupar varios directorios a crear simultaneamente.
+
 ```bash
 mkdir $HOME/{dir1,dir2,dir3}
 ```
 
 El resultado se ve así:
+
 ```bash
 devuser@ubuntu2204-1-devesp
 ~
@@ -326,6 +343,7 @@ drwxrwxr-x 2 devuser devuser 4096 Jun 22 18:42 dir3/
 El símbolo `*` es comúnmente usado para encapsular el patrón de nombre de varios archivos.<br>
 
 Este ejemplo muestra que capturamos cualquier símbolo con `*` seguido por la extensión `.sh`.
+
 ```bash
 devuser@ubuntu2204-1-devesp  
 ~/linux-devesp/linux-scripts
@@ -334,13 +352,14 @@ hist:221 -> ls -l *.sh
 -rwxrw-rw- 1 devuser devuser  178 May 25 22:45 forever-loop.sh*
 -rwxrwxr-x 1 devuser devuser  246 May 19 02:22 greeting.sh*
 ```
+
 Básicamente hemos listado cualquier programa de bash, esos que tienen `.sh` como extension de archivo.
 
 ## Conclusion
 
 El SH y BASH shell es una de las primeras creaciones altamente adoptadas por la comunidad usuaria. Ofrecen muchas características versátiles que hacen su uso muy atractivo. El uso del SHELL varia desde lo más simple tales como entrar comandos para ver archivos, a lo más complejos tales como escriber programas para automatizar tareas complejas.
 
-Es recomendable aprender como usar el shell de manera proficiente para tomar ventaja de muchos usos versatiles. 
+Es recomendable aprender como usar el shell de manera proficiente para tomar ventaja de muchos usos versátiles. 
 
 ## Referencias 
 
@@ -349,10 +368,10 @@ Es recomendable aprender como usar el shell de manera proficiente para tomar ven
 Los comandos siguientes son usados frecuentemente en sesiones de Linux.
 
 cuentas de sistema
-: Tipo de cuenta que no es usuada por algun usuario para entrar al sistema. El propósito de una cuenta de sistema es generalmente para actividades administrativas o ejecución de apllicaciones de terceros que no requieren acción directa de usuarios a travéz de la linea de comandos en una terminal.
+: Tipo de cuenta que no es usada por algún usuario para entrar al sistema. El propósito de una cuenta de sistema es generalmente para actividades administrativas o ejecución de aplicaciones de terceros que no requieren acción directa de usuarios a través de la linea de comandos en una terminal.
 
 extension de archivo
-: se refiera al grupo de letras con que finaliza un nombre de archivo y que generalmente indica el tipo de función que ofrece o el tipo de aplicacíon que se requiere para operarlo. Por ejemplo: un documento de Adobe Acrobat usa `.pdf`, un documento de Microsoft Word usa `.doc`, mientras que un programa de Bash usa `.sh`.
+: se refiera al grupo de letras con que finaliza un nombre de archivo y que generalmente indica el tipo de función que ofrece o el tipo de aplicación que se requiere para operarlo. Por ejemplo: un documento de Adobe Acrobat usa `.pdf`, un documento de Microsoft Word usa `.doc`, mientras que un programa de Bash usa `.sh`.
 
 export
 : comando usado para crear variables con NOMBRE y VALOR en el SHELL
@@ -363,6 +382,7 @@ env
 ### Referencias Utiles
 
 Paginas Manuales
+
 - [Bash Shell](https://manpages.ubuntu.com/manpages/focal/en/man1/bash.1.html)
 - [SH Shell](https://manpages.ubuntu.com/manpages/focal/en/man1/sh.1.html.1.html)
 - [nologin](https://manpages.ubuntu.com/manpages/focal/en/man5/nologin.5.html)
@@ -371,6 +391,7 @@ Paginas Manuales
 - [less](https://manpages.ubuntu.com/manpages/focal/en/man1/less.1.html)
 
 Otras referencias
+
 - [GNU Bash](https://www.gnu.org/software/bash//)
 - [Referencia del Manual de Bash](https://www.gnu.org/software/bash/manual/bash.html)
 

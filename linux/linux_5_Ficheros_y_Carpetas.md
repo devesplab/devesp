@@ -8,7 +8,7 @@ has_toc: false
 nav_order: 5
 ---
 
-# Ficheros y Carpetas
+## Ficheros y Carpetas
 
 {: .no_toc }
 
@@ -39,25 +39,27 @@ Los directorios en Linux son importantes para organizar y administrar archivos y
 
 Este ejemplo muestra el listado del comando `ls -l` de una carpeta de OpenJDK.
 
-Notese que el carácter inicial de la linea indica el tipo de activo:
+Nótese que el carácter inicial de la linea indica el tipo de activo:
+
 - la letra `d` indica que es una carpeta
-- el simbolo de guión `-` indica que es un archivo
+- el símbolo de guión `-` indica que es un archivo
 - la letra `l` indica que es un enlace a otro archivo (or carpeta on otros casos)
 
-![](../../assets/images/archivos-y-carpetas_v1.png)
+![Ejemplo de listado de archivos y carpetas con el comando ls -l que muestra tipos de archivo y permisos](../../assets/images/archivos-y-carpetas_v1.png)
 
 Las carpetas también pueden identificarse por la barra de terminación `/`.
 
 ## Propósito De Directorios y Ficheros
 
-Cuando ha pasado tiempo que hemos trabajado en un projecto, acumulamos mucha informacíon de tópicos diferentes. A un cierto punto es imperativo agrupar información relacionada para que la podamos manejar mas facil.
+Cuando ha pasado tiempo que hemos trabajado en un proyecto, acumulamos mucha información de tópicos diferentes. A un cierto punto es imperativo agrupar información relacionada para que la podamos manejar mas fácil.
 
 Luego tenemos que:
-- Un fichero contiene informacíon de un tema en particular.
+
+- Un fichero contiene información de un tema en particular.
 - Un directorio nos ayuda a agrupar ficheros relacionados a un tema.
 
 Los ficheros pueden ser de varios tipos: texto, binario, pdf, zip, jpeg, etc. Este tipo de clasificación no se aplica a directorios.
 
-Eventualmente la agrupación de datos va más allá del uso individual y puede convertirse en un esfuerzo de un grupo de desarrolladores. Cuando el volúmen de información crece en complejidad hay la necesidar de crear un sistema de version y registrar los cambios pasado el tiempo.
+Eventualmente la agrupación de datos va más allá del uso individual y puede convertirse en un esfuerzo de un grupo de desarrolladores. Cuando el volumen de información crece en complejidad hay la necesitar de crear un sistema de version y registrar los cambios pasado el tiempo.
 
 [Return to main page]({{site.baseurl}}/).
