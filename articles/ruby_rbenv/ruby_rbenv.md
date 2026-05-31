@@ -8,6 +8,8 @@ has_toc: false
 nav_order: 1
 ---
 
+## Propósito de RBENV
+
 {: .no_toc }
 
 <details open markdown="block">
@@ -19,13 +21,12 @@ nav_order: 1
 {:toc}
 </details>
 
-# Propósito de RBENV
-
 rbenv es una herramienta para gestionar diferentes versiones de Ruby en un sistema. Su objetivo principal es permitir a los desarrolladores cambiar fácilmente entre múltiples versiones de Ruby y garantizar que se utilice la versión correcta para un proyecto específico.
 
 ## Instalar RBENV
 
 Este documento explica lo siguiente:
+
 - Obtener rbenv
 - Instalar rbenv
 - Usar rbenv para instalar una version de ruby
@@ -47,14 +48,15 @@ Codename:	noble
 
 ## Obtener RBENV
 
-Hagamos lo siguiente como pre-requisito
+Hagamos lo siguiente como pre-requisito:
+
 - Obtener la distribucion de rbenv
 - Inicializar el ambiente de rbenv
 
 Para empezar, estamos en la carpeta de inicio del usuario.
 
 {: .highlight }
-Todo el proceso descrito aqui es ejecutado estando en el directorio de inicio de un usuario regular (no root).
+Todo el proceso descrito aquí es ejecutado estando en el directorio de inicio de un usuario regular (no root).
 
 ```bash
 devuser@devesp
@@ -64,6 +66,7 @@ hist:188 -> pwd
 
 Clonemos el repositorio de git.
 El argumento `~/.rbenv` indica el destino local donde deseamos clonar el repositorio.
+
 ```bash
 -> git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 Cloning into '/home/devuser/.rbenv'...
@@ -78,6 +81,7 @@ Resolving deltas: 100% (2109/2109), done.
 El comando anterior crea la carpeta `/home/devuser/.rbenv`.
 
 Enseguida, initicializemos rbenv.
+
 ```bash
 -> ~/.rbenv/bin/rbenv init
 writing ~/.bash_profile: now configured for rbenv.
@@ -98,8 +102,8 @@ lrwxrwxrwx 1 devuser devuser 16 Feb 21 04:15 rbenv -> ../libexec/rbenv*
 Antes de que podemos usar rbenv, necesitamos instalar el paquete **ruby-build**.
 
 {: .note }
-El comando de instalacion de rbenv mencionado en el paso anterior no provee el binario de `rbenv`. Este es proveido por el plugin **ruby-build**.<br>
-El plugin de ruby-build es una utilidad que simplifica la instalacion de cualquier version de ruby en sistemas de variantes de Unix.
+El comando de instalación de rbenv mencionado en el paso anterior no provee el binario de `rbenv`. Este es proveído por el plugin **ruby-build**.<br>
+El plugin de ruby-build es una utilidad que simplifica la instalación de cualquier version de ruby en sistemas de variantes de Unix.
 
 Clonemos el repositorio de git y sigamos los pasos para abilitar el paquete.
 
@@ -124,13 +128,15 @@ Already up to date.
 ```
 
 Verifiquemos que rbenv esta en el paso del usuario.
-```
+
+```bash
 ->  which rbenv
 /home/devuser/.rbenv/bin/rbenv
 ```
 
 Verifiquemos la version de rbenv.
-```
+
+```bash
 devuser@devesp
 ~
 hist:277 -> rbenv
@@ -164,7 +170,8 @@ El comando `rbenv` provee la opción `-l` or `--list-all` para ver las versiones
 : muestra todas las versiones disponibles (si son apoyadas corrientemente)
 
 Por ejemplo:
-```
+
+```bash
 -> rbenv install -l
 3.2.11
 3.3.11
@@ -176,8 +183,10 @@ picoruby-3.4.2
 truffleruby-34.0.1
 truffleruby+graalvm-34.0.1
 ```
+
 O la lista mas larga:
-```
+
+```bash
 3.3.5
 3.3.6
 ...
@@ -196,7 +205,7 @@ rbx-5.0
 etc
 ```
 
-## Instalar una version de Ruby (primera instalacion)
+## Instalar una version de Ruby (primera instalación)
 
 El ambiente esta ahora listo y podemos proceder a instalar nuestra primera version de ruby.
 
@@ -209,12 +218,13 @@ rbenv install <version>
 ```
 
 {: .important }
-Una instalacion de ruby toma alrededor de **5 minutos**!<br>
+Una instalación de ruby toma alrededor de **5 minutos**!<br>
 Puede tomar un poco mas de tiempo en sistemas con bajos recursos.<br>
-Este proceso instala algunas dependencias destras de escena.
+Este proceso instala algunas dependencias detrás de escena.
 
 Este proceso lo hacemos en el directorio hogar del usuario que no es root.
-```
+
+```bash
 devuser@devesp
 ~
 hist:215 -> rbenv install 3.3.5
@@ -245,13 +255,13 @@ NOTE: to activate this Ruby version as the new default, run: `rbenv global 3.3.5
 Notemos que el paso de las instalacion es `/home/devuser/.rbenv/versions/3.3.5` 
 Como lo recomienda el comando anterior, establescamos la version global.
 
-```
+```bash
 -> rbenv global 3.3.5
 ```
 
 Esta acción crea el archivo `~/.rbenv/version` el cual contiene la version activa.
 
-```
+```bash
 -> cat ~/.rbenv/version
 3.3.5
 ```
@@ -260,7 +270,7 @@ El comando `rbenv global <version>` establece la version de ruby. En cualquier m
 
 Usemos el comando `rbenv versions` para listar las versiones de ruby disponibles al momento.
 
-```
+```bash
 -> rbenv versions
 * 3.3.5 (set by /home/devuser/.rbenv/version)
 
@@ -273,7 +283,7 @@ ruby 3.3.5 (2024-09-03 revision ef084cc8f4) [x86_64-linux]
 
 La instalacion de ruby agrega el comando `gem`, el cual se usa para instalar paquetes adicionales de ruby conocidos come **gemas** que extienden la funcionalidad de ruby.
 
-```
+```bash
 -> which gem
 /home/devuser/.rbenv/shims/gem
 ```
@@ -365,7 +375,7 @@ RubyGems Environment:
 Al instalar nuevas gemas, van en el paso de la version activa de ruby.
 En este ejemplo el paso de la version activa es ` $HOME/.rbenv/versions/3.3.5`.
 
-```
+```bash
 -> ls -l $HOME/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/
 total 344
 drwxr-xr-x  2 devuser devuser 4096 Feb 21 04:53 abbrev-0.1.2/
@@ -386,7 +396,7 @@ drwxr-xr-x  2 devuser devuser 4096 Feb 21 04:53 digest-3.1.1/
 Podemos listar las gemas que son instaladas por defecto. La lista abajo es parcial.<br>
 Al inspeccionar la lista podemos encontrar si tenemos las dependecias requeridas para desarrollar un proyecto
 
-```
+```bash
 -> gem list | head
 abbrev (default: 0.1.2)
 base64 (default: 0.2.0)
@@ -428,7 +438,7 @@ drwxrwxr-x 7 devuser devuser 4096 Feb 21 05:06 3.4.2/
 
 En esta salida, la version señalada con un asterisco '*' indica que es la version activa.
 
-```
+```bash
 -> rbenv versions
   2.7.2
 * 3.3.5 (set by /home/devuser/.rbenv/version)
@@ -439,13 +449,13 @@ Ahora simplemente podemos editar el achivo `~/.rbenv/version` con la version que
 
 A seguir, editemos el archivo escribiendo `3.4.2` para hacer esa la version global.
 
-```
+```bash
 ->  vi  ~/.rbenv/version
 ```
 
 Verificar la nueva version global.
 
-```
+```bash
 -> rbenv versions
   2.7.2
   3.3.5
@@ -460,7 +470,7 @@ Ahora podemos anular la version GOGAL al establecer la version LOCAL.
 {: .highlight }
 La versión global de Ruby es la versión de Ruby que está configurada para usarse en todo el sistema para todos los proyectos, a menos que la anule una versión local. La versión local de Ruby es específica de un proyecto en particular y se puede configurar para anular la versión global. Esto le permite mantener dependencias y entornos específicos del proyecto sin afectar otros proyectos.
 
-```
+```bash
 -> rbenv local 2.7.2
 
 -> rbenv versions
@@ -470,7 +480,8 @@ La versión global de Ruby es la versión de Ruby que está configurada para usa
 ```
 
 EL comando `gem env` muestra la nueva version activa y las carpetas relevantes al ambiente.
-```
+
+```bash
 devuser@devesp
 ~
 hist:232 -> gem env
@@ -528,7 +539,7 @@ Deseamos instalar una gema llamada `abbrev`.
 
 Usemos el comando `gem` para saber si la gema `abbrev` existe.
 
-```
+```bash
 -> gem search abbrev
 
 *** REMOTE GEMS ***
@@ -544,7 +555,7 @@ rubysl-abbrev (2.0.4)
 La salida muestra que tenemos disponible la gema abbrev (0.1.2).
 Instalemos la gema.
 
-```
+```bash
 -> gem install abbrev
 Fetching abbrev-0.1.2.gem
 Successfully installed abbrev-0.1.2
@@ -556,7 +567,7 @@ Done installing documentation for abbrev after 0 seconds
 
 Verifiquemos que la gema fue instalada.
 
-```
+```bash
 -> gem list abbrev
 
 *** LOCAL GEMS ***
@@ -566,7 +577,7 @@ abbrev (0.1.2)
 
 De donde viene esa gema? Viene del recurso remoto que vimos al correr el comando `gem env`. El recurso remoto se denota con la variable de ambiente REMOTE SOURCES dentro del ambiente de ruby.
 
-```
+```bash
 -> gem env
 RubyGems Environment:
 …
@@ -575,4 +586,6 @@ RubyGems Environment:
 …
 ```
 
-Discutiremos mas detalles acerca de ruby y gemas on otros articulos.
+Discutiremos mas detalles acerca de ruby y gemas on otros artículos.
+
+[Return to main page]({{site.baseurl}}/)
