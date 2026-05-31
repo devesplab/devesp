@@ -9,7 +9,7 @@ has_toc: false
 nav_order: 1
 ---
 
-# LINUX :: SSH :: Conceptos
+## Conceptos De SSH
 
 {: .no_toc }
 
@@ -22,10 +22,10 @@ nav_order: 1
 {:toc}
 </details>
 
-
 **DESCRIPCION**
 
 En esta leccion:
+
 - Qué es SSH?
 - tema dos
 - tema tres
@@ -37,7 +37,7 @@ ninguna
 **REQUERIMIENTOS**
 
 Sistema de linux Ubuntu. <br>
-Alguos comandos requieren privilegios elevados.
+Algunos comandos requieren privilegios elevados.
 
 **ADVERTENCIA**
 
@@ -45,11 +45,14 @@ ninguna.
 
 ## Working Environment
 
-En esta leccion usamos el sistema operativo Ubuntu.
+En esta lección usamos el sistema operativo Ubuntu.
 
 ## Qué es SSH?
 
-OpenSSH es la principal herramienta de conectividad para inicio de sesiones remotas con el protocolo SSH. Cifra todo el tráfico para eliminar escuchas ilegales, secuestro de conexiones y otros ataques. Además, OpenSSH proporciona un gran conjunto de capacidades de tunelización segura, varios métodos de autenticación y opciones de configuración sofisticadas.
+OpenSSH es la principal herramienta de conectividad para inicio de sesiones remotas con el protocolo SSH. Cifra todo el tráfico para eliminar escuchas ilegales, secuestro de conexiones y otros ataques. Además, OpenSSH proporciona un gran conjunto de capacidades de hacer túneles seguros, varios métodos de autenticación y opciones de configuración sofisticadas.
+
+{: .note}
+Un túnel SSH es una conexión cifrada creada sobre SSH que reenvía el tráfico de red de una máquina a otra, permitiéndote acceder de forma segura a servicios a través de una red no confiable
 
 La suite OpenSSH consta de las siguientes herramientas:
 
@@ -59,13 +62,13 @@ La suite OpenSSH consta de las siguientes herramientas:
 
 > _La descripción anterior fue tomada de la página hogar del producto_ [^1]
 
-## Carácteristicas de SSH
+## Características de SSH
 
 Ofrece modo de cifrado segura.
 
 Permite el uso de llaves multiples.
 
-Integracion on herramientas tales como Ansible que permite automatización.
+Integración on herramientas tales como Ansible que permite automatización.
 
 ## Usos de SSH
 
@@ -78,40 +81,45 @@ Transporte de dato mediate copia segura. (SCP)
 ## Cliente de SSH
 
 OpenSSH provee el client `ssh` para facilitar la comunicación entre sistemas.
-El cliente accepta ajustes para facilitar su uso `~/.ssh/config`, `/etc/openssh/openssh.config`
+El cliente acepta ajustes para facilitar su uso `~/.ssh/config`, `/etc/openssh/openssh.config`
 
 ## Servicio de SSH
 
 OpenSSH provee el daemon `sshd` para manejar el proceso que acepta conexiones que vienen de sistemas remotos.
-El daemon accepta ajustes para administrar su uso `/etc/openssh/opensshd.config`
+El daemon acepta ajustes para administrar su uso `/etc/openssh/opensshd.config`
 
 El servicio `sshd` se maneja con el comando `systemctl`. 
 
 Ver el estatus del servicio.
+
 ```bash
 systemcl status ssd
 ```
 
 Parar servicio.
+
 ```bash
 systemcl stop ssd
 ```
 
 Empezar servicio.
+
 ```bash
 systemcl start ssd
 ```
 
 Ver el archivo de configuración del servicio.
+
 ```bash
-systemcl cat ssd
+systemctl cat ssd
 ```
 
 ## Llaves de SSH
 
-SSH logra comunicaciones cifradas mediante el uso de llaves que crean encripcion en tránsito.
+SSH logra comunicaciones cifradas mediante el uso de llaves que crean cifrado en tránsito.
 
 En realidad, SSH requiere el uso de un par de llaves:
+
 - llave privada: tiene que mantenerse privada y segura a todo costo
 - llave pública: puede copiarse a cualquier sistema donde se requiera conexión remota
 
@@ -119,7 +127,7 @@ Podemos crear llaves de varios tipos tales como: `rsa`, `rsa1`, `dsa`.
 
 Usamos el comando `ssh-keygen` para crear llaves. El comando crea la llave pública y la llave privada.
 
-Por defecto ssh usa el nombre `id_rsa` o `id_dsa` para la llave privada, y usa `id_rsa.pub` o `id_dsa.pub` para la llave pública. Las llaves son guardadas en la un directorio escodido `$HOME/.ssh`, pero si asi lo deseamos podemos poner las llaves en el lugar que nos plazca.
+Por defecto ssh usa el nombre `id_rsa` o `id_dsa` para la llave privada, y usa `id_rsa.pub` o `id_dsa.pub` para la llave pública. Las llaves son guardadas en la un directorio escocido `$HOME/.ssh`, pero si asi lo deseamos podemos poner las llaves en el lugar que nos plazca.
 
 En otro documento discutimos como usar las llaves para comunicarnos sobre la red.
 
@@ -148,6 +156,7 @@ DevEsp :: Linux
 - https://docs.devesp.com/linux-en-espa%C3%B1ol/
 
 Paginas Manuales
+
 - [systemctl](https://manpages.ubuntu.com/manpages/focal/en/man1/systemctl.1.html)
 - [systemd](https://manpages.ubuntu.com/manpages/focal/en/man1/systemd.1.html)
 

@@ -8,7 +8,7 @@ has_toc: false
 nav_order: 1
 ---
 
-# Provisionar El Cliente De Git
+## Provisionar El Cliente De Git
 
 {: .no_toc }
 
@@ -32,6 +32,7 @@ Usamos el cliente de Git >= 2.0
 Hacemos lo siguiente en `Ubuntu 22.04.2 LTS`.
 
 Veamos si el paquete esta disponible.
+
 ```bash
 -> sudo apt show  git -a
 Package: git
@@ -40,16 +41,19 @@ Version: 1:2.34.1-1ubuntu1.9
 ```
 
 Actualizemos el index, o cache, the Ubuntu APT. Esto consigue la lista de paquetes disponible hasta ese momento.
+
 ```bash
 -> sudo apt update
 ```
 
 Instalar el paquete de `git`.
+
 ```bash
 -> sudo apt install  git
 ```
 
 Verificar la instalacion.
+
 ```bash
 -> dpkg --get-selections | grep git
 git               install
@@ -57,6 +61,7 @@ git-man           install
 ```
 
 Verificar el binario
+
 ```bash
 -> which git
 /usr/bin/git
@@ -66,6 +71,7 @@ git version 2.34.1
 ```
 
 Si por alguna razón es necesario, podemos desinstalar git en Ubuntu.
+
 ```bash
 -> sudo apt remove  git -y
 ```
@@ -77,6 +83,7 @@ Hacemos lo siguiente en `Red Hat Enterprise Linux 9.2 (Plow)`.
 Ver si el paquete esta disponible.
 
 Podemos usar la bandera `provides` o `list` como se muestra a continuación.
+
 ```bash
 -> yum provides git
 Not root, Subscription Management repositories not updated
@@ -94,11 +101,13 @@ git.x86_64                           2.43.0-1.el9                           ubi-
 ```
 
 Instalar el paquete.
+
 ```bash
 -> sudo yum install git
 ```
 
 Para verificar la instalacion podemos usar el comando `yum` o `rpm` como se muestra a continuación.
+
 ```bash
 -> yum list git
 Not root, Subscription Management repositories not updated
@@ -117,6 +126,7 @@ git-2.43.0-1.el9.x86_64
 ```
 
 Verificar el binario
+
 ```bash
 -> which git
 /usr/bin/git
@@ -126,6 +136,7 @@ git version 2.43.0
 ```
 
 Si por alguna razón es necesario, podemos desinstalar git en RedHat.
+
 ```bash
 -> yum remove git
 ```
@@ -133,6 +144,7 @@ Si por alguna razón es necesario, podemos desinstalar git en RedHat.
 ## Instalar Git en MacOS
 
 Instalar git using `Homebrew`.
+
 ```bash
 -> brew install git
 ```
@@ -141,6 +153,7 @@ Instalar git using `Homebrew`.
 Ver la sección de referencias para el enlace donde obtener `brew`.
 
 Verificar el binario
+
 ```bash
 -> which git
 /usr/bin/git
@@ -159,6 +172,7 @@ Otra manera fácil de instalar el cliente git en Windows es usar el `Escritorio 
 Ver la sección de referencias para el enlace donde obtener el `Escritorio de Github`.
 
 También existe la utilidad `winget` que puede usarse asi:
+
 ```bash
 winget install --id Git.Git -e --source winget
 ```
@@ -174,10 +188,10 @@ EL cliente de Github conocido como `git` es una utilidad de uso universal dispon
 Los comandos siguientes son usados frecuentemente en sesiones de Linux.
 
 yum
-: utilidad para instaler paquetes en RedHat
+: utilidad para instalar paquetes en RedHat
 
 apt
-: utilidad para instaler paquetes en Ubuntu
+: utilidad para instalar paquetes en Ubuntu
 
 brew
 : utilidad para administrar paquetes en MacOS
@@ -185,14 +199,16 @@ brew
 winget
 : utilidad para administrar paquetes en computadoras basadas en el Sistema Operativo Microsoft 
 
-### Referencias Utiles
+### Referencias Útiles
 
 DevEsp 
+
 - [Ubuntu Manejar Paquetes](../linux/linux_14_Package_Management/devesp_packages_14a_ubuntu_package_management.md)
 - [RedHat Manejar Paquetes](../linux/linux_14_Package_Management/devesp_packages_14b_rhel_package_management.md)
 
 
 Obtener el cliente de Git
+
 - [Git Linux Cliente](https://git-scm.com/download/linux)
 - [Git MacOS Cliente](https://git-scm.com/download/mac/)
 - [Git Windows Cliente](https://git-scm.com/download/win)

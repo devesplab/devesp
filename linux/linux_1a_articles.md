@@ -8,7 +8,7 @@ has_toc: false
 nav_order: 0
 ---
 
-# Artículos De Linux
+## Artículos De Linux
 
 {: .no_toc }
 

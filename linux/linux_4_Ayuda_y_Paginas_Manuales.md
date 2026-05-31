@@ -7,7 +7,7 @@ has_toc: false
 nav_order: 4
 ---
 
-# Buscar Ayuda en Linux
+## Buscar Ayuda en Linux
 
 {: .no_toc }
 
@@ -24,7 +24,8 @@ Frecuentemente no recordamos la sintaxis o las opciones disponibles para un coma
 
 Linux prove las páginas manuals y otros comandos para encontrar ayuda disponible internamente o externamente.
 
-Las páginas manuales de Ubuntu están disponibles en linea: 
+Las páginas manuales de Ubuntu están disponibles en linea:
+
 - en Español [^1]
 - en Inglés [^2]
 
@@ -36,12 +37,14 @@ Las páginas manuales de Ubuntu están disponibles en linea:
 Las páginas manuales son documentos disponibles internamente en el sistema que nos proveen información acerca de las diferentes funciones y comandos disponibles.
 
 La sintaxis siguiente muestra como usar el comando `man` para mostrar la pagina manual de un comando:
-```
+
+```bash
 man <nombre-de-comando>
 ```
 
 Por ejemplo la instrucción `man ls` nos muestra la página manual del comando `ls` que usamos para listar archivos y directorios. Abajo vemos un extracto recortado de la página manual de `ls`.
-```
+
+```bash
 NOMBRE
 
        ls, dir, vdir - listan los contenidos de directorios
@@ -84,6 +87,7 @@ not required on a system that users do not log into.
 To restore this content, including manpages, you can run the 'unminimize'
 command. You will still need to ensure the 'man-db' package is installed.
 ```
+
 Es bastante común remover componentes innecesarios de servidores que no requieren tales cosas como páginas manuales.
 
 ## Comando TLDR
@@ -96,18 +100,20 @@ El comando tldr es una utilidad que provee una lista corta de los usos mas comun
 
 En RHEL se instala de esta manera.
 
-```
+```bash
 -> dnf install tldr
 
 -> yum install tldr
 ```
 
 En Ubuntu se instala de esta manera.
-```
+
+```bash
 -> apt install tldr
 ```
 
 En este ejemplo entremos el comando `tldr ls` (se usa igual en RHEL y Ubuntu).
+
 ```bash
 -> tldr ls
 
@@ -143,6 +149,7 @@ En este ejemplo entremos el comando `tldr ls` (se usa igual en RHEL y Ubuntu).
 
 TLDR crea un caché en el directorio de inicio en `$HOME/.cache/tldr`.<br>
 A medida que hacemos búsquedas, agrega ficheros `.md` en el directorio `common` o `linux` dependiendo de la ayuda que buscamos.
+
 ```bash
 -> ls -lR ~/.cache/tldr/
 /root/.cache/tldr/:
@@ -173,22 +180,27 @@ Red Hat describe el paquete `info` de esta manera:<br>
 _"EL proyecto GNU usa el fichero de formato textinfo para su documentación. EL paquete info provee una manera propia en forma de visualizor en la terminal para ver ficheros de textinfo"_
 
 En Ubuntu, instalar asi:
-```
+
+```bash
 sudo apt install info
 ```
 
 En RHEL9, instalar asi:
-```
+
+```bash
 dnf install info
 ```
 
 Luego podemos ver informacion de un comando asi:
-```
+
+```bash
 info <nombre-del-comando>
 ```
+
 Por ejemplo
-```
+
+```bash
 info echo
 ```
 
-[Return to main page]({{site.baseurl}}/).
+[Return to main page]({{site.baseurl}}/)

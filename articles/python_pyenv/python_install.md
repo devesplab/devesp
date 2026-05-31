@@ -202,9 +202,9 @@ pip3
 ### Referencias útiles
 
 Documentación oficial:
-- [Python official Site](https://www.python.org/doc/)
+- [Python Sitio Oficial](https://www.python.org/doc/)
 - [Python Docs](https://docs.python.org/)
-- [How to set up a development environment for Python on Ubuntu](https://documentation.ubuntu.com/ubuntu-for-developers/howto/python-setup/)
+- [Cómo configurar un entorno de desarrollo para Python en Ubuntu](https://documentation.ubuntu.com/ubuntu-for-developers/howto/python-setup/)
 
 Aprender Python en español:
 - [Python Intermedio](https://python-intermedio.readthedocs.io/es/latest/)

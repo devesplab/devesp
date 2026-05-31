@@ -8,7 +8,7 @@ has_toc: false
 nav_order: 2
 ---
 
-# Uso Básico de Git
+## Uso Básico de Git
 
 {: .no_toc }
 
@@ -24,12 +24,14 @@ nav_order: 2
 ---
 
 En esta página discutimos lo siguiente:
+
 - inicializar una carpeta para uso con control de revision
 - clonar un repositorio existente de github
 - entender origen (origin) de github
 - hacer cambios locales y propagarlos a un repositorio
 
-En esta leccion usamos el sistema operativo Ubuntu.<br>
+En esta lección usamos el sistema operativo Ubuntu.
+
 Usamos el cliente de Git >= 2.0
 
 ## Comandos Básico de Git
@@ -37,55 +39,72 @@ Usamos el cliente de Git >= 2.0
 Supongamos que tenemos una fuente de código en la que deseamos implementar control de revision.
 
 Lo primero que hacemos es cambiar a esa carpeta que contiene el código.
-```
+```bash
 -> cd myApp
 ```
 Inicializar repositorio:
-```
+
+```bash
 -> git init myApp
 ```
+
 Hagamos `main` la rama por defecto (sugerido for el comando init anterior).
-```
+
+```bash
 -> git branch -m main
 ```
+
 Hacer seguimiento de archivos que cambian:
-```
+
+```bash
 git status
 ```
+
 Pongamos archivos bajo revision.
-```
+
+```bash
 git add <archivo> 
 ```
+
 Confirmar cambios en un archivo:
-```
+
+```bash
 git commit -am"mis actualizaciones"
 ```
+
 Ahora tenemos que mandar nuestro fuente de código a un origen. <br>
 
 {: .note }
 En Git, `origin` [origen] es el apodo predeterminado del repositorio remoto al que está conectado tu repositorio local.
 
 Procedamos a agregar un origen:
-```
+
+```bash
 git remote add <nombre-de-origen> <git-url>
 ```
+
 Empujar cambios locales al origen:
-```
+
+```bash
 git push <archivo> <rama>
 ```
+
 Clonar un repositorio de git:
-```
+
+```bash
 git clone <git-url>
 ```
+
 Bajar las actualizaciones mas recientes:
-```
+
+```bash
 git pull origin <branch>
 ```
 
 El cliente de git identifica un origen con dos parámetros:
 
 nombre-de-origen 
-: es el nombre legible con el que git indentifica la connexion remota
+: es el nombre legible con el que git identifica la conexión remota
 
 git-url
 : es la URL conocida en el servido de Github
@@ -97,6 +116,7 @@ A continuación vamos a ejercitar el uso de git.
 En nuestro ordenador local es fácil empezar usar git para control de revision. 
 
 En este ejemplo básico, creamos un directorio, cambiamos a ese directorio y lo inicializamos para que este bajo control de revision con git.
+
 ```bash
 -> mkdir data
 -> cd data
@@ -105,6 +125,7 @@ En este ejemplo básico, creamos un directorio, cambiamos a ese directorio y lo 
 A partir de este momento tenemos la habilidad de registrar todo cambio hecho a los datos del repositorio.
 
 El comando `git init` crea el directorio escondido `.git`
+
 ```bash
 -> ls -la ~/data
 total 28
@@ -196,11 +217,13 @@ Github provee el cliente de `git` para manipular control de revision en nuestra 
 Si aún no lo has hecho, sigue las instructiones para [instalar el cliente de git](git_2a_Provisionar.md) en tu sistema.
 
 Para usar un repositorio existente en [github](https://github.com), solo tenemos que clonarlo usando el cliente the git. Usemos aqui un ejemplo con un repositorio real:
+
 ```bash
 git clone https://github.com/devesplab/git-devesp.git
 ```
 
 El comando anterior creará un directorio con el nombre del repositorio `git-devesp`. Podemos cambiar a ese directorio y empezar a trabajar.
+
 ```bash
 cd git-devesp
 ```
@@ -214,6 +237,7 @@ Cuando clonamos un repositorio usando `git clone`, el origin predeterminado se l
 Cuando creamos un repositorio local, debemos agregar la referencia al origen para poder bajar y empujar cambios.
 
 Siguiendo el ejemplo que estamos discutiendo:
+
 - creamos un nuevo directorio
 - cambiamos al directorio
 - agregamos un origen remoto usando un TOKEN para autenticación.
@@ -254,6 +278,7 @@ En el ejemplo anterior truncamos el token para mejor legibilidad.
 ## Hacer y Empujar Cambios
 
 En nuestro ejemplo, usamos el comando `git status` que muestra que inicialmente no tenemos nada.
+
 ```bash
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
@@ -264,13 +289,15 @@ nothing to commit (create/copy files and use "git add" to track)
 ```
 
 De ahora en adelante hacemos referencia a "origin" para cualquier operación que envuelva bajar o empujar cambios. Enseguida creamos un nuevo archivo.
+
 ```bash
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
 -> echo "Hello, Devesp!" > hello.txt
-
 ```
-Y ahora empujamos el nuevo cambio.
+
+Y
+ ahora empujamos el nuevo cambio.
 ```bash
 devuser@ubuntu2204-2-devesp  git(main)
 ~/data
@@ -294,6 +321,7 @@ To https://github.com/devesplab/git-devesp.git
 ```
 
 Para verificar solo habramos el repositorio en el navegador web.
+
 ```bash
 https://github.com/devesplab/git-devesp.git
 ```
@@ -312,11 +340,13 @@ git
 : cliente de github para la manipulación local de control de version de repositorios de github
 
 ### Referencias Utiles
-<br>
+
 DevEsp :: Linux
+
 - [git-devesp](https://github.com/devesplab/git-devesp.git)
 
 Referencias en línea:
+
 - [Documentación General de Git](https://git-scm.com/docs)
 - Client de [git](https://git-scm.com/docs/git)
 - Parámetros de [git-config](https://git-scm.com/docs/git-config/2.22.0)

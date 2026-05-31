@@ -8,7 +8,7 @@ has_toc: false
 nav_order: 9
 ---
 
-# Procesos en Linux
+## Procesos en Linux
 
 {: .no_toc }
 
@@ -27,16 +27,17 @@ nav_order: 9
 
 Un proceso Unix es una instancia de un programa que se ejecuta en el sistema operativo Unix. Cuando se ejecuta un comando o una aplicación, el Unix Kernel crea un proceso para gestionar su ejecución. Linux hace uso del Kernel para segmentar recursos internos separados para cada proceso.
 
-El Linux Kernel juega el siguiete rol:
-- alocar y manejar los recursos internos necesarios para la ejecucion de un proceso
+El Linux Kernel juega el siguiente rol:
+
+- alocar y manejar los recursos internos necesarios para la ejecución de un proceso
 - manejar el horario cuando empezar o terminar un proceso
 - interactuar con el IPC (Inter Process Communication) para que diferentes procesos se comuniquen entre si a traves de pipas, señales y sockets.
 
-Un proceso pertenece al usuario especifico que lo empezo. El usuario tiene cierto control sobre el proceso tales como monitorear la ejecucion, terminarlo, o cambiar la prioridad.
+Un proceso pertenece al usuario especifico que lo empezó. El usuario tiene cierto control sobre el proceso tales como monitorear la ejecución, terminarlo, o cambiar la prioridad.
 
-Cada proceso es identificado por un nombre predefinido, un id numerico llamado `process id` y un id numerico padre llamado `parent process id`.
+Cada proceso es identificado por un nombre predefinido, un id numérico llamado `process id` y un id numérico padre llamado `parent process id`.
 
-En general, un proceso de Linux es una unidad independiente de ejecucion que interactua con el Kernel y con otros proceses para ejecutar tareas y compartir recursos de una manera coordinada.
+En general, un proceso de Linux es una unidad independiente de ejecución que interactúa con el Kernel y con otros proceses para ejecutar tareas y compartir recursos de una manera coordinada.
 
 Cada proceso requiere un espacio de memoria que incluye Segmento de código, Segmento de datos, Montón (Heap) y Pila (Stack).
 
@@ -65,7 +66,7 @@ No todos los procesos son iguales. Cada proceso se clasifica de acuerdo a su imp
 
 ### ID de Proceso (PID, PPID)
 
-En cualquier momento dado pueden haber docenas o cientos de procesos activos en un sistema. Unix asigna a cada proceso un identificador numérico único para diferenciarlos y asi poder realizar un seguimiento y gestionarlo. El valor numérico es conocido como `PID`, el cual es un valor numérico asignado por el Kernel para identificar y manejar el proceso. El PID es muy útil para diagnosticar problemas que occurren durante la ejecucion de tareas que requieren arreglos u optimización. 
+En cualquier momento dado pueden haber docenas o cientos de procesos activos en un sistema. Unix asigna a cada proceso un identificador numérico único para diferenciarlos y asi poder realizar un seguimiento y gestionarlo. El valor numérico es conocido como `PID`, el cual es un valor numérico asignado por el Kernel para identificar y manejar el proceso. El PID es muy útil para diagnosticar problemas que ocurren durante la ejecución de tareas que requieren arreglos u optimización. 
 
 Generalmente cada proceso tiene origen de un proceso padre el cual se conoce como `PPID`. Los procesos pueden crear subprocesos (procesos hijos). Cada proceso tiene un proceso padre, excepto el proceso inicial (normalmente con PID 1, conocido como init en un sistema Unix típico).
 
@@ -90,7 +91,7 @@ UID
 : id del usuario al que pertenece el proceso
 
 PID
-: proceso de id, valor numerico que identifica el proceso
+: proceso de id, valor numérico que identifica el proceso
 
 PPID
 : id del proceso padre, valor numérico que identifica el proceso padre
@@ -122,6 +123,7 @@ Los procesos en Unix deben comunicarse entre si para coordinar sus acciones. Nat
 Los procesos pueden enviar y recibir señales para gestionar la ejecución (por ejemplo, finalizar, pausar) a través del mecanismo de señales de Unix.
 
 Hay varios mecanismos de IPC disponibles en los sistemas Unix, cada uno con sus propias características y casos de uso. Los métodos de IPC más comunes incluyen:
+
 - **Conexiones:** un canal de comunicación unidireccional que conecta la salida de un proceso con la entrada de otro. Las conexiones con nombre (o FIFO) permiten la comunicación entre procesos no relacionados a través del sistema de archivos.
 - **Colas de mensajes:** un método que permite que los procesos envíen y reciban mensajes en una estructura de cola. Los mensajes se pueden priorizar, lo que brinda más control sobre el orden en el que se procesan.
 - **Memoria compartida:** un segmento de memoria que se  puede compartir entre varios procesos, lo que les permite leer y escribir en el mismo espacio de memoria. Este método es muy eficiente ya que permite el acceso directo a los datos compartidos sin necesidad de copiarlos.
@@ -130,11 +132,11 @@ Hay varios mecanismos de IPC disponibles en los sistemas Unix, cada uno con sus 
 
 Estos métodos de IPC ofrecen diferentes ventajas y desventajas en términos de complejidad, rendimiento y facilidad de uso, lo que permite a los desarrolladores elegir el mecanismo más adecuado según los requisitos específicos de su aplicación.
 
-## Referencias 
+## Referencias
 
 ### Glosario De Comandos
 
-### Referencias Utiles
+### Referencias Útiles
 
 - [rfc62 de IPC](https://datatracker.ietf.org/doc/html/rfc62)
 
